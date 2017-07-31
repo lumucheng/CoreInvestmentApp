@@ -13,7 +13,7 @@ namespace CoreInvestmentApp
         {
             InitializeComponent();
 
-            MainPage = new CoreInvestmentApp.MainPage();
+            MainPage = new RootPage();
         }
 
         protected override void OnStart()
