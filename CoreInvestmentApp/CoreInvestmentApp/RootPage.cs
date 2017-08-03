@@ -18,7 +18,8 @@ namespace CoreInvestmentApp
             menuPage.Menu.ItemSelected += (sender, e) => NavigateTo(e.SelectedItem as Menu.MenuItem);
 
             Master = menuPage;
-            Detail = new NavigationPage(new ContractsPage());
+            // Detail = new NavigationPage(new ContractsPage());
+            Detail = new NavigationPage(new Watchlist());
         }
 
         void NavigateTo(Menu.MenuItem menu)

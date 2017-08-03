@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoreInvestmentApp.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +8,13 @@ using Xamarin.Forms;
 
 namespace CoreInvestmentApp
 {
+    public static class ViewModelLocator
+    {
+        static StockViewModel stockVM;
+        public static StockViewModel StockViewModel
+        => stockVM ?? (stockVM = new StockViewModel());
+    }
+
     public partial class App : Application
     {
         public App()

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoreInvestmentApp.Watchlist"
+             xmlns:design="clr-namespace:CoreInvestmentApp;assembly=CoreInvestmentApp"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             BindingContext="{x:Static design:ViewModelLocator.StockViewModel}"
+             Title="Watchlist">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding StockList}"
+                    HasUnevenRows="true">
+                <ListView.Header>
+                    <StackLayout Padding="20,20,0,20" BackgroundColor="#64A68C" >
+                        <Label Text="Company Information" TextColor="White" FontSize="Medium" FontFamily="Bold"/>
+                    </StackLayout>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10" BackgroundColor="#CEE6E5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="60*"/>
+                                    <ColumnDefinition Width="40*" />
+                                </Grid.ColumnDefinitions>
+
+                                <controls:CircleImage 
+                                        BorderColor="Black"
+                                        BorderThickness="1"
+                                        HeightRequest="66"
+                                        HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="CenterAndExpand"
+                                        Aspect="AspectFill"
+                                       WidthRequest="66"
+                                       Grid.RowSpan="3"
+                                       Source="{Binding ImageUrl}"/>
+                                <StackLayout Grid.Column="1" Orientation="Horizontal">
+                                    <Label
+                                       Text="{Binding Name}"
+                                       VerticalOptions="End"
+                                       TextColor="Black"/>
+                                    <Label
+                                       Text="{Binding Category}"
+                                       VerticalOptions="End"
+                                       TextColor="Black" BackgroundColor="#faebd6"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
+                                    <controls:CircleImage 
+                                        BorderColor="#287d3b"
+                                        BorderThickness="3"
+                                        HeightRequest="15"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="CenterAndExpand"
+                                        Aspect="AspectFill"
+                                        WidthRequest="15"/>
+                                    <Label
+                                       VerticalOptions="Start"
+                                       HorizontalOptions="StartAndExpand"
+                                       Text="{Binding CurrentValue}"
+                                       TextColor="Black"/>
+                                </StackLayout>
+                                
+                                <StackLayout  Orientation="Horizontal" Grid.Column="2">
+                                    <controls:CircleImage 
+                                        BorderColor="#ebc361"
+                                        BorderThickness="3"
+                                        HeightRequest="15"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Start"
+                                        Aspect="AspectFill"
+                                        WidthRequest="15"/>
+                                    <Label 
+                                       Text="{Binding Growth}"
+                                       VerticalOptions="End"
+                                       TextColor="Black"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="1">
+                                    <controls:CircleImage 
+                                        BorderColor="#479eaa"
+                                        BorderThickness="3"
+                                        HeightRequest="15"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Start"
+                                        Aspect="AspectFill"
+                                        WidthRequest="15"/>
+                                    <Label 
+                                       VerticalOptions="Start"
+                                       HorizontalOptions="StartAndExpand"
+                                       Text="{Binding Dividend}"
+                                       TextColor="Black"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="2">
+                                    <controls:CircleImage 
+                                        BorderColor="#efa06a"
+                                        BorderThickness="3"
+                                        HeightRequest="15"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Start"
+                                        Aspect="AspectFill"
+                                        WidthRequest="15"/>
+                                    <Label 
+                                       VerticalOptions="Start"
+                                       HorizontalOptions="StartAndExpand"
+                                       Text="{Binding Average}"
+                                       TextColor="Black"/>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -32,10 +32,9 @@ namespace CoreInvestmentApp.Pages
             Content = layout;
         }
 
-        async void OnButtonClicked(object sender, EventArgs e)
+        void OnButtonClicked(object sender, EventArgs e)
         {
-            var nextPage = new TestPage();
-            await Navigation.PushAsync(nextPage);
+           
         }
     }
 }
