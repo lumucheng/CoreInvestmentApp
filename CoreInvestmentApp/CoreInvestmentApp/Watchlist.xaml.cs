@@ -1,4 +1,5 @@
-﻿using CoreInvestmentApp.ViewModel;
+﻿using CoreInvestmentApp.Model;
+using CoreInvestmentApp.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,12 @@ namespace CoreInvestmentApp
         {
             InitializeComponent();
             BindingContext = new StockViewModel();
+        }
+
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            // Pass in data here.
+            Navigation.PushAsync(new DetailedStockPage());
         }
     }
 }

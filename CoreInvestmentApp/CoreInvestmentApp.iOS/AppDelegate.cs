@@ -4,6 +4,9 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using SegmentedControl.FormsPlugin.iOS;
+using OxyPlot.Xamarin.Forms.Platform.iOS;
+using ImageCircle.Forms.Plugin.iOS;
 
 namespace CoreInvestmentApp.iOS
 {
@@ -23,6 +26,11 @@ namespace CoreInvestmentApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            SegmentedControlRenderer.Init();
+            PlotViewRenderer.Init();
+            ImageCircleRenderer.Init();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

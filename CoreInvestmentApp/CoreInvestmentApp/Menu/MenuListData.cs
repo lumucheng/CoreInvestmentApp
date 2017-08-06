@@ -14,29 +14,28 @@ namespace CoreInvestmentApp.Menu
         {
             this.Add(new MenuItem()
             {
-                Title = "Contracts",
+                Title = "Home",
                 IconSource = "contacts.png",
                 TargetType = typeof(ContractsPage)
             });
 
             this.Add(new MenuItem()
             {
-                Title = "Leads",
+                Title = "Assesssment",
                 IconSource = "leads.png",
                 TargetType = typeof(LeadsPage)
             });
 
             this.Add(new MenuItem()
             {
-                Title = "Accounts",
+                Title = "Payment",
                 IconSource = "accounts.png",
                 TargetType = typeof(AccountsPage)
             });
 
             this.Add(new MenuItem()
             {
-                Title = "Opportunities",
-                IconSource = "opportunities.png",
+                Title = "Logout",
                 TargetType = typeof(OpportunitiesPage)
             });
         }

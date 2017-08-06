@@ -38,6 +38,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AssessContentView.xaml.cs">
+      <DependentUpon>AssessContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailedStockPage.xaml.cs">
+      <DependentUpon>DetailedStockPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InfoContentView.xaml.cs">
+      <DependentUpon>InfoContentView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -45,6 +54,7 @@
     <Compile Include="Menu\MenuListData.cs" />
     <Compile Include="Menu\MenuListView.cs" />
     <Compile Include="Menu\MenuPage.cs" />
+    <Compile Include="Model\OxyExData.cs" />
     <Compile Include="Model\Stock.cs" />
     <Compile Include="Model\StockHelper.cs" />
     <Compile Include="Pages\AccountsPage.cs" />
@@ -55,6 +65,15 @@
     <Compile Include="RootPage.cs" />
     <Compile Include="TabPage.xaml.cs">
       <DependentUpon>TabPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\BaseViewModel.cs" />
+    <Compile Include="Tabs\CarouselLayout.cs" />
+    <Compile Include="Tabs\PagerIndicatorDots.cs" />
+    <Compile Include="Tabs\PagerIndicatorTab.cs" />
+    <Compile Include="Tabs\SwitcherPageViewModel.cs" />
+    <Compile Include="Tabs\TabView.cs" />
+    <Compile Include="TestChart.xaml.cs">
+      <DependentUpon>TestChart.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\StockViewModel.cs" />
     <Compile Include="Watchlist.xaml.cs">
@@ -74,6 +93,15 @@
   <ItemGroup>
     <Reference Include="ImageCircle.Forms.Plugin.Abstractions, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\portable-net45+wp80+win8+wpa81\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot, Version=1.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OxyPlot.Core.1.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1+Xamarin.iOS10\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Xamarin.Forms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OxyPlot.Xamarin.Forms.1.0.0\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10\OxyPlot.Xamarin.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="SegmentedControl.FormsPlugin.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SegmentedControl.FormsPlugin.1.3.1\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\SegmentedControl.FormsPlugin.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
@@ -96,6 +124,30 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Watchlist.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DetailedStockPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="InfoContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TestChart.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AssessContentView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

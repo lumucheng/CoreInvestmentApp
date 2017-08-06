@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using CoreInvestmentApp.Model;
 using Xamarin.Forms;
 
 namespace CoreInvestmentApp
@@ -11,8 +11,10 @@ namespace CoreInvestmentApp
     public static class ViewModelLocator
     {
         static StockViewModel stockVM;
-        public static StockViewModel StockViewModel
-        => stockVM ?? (stockVM = new StockViewModel());
+        static OxyExData exData;
+
+        public static StockViewModel StockViewModel => stockVM ?? (stockVM = new StockViewModel());
+        public static OxyExData OxyExData = exData ?? (exData = new OxyExData());
     }
 
     public partial class App : Application

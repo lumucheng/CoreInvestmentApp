@@ -4,14 +4,22 @@
              x:Class="CoreInvestmentApp.Watchlist"
              xmlns:design="clr-namespace:CoreInvestmentApp;assembly=CoreInvestmentApp"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:segcontrol="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
              BindingContext="{x:Static design:ViewModelLocator.StockViewModel}"
              Title="Watchlist">
     <ContentPage.Content>
         <StackLayout>
+            <segcontrol:SegmentedControl x:Name="SegControl" TintColor="#007AFF" SelectedSegment="0" BackgroundColor="#CEE6E5" HorizontalOptions="FillAndExpand" >
+                    <segcontrol:SegmentedControl.Children>
+                        <segcontrol:SegmentedControlOption Text="US" />
+                        <segcontrol:SegmentedControlOption Text="SG" />
+                    </segcontrol:SegmentedControl.Children>
+                </segcontrol:SegmentedControl>
+            <StackLayout x:Name="SegContent"  BackgroundColor="#CEE6E5" Margin="0,0,0,-12" />
             <ListView ItemsSource="{Binding StockList}"
-                    HasUnevenRows="true">
+                    HasUnevenRows="true" ItemSelected="ListView_ItemSelected">
                 <ListView.Header>
-                    <StackLayout Padding="20,20,0,20" BackgroundColor="#64A68C" >
+                    <StackLayout Padding="20,20,20,20" BackgroundColor="#64A68C" >
                         <Label Text="Company Information" TextColor="White" FontSize="Medium" FontFamily="Bold"/>
                     </StackLayout>
                 </ListView.Header>

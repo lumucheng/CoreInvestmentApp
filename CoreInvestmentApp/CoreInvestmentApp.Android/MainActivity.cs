@@ -6,6 +6,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using SegmentedControl.FormsPlugin.Android;
+using OxyPlot.Xamarin.Forms.Platform.Android;
+using ImageCircle.Forms.Plugin.Droid;
 
 namespace CoreInvestmentApp.Droid
 {
@@ -20,6 +23,11 @@ namespace CoreInvestmentApp.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            SegmentedControlRenderer.Init();
+            PlotViewRenderer.Init();
+            ImageCircleRenderer.Init();
+
             LoadApplication(new App());
         }
     }
