@@ -38,13 +38,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AssessContentView.xaml.cs">
+    <Compile Include="Classes\Util.cs" />
+    <Compile Include="Pages\AssessContentView.xaml.cs">
       <DependentUpon>AssessContentView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DetailedStockPage.xaml.cs">
+    <Compile Include="Pages\DetailedStockPage.xaml.cs">
       <DependentUpon>DetailedStockPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InfoContentView.xaml.cs">
+    <Compile Include="Pages\InfoContentView.xaml.cs">
       <DependentUpon>InfoContentView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
@@ -57,13 +58,16 @@
     <Compile Include="Model\OxyExData.cs" />
     <Compile Include="Model\Stock.cs" />
     <Compile Include="Model\StockHelper.cs" />
-    <Compile Include="Pages\AccountsPage.cs" />
-    <Compile Include="Pages\ContractsPage.cs" />
-    <Compile Include="Pages\LeadsPage.cs" />
-    <Compile Include="Pages\OpportunitiesPage.cs" />
+    <Compile Include="Pages\SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SliderPages\AccountsPage.cs" />
+    <Compile Include="SliderPages\ContractsPage.cs" />
+    <Compile Include="SliderPages\LeadsPage.cs" />
+    <Compile Include="SliderPages\OpportunitiesPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RootPage.cs" />
-    <Compile Include="TabPage.xaml.cs">
+    <Compile Include="Pages\TabPage.xaml.cs">
       <DependentUpon>TabPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tabs\BaseViewModel.cs" />
@@ -76,8 +80,8 @@
       <DependentUpon>TestChart.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\StockViewModel.cs" />
-    <Compile Include="Watchlist.xaml.cs">
-      <DependentUpon>Watchlist.xaml</DependentUpon>
+    <Compile Include="Pages\WatchlistPage.xaml.cs">
+      <DependentUpon>WatchlistPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +98,9 @@
     <Reference Include="ImageCircle.Forms.Plugin.Abstractions, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\portable-net45+wp80+win8+wpa81\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="OxyPlot, Version=1.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
       <HintPath>..\..\packages\OxyPlot.Core.1.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1+Xamarin.iOS10\OxyPlot.dll</HintPath>
     </Reference>
@@ -102,6 +109,9 @@
     </Reference>
     <Reference Include="SegmentedControl.FormsPlugin.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\SegmentedControl.FormsPlugin.1.3.1\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\SegmentedControl.FormsPlugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v1.0\System.Net.Http.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
@@ -117,25 +127,25 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="TabPage.xaml">
+    <EmbeddedResource Include="Pages\TabPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Watchlist.xaml">
+    <EmbeddedResource Include="Pages\WatchlistPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DetailedStockPage.xaml">
+    <EmbeddedResource Include="Pages\DetailedStockPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="InfoContentView.xaml">
+    <EmbeddedResource Include="Pages\InfoContentView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -147,7 +157,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AssessContentView.xaml">
+    <EmbeddedResource Include="Pages\AssessContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\SearchPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

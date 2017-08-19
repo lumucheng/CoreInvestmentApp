@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace CoreInvestmentApp
+namespace CoreInvestmentApp.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Watchlist : ContentPage
+    public partial class WatchlistPage : ContentPage
     {
-        public Watchlist()
+        public WatchlistPage()
         {
             InitializeComponent();
             BindingContext = new StockViewModel();
@@ -24,6 +24,11 @@ namespace CoreInvestmentApp
         {
             // Pass in data here.
             Navigation.PushAsync(new DetailedStockPage());
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new SearchPage());
         }
     }
 }

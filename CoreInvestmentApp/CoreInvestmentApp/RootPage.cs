@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using CoreInvestmentApp.Menu;
+using CoreInvestmentApp.SliderPages;
 using CoreInvestmentApp.Pages;
 
 namespace CoreInvestmentApp
@@ -19,7 +20,7 @@ namespace CoreInvestmentApp
 
             Master = menuPage;
             // Detail = new NavigationPage(new ContractsPage());
-            Detail = new NavigationPage(new Watchlist());
+            Detail = new NavigationPage(new WatchlistPage());
         }
 
         void NavigateTo(Menu.MenuItem menu)

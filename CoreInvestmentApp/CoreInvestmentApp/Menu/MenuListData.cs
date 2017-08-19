@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using CoreInvestmentApp.Pages;
+using CoreInvestmentApp.SliderPages;
 
 namespace CoreInvestmentApp.Menu
 {

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
-             x:Class="CoreInvestmentApp.InfoContentView">
+             x:Class="CoreInvestmentApp.Pages.InfoContentView">
     <ContentView.Content>
         <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
             <StackLayout BackgroundColor="White" Padding="15, 10, 10, 10"  Orientation="Vertical" VerticalOptions="FillAndExpand">
@@ -28,7 +28,7 @@
                 <Label Text="Market Share" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                 <Label Text="Based on Market Capitalization" FontSize="Medium" HorizontalOptions="CenterAndExpand" />
 
-                <oxy:PlotView x:Name="pieChart" Model="{Binding PieModel}" HeightRequest="400" WidthRequest="250" Margin="5,5,5,10" />
+                <oxy:PlotView x:Name="pieChart" Model="{Binding PieModel}" HeightRequest="400" WidthRequest="250" Margin="5,5,5,10" HorizontalOptions="CenterAndExpand" />
 
                 <BoxView Color="Gray" HeightRequest="1"/>
 

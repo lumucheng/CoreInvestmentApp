@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CoreInvestmentApp.Watchlist"
+             x:Class="CoreInvestmentApp.Pages.WatchlistPage"
              xmlns:design="clr-namespace:CoreInvestmentApp;assembly=CoreInvestmentApp"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
              xmlns:segcontrol="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
@@ -9,6 +9,14 @@
              Title="Watchlist">
     <ContentPage.Content>
         <StackLayout>
+
+            <Button Text="Search Stock"
+                    FontSize="Medium"
+                    BackgroundColor="#007AFF"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Fill"
+                    Clicked="Button_Clicked"/>
+
             <segcontrol:SegmentedControl x:Name="SegControl" TintColor="#007AFF" SelectedSegment="0" BackgroundColor="#CEE6E5" HorizontalOptions="FillAndExpand" >
                     <segcontrol:SegmentedControl.Children>
                         <segcontrol:SegmentedControlOption Text="US" />
