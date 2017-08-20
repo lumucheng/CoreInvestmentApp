@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CoreInvestmentApp.Pages.WatchlistPage"
@@ -9,7 +9,6 @@
              Title="Watchlist">
     <ContentPage.Content>
         <StackLayout>
-
             <Button Text="Search Stock"
                     FontSize="Medium"
                     BackgroundColor="#007AFF"
@@ -25,7 +24,7 @@
                 </segcontrol:SegmentedControl>
             <StackLayout x:Name="SegContent"  BackgroundColor="#CEE6E5" Margin="0,0,0,-12" />
             <ListView ItemsSource="{Binding StockList}"
-                    HasUnevenRows="true" ItemSelected="ListView_ItemSelected">
+                    HasUnevenRows="true" ItemSelected="ListView_ItemSelected" SeparatorVisibility="None">
                 <ListView.Header>
                     <StackLayout Padding="20,20,20,20" BackgroundColor="#64A68C" >
                         <Label Text="Company Information" TextColor="White" FontSize="Medium" FontFamily="Bold"/>
@@ -42,8 +41,8 @@
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="60*"/>
-                                    <ColumnDefinition Width="40*" />
+                                    <ColumnDefinition Width="55*"/>
+                                    <ColumnDefinition Width="45*" />
                                 </Grid.ColumnDefinitions>
 
                                 <controls:CircleImage 
@@ -133,6 +132,9 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <Label />
+                </ListView.Footer>
             </ListView>
         </StackLayout>
     </ContentPage.Content>

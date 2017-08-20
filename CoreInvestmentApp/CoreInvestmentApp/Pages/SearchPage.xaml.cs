@@ -9,16 +9,39 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Json.n
+using Newtonsoft.Json;
+using CoreInvestmentApp.Model;
+using System.Collections.ObjectModel;
+using Newtonsoft.Json.Linq;
 
 namespace CoreInvestmentApp.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SearchPage : ContentPage
 	{
+        private ObservableCollection<StockIdentifier> identifierList = new ObservableCollection<StockIdentifier>();
+        public ObservableCollection<StockIdentifier> IdentifierList
+        {
+            get 
+            {
+                return identifierList;
+            }
+            set 
+            {
+                identifierList = value;
+            }
+        }
+         
 		public SearchPage ()
 		{
 			InitializeComponent ();
+            Title = "Search";
+
+			ToolbarItems.Add(new ToolbarItem
+			{
+				Text = "Done",
+				Command = new Command(() => Navigation.PopModalAsync()),
+			});
 		}
 
         private async Task Entry_Completed(object sender, EventArgs e)
@@ -32,9 +55,15 @@ namespace CoreInvestmentApp.Pages
             var response = await client.GetAsync(uri);
             if (response.IsSuccessStatusCode)
             {
-                var content = await response.Content.ReadAsStringAsync();
-
-
+                var json = await response.Content.ReadAsStringAsync();
+                JObject jsonObject = JObject.Parse(json);
+                JArray data = (JArray)jsonObject["data"];
+                IdentifierList = JsonConvert.DeserializeObject<ObservableCollection<StockIdentifier>>(data.ToString());
+                StockIdentifierListView.ItemsSource = IdentifierList;
+            }
+            else 
+            {
+                //TODO: Handle error here
             }
         }
     }

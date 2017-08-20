@@ -28,7 +28,7 @@ namespace CoreInvestmentApp.Pages
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new SearchPage());
+            Navigation.PushModalAsync(new NavigationPage(new SearchPage()));
         }
     }
 }

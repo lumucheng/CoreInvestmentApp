@@ -1,14 +1,56 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CoreInvestmentApp.Pages.SearchPage">
     <ContentPage.Content>
-        <StackLayout Padding="10,10,10,10">
-            <Entry x:Name="EntrySearch" FontSize="Medium" Placeholder="Enter Stock Identifier" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Completed="Entry_Completed" />
+        <StackLayout Padding="10,25,10,10">
+            <Entry x:Name="EntrySearch" FontSize="Medium" Placeholder="Enter Stock Identifier" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Completed="Entry_Completed" />
             <Button Text="Search" FontSize="Medium" FontAttributes="Bold" Clicked="Entry_Completed" />
 
-            <ListView HasUnevenRows="False">
-                
+            <ListView x:Name="StockIdentifierListView" HasUnevenRows="False" ItemsSource="{Binding IdentifierList}" RowHeight="100">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Margin="10,10,10,10" >
+                                <StackLayout Orientation="Horizontal">
+                                    <Label
+                                       Text="Name:"
+                                       VerticalOptions="End"
+                                       TextColor="Black"/>
+                                    <Label
+                                       Text="{Binding Name}"
+                                       VerticalOptions="End"
+                                       TextColor="Black" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label
+                                       Text="Ticker:"
+                                       VerticalOptions="End"
+                                       TextColor="Black"/>
+                                    <Label
+                                       Text="{Binding Ticker}"
+                                       VerticalOptions="End"
+                                       TextColor="Black" />
+                                </StackLayout>
+                                
+                                <StackLayout Orientation="Horizontal">
+                                    <Label
+                                       Text="Last Filling Date:"
+                                       VerticalOptions="End"
+                                       TextColor="Black" />
+                                    <Label
+                                       Text="{Binding LatestFillingDate}"
+                                       VerticalOptions="End"
+                                       TextColor="Black"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <Label />
+                </ListView.Footer>
             </ListView>
         </StackLayout>
     </ContentPage.Content>
