@@ -26,6 +26,1664 @@ namespace CoreInvestmentApp.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Messier16.Forms.Android.Controls.Resource.Animation.abc_fade_in = global::CoreInvestmentApp.Droid.Resource.Animation.abc_fade_in;
+			global::Messier16.Forms.Android.Controls.Resource.Animation.abc_fade_out = global::CoreInvestmentApp.Droid.Resource.Animation.abc_fade_out;
+			global::Messier16.Forms.Android.Controls.Resource.Animation.abc_grow_fade_in_from_bottom = global::CoreInvestmentApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Messier16.Forms.Android.Controls.Resource.Animation.abc_popup_enter = global::CoreInvestmentApp.Droid.Resource.Animation.abc_popup_enter;
+			global::Messier16.Forms.Android.Controls.Resource.Animation.abc_popup_exit = global::CoreInvestmentApp.Droid.Resource.Animation.abc_popup_exit;
+			global::Messier16.Forms.Android.Controls.Resource.Animation.abc_shrink_fade_out_from_bottom = global::CoreInvestmentApp.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Messier16.Forms.Android.Controls.Resource.Animation.abc_slide_in_bottom = global::CoreInvestmentApp.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Messier16.Forms.Android.Controls.Resource.Animation.abc_slide_in_top = global::CoreInvestmentApp.Droid.Resource.Animation.abc_slide_in_top;
+			global::Messier16.Forms.Android.Controls.Resource.Animation.abc_slide_out_bottom = global::CoreInvestmentApp.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Messier16.Forms.Android.Controls.Resource.Animation.abc_slide_out_top = global::CoreInvestmentApp.Droid.Resource.Animation.abc_slide_out_top;
+			global::Messier16.Forms.Android.Controls.Resource.Animation.design_bottom_sheet_slide_in = global::CoreInvestmentApp.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Messier16.Forms.Android.Controls.Resource.Animation.design_bottom_sheet_slide_out = global::CoreInvestmentApp.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Messier16.Forms.Android.Controls.Resource.Animation.design_fab_in = global::CoreInvestmentApp.Droid.Resource.Animation.design_fab_in;
+			global::Messier16.Forms.Android.Controls.Resource.Animation.design_fab_out = global::CoreInvestmentApp.Droid.Resource.Animation.design_fab_out;
+			global::Messier16.Forms.Android.Controls.Resource.Animation.design_snackbar_in = global::CoreInvestmentApp.Droid.Resource.Animation.design_snackbar_in;
+			global::Messier16.Forms.Android.Controls.Resource.Animation.design_snackbar_out = global::CoreInvestmentApp.Droid.Resource.Animation.design_snackbar_out;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionBarDivider = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarDivider;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionBarItemBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionBarPopupTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionBarSize = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarSize;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionBarSplitStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionBarStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionBarTabBarStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionBarTabStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionBarTabTextStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionBarTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionBarWidgetTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionDropDownStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.actionLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionMenuTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionMenuTextColor = global::CoreInvestmentApp.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionModeBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionModeCloseButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionModeCloseDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionModeCopyDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionModeCutDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionModeFindDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionModePasteDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionModePopupWindowStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionModeSelectAllDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionModeShareDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionModeSplitBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionModeStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionModeWebSearchDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionOverflowButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionOverflowMenuStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionProviderClass = global::CoreInvestmentApp.Droid.Resource.Attribute.actionProviderClass;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.actionViewClass = global::CoreInvestmentApp.Droid.Resource.Attribute.actionViewClass;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.activityChooserViewStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.alertDialogButtonGroupStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.alertDialogCenterButtons = global::CoreInvestmentApp.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.alertDialogStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.alertDialogStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.alertDialogTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.alertDialogTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.allowStacking = global::CoreInvestmentApp.Droid.Resource.Attribute.allowStacking;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.arrowHeadLength = global::CoreInvestmentApp.Droid.Resource.Attribute.arrowHeadLength;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.arrowShaftLength = global::CoreInvestmentApp.Droid.Resource.Attribute.arrowShaftLength;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.autoCompleteTextViewStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.background = global::CoreInvestmentApp.Droid.Resource.Attribute.background;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.backgroundSplit = global::CoreInvestmentApp.Droid.Resource.Attribute.backgroundSplit;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.backgroundStacked = global::CoreInvestmentApp.Droid.Resource.Attribute.backgroundStacked;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.backgroundTint = global::CoreInvestmentApp.Droid.Resource.Attribute.backgroundTint;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.backgroundTintMode = global::CoreInvestmentApp.Droid.Resource.Attribute.backgroundTintMode;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.barLength = global::CoreInvestmentApp.Droid.Resource.Attribute.barLength;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.behavior_hideable = global::CoreInvestmentApp.Droid.Resource.Attribute.behavior_hideable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.behavior_overlapTop = global::CoreInvestmentApp.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.behavior_peekHeight = global::CoreInvestmentApp.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.borderWidth = global::CoreInvestmentApp.Droid.Resource.Attribute.borderWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.borderlessButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.bottomSheetDialogTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.bottomSheetStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.bottomSheetStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.buttonBarButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.buttonBarNegativeButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.buttonBarNeutralButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.buttonBarPositiveButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.buttonBarStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonBarStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.buttonPanelSideLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.buttonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.buttonStyleSmall = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.buttonTint = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonTint;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.buttonTintMode = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonTintMode;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.cardBackgroundColor = global::CoreInvestmentApp.Droid.Resource.Attribute.cardBackgroundColor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.cardCornerRadius = global::CoreInvestmentApp.Droid.Resource.Attribute.cardCornerRadius;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.cardElevation = global::CoreInvestmentApp.Droid.Resource.Attribute.cardElevation;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.cardMaxElevation = global::CoreInvestmentApp.Droid.Resource.Attribute.cardMaxElevation;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.cardPreventCornerOverlap = global::CoreInvestmentApp.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.cardUseCompatPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.checkboxStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.checkboxStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.checkedTextViewStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.closeIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.closeIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.closeItemLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.closeItemLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.collapseContentDescription = global::CoreInvestmentApp.Droid.Resource.Attribute.collapseContentDescription;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.collapseIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.collapseIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.collapsedTitleGravity = global::CoreInvestmentApp.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.collapsedTitleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.color = global::CoreInvestmentApp.Droid.Resource.Attribute.color;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.colorAccent = global::CoreInvestmentApp.Droid.Resource.Attribute.colorAccent;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.colorButtonNormal = global::CoreInvestmentApp.Droid.Resource.Attribute.colorButtonNormal;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.colorControlActivated = global::CoreInvestmentApp.Droid.Resource.Attribute.colorControlActivated;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.colorControlHighlight = global::CoreInvestmentApp.Droid.Resource.Attribute.colorControlHighlight;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.colorControlNormal = global::CoreInvestmentApp.Droid.Resource.Attribute.colorControlNormal;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.colorPrimary = global::CoreInvestmentApp.Droid.Resource.Attribute.colorPrimary;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.colorPrimaryDark = global::CoreInvestmentApp.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.colorSwitchThumbNormal = global::CoreInvestmentApp.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.commitIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.commitIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.contentInsetEnd = global::CoreInvestmentApp.Droid.Resource.Attribute.contentInsetEnd;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.contentInsetLeft = global::CoreInvestmentApp.Droid.Resource.Attribute.contentInsetLeft;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.contentInsetRight = global::CoreInvestmentApp.Droid.Resource.Attribute.contentInsetRight;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.contentInsetStart = global::CoreInvestmentApp.Droid.Resource.Attribute.contentInsetStart;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.contentPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.contentPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.contentPaddingBottom = global::CoreInvestmentApp.Droid.Resource.Attribute.contentPaddingBottom;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.contentPaddingLeft = global::CoreInvestmentApp.Droid.Resource.Attribute.contentPaddingLeft;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.contentPaddingRight = global::CoreInvestmentApp.Droid.Resource.Attribute.contentPaddingRight;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.contentPaddingTop = global::CoreInvestmentApp.Droid.Resource.Attribute.contentPaddingTop;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.contentScrim = global::CoreInvestmentApp.Droid.Resource.Attribute.contentScrim;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.controlBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.controlBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.counterEnabled = global::CoreInvestmentApp.Droid.Resource.Attribute.counterEnabled;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.counterMaxLength = global::CoreInvestmentApp.Droid.Resource.Attribute.counterMaxLength;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.counterOverflowTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.counterTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.counterTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.customNavigationLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.customNavigationLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.defaultQueryHint = global::CoreInvestmentApp.Droid.Resource.Attribute.defaultQueryHint;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.dialogPreferredPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.dialogTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.dialogTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.displayOptions = global::CoreInvestmentApp.Droid.Resource.Attribute.displayOptions;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.divider = global::CoreInvestmentApp.Droid.Resource.Attribute.divider;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.dividerHorizontal = global::CoreInvestmentApp.Droid.Resource.Attribute.dividerHorizontal;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.dividerPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.dividerPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.dividerVertical = global::CoreInvestmentApp.Droid.Resource.Attribute.dividerVertical;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.drawableSize = global::CoreInvestmentApp.Droid.Resource.Attribute.drawableSize;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.drawerArrowStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.dropDownListViewStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.dropdownListPreferredItemHeight = global::CoreInvestmentApp.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.editTextBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.editTextBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.editTextColor = global::CoreInvestmentApp.Droid.Resource.Attribute.editTextColor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.editTextStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.editTextStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.elevation = global::CoreInvestmentApp.Droid.Resource.Attribute.elevation;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.errorEnabled = global::CoreInvestmentApp.Droid.Resource.Attribute.errorEnabled;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.errorTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.errorTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.expandActivityOverflowButtonDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.expanded = global::CoreInvestmentApp.Droid.Resource.Attribute.expanded;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.expandedTitleGravity = global::CoreInvestmentApp.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.expandedTitleMargin = global::CoreInvestmentApp.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.expandedTitleMarginBottom = global::CoreInvestmentApp.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.expandedTitleMarginEnd = global::CoreInvestmentApp.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.expandedTitleMarginStart = global::CoreInvestmentApp.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.expandedTitleMarginTop = global::CoreInvestmentApp.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.expandedTitleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.externalRouteEnabledDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.externalRouteEnabledDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.fabSize = global::CoreInvestmentApp.Droid.Resource.Attribute.fabSize;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.foregroundInsidePadding = global::CoreInvestmentApp.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.gapBetweenBars = global::CoreInvestmentApp.Droid.Resource.Attribute.gapBetweenBars;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.goIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.goIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.headerLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.headerLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.height = global::CoreInvestmentApp.Droid.Resource.Attribute.height;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.hideOnContentScroll = global::CoreInvestmentApp.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.hintAnimationEnabled = global::CoreInvestmentApp.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.hintEnabled = global::CoreInvestmentApp.Droid.Resource.Attribute.hintEnabled;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.hintTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.hintTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.homeAsUpIndicator = global::CoreInvestmentApp.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.homeLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.homeLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.icon = global::CoreInvestmentApp.Droid.Resource.Attribute.icon;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.iconifiedByDefault = global::CoreInvestmentApp.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.imageButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.imageButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.indeterminateProgressStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.initialActivityCount = global::CoreInvestmentApp.Droid.Resource.Attribute.initialActivityCount;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.insetForeground = global::CoreInvestmentApp.Droid.Resource.Attribute.insetForeground;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.isLightTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.isLightTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.itemBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.itemBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.itemIconTint = global::CoreInvestmentApp.Droid.Resource.Attribute.itemIconTint;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.itemPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.itemPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.itemTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.itemTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.itemTextColor = global::CoreInvestmentApp.Droid.Resource.Attribute.itemTextColor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.keylines = global::CoreInvestmentApp.Droid.Resource.Attribute.keylines;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.layout = global::CoreInvestmentApp.Droid.Resource.Attribute.layout;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.layoutManager = global::CoreInvestmentApp.Droid.Resource.Attribute.layoutManager;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.layout_anchor = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_anchor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.layout_anchorGravity = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.layout_behavior = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_behavior;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.layout_collapseMode = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_collapseMode;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.layout_collapseParallaxMultiplier = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.layout_keyline = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_keyline;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.layout_scrollFlags = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.layout_scrollInterpolator = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.lineColor = global::CoreInvestmentApp.Droid.Resource.Attribute.lineColor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.lineHeightSelected = global::CoreInvestmentApp.Droid.Resource.Attribute.lineHeightSelected;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.lineHeightUnselected = global::CoreInvestmentApp.Droid.Resource.Attribute.lineHeightUnselected;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.listChoiceBackgroundIndicator = global::CoreInvestmentApp.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.listDividerAlertDialog = global::CoreInvestmentApp.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.listItemLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.listItemLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.listLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.listLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.listPopupWindowStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.listPreferredItemHeight = global::CoreInvestmentApp.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.listPreferredItemHeightLarge = global::CoreInvestmentApp.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.listPreferredItemHeightSmall = global::CoreInvestmentApp.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.listPreferredItemPaddingLeft = global::CoreInvestmentApp.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.listPreferredItemPaddingRight = global::CoreInvestmentApp.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.logo = global::CoreInvestmentApp.Droid.Resource.Attribute.logo;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.logoDescription = global::CoreInvestmentApp.Droid.Resource.Attribute.logoDescription;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.maxActionInlineWidth = global::CoreInvestmentApp.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.maxButtonHeight = global::CoreInvestmentApp.Droid.Resource.Attribute.maxButtonHeight;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.measureWithLargestChild = global::CoreInvestmentApp.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.mediaRouteAudioTrackDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.mediaRouteButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRouteButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.mediaRouteCloseDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRouteCloseDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.mediaRouteDefaultIconDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.mediaRoutePauseDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRoutePauseDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.mediaRoutePlayDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRoutePlayDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.mediaRouteTvIconDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRouteTvIconDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.menu = global::CoreInvestmentApp.Droid.Resource.Attribute.menu;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.multiChoiceItemLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.navigationContentDescription = global::CoreInvestmentApp.Droid.Resource.Attribute.navigationContentDescription;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.navigationIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.navigationIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.navigationMode = global::CoreInvestmentApp.Droid.Resource.Attribute.navigationMode;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.overlapAnchor = global::CoreInvestmentApp.Droid.Resource.Attribute.overlapAnchor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.paddingEnd = global::CoreInvestmentApp.Droid.Resource.Attribute.paddingEnd;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.paddingStart = global::CoreInvestmentApp.Droid.Resource.Attribute.paddingStart;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.panelBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.panelBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.panelMenuListTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.panelMenuListWidth = global::CoreInvestmentApp.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.popupMenuStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.popupMenuStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.popupTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.popupTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.popupWindowStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.popupWindowStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.preserveIconSpacing = global::CoreInvestmentApp.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.pressedTranslationZ = global::CoreInvestmentApp.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.progressBarPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.progressBarPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.progressBarStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.progressBarStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.queryBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.queryBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.queryHint = global::CoreInvestmentApp.Droid.Resource.Attribute.queryHint;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.radioButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.radioButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.ratingBarStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.ratingBarStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.ratingBarStyleIndicator = global::CoreInvestmentApp.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.ratingBarStyleSmall = global::CoreInvestmentApp.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.reverseLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.reverseLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.rippleColor = global::CoreInvestmentApp.Droid.Resource.Attribute.rippleColor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.searchHintIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.searchHintIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.searchIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.searchIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.searchViewStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.searchViewStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.seekBarStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.seekBarStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.segmentedControlOptionStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.segmentedControlOptionStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.selectableItemBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.selectableItemBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.selectableItemBackgroundBorderless = global::CoreInvestmentApp.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.showAsAction = global::CoreInvestmentApp.Droid.Resource.Attribute.showAsAction;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.showDividers = global::CoreInvestmentApp.Droid.Resource.Attribute.showDividers;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.showText = global::CoreInvestmentApp.Droid.Resource.Attribute.showText;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.singleChoiceItemLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.spanCount = global::CoreInvestmentApp.Droid.Resource.Attribute.spanCount;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.spinBars = global::CoreInvestmentApp.Droid.Resource.Attribute.spinBars;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.spinnerDropDownItemStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.spinnerStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.spinnerStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.splitTrack = global::CoreInvestmentApp.Droid.Resource.Attribute.splitTrack;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.srcCompat = global::CoreInvestmentApp.Droid.Resource.Attribute.srcCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.stackFromEnd = global::CoreInvestmentApp.Droid.Resource.Attribute.stackFromEnd;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.state_above_anchor = global::CoreInvestmentApp.Droid.Resource.Attribute.state_above_anchor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.statusBarBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.statusBarBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.statusBarScrim = global::CoreInvestmentApp.Droid.Resource.Attribute.statusBarScrim;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.submitBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.submitBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.subtitle = global::CoreInvestmentApp.Droid.Resource.Attribute.subtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.subtitleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.subtitleTextColor = global::CoreInvestmentApp.Droid.Resource.Attribute.subtitleTextColor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.subtitleTextStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.suggestionRowLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.switchMinWidth = global::CoreInvestmentApp.Droid.Resource.Attribute.switchMinWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.switchPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.switchPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.switchStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.switchStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.switchTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.switchTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.tabBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabContentStart = global::CoreInvestmentApp.Droid.Resource.Attribute.tabContentStart;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabGravity = global::CoreInvestmentApp.Droid.Resource.Attribute.tabGravity;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabIndicatorColor = global::CoreInvestmentApp.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabIndicatorHeight = global::CoreInvestmentApp.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabMaxWidth = global::CoreInvestmentApp.Droid.Resource.Attribute.tabMaxWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabMinWidth = global::CoreInvestmentApp.Droid.Resource.Attribute.tabMinWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabMode = global::CoreInvestmentApp.Droid.Resource.Attribute.tabMode;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.tabPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabPaddingBottom = global::CoreInvestmentApp.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabPaddingEnd = global::CoreInvestmentApp.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabPaddingStart = global::CoreInvestmentApp.Droid.Resource.Attribute.tabPaddingStart;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabPaddingTop = global::CoreInvestmentApp.Droid.Resource.Attribute.tabPaddingTop;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabSelectedTextColor = global::CoreInvestmentApp.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.tabTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.tabTextColor = global::CoreInvestmentApp.Droid.Resource.Attribute.tabTextColor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.textAllCaps = global::CoreInvestmentApp.Droid.Resource.Attribute.textAllCaps;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.textAppearanceLargePopupMenu = global::CoreInvestmentApp.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.textAppearanceListItem = global::CoreInvestmentApp.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.textAppearanceListItemSmall = global::CoreInvestmentApp.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.textAppearanceSearchResultSubtitle = global::CoreInvestmentApp.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.textAppearanceSearchResultTitle = global::CoreInvestmentApp.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.textAppearanceSmallPopupMenu = global::CoreInvestmentApp.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.textColorAlertDialogListItem = global::CoreInvestmentApp.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.textColorError = global::CoreInvestmentApp.Droid.Resource.Attribute.textColorError;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.textColorSearchUrl = global::CoreInvestmentApp.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.theme = global::CoreInvestmentApp.Droid.Resource.Attribute.theme;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.thickness = global::CoreInvestmentApp.Droid.Resource.Attribute.thickness;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.thumbTextPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.thumbTextPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.title = global::CoreInvestmentApp.Droid.Resource.Attribute.title;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.titleEnabled = global::CoreInvestmentApp.Droid.Resource.Attribute.titleEnabled;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.titleMarginBottom = global::CoreInvestmentApp.Droid.Resource.Attribute.titleMarginBottom;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.titleMarginEnd = global::CoreInvestmentApp.Droid.Resource.Attribute.titleMarginEnd;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.titleMarginStart = global::CoreInvestmentApp.Droid.Resource.Attribute.titleMarginStart;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.titleMarginTop = global::CoreInvestmentApp.Droid.Resource.Attribute.titleMarginTop;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.titleMargins = global::CoreInvestmentApp.Droid.Resource.Attribute.titleMargins;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.titleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.titleTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.titleTextColor = global::CoreInvestmentApp.Droid.Resource.Attribute.titleTextColor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.titleTextStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.titleTextStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.toolbarId = global::CoreInvestmentApp.Droid.Resource.Attribute.toolbarId;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.toolbarNavigationButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.toolbarStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.toolbarStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.track = global::CoreInvestmentApp.Droid.Resource.Attribute.track;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.useCompatPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.useCompatPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.voiceIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.voiceIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.windowActionBar = global::CoreInvestmentApp.Droid.Resource.Attribute.windowActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.windowActionBarOverlay = global::CoreInvestmentApp.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.windowActionModeOverlay = global::CoreInvestmentApp.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.windowFixedHeightMajor = global::CoreInvestmentApp.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.windowFixedHeightMinor = global::CoreInvestmentApp.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.windowFixedWidthMajor = global::CoreInvestmentApp.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.windowFixedWidthMinor = global::CoreInvestmentApp.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.windowMinWidthMajor = global::CoreInvestmentApp.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.windowMinWidthMinor = global::CoreInvestmentApp.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Messier16.Forms.Android.Controls.Resource.Attribute.windowNoTitle = global::CoreInvestmentApp.Droid.Resource.Attribute.windowNoTitle;
+			global::Messier16.Forms.Android.Controls.Resource.Boolean.abc_action_bar_embed_tabs = global::CoreInvestmentApp.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Messier16.Forms.Android.Controls.Resource.Boolean.abc_allow_stacked_button_bar = global::CoreInvestmentApp.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Messier16.Forms.Android.Controls.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::CoreInvestmentApp.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Messier16.Forms.Android.Controls.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::CoreInvestmentApp.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
+			global::Messier16.Forms.Android.Controls.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::CoreInvestmentApp.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
+			global::Messier16.Forms.Android.Controls.Resource.Color.abc_background_cache_hint_selector_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.abc_background_cache_hint_selector_material_light = global::CoreInvestmentApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.abc_color_highlight_material = global::CoreInvestmentApp.Droid.Resource.Color.abc_color_highlight_material;
+			global::Messier16.Forms.Android.Controls.Resource.Color.abc_input_method_navigation_guard = global::CoreInvestmentApp.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::Messier16.Forms.Android.Controls.Resource.Color.abc_primary_text_disable_only_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.abc_primary_text_disable_only_material_light = global::CoreInvestmentApp.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.abc_primary_text_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.abc_primary_text_material_light = global::CoreInvestmentApp.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.abc_search_url_text = global::CoreInvestmentApp.Droid.Resource.Color.abc_search_url_text;
+			global::Messier16.Forms.Android.Controls.Resource.Color.abc_search_url_text_normal = global::CoreInvestmentApp.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Messier16.Forms.Android.Controls.Resource.Color.abc_search_url_text_pressed = global::CoreInvestmentApp.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Messier16.Forms.Android.Controls.Resource.Color.abc_search_url_text_selected = global::CoreInvestmentApp.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Messier16.Forms.Android.Controls.Resource.Color.abc_secondary_text_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.abc_secondary_text_material_light = global::CoreInvestmentApp.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.accent_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.accent_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.accent_material_light = global::CoreInvestmentApp.Droid.Resource.Color.accent_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.background_floating_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.background_floating_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.background_floating_material_light = global::CoreInvestmentApp.Droid.Resource.Color.background_floating_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.background_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.background_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.background_material_light = global::CoreInvestmentApp.Droid.Resource.Color.background_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.bright_foreground_disabled_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.bright_foreground_disabled_material_light = global::CoreInvestmentApp.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.bright_foreground_inverse_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.bright_foreground_inverse_material_light = global::CoreInvestmentApp.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.bright_foreground_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.bright_foreground_material_light = global::CoreInvestmentApp.Droid.Resource.Color.bright_foreground_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.button_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.button_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.button_material_light = global::CoreInvestmentApp.Droid.Resource.Color.button_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.cardview_dark_background = global::CoreInvestmentApp.Droid.Resource.Color.cardview_dark_background;
+			global::Messier16.Forms.Android.Controls.Resource.Color.cardview_light_background = global::CoreInvestmentApp.Droid.Resource.Color.cardview_light_background;
+			global::Messier16.Forms.Android.Controls.Resource.Color.cardview_shadow_end_color = global::CoreInvestmentApp.Droid.Resource.Color.cardview_shadow_end_color;
+			global::Messier16.Forms.Android.Controls.Resource.Color.cardview_shadow_start_color = global::CoreInvestmentApp.Droid.Resource.Color.cardview_shadow_start_color;
+			global::Messier16.Forms.Android.Controls.Resource.Color.design_fab_shadow_end_color = global::CoreInvestmentApp.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Messier16.Forms.Android.Controls.Resource.Color.design_fab_shadow_mid_color = global::CoreInvestmentApp.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Messier16.Forms.Android.Controls.Resource.Color.design_fab_shadow_start_color = global::CoreInvestmentApp.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Messier16.Forms.Android.Controls.Resource.Color.design_fab_stroke_end_inner_color = global::CoreInvestmentApp.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Messier16.Forms.Android.Controls.Resource.Color.design_fab_stroke_end_outer_color = global::CoreInvestmentApp.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Messier16.Forms.Android.Controls.Resource.Color.design_fab_stroke_top_inner_color = global::CoreInvestmentApp.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Messier16.Forms.Android.Controls.Resource.Color.design_fab_stroke_top_outer_color = global::CoreInvestmentApp.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Messier16.Forms.Android.Controls.Resource.Color.design_snackbar_background_color = global::CoreInvestmentApp.Droid.Resource.Color.design_snackbar_background_color;
+			global::Messier16.Forms.Android.Controls.Resource.Color.design_textinput_error_color_dark = global::CoreInvestmentApp.Droid.Resource.Color.design_textinput_error_color_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.design_textinput_error_color_light = global::CoreInvestmentApp.Droid.Resource.Color.design_textinput_error_color_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.dim_foreground_disabled_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.dim_foreground_disabled_material_light = global::CoreInvestmentApp.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.dim_foreground_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.dim_foreground_material_light = global::CoreInvestmentApp.Droid.Resource.Color.dim_foreground_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.foreground_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.foreground_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.foreground_material_light = global::CoreInvestmentApp.Droid.Resource.Color.foreground_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.highlight = global::CoreInvestmentApp.Droid.Resource.Color.highlight;
+			global::Messier16.Forms.Android.Controls.Resource.Color.highlighted_text_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.highlighted_text_material_light = global::CoreInvestmentApp.Droid.Resource.Color.highlighted_text_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.light = global::CoreInvestmentApp.Droid.Resource.Color.light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.material_blue_grey_800 = global::CoreInvestmentApp.Droid.Resource.Color.material_blue_grey_800;
+			global::Messier16.Forms.Android.Controls.Resource.Color.material_blue_grey_900 = global::CoreInvestmentApp.Droid.Resource.Color.material_blue_grey_900;
+			global::Messier16.Forms.Android.Controls.Resource.Color.material_blue_grey_950 = global::CoreInvestmentApp.Droid.Resource.Color.material_blue_grey_950;
+			global::Messier16.Forms.Android.Controls.Resource.Color.material_deep_teal_200 = global::CoreInvestmentApp.Droid.Resource.Color.material_deep_teal_200;
+			global::Messier16.Forms.Android.Controls.Resource.Color.material_deep_teal_500 = global::CoreInvestmentApp.Droid.Resource.Color.material_deep_teal_500;
+			global::Messier16.Forms.Android.Controls.Resource.Color.material_grey_100 = global::CoreInvestmentApp.Droid.Resource.Color.material_grey_100;
+			global::Messier16.Forms.Android.Controls.Resource.Color.material_grey_300 = global::CoreInvestmentApp.Droid.Resource.Color.material_grey_300;
+			global::Messier16.Forms.Android.Controls.Resource.Color.material_grey_50 = global::CoreInvestmentApp.Droid.Resource.Color.material_grey_50;
+			global::Messier16.Forms.Android.Controls.Resource.Color.material_grey_600 = global::CoreInvestmentApp.Droid.Resource.Color.material_grey_600;
+			global::Messier16.Forms.Android.Controls.Resource.Color.material_grey_800 = global::CoreInvestmentApp.Droid.Resource.Color.material_grey_800;
+			global::Messier16.Forms.Android.Controls.Resource.Color.material_grey_850 = global::CoreInvestmentApp.Droid.Resource.Color.material_grey_850;
+			global::Messier16.Forms.Android.Controls.Resource.Color.material_grey_900 = global::CoreInvestmentApp.Droid.Resource.Color.material_grey_900;
+			global::Messier16.Forms.Android.Controls.Resource.Color.normal = global::CoreInvestmentApp.Droid.Resource.Color.normal;
+			global::Messier16.Forms.Android.Controls.Resource.Color.primary_dark_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.primary_dark_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.primary_dark_material_light = global::CoreInvestmentApp.Droid.Resource.Color.primary_dark_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.primary_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.primary_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.primary_material_light = global::CoreInvestmentApp.Droid.Resource.Color.primary_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.primary_text_default_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.primary_text_default_material_light = global::CoreInvestmentApp.Droid.Resource.Color.primary_text_default_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.primary_text_disabled_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.primary_text_disabled_material_light = global::CoreInvestmentApp.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.ripple_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.ripple_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.ripple_material_light = global::CoreInvestmentApp.Droid.Resource.Color.ripple_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.secondary_text_default_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.secondary_text_default_material_light = global::CoreInvestmentApp.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.secondary_text_disabled_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.secondary_text_disabled_material_light = global::CoreInvestmentApp.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.segmented_control_text = global::CoreInvestmentApp.Droid.Resource.Color.segmented_control_text;
+			global::Messier16.Forms.Android.Controls.Resource.Color.selected = global::CoreInvestmentApp.Droid.Resource.Color.selected;
+			global::Messier16.Forms.Android.Controls.Resource.Color.switch_thumb_disabled_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.switch_thumb_disabled_material_light = global::CoreInvestmentApp.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.switch_thumb_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.switch_thumb_material_light = global::CoreInvestmentApp.Droid.Resource.Color.switch_thumb_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Color.switch_thumb_normal_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Color.switch_thumb_normal_material_light = global::CoreInvestmentApp.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_action_bar_content_inset_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_action_bar_default_height_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_action_bar_default_padding_end_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_action_bar_default_padding_start_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_action_bar_progress_bar_size = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_progress_bar_size;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_action_bar_stacked_max_height = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_action_button_min_height_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_action_button_min_width_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_action_button_min_width_overflow_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_alert_dialog_button_bar_height = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_button_inset_horizontal_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_button_inset_vertical_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_button_padding_horizontal_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_button_padding_vertical_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_config_prefDialogWidth = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_control_corner_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_control_inset_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_control_padding_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_dialog_fixed_height_major = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_dialog_fixed_height_minor = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_dialog_fixed_width_major = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_dialog_fixed_width_minor = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_dialog_min_width_major = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_dialog_min_width_minor = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_dialog_padding_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_dialog_padding_top_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_disabled_alpha_material_dark = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_disabled_alpha_material_light = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_dropdownitem_icon_width = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_dropdownitem_text_padding_left = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_dropdownitem_text_padding_right = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_edit_text_inset_bottom_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_edit_text_inset_top_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_floating_window_z = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_list_item_padding_horizontal_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_panel_menu_list_width = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_search_view_preferred_width = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_seekbar_track_background_height_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_seekbar_track_progress_height_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_select_dialog_padding_start_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_switch_padding = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_switch_padding;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_body_1_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_body_2_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_button_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_caption_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_display_1_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_display_2_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_display_3_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_display_4_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_headline_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_large_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_medium_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_menu_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_small_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_subhead_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_title_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.abc_text_size_title_material_toolbar = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.cardview_compat_inset_shadow = global::CoreInvestmentApp.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.cardview_default_elevation = global::CoreInvestmentApp.Droid.Resource.Dimension.cardview_default_elevation;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.cardview_default_radius = global::CoreInvestmentApp.Droid.Resource.Dimension.cardview_default_radius;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_appbar_elevation = global::CoreInvestmentApp.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_bottom_sheet_modal_elevation = global::CoreInvestmentApp.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_fab_border_width = global::CoreInvestmentApp.Droid.Resource.Dimension.design_fab_border_width;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_fab_elevation = global::CoreInvestmentApp.Droid.Resource.Dimension.design_fab_elevation;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_fab_image_size = global::CoreInvestmentApp.Droid.Resource.Dimension.design_fab_image_size;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_fab_size_mini = global::CoreInvestmentApp.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_fab_size_normal = global::CoreInvestmentApp.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_fab_translation_z_pressed = global::CoreInvestmentApp.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_navigation_elevation = global::CoreInvestmentApp.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_navigation_icon_padding = global::CoreInvestmentApp.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_navigation_icon_size = global::CoreInvestmentApp.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_navigation_max_width = global::CoreInvestmentApp.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_navigation_padding_bottom = global::CoreInvestmentApp.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_navigation_separator_vertical_padding = global::CoreInvestmentApp.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_snackbar_action_inline_max_width = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_snackbar_background_corner_radius = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_snackbar_elevation = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_snackbar_max_width = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_snackbar_min_width = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_snackbar_padding_horizontal = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_snackbar_padding_vertical = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_snackbar_text_size = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_tab_max_width = global::CoreInvestmentApp.Droid.Resource.Dimension.design_tab_max_width;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_tab_scrollable_min_width = global::CoreInvestmentApp.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_tab_text_size = global::CoreInvestmentApp.Droid.Resource.Dimension.design_tab_text_size;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.design_tab_text_size_2line = global::CoreInvestmentApp.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.disabled_alpha_material_dark = global::CoreInvestmentApp.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.disabled_alpha_material_light = global::CoreInvestmentApp.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.highlight_alpha_material_colored = global::CoreInvestmentApp.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.highlight_alpha_material_dark = global::CoreInvestmentApp.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.highlight_alpha_material_light = global::CoreInvestmentApp.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::CoreInvestmentApp.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::CoreInvestmentApp.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::CoreInvestmentApp.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.mr_controller_volume_group_list_item_height = global::CoreInvestmentApp.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::CoreInvestmentApp.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.mr_controller_volume_group_list_max_height = global::CoreInvestmentApp.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::CoreInvestmentApp.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.mr_dialog_fixed_width_major = global::CoreInvestmentApp.Droid.Resource.Dimension.mr_dialog_fixed_width_major;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.mr_dialog_fixed_width_minor = global::CoreInvestmentApp.Droid.Resource.Dimension.mr_dialog_fixed_width_minor;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.notification_large_icon_height = global::CoreInvestmentApp.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.notification_large_icon_width = global::CoreInvestmentApp.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.notification_subtext_size = global::CoreInvestmentApp.Droid.Resource.Dimension.notification_subtext_size;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.segmented_control_default_height = global::CoreInvestmentApp.Droid.Resource.Dimension.segmented_control_default_height;
+			global::Messier16.Forms.Android.Controls.Resource.Dimension.segmented_control_text_size = global::CoreInvestmentApp.Droid.Resource.Dimension.segmented_control_text_size;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_action_bar_item_background_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_btn_borderless_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_btn_check_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_btn_colored_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_btn_default_mtrl_shape = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_btn_radio_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_cab_background_internal_bg = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_cab_background_top_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_control_background_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_control_background_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_edit_text_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_ic_star_black_16dp = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_ic_star_black_36dp = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_ic_star_half_black_16dp = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_ic_star_half_black_36dp = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_item_background_holo_dark = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_item_background_holo_light = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_list_divider_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_list_focused_holo = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_list_longpressed_holo = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_list_pressed_holo_dark = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_list_pressed_holo_light = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_list_selector_disabled_holo_light = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_list_selector_holo_dark = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_list_selector_holo_light = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_popup_background_mtrl_mult = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_ratingbar_indicator_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_ratingbar_small_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_seekbar_thumb_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_seekbar_track_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_spinner_textfield_background_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_switch_thumb_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_switch_track_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_tab_indicator_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_text_cursor_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.abc_textfield_search_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.design_fab_background = global::CoreInvestmentApp.Droid.Resource.Drawable.design_fab_background;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.design_snackbar_background = global::CoreInvestmentApp.Droid.Resource.Drawable.design_snackbar_background;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.ic_audiotrack_light = global::CoreInvestmentApp.Droid.Resource.Drawable.ic_audiotrack_light;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.mr_dialog_material_background_dark = global::CoreInvestmentApp.Droid.Resource.Drawable.mr_dialog_material_background_dark;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.mr_dialog_material_background_light = global::CoreInvestmentApp.Droid.Resource.Drawable.mr_dialog_material_background_light;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.notification_template_icon_bg = global::CoreInvestmentApp.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.segmented_control_background = global::CoreInvestmentApp.Droid.Resource.Drawable.segmented_control_background;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.segmented_control_first_background = global::CoreInvestmentApp.Droid.Resource.Drawable.segmented_control_first_background;
+			global::Messier16.Forms.Android.Controls.Resource.Drawable.segmented_control_last_background = global::CoreInvestmentApp.Droid.Resource.Drawable.segmented_control_last_background;
+			global::Messier16.Forms.Android.Controls.Resource.Id.action0 = global::CoreInvestmentApp.Droid.Resource.Id.action0;
+			global::Messier16.Forms.Android.Controls.Resource.Id.action_bar = global::CoreInvestmentApp.Droid.Resource.Id.action_bar;
+			global::Messier16.Forms.Android.Controls.Resource.Id.action_bar_activity_content = global::CoreInvestmentApp.Droid.Resource.Id.action_bar_activity_content;
+			global::Messier16.Forms.Android.Controls.Resource.Id.action_bar_container = global::CoreInvestmentApp.Droid.Resource.Id.action_bar_container;
+			global::Messier16.Forms.Android.Controls.Resource.Id.action_bar_root = global::CoreInvestmentApp.Droid.Resource.Id.action_bar_root;
+			global::Messier16.Forms.Android.Controls.Resource.Id.action_bar_spinner = global::CoreInvestmentApp.Droid.Resource.Id.action_bar_spinner;
+			global::Messier16.Forms.Android.Controls.Resource.Id.action_bar_subtitle = global::CoreInvestmentApp.Droid.Resource.Id.action_bar_subtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Id.action_bar_title = global::CoreInvestmentApp.Droid.Resource.Id.action_bar_title;
+			global::Messier16.Forms.Android.Controls.Resource.Id.action_context_bar = global::CoreInvestmentApp.Droid.Resource.Id.action_context_bar;
+			global::Messier16.Forms.Android.Controls.Resource.Id.action_divider = global::CoreInvestmentApp.Droid.Resource.Id.action_divider;
+			global::Messier16.Forms.Android.Controls.Resource.Id.action_menu_divider = global::CoreInvestmentApp.Droid.Resource.Id.action_menu_divider;
+			global::Messier16.Forms.Android.Controls.Resource.Id.action_menu_presenter = global::CoreInvestmentApp.Droid.Resource.Id.action_menu_presenter;
+			global::Messier16.Forms.Android.Controls.Resource.Id.action_mode_bar = global::CoreInvestmentApp.Droid.Resource.Id.action_mode_bar;
+			global::Messier16.Forms.Android.Controls.Resource.Id.action_mode_bar_stub = global::CoreInvestmentApp.Droid.Resource.Id.action_mode_bar_stub;
+			global::Messier16.Forms.Android.Controls.Resource.Id.action_mode_close_button = global::CoreInvestmentApp.Droid.Resource.Id.action_mode_close_button;
+			global::Messier16.Forms.Android.Controls.Resource.Id.activity_chooser_view_content = global::CoreInvestmentApp.Droid.Resource.Id.activity_chooser_view_content;
+			global::Messier16.Forms.Android.Controls.Resource.Id.alertTitle = global::CoreInvestmentApp.Droid.Resource.Id.alertTitle;
+			global::Messier16.Forms.Android.Controls.Resource.Id.always = global::CoreInvestmentApp.Droid.Resource.Id.always;
+			global::Messier16.Forms.Android.Controls.Resource.Id.beginning = global::CoreInvestmentApp.Droid.Resource.Id.beginning;
+			global::Messier16.Forms.Android.Controls.Resource.Id.bottom = global::CoreInvestmentApp.Droid.Resource.Id.bottom;
+			global::Messier16.Forms.Android.Controls.Resource.Id.buttonPanel = global::CoreInvestmentApp.Droid.Resource.Id.buttonPanel;
+			global::Messier16.Forms.Android.Controls.Resource.Id.cancel_action = global::CoreInvestmentApp.Droid.Resource.Id.cancel_action;
+			global::Messier16.Forms.Android.Controls.Resource.Id.center = global::CoreInvestmentApp.Droid.Resource.Id.center;
+			global::Messier16.Forms.Android.Controls.Resource.Id.center_horizontal = global::CoreInvestmentApp.Droid.Resource.Id.center_horizontal;
+			global::Messier16.Forms.Android.Controls.Resource.Id.center_vertical = global::CoreInvestmentApp.Droid.Resource.Id.center_vertical;
+			global::Messier16.Forms.Android.Controls.Resource.Id.checkbox = global::CoreInvestmentApp.Droid.Resource.Id.checkbox;
+			global::Messier16.Forms.Android.Controls.Resource.Id.chronometer = global::CoreInvestmentApp.Droid.Resource.Id.chronometer;
+			global::Messier16.Forms.Android.Controls.Resource.Id.clip_horizontal = global::CoreInvestmentApp.Droid.Resource.Id.clip_horizontal;
+			global::Messier16.Forms.Android.Controls.Resource.Id.clip_vertical = global::CoreInvestmentApp.Droid.Resource.Id.clip_vertical;
+			global::Messier16.Forms.Android.Controls.Resource.Id.collapseActionView = global::CoreInvestmentApp.Droid.Resource.Id.collapseActionView;
+			global::Messier16.Forms.Android.Controls.Resource.Id.contentPanel = global::CoreInvestmentApp.Droid.Resource.Id.contentPanel;
+			global::Messier16.Forms.Android.Controls.Resource.Id.custom = global::CoreInvestmentApp.Droid.Resource.Id.custom;
+			global::Messier16.Forms.Android.Controls.Resource.Id.customPanel = global::CoreInvestmentApp.Droid.Resource.Id.customPanel;
+			global::Messier16.Forms.Android.Controls.Resource.Id.decor_content_parent = global::CoreInvestmentApp.Droid.Resource.Id.decor_content_parent;
+			global::Messier16.Forms.Android.Controls.Resource.Id.default_activity_button = global::CoreInvestmentApp.Droid.Resource.Id.default_activity_button;
+			global::Messier16.Forms.Android.Controls.Resource.Id.design_bottom_sheet = global::CoreInvestmentApp.Droid.Resource.Id.design_bottom_sheet;
+			global::Messier16.Forms.Android.Controls.Resource.Id.design_menu_item_action_area = global::CoreInvestmentApp.Droid.Resource.Id.design_menu_item_action_area;
+			global::Messier16.Forms.Android.Controls.Resource.Id.design_menu_item_action_area_stub = global::CoreInvestmentApp.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::Messier16.Forms.Android.Controls.Resource.Id.design_menu_item_text = global::CoreInvestmentApp.Droid.Resource.Id.design_menu_item_text;
+			global::Messier16.Forms.Android.Controls.Resource.Id.design_navigation_view = global::CoreInvestmentApp.Droid.Resource.Id.design_navigation_view;
+			global::Messier16.Forms.Android.Controls.Resource.Id.disableHome = global::CoreInvestmentApp.Droid.Resource.Id.disableHome;
+			global::Messier16.Forms.Android.Controls.Resource.Id.edit_query = global::CoreInvestmentApp.Droid.Resource.Id.edit_query;
+			global::Messier16.Forms.Android.Controls.Resource.Id.end = global::CoreInvestmentApp.Droid.Resource.Id.end;
+			global::Messier16.Forms.Android.Controls.Resource.Id.end_padder = global::CoreInvestmentApp.Droid.Resource.Id.end_padder;
+			global::Messier16.Forms.Android.Controls.Resource.Id.enterAlways = global::CoreInvestmentApp.Droid.Resource.Id.enterAlways;
+			global::Messier16.Forms.Android.Controls.Resource.Id.enterAlwaysCollapsed = global::CoreInvestmentApp.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::Messier16.Forms.Android.Controls.Resource.Id.exitUntilCollapsed = global::CoreInvestmentApp.Droid.Resource.Id.exitUntilCollapsed;
+			global::Messier16.Forms.Android.Controls.Resource.Id.expand_activities_button = global::CoreInvestmentApp.Droid.Resource.Id.expand_activities_button;
+			global::Messier16.Forms.Android.Controls.Resource.Id.expanded_menu = global::CoreInvestmentApp.Droid.Resource.Id.expanded_menu;
+			global::Messier16.Forms.Android.Controls.Resource.Id.fill = global::CoreInvestmentApp.Droid.Resource.Id.fill;
+			global::Messier16.Forms.Android.Controls.Resource.Id.fill_horizontal = global::CoreInvestmentApp.Droid.Resource.Id.fill_horizontal;
+			global::Messier16.Forms.Android.Controls.Resource.Id.fill_vertical = global::CoreInvestmentApp.Droid.Resource.Id.fill_vertical;
+			global::Messier16.Forms.Android.Controls.Resource.Id.@fixed = global::CoreInvestmentApp.Droid.Resource.Id.@fixed;
+			global::Messier16.Forms.Android.Controls.Resource.Id.home = global::CoreInvestmentApp.Droid.Resource.Id.home;
+			global::Messier16.Forms.Android.Controls.Resource.Id.homeAsUp = global::CoreInvestmentApp.Droid.Resource.Id.homeAsUp;
+			global::Messier16.Forms.Android.Controls.Resource.Id.icon = global::CoreInvestmentApp.Droid.Resource.Id.icon;
+			global::Messier16.Forms.Android.Controls.Resource.Id.ifRoom = global::CoreInvestmentApp.Droid.Resource.Id.ifRoom;
+			global::Messier16.Forms.Android.Controls.Resource.Id.image = global::CoreInvestmentApp.Droid.Resource.Id.image;
+			global::Messier16.Forms.Android.Controls.Resource.Id.info = global::CoreInvestmentApp.Droid.Resource.Id.info;
+			global::Messier16.Forms.Android.Controls.Resource.Id.item_touch_helper_previous_elevation = global::CoreInvestmentApp.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Messier16.Forms.Android.Controls.Resource.Id.left = global::CoreInvestmentApp.Droid.Resource.Id.left;
+			global::Messier16.Forms.Android.Controls.Resource.Id.line1 = global::CoreInvestmentApp.Droid.Resource.Id.line1;
+			global::Messier16.Forms.Android.Controls.Resource.Id.line3 = global::CoreInvestmentApp.Droid.Resource.Id.line3;
+			global::Messier16.Forms.Android.Controls.Resource.Id.listMode = global::CoreInvestmentApp.Droid.Resource.Id.listMode;
+			global::Messier16.Forms.Android.Controls.Resource.Id.list_item = global::CoreInvestmentApp.Droid.Resource.Id.list_item;
+			global::Messier16.Forms.Android.Controls.Resource.Id.media_actions = global::CoreInvestmentApp.Droid.Resource.Id.media_actions;
+			global::Messier16.Forms.Android.Controls.Resource.Id.middle = global::CoreInvestmentApp.Droid.Resource.Id.middle;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mini = global::CoreInvestmentApp.Droid.Resource.Id.mini;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_art = global::CoreInvestmentApp.Droid.Resource.Id.mr_art;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_chooser_list = global::CoreInvestmentApp.Droid.Resource.Id.mr_chooser_list;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_chooser_route_desc = global::CoreInvestmentApp.Droid.Resource.Id.mr_chooser_route_desc;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_chooser_route_icon = global::CoreInvestmentApp.Droid.Resource.Id.mr_chooser_route_icon;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_chooser_route_name = global::CoreInvestmentApp.Droid.Resource.Id.mr_chooser_route_name;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_close = global::CoreInvestmentApp.Droid.Resource.Id.mr_close;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_control_divider = global::CoreInvestmentApp.Droid.Resource.Id.mr_control_divider;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_control_subtitle = global::CoreInvestmentApp.Droid.Resource.Id.mr_control_subtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_control_title = global::CoreInvestmentApp.Droid.Resource.Id.mr_control_title;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_control_title_container = global::CoreInvestmentApp.Droid.Resource.Id.mr_control_title_container;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_custom_control = global::CoreInvestmentApp.Droid.Resource.Id.mr_custom_control;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_default_control = global::CoreInvestmentApp.Droid.Resource.Id.mr_default_control;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_dialog_area = global::CoreInvestmentApp.Droid.Resource.Id.mr_dialog_area;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_expandable_area = global::CoreInvestmentApp.Droid.Resource.Id.mr_expandable_area;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_group_expand_collapse = global::CoreInvestmentApp.Droid.Resource.Id.mr_group_expand_collapse;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_media_main_control = global::CoreInvestmentApp.Droid.Resource.Id.mr_media_main_control;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_name = global::CoreInvestmentApp.Droid.Resource.Id.mr_name;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_playback_control = global::CoreInvestmentApp.Droid.Resource.Id.mr_playback_control;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_title_bar = global::CoreInvestmentApp.Droid.Resource.Id.mr_title_bar;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_volume_control = global::CoreInvestmentApp.Droid.Resource.Id.mr_volume_control;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_volume_group_list = global::CoreInvestmentApp.Droid.Resource.Id.mr_volume_group_list;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_volume_item_icon = global::CoreInvestmentApp.Droid.Resource.Id.mr_volume_item_icon;
+			global::Messier16.Forms.Android.Controls.Resource.Id.mr_volume_slider = global::CoreInvestmentApp.Droid.Resource.Id.mr_volume_slider;
+			global::Messier16.Forms.Android.Controls.Resource.Id.multiply = global::CoreInvestmentApp.Droid.Resource.Id.multiply;
+			global::Messier16.Forms.Android.Controls.Resource.Id.navigation_header_container = global::CoreInvestmentApp.Droid.Resource.Id.navigation_header_container;
+			global::Messier16.Forms.Android.Controls.Resource.Id.never = global::CoreInvestmentApp.Droid.Resource.Id.never;
+			global::Messier16.Forms.Android.Controls.Resource.Id.none = global::CoreInvestmentApp.Droid.Resource.Id.none;
+			global::Messier16.Forms.Android.Controls.Resource.Id.normal = global::CoreInvestmentApp.Droid.Resource.Id.normal;
+			global::Messier16.Forms.Android.Controls.Resource.Id.parallax = global::CoreInvestmentApp.Droid.Resource.Id.parallax;
+			global::Messier16.Forms.Android.Controls.Resource.Id.parentPanel = global::CoreInvestmentApp.Droid.Resource.Id.parentPanel;
+			global::Messier16.Forms.Android.Controls.Resource.Id.pin = global::CoreInvestmentApp.Droid.Resource.Id.pin;
+			global::Messier16.Forms.Android.Controls.Resource.Id.progress_circular = global::CoreInvestmentApp.Droid.Resource.Id.progress_circular;
+			global::Messier16.Forms.Android.Controls.Resource.Id.progress_horizontal = global::CoreInvestmentApp.Droid.Resource.Id.progress_horizontal;
+			global::Messier16.Forms.Android.Controls.Resource.Id.radio = global::CoreInvestmentApp.Droid.Resource.Id.radio;
+			global::Messier16.Forms.Android.Controls.Resource.Id.right = global::CoreInvestmentApp.Droid.Resource.Id.right;
+			global::Messier16.Forms.Android.Controls.Resource.Id.screen = global::CoreInvestmentApp.Droid.Resource.Id.screen;
+			global::Messier16.Forms.Android.Controls.Resource.Id.scroll = global::CoreInvestmentApp.Droid.Resource.Id.scroll;
+			global::Messier16.Forms.Android.Controls.Resource.Id.scrollIndicatorDown = global::CoreInvestmentApp.Droid.Resource.Id.scrollIndicatorDown;
+			global::Messier16.Forms.Android.Controls.Resource.Id.scrollIndicatorUp = global::CoreInvestmentApp.Droid.Resource.Id.scrollIndicatorUp;
+			global::Messier16.Forms.Android.Controls.Resource.Id.scrollView = global::CoreInvestmentApp.Droid.Resource.Id.scrollView;
+			global::Messier16.Forms.Android.Controls.Resource.Id.scrollable = global::CoreInvestmentApp.Droid.Resource.Id.scrollable;
+			global::Messier16.Forms.Android.Controls.Resource.Id.search_badge = global::CoreInvestmentApp.Droid.Resource.Id.search_badge;
+			global::Messier16.Forms.Android.Controls.Resource.Id.search_bar = global::CoreInvestmentApp.Droid.Resource.Id.search_bar;
+			global::Messier16.Forms.Android.Controls.Resource.Id.search_button = global::CoreInvestmentApp.Droid.Resource.Id.search_button;
+			global::Messier16.Forms.Android.Controls.Resource.Id.search_close_btn = global::CoreInvestmentApp.Droid.Resource.Id.search_close_btn;
+			global::Messier16.Forms.Android.Controls.Resource.Id.search_edit_frame = global::CoreInvestmentApp.Droid.Resource.Id.search_edit_frame;
+			global::Messier16.Forms.Android.Controls.Resource.Id.search_go_btn = global::CoreInvestmentApp.Droid.Resource.Id.search_go_btn;
+			global::Messier16.Forms.Android.Controls.Resource.Id.search_mag_icon = global::CoreInvestmentApp.Droid.Resource.Id.search_mag_icon;
+			global::Messier16.Forms.Android.Controls.Resource.Id.search_plate = global::CoreInvestmentApp.Droid.Resource.Id.search_plate;
+			global::Messier16.Forms.Android.Controls.Resource.Id.search_src_text = global::CoreInvestmentApp.Droid.Resource.Id.search_src_text;
+			global::Messier16.Forms.Android.Controls.Resource.Id.search_voice_btn = global::CoreInvestmentApp.Droid.Resource.Id.search_voice_btn;
+			global::Messier16.Forms.Android.Controls.Resource.Id.select_dialog_listview = global::CoreInvestmentApp.Droid.Resource.Id.select_dialog_listview;
+			global::Messier16.Forms.Android.Controls.Resource.Id.shortcut = global::CoreInvestmentApp.Droid.Resource.Id.shortcut;
+			global::Messier16.Forms.Android.Controls.Resource.Id.showCustom = global::CoreInvestmentApp.Droid.Resource.Id.showCustom;
+			global::Messier16.Forms.Android.Controls.Resource.Id.showHome = global::CoreInvestmentApp.Droid.Resource.Id.showHome;
+			global::Messier16.Forms.Android.Controls.Resource.Id.showTitle = global::CoreInvestmentApp.Droid.Resource.Id.showTitle;
+			global::Messier16.Forms.Android.Controls.Resource.Id.snackbar_action = global::CoreInvestmentApp.Droid.Resource.Id.snackbar_action;
+			global::Messier16.Forms.Android.Controls.Resource.Id.snackbar_text = global::CoreInvestmentApp.Droid.Resource.Id.snackbar_text;
+			global::Messier16.Forms.Android.Controls.Resource.Id.snap = global::CoreInvestmentApp.Droid.Resource.Id.snap;
+			global::Messier16.Forms.Android.Controls.Resource.Id.spacer = global::CoreInvestmentApp.Droid.Resource.Id.spacer;
+			global::Messier16.Forms.Android.Controls.Resource.Id.split_action_bar = global::CoreInvestmentApp.Droid.Resource.Id.split_action_bar;
+			global::Messier16.Forms.Android.Controls.Resource.Id.src_atop = global::CoreInvestmentApp.Droid.Resource.Id.src_atop;
+			global::Messier16.Forms.Android.Controls.Resource.Id.src_in = global::CoreInvestmentApp.Droid.Resource.Id.src_in;
+			global::Messier16.Forms.Android.Controls.Resource.Id.src_over = global::CoreInvestmentApp.Droid.Resource.Id.src_over;
+			global::Messier16.Forms.Android.Controls.Resource.Id.start = global::CoreInvestmentApp.Droid.Resource.Id.start;
+			global::Messier16.Forms.Android.Controls.Resource.Id.status_bar_latest_event_content = global::CoreInvestmentApp.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Messier16.Forms.Android.Controls.Resource.Id.submit_area = global::CoreInvestmentApp.Droid.Resource.Id.submit_area;
+			global::Messier16.Forms.Android.Controls.Resource.Id.tabMode = global::CoreInvestmentApp.Droid.Resource.Id.tabMode;
+			global::Messier16.Forms.Android.Controls.Resource.Id.text = global::CoreInvestmentApp.Droid.Resource.Id.text;
+			global::Messier16.Forms.Android.Controls.Resource.Id.text2 = global::CoreInvestmentApp.Droid.Resource.Id.text2;
+			global::Messier16.Forms.Android.Controls.Resource.Id.textSpacerNoButtons = global::CoreInvestmentApp.Droid.Resource.Id.textSpacerNoButtons;
+			global::Messier16.Forms.Android.Controls.Resource.Id.time = global::CoreInvestmentApp.Droid.Resource.Id.time;
+			global::Messier16.Forms.Android.Controls.Resource.Id.title = global::CoreInvestmentApp.Droid.Resource.Id.title;
+			global::Messier16.Forms.Android.Controls.Resource.Id.title_template = global::CoreInvestmentApp.Droid.Resource.Id.title_template;
+			global::Messier16.Forms.Android.Controls.Resource.Id.top = global::CoreInvestmentApp.Droid.Resource.Id.top;
+			global::Messier16.Forms.Android.Controls.Resource.Id.topPanel = global::CoreInvestmentApp.Droid.Resource.Id.topPanel;
+			global::Messier16.Forms.Android.Controls.Resource.Id.touch_outside = global::CoreInvestmentApp.Droid.Resource.Id.touch_outside;
+			global::Messier16.Forms.Android.Controls.Resource.Id.up = global::CoreInvestmentApp.Droid.Resource.Id.up;
+			global::Messier16.Forms.Android.Controls.Resource.Id.useLogo = global::CoreInvestmentApp.Droid.Resource.Id.useLogo;
+			global::Messier16.Forms.Android.Controls.Resource.Id.view_offset_helper = global::CoreInvestmentApp.Droid.Resource.Id.view_offset_helper;
+			global::Messier16.Forms.Android.Controls.Resource.Id.volume_item_container = global::CoreInvestmentApp.Droid.Resource.Id.volume_item_container;
+			global::Messier16.Forms.Android.Controls.Resource.Id.withText = global::CoreInvestmentApp.Droid.Resource.Id.withText;
+			global::Messier16.Forms.Android.Controls.Resource.Id.wrap_content = global::CoreInvestmentApp.Droid.Resource.Id.wrap_content;
+			global::Messier16.Forms.Android.Controls.Resource.Integer.abc_config_activityDefaultDur = global::CoreInvestmentApp.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Messier16.Forms.Android.Controls.Resource.Integer.abc_config_activityShortDur = global::CoreInvestmentApp.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Messier16.Forms.Android.Controls.Resource.Integer.bottom_sheet_slide_duration = global::CoreInvestmentApp.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::Messier16.Forms.Android.Controls.Resource.Integer.cancel_button_image_alpha = global::CoreInvestmentApp.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Messier16.Forms.Android.Controls.Resource.Integer.design_snackbar_text_max_lines = global::CoreInvestmentApp.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Messier16.Forms.Android.Controls.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::CoreInvestmentApp.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
+			global::Messier16.Forms.Android.Controls.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::CoreInvestmentApp.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
+			global::Messier16.Forms.Android.Controls.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::CoreInvestmentApp.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
+			global::Messier16.Forms.Android.Controls.Resource.Integer.status_bar_notification_info_maxnum = global::CoreInvestmentApp.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Messier16.Forms.Android.Controls.Resource.Interpolator.mr_fast_out_slow_in = global::CoreInvestmentApp.Droid.Resource.Interpolator.mr_fast_out_slow_in;
+			global::Messier16.Forms.Android.Controls.Resource.Interpolator.mr_linear_out_slow_in = global::CoreInvestmentApp.Droid.Resource.Interpolator.mr_linear_out_slow_in;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_action_bar_title_item = global::CoreInvestmentApp.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_action_bar_up_container = global::CoreInvestmentApp.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_action_bar_view_list_nav_layout = global::CoreInvestmentApp.Droid.Resource.Layout.abc_action_bar_view_list_nav_layout;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_action_menu_item_layout = global::CoreInvestmentApp.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_action_menu_layout = global::CoreInvestmentApp.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_action_mode_bar = global::CoreInvestmentApp.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_action_mode_close_item_material = global::CoreInvestmentApp.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_activity_chooser_view = global::CoreInvestmentApp.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_activity_chooser_view_list_item = global::CoreInvestmentApp.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_alert_dialog_button_bar_material = global::CoreInvestmentApp.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_alert_dialog_material = global::CoreInvestmentApp.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_dialog_title_material = global::CoreInvestmentApp.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_expanded_menu_layout = global::CoreInvestmentApp.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_list_menu_item_checkbox = global::CoreInvestmentApp.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_list_menu_item_icon = global::CoreInvestmentApp.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_list_menu_item_layout = global::CoreInvestmentApp.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_list_menu_item_radio = global::CoreInvestmentApp.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_popup_menu_item_layout = global::CoreInvestmentApp.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_screen_content_include = global::CoreInvestmentApp.Droid.Resource.Layout.abc_screen_content_include;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_screen_simple = global::CoreInvestmentApp.Droid.Resource.Layout.abc_screen_simple;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_screen_simple_overlay_action_mode = global::CoreInvestmentApp.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_screen_toolbar = global::CoreInvestmentApp.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_search_dropdown_item_icons_2line = global::CoreInvestmentApp.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_search_view = global::CoreInvestmentApp.Droid.Resource.Layout.abc_search_view;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.abc_select_dialog_material = global::CoreInvestmentApp.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.design_bottom_sheet_dialog = global::CoreInvestmentApp.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.design_layout_snackbar = global::CoreInvestmentApp.Droid.Resource.Layout.design_layout_snackbar;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.design_layout_snackbar_include = global::CoreInvestmentApp.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.design_layout_tab_icon = global::CoreInvestmentApp.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.design_layout_tab_text = global::CoreInvestmentApp.Droid.Resource.Layout.design_layout_tab_text;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.design_menu_item_action_area = global::CoreInvestmentApp.Droid.Resource.Layout.design_menu_item_action_area;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.design_navigation_item = global::CoreInvestmentApp.Droid.Resource.Layout.design_navigation_item;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.design_navigation_item_header = global::CoreInvestmentApp.Droid.Resource.Layout.design_navigation_item_header;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.design_navigation_item_separator = global::CoreInvestmentApp.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.design_navigation_item_subheader = global::CoreInvestmentApp.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.design_navigation_menu = global::CoreInvestmentApp.Droid.Resource.Layout.design_navigation_menu;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.design_navigation_menu_item = global::CoreInvestmentApp.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.mr_chooser_dialog = global::CoreInvestmentApp.Droid.Resource.Layout.mr_chooser_dialog;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.mr_chooser_list_item = global::CoreInvestmentApp.Droid.Resource.Layout.mr_chooser_list_item;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.mr_controller_material_dialog_b = global::CoreInvestmentApp.Droid.Resource.Layout.mr_controller_material_dialog_b;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.mr_controller_volume_item = global::CoreInvestmentApp.Droid.Resource.Layout.mr_controller_volume_item;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.mr_playback_control = global::CoreInvestmentApp.Droid.Resource.Layout.mr_playback_control;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.mr_volume_control = global::CoreInvestmentApp.Droid.Resource.Layout.mr_volume_control;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.notification_media_action = global::CoreInvestmentApp.Droid.Resource.Layout.notification_media_action;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.notification_media_cancel_action = global::CoreInvestmentApp.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.notification_template_big_media = global::CoreInvestmentApp.Droid.Resource.Layout.notification_template_big_media;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.notification_template_big_media_narrow = global::CoreInvestmentApp.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.notification_template_media = global::CoreInvestmentApp.Droid.Resource.Layout.notification_template_media;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.notification_template_part_chronometer = global::CoreInvestmentApp.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.notification_template_part_time = global::CoreInvestmentApp.Droid.Resource.Layout.notification_template_part_time;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.SegmentedControl = global::CoreInvestmentApp.Droid.Resource.Layout.SegmentedControl;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.select_dialog_item_material = global::CoreInvestmentApp.Droid.Resource.Layout.select_dialog_item_material;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.select_dialog_multichoice_material = global::CoreInvestmentApp.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.select_dialog_singlechoice_material = global::CoreInvestmentApp.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Messier16.Forms.Android.Controls.Resource.Layout.support_simple_spinner_dropdown_item = global::CoreInvestmentApp.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Messier16.Forms.Android.Controls.Resource.String.ApplicationName = global::CoreInvestmentApp.Droid.Resource.String.ApplicationName;
+			global::Messier16.Forms.Android.Controls.Resource.String.Hello = global::CoreInvestmentApp.Droid.Resource.String.Hello;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_action_bar_home_description = global::CoreInvestmentApp.Droid.Resource.String.abc_action_bar_home_description;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_action_bar_home_description_format = global::CoreInvestmentApp.Droid.Resource.String.abc_action_bar_home_description_format;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_action_bar_home_subtitle_description_format = global::CoreInvestmentApp.Droid.Resource.String.abc_action_bar_home_subtitle_description_format;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_action_bar_up_description = global::CoreInvestmentApp.Droid.Resource.String.abc_action_bar_up_description;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_action_menu_overflow_description = global::CoreInvestmentApp.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_action_mode_done = global::CoreInvestmentApp.Droid.Resource.String.abc_action_mode_done;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_activity_chooser_view_see_all = global::CoreInvestmentApp.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_activitychooserview_choose_application = global::CoreInvestmentApp.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_capital_off = global::CoreInvestmentApp.Droid.Resource.String.abc_capital_off;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_capital_on = global::CoreInvestmentApp.Droid.Resource.String.abc_capital_on;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_search_hint = global::CoreInvestmentApp.Droid.Resource.String.abc_search_hint;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_searchview_description_clear = global::CoreInvestmentApp.Droid.Resource.String.abc_searchview_description_clear;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_searchview_description_query = global::CoreInvestmentApp.Droid.Resource.String.abc_searchview_description_query;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_searchview_description_search = global::CoreInvestmentApp.Droid.Resource.String.abc_searchview_description_search;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_searchview_description_submit = global::CoreInvestmentApp.Droid.Resource.String.abc_searchview_description_submit;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_searchview_description_voice = global::CoreInvestmentApp.Droid.Resource.String.abc_searchview_description_voice;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_shareactionprovider_share_with = global::CoreInvestmentApp.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_shareactionprovider_share_with_application = global::CoreInvestmentApp.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Messier16.Forms.Android.Controls.Resource.String.abc_toolbar_collapse_description = global::CoreInvestmentApp.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Messier16.Forms.Android.Controls.Resource.String.appbar_scrolling_view_behavior = global::CoreInvestmentApp.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Messier16.Forms.Android.Controls.Resource.String.bottom_sheet_behavior = global::CoreInvestmentApp.Droid.Resource.String.bottom_sheet_behavior;
+			global::Messier16.Forms.Android.Controls.Resource.String.character_counter_pattern = global::CoreInvestmentApp.Droid.Resource.String.character_counter_pattern;
+			global::Messier16.Forms.Android.Controls.Resource.String.mr_button_content_description = global::CoreInvestmentApp.Droid.Resource.String.mr_button_content_description;
+			global::Messier16.Forms.Android.Controls.Resource.String.mr_chooser_searching = global::CoreInvestmentApp.Droid.Resource.String.mr_chooser_searching;
+			global::Messier16.Forms.Android.Controls.Resource.String.mr_chooser_title = global::CoreInvestmentApp.Droid.Resource.String.mr_chooser_title;
+			global::Messier16.Forms.Android.Controls.Resource.String.mr_controller_casting_screen = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_casting_screen;
+			global::Messier16.Forms.Android.Controls.Resource.String.mr_controller_close_description = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_close_description;
+			global::Messier16.Forms.Android.Controls.Resource.String.mr_controller_collapse_group = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_collapse_group;
+			global::Messier16.Forms.Android.Controls.Resource.String.mr_controller_disconnect = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_disconnect;
+			global::Messier16.Forms.Android.Controls.Resource.String.mr_controller_expand_group = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_expand_group;
+			global::Messier16.Forms.Android.Controls.Resource.String.mr_controller_no_info_available = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_no_info_available;
+			global::Messier16.Forms.Android.Controls.Resource.String.mr_controller_no_media_selected = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_no_media_selected;
+			global::Messier16.Forms.Android.Controls.Resource.String.mr_controller_pause = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_pause;
+			global::Messier16.Forms.Android.Controls.Resource.String.mr_controller_play = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_play;
+			global::Messier16.Forms.Android.Controls.Resource.String.mr_controller_stop = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_stop;
+			global::Messier16.Forms.Android.Controls.Resource.String.mr_system_route_name = global::CoreInvestmentApp.Droid.Resource.String.mr_system_route_name;
+			global::Messier16.Forms.Android.Controls.Resource.String.mr_user_route_category_name = global::CoreInvestmentApp.Droid.Resource.String.mr_user_route_category_name;
+			global::Messier16.Forms.Android.Controls.Resource.String.status_bar_notification_info_overflow = global::CoreInvestmentApp.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Messier16.Forms.Android.Controls.Resource.Style.AlertDialog_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.AlertDialog_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Animation_AppCompat_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Animation_AppCompat_DropDownUp = global::CoreInvestmentApp.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Animation_Design_BottomSheetDialog = global::CoreInvestmentApp.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_AlertDialog_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_AlertDialog_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Animation_AppCompat_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::CoreInvestmentApp.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_CardView = global::CoreInvestmentApp.Droid.Resource.Style.Base_CardView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_DialogWindowTitle_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Button = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Large = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Small = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Title = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Theme_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Theme_AppCompat_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Theme_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_ThemeOverlay_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::CoreInvestmentApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::CoreInvestmentApp.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::CoreInvestmentApp.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V21_Theme_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V21_Theme_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V22_Theme_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V22_Theme_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V23_Theme_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V23_Theme_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V7_Theme_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V7_Theme_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::CoreInvestmentApp.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::CoreInvestmentApp.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ActionButton = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ActionMode = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Button = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Button_Small = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_EditText = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ImageButton = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ListView = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_RatingBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_SearchView = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_SeekBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Spinner = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Toolbar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Base_Widget_Design_TabLayout = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Style.CardView = global::CoreInvestmentApp.Droid.Resource.Style.CardView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.CardView_Dark = global::CoreInvestmentApp.Droid.Resource.Style.CardView_Dark;
+			global::Messier16.Forms.Android.Controls.Resource.Style.CardView_Light = global::CoreInvestmentApp.Droid.Resource.Style.CardView_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Platform_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Platform_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Platform_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Platform_ThemeOverlay_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::CoreInvestmentApp.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Platform_V11_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Platform_V11_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Platform_V11_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Platform_V11_AppCompat_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Platform_V14_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Platform_V14_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Platform_V14_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Platform_V14_AppCompat_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Platform_Widget_AppCompat_Spinner = global::CoreInvestmentApp.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Messier16.Forms.Android.Controls.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Messier16.Forms.Android.Controls.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Messier16.Forms.Android.Controls.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Messier16.Forms.Android.Controls.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Messier16.Forms.Android.Controls.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Messier16.Forms.Android.Controls.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Messier16.Forms.Android.Controls.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Messier16.Forms.Android.Controls.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Messier16.Forms.Android.Controls.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Messier16.Forms.Android.Controls.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Messier16.Forms.Android.Controls.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::CoreInvestmentApp.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Messier16.Forms.Android.Controls.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Messier16.Forms.Android.Controls.Resource.Style.SegmentedControlOption = global::CoreInvestmentApp.Droid.Resource.Style.SegmentedControlOption;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Body1 = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Body2 = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Button = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Caption = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Display1 = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Display2 = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Display3 = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Display4 = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Headline = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Large = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Medium = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Menu = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Small = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Subhead = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Title = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_Design_Counter = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_Design_Counter_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_Design_Error = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_Design_Hint = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_Design_Snackbar_Message = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_Design_Tab = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_StatusBar_EventContent = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_StatusBar_EventContent;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_StatusBar_EventContent_Info = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Info;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_StatusBar_EventContent_Line2 = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Line2;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_StatusBar_EventContent_Time = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Time;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_StatusBar_EventContent_Title = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Title;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_CompactMenu = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_DayNight = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_Dialog_Alert = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_Light_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_AppCompat_NoActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_Design = global::CoreInvestmentApp.Droid.Resource.Style.Theme_Design;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_Design_BottomSheetDialog = global::CoreInvestmentApp.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_Design_Light = global::CoreInvestmentApp.Droid.Resource.Style.Theme_Design_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::CoreInvestmentApp.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_Design_Light_NoActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_Design_NoActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_MediaRouter = global::CoreInvestmentApp.Droid.Resource.Style.Theme_MediaRouter;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_MediaRouter_Light = global::CoreInvestmentApp.Droid.Resource.Style.Theme_MediaRouter_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::CoreInvestmentApp.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Theme_MediaRouter_LightControlPanel = global::CoreInvestmentApp.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel;
+			global::Messier16.Forms.Android.Controls.Resource.Style.ThemeOverlay_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.ThemeOverlay_AppCompat_Dark = global::CoreInvestmentApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Messier16.Forms.Android.Controls.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.ThemeOverlay_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ActionButton = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ActionMode = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ActivityChooserView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Button = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Button_Borderless = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Button_Colored = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Button_Small = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ButtonBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_EditText = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ImageButton = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ActionButton = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_SearchView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ListPopupWindow = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ListView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ListView_DropDown = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ListView_Menu = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_PopupMenu = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_PopupWindow = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ProgressBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_RatingBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_RatingBar_Small = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_SearchView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_SeekBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Spinner = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Toolbar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_Design_AppBarLayout = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_Design_BottomSheet_Modal = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_Design_CollapsingToolbar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_Design_CoordinatorLayout = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_CoordinatorLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_Design_FloatingActionButton = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_Design_NavigationView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_Design_Snackbar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_Design_TabLayout = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_Design_TextInputLayout = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::CoreInvestmentApp.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
+			global::Messier16.Forms.Android.Controls.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::CoreInvestmentApp.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_background = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_background;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_backgroundSplit = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_backgroundStacked = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_contentInsetEnd = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_contentInsetLeft = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_contentInsetRight = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_contentInsetStart = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_customNavigationLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_displayOptions = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_divider = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_divider;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_elevation = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_height = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_height;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_hideOnContentScroll = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_homeAsUpIndicator = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_homeLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_icon = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_icon;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_itemPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_logo = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_logo;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_navigationMode = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_popupTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_progressBarPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_progressBarStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_subtitle = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_subtitleTextStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_title = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_title;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBar_titleTextStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBarLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBarLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionMenuItemView = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionMenuItemView_android_minWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionMenuView = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMenuView;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionMode = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMode;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionMode_background = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMode_background;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionMode_backgroundSplit = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionMode_closeItemLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionMode_height = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMode_height;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionMode_subtitleTextStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActionMode_titleTextStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActivityChooserView = global::CoreInvestmentApp.Droid.Resource.Styleable.ActivityChooserView;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ActivityChooserView_initialActivityCount = global::CoreInvestmentApp.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AlertDialog = global::CoreInvestmentApp.Droid.Resource.Styleable.AlertDialog;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AlertDialog_android_layout = global::CoreInvestmentApp.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AlertDialog_listItemLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AlertDialog_listLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppBarLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.AppBarLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppBarLayout_android_background = global::CoreInvestmentApp.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppBarLayout_elevation = global::CoreInvestmentApp.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppBarLayout_expanded = global::CoreInvestmentApp.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatImageView = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatImageView;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatImageView_android_src = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatImageView_srcCompat = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTextView = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTextView;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTextView_android_textAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTextView_textAllCaps = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionBarDivider = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionBarSize = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionBarStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionBarTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionModeBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionModeStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_buttonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_checkboxStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_colorAccent = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_colorControlActivated = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_colorControlNormal = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_colorPrimary = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_controlBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_dialogTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_dividerVertical = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_editTextBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_editTextColor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_editTextStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_panelBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_searchViewStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_seekBarStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_spinnerStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_switchStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_toolbarStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_windowActionBar = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.AppCompatTheme_windowNoTitle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ButtonBarLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.ButtonBarLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ButtonBarLayout_allowStacking = global::CoreInvestmentApp.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CardView = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CardView_android_minHeight = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CardView_android_minWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CardView_cardBackgroundColor = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CardView_cardCornerRadius = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CardView_cardElevation = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_cardElevation;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CardView_cardMaxElevation = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CardView_cardPreventCornerOverlap = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CardView_cardUseCompatPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CardView_contentPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_contentPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CardView_contentPaddingBottom = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CardView_contentPaddingLeft = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CardView_contentPaddingRight = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CardView_contentPaddingTop = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CollapsingToolbarLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CollapsingToolbarLayout_title = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CompoundButton = global::CoreInvestmentApp.Droid.Resource.Styleable.CompoundButton;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CompoundButton_android_button = global::CoreInvestmentApp.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CompoundButton_buttonTint = global::CoreInvestmentApp.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CompoundButton_buttonTintMode = global::CoreInvestmentApp.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CoordinatorLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CoordinatorLayout_keylines = global::CoreInvestmentApp.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.DesignTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.DesignTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.DesignTheme_bottomSheetStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.DesignTheme_textColorError = global::CoreInvestmentApp.Droid.Resource.Styleable.DesignTheme_textColorError;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.DrawerArrowToggle = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.DrawerArrowToggle_barLength = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.DrawerArrowToggle_color = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.DrawerArrowToggle_drawableSize = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.DrawerArrowToggle_spinBars = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.DrawerArrowToggle_thickness = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.FloatingActionButton = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.FloatingActionButton_backgroundTint = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.FloatingActionButton_borderWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.FloatingActionButton_elevation = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.FloatingActionButton_fabSize = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.FloatingActionButton_rippleColor = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.FloatingActionButton_useCompatPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ForegroundLinearLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::CoreInvestmentApp.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::CoreInvestmentApp.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::CoreInvestmentApp.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.LinearLayoutCompat = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.LinearLayoutCompat_android_gravity = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.LinearLayoutCompat_android_orientation = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.LinearLayoutCompat_divider = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.LinearLayoutCompat_showDividers = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.LinearLayoutCompat_Layout = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ListPopupWindow = global::CoreInvestmentApp.Droid.Resource.Styleable.ListPopupWindow;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::CoreInvestmentApp.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::CoreInvestmentApp.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MediaRouteButton = global::CoreInvestmentApp.Droid.Resource.Styleable.MediaRouteButton;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MediaRouteButton_android_minHeight = global::CoreInvestmentApp.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MediaRouteButton_android_minWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuGroup = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuGroup;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuGroup_android_checkableBehavior = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuGroup_android_enabled = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuGroup_android_id = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuGroup_android_menuCategory = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuGroup_android_orderInCategory = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuGroup_android_visible = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_actionLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_actionProviderClass = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_actionViewClass = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_android_checkable = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_android_checked = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_android_enabled = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_android_icon = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_android_id = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_android_menuCategory = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_android_numericShortcut = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_android_onClick = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_android_orderInCategory = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_android_title = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_android_titleCondensed = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_android_visible = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuItem_showAsAction = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuView = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuView_android_headerBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuView_android_horizontalDivider = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuView_android_itemBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuView_android_itemTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuView_android_verticalDivider = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuView_android_windowAnimationStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.MenuView_preserveIconSpacing = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.NavigationView = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.NavigationView_android_background = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.NavigationView_android_maxWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.NavigationView_elevation = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.NavigationView_headerLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.NavigationView_itemBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.NavigationView_itemIconTint = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.NavigationView_itemTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.NavigationView_itemTextColor = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.NavigationView_menu = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_menu;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.PopupWindow = global::CoreInvestmentApp.Droid.Resource.Styleable.PopupWindow;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.PopupWindow_android_popupBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.PopupWindow_overlapAnchor = global::CoreInvestmentApp.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.PopupWindowBackgroundState = global::CoreInvestmentApp.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::CoreInvestmentApp.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.RecyclerView = global::CoreInvestmentApp.Droid.Resource.Styleable.RecyclerView;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.RecyclerView_android_orientation = global::CoreInvestmentApp.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.RecyclerView_layoutManager = global::CoreInvestmentApp.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.RecyclerView_reverseLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.RecyclerView_spanCount = global::CoreInvestmentApp.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.RecyclerView_stackFromEnd = global::CoreInvestmentApp.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ScrimInsetsFrameLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::CoreInvestmentApp.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_android_focusable = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_android_imeOptions = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_android_inputType = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_android_maxWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_closeIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_commitIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_defaultQueryHint = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_goIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_iconifiedByDefault = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_layout = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_layout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_queryBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_queryHint = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_searchHintIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_searchIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_submitBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_suggestionRowLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SearchView_voiceIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SegmentedControlOption = global::CoreInvestmentApp.Droid.Resource.Styleable.SegmentedControlOption;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SegmentedControlOption_lineColor = global::CoreInvestmentApp.Droid.Resource.Styleable.SegmentedControlOption_lineColor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SegmentedControlOption_lineHeightSelected = global::CoreInvestmentApp.Droid.Resource.Styleable.SegmentedControlOption_lineHeightSelected;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SegmentedControlOption_lineHeightUnselected = global::CoreInvestmentApp.Droid.Resource.Styleable.SegmentedControlOption_lineHeightUnselected;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SegmentedControlOption_segmentedControlOptionStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.SegmentedControlOption_segmentedControlOptionStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SnackbarLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.SnackbarLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SnackbarLayout_android_maxWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SnackbarLayout_elevation = global::CoreInvestmentApp.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Spinner = global::CoreInvestmentApp.Droid.Resource.Styleable.Spinner;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Spinner_android_dropDownWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Spinner_android_entries = global::CoreInvestmentApp.Droid.Resource.Styleable.Spinner_android_entries;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Spinner_android_popupBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Spinner_android_prompt = global::CoreInvestmentApp.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Spinner_popupTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SwitchCompat = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SwitchCompat_android_textOff = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SwitchCompat_android_textOn = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SwitchCompat_android_thumb = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SwitchCompat_showText = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SwitchCompat_splitTrack = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SwitchCompat_switchMinWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SwitchCompat_switchPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SwitchCompat_switchTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SwitchCompat_thumbTextPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.SwitchCompat_track = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabItem = global::CoreInvestmentApp.Droid.Resource.Styleable.TabItem;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabItem_android_icon = global::CoreInvestmentApp.Droid.Resource.Styleable.TabItem_android_icon;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabItem_android_layout = global::CoreInvestmentApp.Droid.Resource.Styleable.TabItem_android_layout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabItem_android_text = global::CoreInvestmentApp.Droid.Resource.Styleable.TabItem_android_text;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabContentStart = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabGravity = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabIndicatorColor = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabIndicatorHeight = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabMaxWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabMinWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabMode = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabPaddingBottom = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabPaddingEnd = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabPaddingStart = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabPaddingTop = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabSelectedTextColor = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TabLayout_tabTextColor = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextAppearance_android_shadowColor = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextAppearance_android_shadowDx = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextAppearance_android_shadowDy = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextAppearance_android_shadowRadius = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextAppearance_android_textColor = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextAppearance_android_textSize = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextAppearance_android_textStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextAppearance_android_typeface = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextAppearance_textAllCaps = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextInputLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextInputLayout_android_hint = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextInputLayout_android_textColorHint = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextInputLayout_counterEnabled = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextInputLayout_counterMaxLength = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextInputLayout_counterTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextInputLayout_errorEnabled = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextInputLayout_errorTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextInputLayout_hintEnabled = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.TextInputLayout_hintTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_android_gravity = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_android_minHeight = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_collapseContentDescription = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_collapseIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_contentInsetEnd = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_contentInsetLeft = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_contentInsetRight = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_contentInsetStart = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_logo = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_logo;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_logoDescription = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_maxButtonHeight = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_navigationContentDescription = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_navigationIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_popupTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_subtitle = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_subtitleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_subtitleTextColor = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_title = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_title;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_titleMarginBottom = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_titleMarginEnd = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_titleMarginStart = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_titleMarginTop = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_titleMargins = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_titleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.Toolbar_titleTextColor = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.View = global::CoreInvestmentApp.Droid.Resource.Styleable.View;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.View_android_focusable = global::CoreInvestmentApp.Droid.Resource.Styleable.View_android_focusable;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.View_android_theme = global::CoreInvestmentApp.Droid.Resource.Styleable.View_android_theme;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.View_paddingEnd = global::CoreInvestmentApp.Droid.Resource.Styleable.View_paddingEnd;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.View_paddingStart = global::CoreInvestmentApp.Droid.Resource.Styleable.View_paddingStart;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.View_theme = global::CoreInvestmentApp.Droid.Resource.Styleable.View_theme;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ViewBackgroundHelper = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ViewBackgroundHelper_android_background = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ViewStubCompat = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewStubCompat;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ViewStubCompat_android_id = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ViewStubCompat_android_inflatedId = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Messier16.Forms.Android.Controls.Resource.Styleable.ViewStubCompat_android_layout = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 			global::SegmentedControl.FormsPlugin.Android.Resource.Animation.abc_fade_in = global::CoreInvestmentApp.Droid.Resource.Animation.abc_fade_in;
 			global::SegmentedControl.FormsPlugin.Android.Resource.Animation.abc_fade_out = global::CoreInvestmentApp.Droid.Resource.Animation.abc_fade_out;
 			global::SegmentedControl.FormsPlugin.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::CoreInvestmentApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -742,7 +2400,6 @@ namespace CoreInvestmentApp.Droid
 			global::SegmentedControl.FormsPlugin.Android.Resource.Id.search_src_text = global::CoreInvestmentApp.Droid.Resource.Id.search_src_text;
 			global::SegmentedControl.FormsPlugin.Android.Resource.Id.search_voice_btn = global::CoreInvestmentApp.Droid.Resource.Id.search_voice_btn;
 			global::SegmentedControl.FormsPlugin.Android.Resource.Id.select_dialog_listview = global::CoreInvestmentApp.Droid.Resource.Id.select_dialog_listview;
-			global::SegmentedControl.FormsPlugin.Android.Resource.Id.shape_id = global::CoreInvestmentApp.Droid.Resource.Id.shape_id;
 			global::SegmentedControl.FormsPlugin.Android.Resource.Id.shortcut = global::CoreInvestmentApp.Droid.Resource.Id.shortcut;
 			global::SegmentedControl.FormsPlugin.Android.Resource.Id.showCustom = global::CoreInvestmentApp.Droid.Resource.Id.showCustom;
 			global::SegmentedControl.FormsPlugin.Android.Resource.Id.showHome = global::CoreInvestmentApp.Droid.Resource.Id.showHome;
@@ -2285,6 +3942,15 @@ namespace CoreInvestmentApp.Droid
 			// aapt resource value: 0x7f010104
 			public const int layout_scrollInterpolator = 2130772228;
 			
+			// aapt resource value: 0x7f010153
+			public const int lineColor = 2130772307;
+			
+			// aapt resource value: 0x7f010155
+			public const int lineHeightSelected = 2130772309;
+			
+			// aapt resource value: 0x7f010154
+			public const int lineHeightUnselected = 2130772308;
+			
 			// aapt resource value: 0x7f010098
 			public const int listChoiceBackgroundIndicator = 2130772120;
 			
@@ -2485,6 +4151,9 @@ namespace CoreInvestmentApp.Droid
 			
 			// aapt resource value: 0x7f0100b5
 			public const int seekBarStyle = 2130772149;
+			
+			// aapt resource value: 0x7f010152
+			public const int segmentedControlOptionStyle = 2130772306;
 			
 			// aapt resource value: 0x7f01007b
 			public const int selectableItemBackground = 2130772091;
@@ -2809,44 +4478,44 @@ namespace CoreInvestmentApp.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0c004c
-			public const int abc_background_cache_hint_selector_material_dark = 2131492940;
-			
-			// aapt resource value: 0x7f0c004d
-			public const int abc_background_cache_hint_selector_material_light = 2131492941;
-			
 			// aapt resource value: 0x7f0c004e
-			public const int abc_btn_colored_borderless_text_material = 2131492942;
+			public const int abc_background_cache_hint_selector_material_dark = 2131492942;
 			
 			// aapt resource value: 0x7f0c004f
-			public const int abc_btn_colored_text_material = 2131492943;
+			public const int abc_background_cache_hint_selector_material_light = 2131492943;
 			
 			// aapt resource value: 0x7f0c0050
-			public const int abc_color_highlight_material = 2131492944;
+			public const int abc_btn_colored_borderless_text_material = 2131492944;
 			
 			// aapt resource value: 0x7f0c0051
-			public const int abc_hint_foreground_material_dark = 2131492945;
+			public const int abc_btn_colored_text_material = 2131492945;
 			
 			// aapt resource value: 0x7f0c0052
-			public const int abc_hint_foreground_material_light = 2131492946;
+			public const int abc_color_highlight_material = 2131492946;
+			
+			// aapt resource value: 0x7f0c0053
+			public const int abc_hint_foreground_material_dark = 2131492947;
+			
+			// aapt resource value: 0x7f0c0054
+			public const int abc_hint_foreground_material_light = 2131492948;
 			
 			// aapt resource value: 0x7f0c0005
 			public const int abc_input_method_navigation_guard = 2131492869;
 			
-			// aapt resource value: 0x7f0c0053
-			public const int abc_primary_text_disable_only_material_dark = 2131492947;
-			
-			// aapt resource value: 0x7f0c0054
-			public const int abc_primary_text_disable_only_material_light = 2131492948;
-			
 			// aapt resource value: 0x7f0c0055
-			public const int abc_primary_text_material_dark = 2131492949;
+			public const int abc_primary_text_disable_only_material_dark = 2131492949;
 			
 			// aapt resource value: 0x7f0c0056
-			public const int abc_primary_text_material_light = 2131492950;
+			public const int abc_primary_text_disable_only_material_light = 2131492950;
 			
 			// aapt resource value: 0x7f0c0057
-			public const int abc_search_url_text = 2131492951;
+			public const int abc_primary_text_material_dark = 2131492951;
+			
+			// aapt resource value: 0x7f0c0058
+			public const int abc_primary_text_material_light = 2131492952;
+			
+			// aapt resource value: 0x7f0c0059
+			public const int abc_search_url_text = 2131492953;
 			
 			// aapt resource value: 0x7f0c0006
 			public const int abc_search_url_text_normal = 2131492870;
@@ -2857,32 +4526,32 @@ namespace CoreInvestmentApp.Droid
 			// aapt resource value: 0x7f0c0008
 			public const int abc_search_url_text_selected = 2131492872;
 			
-			// aapt resource value: 0x7f0c0058
-			public const int abc_secondary_text_material_dark = 2131492952;
-			
-			// aapt resource value: 0x7f0c0059
-			public const int abc_secondary_text_material_light = 2131492953;
-			
 			// aapt resource value: 0x7f0c005a
-			public const int abc_tint_btn_checkable = 2131492954;
+			public const int abc_secondary_text_material_dark = 2131492954;
 			
 			// aapt resource value: 0x7f0c005b
-			public const int abc_tint_default = 2131492955;
+			public const int abc_secondary_text_material_light = 2131492955;
 			
 			// aapt resource value: 0x7f0c005c
-			public const int abc_tint_edittext = 2131492956;
+			public const int abc_tint_btn_checkable = 2131492956;
 			
 			// aapt resource value: 0x7f0c005d
-			public const int abc_tint_seek_thumb = 2131492957;
+			public const int abc_tint_default = 2131492957;
 			
 			// aapt resource value: 0x7f0c005e
-			public const int abc_tint_spinner = 2131492958;
+			public const int abc_tint_edittext = 2131492958;
 			
 			// aapt resource value: 0x7f0c005f
-			public const int abc_tint_switch_thumb = 2131492959;
+			public const int abc_tint_seek_thumb = 2131492959;
 			
 			// aapt resource value: 0x7f0c0060
-			public const int abc_tint_switch_track = 2131492960;
+			public const int abc_tint_spinner = 2131492960;
+			
+			// aapt resource value: 0x7f0c0061
+			public const int abc_tint_switch_thumb = 2131492961;
+			
+			// aapt resource value: 0x7f0c0062
+			public const int abc_tint_switch_track = 2131492962;
 			
 			// aapt resource value: 0x7f0c0009
 			public const int accent_material_dark = 2131492873;
@@ -2941,8 +4610,8 @@ namespace CoreInvestmentApp.Droid
 			// aapt resource value: 0x7f0c003f
 			public const int design_bottom_navigation_shadow_color = 2131492927;
 			
-			// aapt resource value: 0x7f0c0061
-			public const int design_error = 2131492961;
+			// aapt resource value: 0x7f0c0063
+			public const int design_error = 2131492963;
 			
 			// aapt resource value: 0x7f0c0040
 			public const int design_fab_shadow_end_color = 2131492928;
@@ -2974,8 +4643,8 @@ namespace CoreInvestmentApp.Droid
 			// aapt resource value: 0x7f0c0049
 			public const int design_textinput_error_color_light = 2131492937;
 			
-			// aapt resource value: 0x7f0c0062
-			public const int design_tint_password_toggle = 2131492962;
+			// aapt resource value: 0x7f0c0064
+			public const int design_tint_password_toggle = 2131492964;
 			
 			// aapt resource value: 0x7f0c0017
 			public const int dim_foreground_disabled_material_dark = 2131492887;
@@ -2995,11 +4664,17 @@ namespace CoreInvestmentApp.Droid
 			// aapt resource value: 0x7f0c001c
 			public const int foreground_material_light = 2131492892;
 			
+			// aapt resource value: 0x7f0c004d
+			public const int highlight = 2131492941;
+			
 			// aapt resource value: 0x7f0c001d
 			public const int highlighted_text_material_dark = 2131492893;
 			
 			// aapt resource value: 0x7f0c001e
 			public const int highlighted_text_material_light = 2131492894;
+			
+			// aapt resource value: 0x7f0c004c
+			public const int light = 2131492940;
 			
 			// aapt resource value: 0x7f0c001f
 			public const int material_blue_grey_800 = 2131492895;
@@ -3091,8 +4766,8 @@ namespace CoreInvestmentApp.Droid
 			// aapt resource value: 0x7f0c003a
 			public const int secondary_text_disabled_material_light = 2131492922;
 			
-			// aapt resource value: 0x7f0c0063
-			public const int segmented_control_text = 2131492963;
+			// aapt resource value: 0x7f0c0065
+			public const int segmented_control_text = 2131492965;
 			
 			// aapt resource value: 0x7f0c004b
 			public const int selected = 2131492939;
@@ -3103,11 +4778,11 @@ namespace CoreInvestmentApp.Droid
 			// aapt resource value: 0x7f0c003c
 			public const int switch_thumb_disabled_material_light = 2131492924;
 			
-			// aapt resource value: 0x7f0c0064
-			public const int switch_thumb_material_dark = 2131492964;
+			// aapt resource value: 0x7f0c0066
+			public const int switch_thumb_material_dark = 2131492966;
 			
-			// aapt resource value: 0x7f0c0065
-			public const int switch_thumb_material_light = 2131492965;
+			// aapt resource value: 0x7f0c0067
+			public const int switch_thumb_material_light = 2131492967;
 			
 			// aapt resource value: 0x7f0c003d
 			public const int switch_thumb_normal_material_dark = 2131492925;
@@ -3571,6 +5246,12 @@ namespace CoreInvestmentApp.Droid
 			
 			// aapt resource value: 0x7f07006d
 			public const int notification_top_pad_large_text = 2131165293;
+			
+			// aapt resource value: 0x7f070094
+			public const int segmented_control_default_height = 2131165332;
+			
+			// aapt resource value: 0x7f070095
+			public const int segmented_control_text_size = 2131165333;
 			
 			static Dimension()
 			{
@@ -4855,9 +6536,6 @@ namespace CoreInvestmentApp.Droid
 			// aapt resource value: 0x7f080072
 			public const int select_dialog_listview = 2131230834;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int shape_id = 2131230901;
-			
 			// aapt resource value: 0x7f08005c
 			public const int shortcut = 2131230812;
 			
@@ -5261,22 +6939,25 @@ namespace CoreInvestmentApp.Droid
 			public const int RadioGroup = 2130903103;
 			
 			// aapt resource value: 0x7f030040
-			public const int select_dialog_item_material = 2130903104;
+			public const int SegmentedControl = 2130903104;
 			
 			// aapt resource value: 0x7f030041
-			public const int select_dialog_multichoice_material = 2130903105;
+			public const int select_dialog_item_material = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public const int select_dialog_singlechoice_material = 2130903106;
+			public const int select_dialog_multichoice_material = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public const int support_simple_spinner_dropdown_item = 2130903107;
+			public const int select_dialog_singlechoice_material = 2130903107;
 			
 			// aapt resource value: 0x7f030044
-			public const int Tabbar = 2130903108;
+			public const int support_simple_spinner_dropdown_item = 2130903108;
 			
 			// aapt resource value: 0x7f030045
-			public const int Toolbar = 2130903109;
+			public const int Tabbar = 2130903109;
+			
+			// aapt resource value: 0x7f030046
+			public const int Toolbar = 2130903110;
 			
 			static Layout()
 			{
@@ -5290,6 +6971,12 @@ namespace CoreInvestmentApp.Droid
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f09003f
+			public const int ApplicationName = 2131296319;
+			
+			// aapt resource value: 0x7f09003e
+			public const int Hello = 2131296318;
 			
 			// aapt resource value: 0x7f090015
 			public const int abc_action_bar_home_description = 2131296277;
@@ -5505,8 +7192,8 @@ namespace CoreInvestmentApp.Droid
 			// aapt resource value: 0x7f0b0170
 			public const int Animation_Design_BottomSheetDialog = 2131427696;
 			
-			// aapt resource value: 0x7f0b018b
-			public const int AppCompatDialogStyle = 2131427723;
+			// aapt resource value: 0x7f0b018c
+			public const int AppCompatDialogStyle = 2131427724;
 			
 			// aapt resource value: 0x7f0b00b2
 			public const int Base_AlertDialog_AppCompat = 2131427506;
@@ -5982,11 +7669,11 @@ namespace CoreInvestmentApp.Droid
 			// aapt resource value: 0x7f0b000e
 			public const int CardView_Light = 2131427342;
 			
-			// aapt resource value: 0x7f0b0189
-			public const int MainTheme = 2131427721;
-			
 			// aapt resource value: 0x7f0b018a
-			public const int MainTheme_Base = 2131427722;
+			public const int MainTheme = 2131427722;
+			
+			// aapt resource value: 0x7f0b018b
+			public const int MainTheme_Base = 2131427723;
 			
 			// aapt resource value: 0x7f0b002d
 			public const int Platform_AppCompat = 2131427373;
@@ -6071,6 +7758,9 @@ namespace CoreInvestmentApp.Droid
 			
 			// aapt resource value: 0x7f0b004d
 			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131427405;
+			
+			// aapt resource value: 0x7f0b0189
+			public const int SegmentedControlOption = 2131427721;
 			
 			// aapt resource value: 0x7f0b00dd
 			public const int TextAppearance_AppCompat = 2131427549;
@@ -8192,6 +9882,24 @@ namespace CoreInvestmentApp.Droid
 			
 			// aapt resource value: 12
 			public const int SearchView_voiceIcon = 12;
+			
+			public static int[] SegmentedControlOption = new int[] {
+					2130772306,
+					2130772307,
+					2130772308,
+					2130772309};
+			
+			// aapt resource value: 1
+			public const int SegmentedControlOption_lineColor = 1;
+			
+			// aapt resource value: 3
+			public const int SegmentedControlOption_lineHeightSelected = 3;
+			
+			// aapt resource value: 2
+			public const int SegmentedControlOption_lineHeightUnselected = 2;
+			
+			// aapt resource value: 0
+			public const int SegmentedControlOption_segmentedControlOptionStyle = 0;
 			
 			public static int[] SnackbarLayout = new int[] {
 					16843039,

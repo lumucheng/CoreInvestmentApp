@@ -13,6 +13,7 @@ using Newtonsoft.Json;
 using CoreInvestmentApp.Model;
 using System.Collections.ObjectModel;
 using Newtonsoft.Json.Linq;
+using Realms;
 
 namespace CoreInvestmentApp.Pages
 {
@@ -65,6 +66,18 @@ namespace CoreInvestmentApp.Pages
             {
                 //TODO: Handle error here
             }
+        }
+
+        private void StockIdentifierListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var vRealmDb = Realm.GetInstance();
+            StockIdentifier stock = (StockIdentifier)e.SelectedItem;
+
+            vRealmDb.Write(() => {
+                vRealmDb.Add(stock, true);
+            });
+
+            Navigation.PopModalAsync();
         }
     }
 }

@@ -13,14 +13,25 @@ namespace CoreInvestmentApp.Pages
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class InfoContentView : ContentView
 	{
-		public InfoContentView ()
+        Stock stock;
+		public InfoContentView (Stock stock)
 		{
 			InitializeComponent ();
 
-            // Bind data to chart.
-            pieChart.BindingContext = ViewModelLocator.OxyExData;
+            this.stock = stock;
+            LabelDescription.Text = stock.Description;
+            LabelAdjClosePrice.Text = "$" + stock.AdjClosePrice;
+            LabelVolume.Text = stock.Volume;
+            LabelFiftyTwoHigh.Text = "$" +stock.FiftyTwoWeekHigh;
+            LabelFiftyTwoLow.Text = "$" + stock.FiftyTwoWeekLow;
+            LabelSector.Text = stock.Sector;
+            LabelName.Text = stock.Name;
+            LabelTicker.Text = stock.StockIdentifier.Ticker;
+            LabelMarketCap.Text = stock.MarketCap;
+            circleImage.Source = stock.ImageUrl;
 
-            circleImage.Source = "https://pbs.twimg.com/profile_images/476066629000785921/6D3DK65E_400x400.jpeg";
+            // Bind data to chart.
+            // pieChart.BindingContext = ViewModelLocator.OxyExData;
         }
 	}
 }

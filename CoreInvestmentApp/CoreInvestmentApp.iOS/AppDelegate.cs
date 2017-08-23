@@ -4,9 +4,9 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
-using SegmentedControl.FormsPlugin.iOS;
 using OxyPlot.Xamarin.Forms.Platform.iOS;
 using ImageCircle.Forms.Plugin.iOS;
+using Messier16.Forms.iOS.Controls;
 
 namespace CoreInvestmentApp.iOS
 {
@@ -27,9 +27,10 @@ namespace CoreInvestmentApp.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            SegmentedControlRenderer.Init();
+            SegmentedControl.FormsPlugin.iOS.SegmentedControlRenderer.Init();
             PlotViewRenderer.Init();
             ImageCircleRenderer.Init();
+            Messier16Controls.InitAll();
 
             LoadApplication(new App());
 

@@ -1,10 +1,12 @@
 ﻿using System;
 using Newtonsoft.Json;
+using Realms;
 
 namespace CoreInvestmentApp.Model
 {
-    public class StockIdentifier
+    public class StockIdentifier : RealmObject
     {
+        [PrimaryKey]
 		[JsonProperty("ticker")]
 		public string Ticker { get; set; }
 
@@ -19,10 +21,5 @@ namespace CoreInvestmentApp.Model
 
 		[JsonProperty("latest_filing_date")]
 		public string LatestFillingDate { get; set; }
-
-        public StockIdentifier()
-        {
-            
-        }
     }
 }

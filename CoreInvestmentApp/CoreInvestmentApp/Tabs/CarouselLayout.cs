@@ -5,6 +5,7 @@ using System.Linq;
 using Xamarin.Forms;
 using System.Threading.Tasks;
 using CoreInvestmentApp.Pages;
+using CoreInvestmentApp.Model;
 
 namespace CoreInvestmentApp.Tabs
 {
@@ -20,6 +21,7 @@ namespace CoreInvestmentApp.Tabs
         readonly StackLayout _stack;
 
         int _selectedIndex;
+        public Stock Stock { get; set; }
 
         public CarouselLayout()
         {
@@ -130,7 +132,11 @@ namespace CoreInvestmentApp.Tabs
                 View view;
                 if (index == 0)
                 {
-                    view = new InfoContentView();
+                    view = new InfoContentView(Stock);
+                }
+                else if (index == 1)
+                {
+                    view = new AssessContentView(Stock);
                 }
                 else
                 {

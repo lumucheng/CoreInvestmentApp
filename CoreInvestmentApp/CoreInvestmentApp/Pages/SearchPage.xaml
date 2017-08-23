@@ -7,7 +7,7 @@
             <Entry x:Name="EntrySearch" FontSize="Medium" Placeholder="Enter Stock Identifier" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Completed="Entry_Completed" />
             <Button Text="Search" FontSize="Medium" FontAttributes="Bold" Clicked="Entry_Completed" />
 
-            <ListView x:Name="StockIdentifierListView" HasUnevenRows="False" ItemsSource="{Binding IdentifierList}" RowHeight="100">
+            <ListView x:Name="StockIdentifierListView" HasUnevenRows="False" ItemsSource="{Binding IdentifierList}" RowHeight="100" ItemSelected="StockIdentifierListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

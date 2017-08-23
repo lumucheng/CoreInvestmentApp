@@ -5,7 +5,6 @@
              xmlns:design="clr-namespace:CoreInvestmentApp;assembly=CoreInvestmentApp"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
              xmlns:segcontrol="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
-             BindingContext="{x:Static design:ViewModelLocator.StockViewModel}"
              Title="Watchlist">
     <ContentPage.Content>
         <StackLayout>
@@ -14,16 +13,18 @@
                     BackgroundColor="#007AFF"
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="Fill"
+                    
                     Clicked="Button_Clicked"/>
 
-            <segcontrol:SegmentedControl x:Name="SegControl" TintColor="#007AFF" SelectedSegment="0" BackgroundColor="#CEE6E5" HorizontalOptions="FillAndExpand" >
+            <!--<segcontrol:SegmentedControl x:Name="SegControl" TintColor="#007AFF" SelectedSegment="0" BackgroundColor="#CEE6E5" HorizontalOptions="FillAndExpand" >
                     <segcontrol:SegmentedControl.Children>
                         <segcontrol:SegmentedControlOption Text="US" />
                         <segcontrol:SegmentedControlOption Text="SG" />
                     </segcontrol:SegmentedControl.Children>
-                </segcontrol:SegmentedControl>
+                </segcontrol:SegmentedControl>-->
+
             <StackLayout x:Name="SegContent"  BackgroundColor="#CEE6E5" Margin="0,0,0,-12" />
-            <ListView ItemsSource="{Binding StockList}"
+            <ListView x:Name="StockListView" ItemsSource="{Binding StockList}"
                     HasUnevenRows="true" ItemSelected="ListView_ItemSelected" SeparatorVisibility="None">
                 <ListView.Header>
                     <StackLayout Padding="20,20,20,20" BackgroundColor="#64A68C" >
@@ -46,15 +47,15 @@
                                 </Grid.ColumnDefinitions>
 
                                 <controls:CircleImage 
-                                        BorderColor="Black"
-                                        BorderThickness="1"
-                                        HeightRequest="66"
-                                        HorizontalOptions="CenterAndExpand"
-                                        VerticalOptions="CenterAndExpand"
-                                        Aspect="AspectFill"
-                                       WidthRequest="66"
-                                       Grid.RowSpan="3"
-                                       Source="{Binding ImageUrl}"/>
+                                    Aspect="AspectFit"
+                                    BorderColor="Black"
+                                    BorderThickness="1"
+                                    HeightRequest="66"
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    WidthRequest="66"
+                                    Grid.RowSpan="3"
+                                    Source="{Binding ImageUrl}"/>
                                 <StackLayout Grid.Column="1" Orientation="Horizontal">
                                     <Label
                                        Text="{Binding Name}"
@@ -78,10 +79,10 @@
                                     <Label
                                        VerticalOptions="Start"
                                        HorizontalOptions="StartAndExpand"
-                                       Text="{Binding CurrentValue}"
+                                       Text="{Binding CurrentValue, StringFormat='USD{0}'}"
                                        TextColor="Black"/>
                                 </StackLayout>
-                                
+
                                 <StackLayout  Orientation="Horizontal" Grid.Column="2">
                                     <controls:CircleImage 
                                         BorderColor="#ebc361"
@@ -92,7 +93,7 @@
                                         Aspect="AspectFill"
                                         WidthRequest="15"/>
                                     <Label 
-                                       Text="{Binding Growth}"
+                                       Text="{Binding Growth, StringFormat='{0}'}"
                                        VerticalOptions="End"
                                        TextColor="Black"/>
                                 </StackLayout>
@@ -109,7 +110,7 @@
                                     <Label 
                                        VerticalOptions="Start"
                                        HorizontalOptions="StartAndExpand"
-                                       Text="{Binding Dividend}"
+                                       Text="{Binding Dividend, StringFormat='USD{0}'}"
                                        TextColor="Black"/>
                                 </StackLayout>
 

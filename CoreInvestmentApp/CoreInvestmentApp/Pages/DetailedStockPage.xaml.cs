@@ -1,8 +1,12 @@
-﻿using CoreInvestmentApp.Tabs;
+﻿using CoreInvestmentApp.Classes;
+using CoreInvestmentApp.Model;
+using CoreInvestmentApp.Tabs;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,14 +15,293 @@ using Xamarin.Forms.Xaml;
 
 namespace CoreInvestmentApp.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DetailedStockPage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class DetailedStockPage : ContentPage
+    {
         View _tabs;
         RelativeLayout relativeLayout;
         SwitcherPageViewModel viewModel;
+        Stock stock;
 
-        public DetailedStockPage()
+        public DetailedStockPage(Stock stock)
+        {
+            this.stock = stock;
+            GetDetailedInfoAsync();
+        }
+
+        private async void GetDetailedInfoAsync()
+        {
+            string query = string.Format(Util.IntrinioAPIUrl +
+                    "/data_point?identifier={0}&item=long_description,adj_close_price,volume,52_week_high,52_week_low,sector,marketcap,basiceps,epsgrowth,peg,ask_price,debttoequity", stock.StockIdentifier.Ticker);
+            HttpClient client = Util.GetAuthHttpClient();
+            var uri = new Uri(query);
+
+            var response = await client.GetAsync(uri);
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                JObject jsonObject = JObject.Parse(json);
+                JArray data = (JArray)jsonObject["data"];
+
+                foreach (JToken token in data)
+                {
+                    string item = token["item"].ToString();
+                    string value = token["value"].ToString();
+
+                    if (item == "long_description")
+                    {
+                        stock.Description = value;
+                    }
+                    else if (item == "adj_close_price")
+                    {
+                        stock.AdjClosePrice = value;
+                    }
+                    else if (item == "volume")
+                    {
+                        stock.Volume = value;
+                    }
+                    else if (item == "52_week_high")
+                    {
+                        stock.FiftyTwoWeekHigh = value;
+                    }
+                    else if (item == "52_week_low")
+                    {
+                        stock.FiftyTwoWeekLow = value;
+                    }
+                    else if (item == "sector")
+                    {
+                        stock.Sector = value;
+                    }
+                    else if (item == "marketcap")
+                    {
+                        stock.MarketCap = value;
+                    }
+                    else if (item == "basiceps")
+                    {
+                        stock.BasicEps = value;
+                    }
+                    else if (item == "epsgrowth")
+                    {
+                        stock.EpsGrowth = value;
+                    }
+                    else if (item == "pricetoearnings")
+                    {
+                        stock.PEG = value;
+                    }
+                    else if (item == "ask_price")
+                    {
+                        stock.AskPrice = value;
+                    }
+                    else if (item == "debttoequity")
+                    {
+                        stock.DebtToEquity = value;
+                    }
+                }
+
+                GetHistoricalEPS();
+            }
+        }
+
+        private async void GetHistoricalEPS()
+        {
+            DateTime currentDate = DateTime.Now;
+            DateTime previousDate = currentDate.AddYears(-10);
+
+            string query = string.Format(Util.IntrinioAPIUrl +
+                   "/historical_data?identifier={0}&item=basiceps&type=FY&start_date={1}-01-01&end_date={2}-01-01",
+                   stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
+            HttpClient client = Util.GetAuthHttpClient();
+            var uri = new Uri(query);
+
+            var response = await client.GetAsync(uri);
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                JObject jsonObject = JObject.Parse(json);
+                JArray data = (JArray)jsonObject["data"];
+                List<EarningPerShare> epsList = new List<EarningPerShare>();
+
+                foreach (JToken token in data)
+                {
+                    string date = token["date"].ToString();
+                    string value = token["value"].ToString();
+
+                    if (value.Length > 0 && value != "null")
+                    {
+                        EarningPerShare eps = new EarningPerShare();
+                        eps.DateStr = date;
+                        eps.ValueStr = value;
+
+                        epsList.Add(eps);
+                    }
+                }
+
+                stock.EpsList = epsList;
+
+                GetFreeCashFlow();
+            }
+        }
+
+        private async void GetFreeCashFlow()
+        {
+            DateTime currentDate = DateTime.Now;
+            DateTime previousDate = currentDate.AddYears(-10);
+
+            string query = string.Format(Util.IntrinioAPIUrl +
+                   "/historical_data?identifier={0}&item=freecashflow&type=FY&start_date={1}-01-01&end_date={2}-01-01",
+                   stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
+            HttpClient client = Util.GetAuthHttpClient();
+            var uri = new Uri(query);
+
+            var response = await client.GetAsync(uri);
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                JObject jsonObject = JObject.Parse(json);
+                JArray data = (JArray)jsonObject["data"];
+                List<FreeCashFlow> cashFlowList = new List<FreeCashFlow>();
+
+                foreach (JToken token in data)
+                {
+                    string date = token["date"].ToString();
+                    string value = token["value"].ToString();
+
+                    if (value.Length > 0 && value != "null")
+                    {
+                        FreeCashFlow fcf = new FreeCashFlow();
+                        fcf.DateStr = date;
+                        fcf.ValueStr = value;
+
+                        cashFlowList.Add(fcf);
+                    }
+                    
+                }
+
+                stock.CashFlowList = cashFlowList;
+
+                GetDebtToEquity();
+            }
+        }
+
+        private async void GetDebtToEquity()
+        {
+            DateTime currentDate = DateTime.Now;
+            DateTime previousDate = currentDate.AddYears(-10);
+
+            string query = string.Format(Util.IntrinioAPIUrl +
+                   "/historical_data?identifier={0}&item=debttoequity&type=FY&start_date={1}-01-01&end_date={2}-01-01",
+                   stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
+            HttpClient client = Util.GetAuthHttpClient();
+            var uri = new Uri(query);
+
+            var response = await client.GetAsync(uri);
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                JObject jsonObject = JObject.Parse(json);
+                JArray data = (JArray)jsonObject["data"];
+                List<DebtToEquity> debtToEquityList = new List<DebtToEquity>();
+
+                foreach (JToken token in data)
+                {
+                    string date = token["date"].ToString();
+                    string value = token["value"].ToString();
+
+                    if (value.Length > 0 && value != "null")
+                    {
+                        DebtToEquity debtToEqu = new DebtToEquity();
+                        debtToEqu.DateStr = date;
+                        debtToEqu.ValueStr = value;
+
+                        debtToEquityList.Add(debtToEqu);
+                    }
+                }
+
+                stock.DebtToEquityList = debtToEquityList;
+
+                GetReturnOnEquity();
+            }
+        }
+
+        private async void GetReturnOnEquity()
+        {
+            DateTime currentDate = DateTime.Now;
+            DateTime previousDate = currentDate.AddYears(-10);
+
+            string query = string.Format(Util.IntrinioAPIUrl +
+                   "/historical_data?identifier={0}&item=roe&type=FY&start_date={1}-01-01&end_date={2}-01-01",
+                   stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
+            HttpClient client = Util.GetAuthHttpClient();
+            var uri = new Uri(query);
+
+            var response = await client.GetAsync(uri);
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                JObject jsonObject = JObject.Parse(json);
+                JArray data = (JArray)jsonObject["data"];
+                List<ReturnOnEquity> roeList = new List<ReturnOnEquity>();
+
+                foreach (JToken token in data)
+                {
+                    string date = token["date"].ToString();
+                    string value = token["value"].ToString();
+
+                    if (value.Length > 0 && value != "null")
+                    {
+                        ReturnOnEquity returnToEquity = new ReturnOnEquity();
+                        returnToEquity.DateStr = date;
+                        returnToEquity.ValueStr = value;
+
+                        roeList.Add(returnToEquity);
+                    }
+                }
+
+                stock.ReturnToEquityList = roeList;
+                GetReturnOnAsset();
+            }
+        }
+
+        private async void GetReturnOnAsset()
+        {
+            DateTime currentDate = DateTime.Now;
+            DateTime previousDate = currentDate.AddYears(-10);
+
+            string query = string.Format(Util.IntrinioAPIUrl +
+                   "/historical_data?identifier={0}&item=roa&type=FY&start_date={1}-01-01&end_date={2}-01-01",
+                   stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
+            HttpClient client = Util.GetAuthHttpClient();
+            var uri = new Uri(query);
+
+            var response = await client.GetAsync(uri);
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                JObject jsonObject = JObject.Parse(json);
+                JArray data = (JArray)jsonObject["data"];
+                List<ReturnOnAsset> roaList = new List<ReturnOnAsset>();
+
+                foreach (JToken token in data)
+                {
+                    string date = token["date"].ToString();
+                    string value = token["value"].ToString();
+
+                    if (value.Length > 0 && value != "null")
+                    {
+                        ReturnOnAsset returnToAssest = new ReturnOnAsset();
+                        returnToAssest.DateStr = date;
+                        returnToAssest.ValueStr = value;
+
+                        roaList.Add(returnToAssest);
+                    }
+                }
+
+                stock.ReturnToAssetList = roaList;
+                LayoutInterface();
+            }
+        }
+
+        private void LayoutInterface()
         {
             viewModel = new SwitcherPageViewModel();
             BindingContext = viewModel;
@@ -29,11 +312,10 @@ namespace CoreInvestmentApp.Pages
                 Orientation = StackOrientation.Vertical,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 Padding = new Thickness(0, 0, 0, 0)
-                
             };
 
-            stackLayout.Children.Add(new Label { Text = "AAPL", TextColor = Color.White, FontSize = 24, FontAttributes = FontAttributes.Bold, Margin = new Thickness(15, 10, 0, 0)});
-            stackLayout.Children.Add(new Label { Text = "Apple Inc.", TextColor = Color.White, FontSize = 16, Margin = new Thickness(15, 10, 0, 0)});
+            stackLayout.Children.Add(new Label { Text = stock.StockIdentifier.Ticker, TextColor = Color.White, FontSize = 24, FontAttributes = FontAttributes.Bold, Margin = new Thickness(15, 10, 0, 0) });
+            stackLayout.Children.Add(new Label { Text = stock.StockIdentifier.Name, TextColor = Color.White, FontSize = 16, Margin = new Thickness(15, 10, 0, 0) });
 
             relativeLayout = new RelativeLayout
             {
@@ -69,8 +351,10 @@ namespace CoreInvestmentApp.Pages
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 IndicatorStyle = CarouselLayout.IndicatorStyleEnum.Tabs,
-                ItemTemplate = new DataTemplate(typeof(ContentView))
+                ItemTemplate = new DataTemplate(typeof(ContentView)),
+                Stock = stock
             };
+
             carousel.SetBinding(CarouselLayout.ItemsSourceProperty, "Pages");
             carousel.SetBinding(CarouselLayout.SelectedItemProperty, "CurrentPage", BindingMode.TwoWay);
 

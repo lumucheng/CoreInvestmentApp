@@ -1,10 +1,246 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:messier16="clr-namespace:Messier16.Forms.Controls;assembly=Messier16.Forms.Controls"
+             xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+             xmlns:local="clr-namespace:CoreInvestmentApp.Classes"
              x:Class="CoreInvestmentApp.Pages.AssessContentView">
   <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
-  </ContentView.Content>
+        <StackLayout Orientation="Vertical" BackgroundColor="White">
+            <Label x:Name="LabelScore" FontSize="Large" Text="Investor Confidence: " HorizontalOptions="CenterAndExpand" />
+            <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+                <StackLayout BackgroundColor="White" Padding="10, 10, 10, 10"  Orientation="Vertical" VerticalOptions="FillAndExpand">
+
+                    <Label Text="NICES" FontSize="Large" FontAttributes="Bold" />
+
+                    <StackLayout Orientation="Horizontal">
+                        <messier16:Checkbox WidthRequest="45" />
+                        <Label FontSize="Medium" Text="Network effect" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <messier16:Checkbox WidthRequest="45" />
+                        <Label FontSize="Medium" Text="Intangible assets" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <messier16:Checkbox WidthRequest="45" />
+                        <Label FontSize="Medium" Text="Cost advantage" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <messier16:Checkbox WidthRequest="45" />
+                        <Label FontSize="Medium" Text="Efficient scale" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <messier16:Checkbox WidthRequest="45" />
+                        <Label FontSize="Medium" Text="Switching cost" />
+                    </StackLayout>
+
+                    <Label Text="CORE" FontSize="Large" FontAttributes="Bold" />
+
+                    <oxy:PlotView x:Name="EPSChart"  Model="{Binding EPSModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand"  />
+
+                    <Label Text="Average growth" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+
+                    <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Orientation="Vertical" Grid.Column="0" HorizontalOptions="FillAndExpand">
+                            <local:CurvedCornersLabel
+                                x:Name="LabelThreeYears"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                FontSize="Medium"
+                                HeightRequest="30"
+                                CurvedBackgroundColor="#0040ff"
+                                TextColor="White"
+                                CurvedCornerRadius="15"
+                                HorizontalOptions="CenterAndExpand"
+                                WidthRequest="80">
+                            </local:CurvedCornersLabel>
+                            <Label Text="3 Years" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" Grid.Column="1" HorizontalOptions="FillAndExpand">
+                            <local:CurvedCornersLabel
+                                x:Name="LabelFiveYears"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                FontSize="Medium"
+                                HeightRequest="30"
+                                CurvedBackgroundColor="#0040ff"
+                                TextColor="White"
+                                CurvedCornerRadius="15"
+                                HorizontalOptions="CenterAndExpand"
+                                WidthRequest="80">
+                            </local:CurvedCornersLabel>
+                            <Label Text="5 Years" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </Grid>
+
+                    <Label Text="Latest Earning per Share (USD)" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+
+                    <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Orientation="Vertical" Grid.Column="0" HorizontalOptions="FillAndExpand">
+                            <local:CurvedCornersLabel
+                                x:Name="LabelAnnual"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                FontSize="Medium"
+                                HeightRequest="30"
+                                CurvedBackgroundColor="#0040ff"
+                                TextColor="White"
+                                CurvedCornerRadius="5"
+                                HorizontalOptions="CenterAndExpand"
+                                WidthRequest="80">
+                            </local:CurvedCornersLabel>
+                            <Label Text="Annual" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" Grid.Column="1" HorizontalOptions="FillAndExpand">
+                            <local:CurvedCornersLabel
+                                x:Name="LabelTTM"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                FontSize="Medium"
+                                HeightRequest="30"
+                                CurvedBackgroundColor="#0040ff"
+                                TextColor="White"
+                                CurvedCornerRadius="15"
+                                HorizontalOptions="CenterAndExpand"
+                                WidthRequest="80">
+                            </local:CurvedCornersLabel>
+                            <Label Text="TTM" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" Grid.Column="2" HorizontalOptions="FillAndExpand">
+                            <local:CurvedCornersLabel
+                                x:Name="LabelGrowth"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                FontSize="Medium"
+                                HeightRequest="30"
+                                CurvedBackgroundColor="#0040ff"
+                                TextColor="White"
+                                CurvedCornerRadius="15"
+                                HorizontalOptions="CenterAndExpand"
+                                WidthRequest="80">
+                            </local:CurvedCornersLabel>
+                            <Label Text="Growth (%)" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </Grid>
+
+                    <Label Text="Earning per share estimated growth (%)" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                    <Editor x:Name="EditEstimatedGrowth" HorizontalOptions="CenterAndExpand" />
+
+                    <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Orientation="Vertical" Grid.Column="0" HorizontalOptions="FillAndExpand">
+                            <local:CurvedCornersLabel
+                                x:Name="LabelPEG"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                FontSize="Medium"
+                                HeightRequest="30"
+                                CurvedBackgroundColor="#0040ff"
+                                TextColor="White"
+                                CurvedCornerRadius="15"
+                                HorizontalOptions="CenterAndExpand"
+                                WidthRequest="80">
+                            </local:CurvedCornersLabel>
+                            <Label Text="PEG" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+
+                        <StackLayout Orientation="Vertical" Grid.Column="1" HorizontalOptions="FillAndExpand">
+                            <local:CurvedCornersLabel
+                                x:Name="LabelEntryPrice"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                FontSize="Medium"
+                                HeightRequest="30"
+                                CurvedBackgroundColor="#0040ff"
+                                TextColor="White"
+                                CurvedCornerRadius="15"
+                                HorizontalOptions="CenterAndExpand"
+                                WidthRequest="80">
+                            </local:CurvedCornersLabel>
+                            <Label Text="Entry Price" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </Grid>
+
+                    <Label Text="Based on the chart, do you think that the company is profitable?" FontSize="Medium" HorizontalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
+                    <Label Text="Profitable companies usually have positive &amp; consistent earning per share for the last 5 to 10 years?" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
+
+                    <StackLayout Orientation="Horizontal">
+                        <messier16:Checkbox WidthRequest="45" />
+                        <Label FontSize="Medium" Text="Profitable" />
+                    </StackLayout>
+
+                    <oxy:PlotView x:Name="OCFChart"  Model="{Binding OCFModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand"  />
+
+                    <oxy:PlotView x:Name="DTEChart"  Model="{Binding DTEModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand"  />
+
+                    <Label Text="Latest Debt to Equity" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+
+                    <local:CurvedCornersLabel
+                                x:Name="LabelDebtToEquity"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                FontSize="Medium"
+                                HeightRequest="30"
+                                CurvedBackgroundColor="#0040ff"
+                                TextColor="White"
+                                CurvedCornerRadius="15"
+                                HorizontalOptions="CenterAndExpand"
+                                WidthRequest="80">
+                    </local:CurvedCornersLabel>
+
+                    <Label Text="Based on the chart and the latest debt to equity ratio, do you think that the company has healthy financial leverage?" FontSize="Medium" HorizontalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
+                    <Label Text="Companies that have healthy financial leverage usally have less than 50% debt to equity ratio, especially in the latest year" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
+
+                    <StackLayout Orientation="Horizontal">
+                        <messier16:Checkbox WidthRequest="45" />
+                        <Label FontSize="Medium" Text="Healthy" />
+                    </StackLayout>
+
+                    <oxy:PlotView x:Name="ROEChart"  Model="{Binding ROEModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand"  />
+
+                    <Label Text="Based on the cart, do you think that the company has good strategies in investing shareholders' money?" FontSize="Medium" HorizontalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
+                    <Label Text="Companies that have good strategies in investing shareholders' money usually have consistent return on equity above 15% for the last 5 to 10 years" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
+                    
+                    <StackLayout Orientation="Horizontal">
+                        <messier16:Checkbox WidthRequest="45" />
+                        <Label FontSize="Medium" Text="Healthy" />
+                    </StackLayout>
+
+                    <oxy:PlotView x:Name="ROAChart"  Model="{Binding ROAModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand"  />
+                    
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentView.Content>
 </ContentView>

@@ -8,27 +8,27 @@
         <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
             <StackLayout BackgroundColor="White" Padding="15, 10, 10, 10"  Orientation="Vertical" VerticalOptions="FillAndExpand">
                 <Label Text="PROFILE" FontSize="Large" FontAttributes="Bold" />
-                <Label FontSize="Medium" TextColor="Black" Text="Apple, Inc. engages in the design, manufacture, and marketing of mobile communication, media devices, personal computers, and portable digital music players. It operates through the following geographical segments: Americas, Europe, Greater China, Japan, and Rest of Asia Pacific. The Americas segment includes both North and South America. The Europe segment consists of European countries, as well as India, the Middle East, and Africa. The Greater China segment comprises of China, Hong Kong, and Taiwan. The Rest of Asia Pacific segment includes Australia and Asian countries not included in the reportable operating segments of the company. The company was founded by Steven Paul Jobs, Ronald Gerald Wayne, and Stephen G. Wozniak on April 1, 1976 and is headquartered in Cupertino, CA." />
+                <Label x:Name="LabelDescription" FontSize="Medium" TextColor="Black" />
 
                 <Label Text="MARKET" FontSize="Large" FontAttributes="Bold" />
                 <Label Text="Adjusted Close Price" FontSize="Medium" FontAttributes="Bold" />
-                <Label Text="$145.35" TextColor="Black" FontSize="Medium" FontAttributes="Bold" />
+                <Label x:Name="LabelAdjClosePrice" TextColor="Black" FontSize="Medium" FontAttributes="Bold" />
                 <BoxView Color="Gray" HeightRequest="1"/>
                 <Label Text="Volume" FontSize="Medium" FontAttributes="Bold" />
-                <Label Text="23, 124, 532" TextColor="Black" FontSize="Medium" FontAttributes="Bold" />
+                <Label x:Name="LabelVolume" TextColor="Black" FontSize="Medium" FontAttributes="Bold" />
                 <BoxView Color="Gray" HeightRequest="1"/>
                 <Label Text="52 Week High" FontSize="Medium" FontAttributes="Bold" />
-                <Label Text="$148.25" TextColor="Black" FontSize="Medium" FontAttributes="Bold" />
+                <Label x:Name="LabelFiftyTwoHigh" TextColor="Black" FontSize="Medium" FontAttributes="Bold" />
                 <BoxView Color="Gray" HeightRequest="1"/>
                 <Label Text="52 Week Low" FontSize="Medium" FontAttributes="Bold" />
-                <Label Text="$143.35" TextColor="Black" FontSize="Medium" FontAttributes="Bold" />
+                <Label x:Name="LabelFiftyTwoLow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" />
                 <BoxView Color="Gray" HeightRequest="1"/>
 
-                <Label Text="FOOD AND KINDRED PRODUCTS" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                <Label x:Name="LabelSector" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                 <Label Text="Market Share" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                 <Label Text="Based on Market Capitalization" FontSize="Medium" HorizontalOptions="CenterAndExpand" />
 
-                <oxy:PlotView x:Name="pieChart" Model="{Binding PieModel}" HeightRequest="400" WidthRequest="250" Margin="5,5,5,10" HorizontalOptions="CenterAndExpand" />
+                <!--<oxy:PlotView x:Name="pieChart" Model="{Binding PieModel}" HeightRequest="400" WidthRequest="250" Margin="5,5,5,10" HorizontalOptions="CenterAndExpand" />-->
 
                 <BoxView Color="Gray" HeightRequest="1"/>
 
@@ -50,24 +50,24 @@
                         HeightRequest="66"
                         HorizontalOptions="CenterAndExpand"
                         VerticalOptions="CenterAndExpand"
-                        Aspect="AspectFill"
+                        Aspect="AspectFit"
                         WidthRequest="66"
                         Grid.RowSpan="2"
                         Source="{Binding ImageUrl}"/>
 
                     <Label
+                        x:Name="LabelTicker"
                         Grid.Row="2"
                         Grid.Column="0"
-                        Text="MDLZ"
                         FontSize="Medium"
                         FontAttributes="Bold"
                         HorizontalOptions="CenterAndExpand"
                         TextColor="Black"/>
 
                     <Label
+                        x:Name="LabelName"
                         Grid.Row="0"
                         Grid.Column="1"
-                        Text="Mondelez International, Inc."
                         FontSize="Medium"
                         TextColor="Black"/>
 
@@ -79,9 +79,9 @@
                         TextColor="Black"/>
 
                     <Label
+                        x:Name="LabelMarketCap"
                         Grid.Row="2"
                         Grid.Column="1"
-                        Text="63.88 Billion"
                         FontSize="Medium"
                         TextColor="Black"/>
 
