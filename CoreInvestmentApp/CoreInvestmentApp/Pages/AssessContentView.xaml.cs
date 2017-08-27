@@ -5,11 +5,10 @@ using OxyPlot.Series;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using CoreInvestmentApp.Classes;
 
 namespace CoreInvestmentApp.Pages
 {
@@ -44,27 +43,39 @@ namespace CoreInvestmentApp.Pages
 
             double totalThree = 0.0f;
             double totalFive = 0.0f;
-            for (int i = 0; i < 5; i++)
+
+            if (SortedList.Count() >= 3)
             {
-                totalFive += SortedList[i].Value;
-               
-                if (i < 3)
-                {
-                    totalThree += SortedList[i].Value;
-                }
+                totalThree = Math.Pow((SortedList[0].Value - SortedList[2].Value), 0.5) - 1;
             }
 
-            LabelThreeYears.Text = (totalThree / 3.0).ToString("F2");
+			if (SortedList.Count() >= 5)
+			{
+				totalThree = Math.Pow((SortedList[0].Value - SortedList[4].Value), 0.25) - 1;
+			}
+
+			LabelThreeYears.Text = (totalThree / 3.0).ToString("F2");
             LabelFiveYears.Text = (totalFive / 5.0).ToString("F2");
 
-            LabelAnnual.Text = stock.BasicEps;
-            LabelTTM.Text = "--";
-            LabelGrowth.Text = String.Format("{0:P2}", Decimal.Parse(stock.EpsGrowth));
+            LabelAnnual.Text = SortedList[0].Value.ToString();
+            LabelTTM.Text = stock.BasicEpsString;
+            LabelGrowth.Text = Util.FormatNumberToPercent(stock.EpsGrowth);
 
-            LabelPEG.Text = stock.PEG;
-            LabelEntryPrice.Text = "USD" + stock.AskPrice;
+            LabelPEG.Text = "--";
+            if (stock.AdjClosePrice > 0 && stock.BasicEps > 0 && stock.EpsGrowth > 0)
+            {
+                decimal peg = (stock.AdjClosePrice / stock.BasicEps) * stock.EpsGrowth;
+                LabelPEG.Text = Util.FormatNumberToCurrency(peg, CURRENCY_TYPE.DOLLAR_SIGN);
+            }
 
-            LabelDebtToEquity.Text = stock.DebtToEquity;
+            if (stock.EpsEstimatedGrowth > 0)
+            {
+                EntryEstimate.Text = Util.FormatNumberToPercent(stock.EpsEstimatedGrowth);
+                decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
+                LabelEntryPrice.Text = Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD);
+            }
+
+            LabelDebtToEquity.Text = Util.FormatNumberToPercent(stock.DebtToEquity);
         }
 
         private void CreateEPSChart()
@@ -90,7 +101,6 @@ namespace CoreInvestmentApp.Pages
 
         private void CreateOCFChart()
         {
-            var plotModel1 = new PlotModel { Title = "Operating Cash Flow" };
             var areaSeries1 = new AreaSeries
             {
                 MarkerType = MarkerType.Circle,
@@ -99,11 +109,41 @@ namespace CoreInvestmentApp.Pages
                 StrokeThickness = 1,
             };
 
+            double total = 0.0f;
             foreach (FreeCashFlow fcf in stock.CashFlowList)
             {
-                areaSeries1.Points.Add(new DataPoint(fcf.Date.Year, fcf.Value));
+                total += fcf.Value;
             }
 
+            double avg = total / stock.CashFlowList.Count();
+            double hundredthousands = 100000;
+            double million = 1000000;
+            double billion = 1000000000;
+            double unit;
+            string unitStr;
+
+            if (avg / billion > 1)
+            {
+                unitStr = "Billion";
+                unit = billion;
+            }
+            else if (avg / million > 1)
+            {
+                unitStr = "Million"; 
+                unit = million;
+            }
+            else{
+                unitStr = "Hundred Thousands";
+                unit = hundredthousands;
+            }
+
+            foreach (FreeCashFlow fcf in stock.CashFlowList)
+            {
+                areaSeries1.Points.Add(new DataPoint(fcf.Date.Year, fcf.Value / unit));
+            }
+
+            string title = String.Format("Operating Cash Flow ({0} USD)", unitStr);
+            var plotModel1 = new PlotModel { Title = title };
             plotModel1.Series.Add(areaSeries1);
 
             OCFModel = plotModel1;
@@ -170,6 +210,13 @@ namespace CoreInvestmentApp.Pages
             plotModel1.Series.Add(areaSeries1);
 
             ROAModel = plotModel1;
+        }
+
+        void Handle_Completed(object sender, System.EventArgs e)
+        {
+            stock.EpsEstimatedGrowth = Decimal.Parse(EntryEstimate.Text);
+			decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
+			LabelEntryPrice.Text = Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD);
         }
     }
 }

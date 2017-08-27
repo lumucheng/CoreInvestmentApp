@@ -20,14 +20,14 @@ namespace CoreInvestmentApp.Pages
 
             this.stock = stock;
             LabelDescription.Text = stock.Description;
-            LabelAdjClosePrice.Text = "$" + stock.AdjClosePrice;
-            LabelVolume.Text = stock.Volume;
-            LabelFiftyTwoHigh.Text = "$" +stock.FiftyTwoWeekHigh;
-            LabelFiftyTwoLow.Text = "$" + stock.FiftyTwoWeekLow;
+            LabelAdjClosePrice.Text = stock.AdjClosePriceString;
+            LabelVolume.Text = stock.VolumeString;
+            LabelFiftyTwoHigh.Text = stock.FiftyTwoWeekHighString;
+            LabelFiftyTwoLow.Text = stock.FiftyTwoWeekLowString;
             LabelSector.Text = stock.Sector;
             LabelName.Text = stock.Name;
             LabelTicker.Text = stock.StockIdentifier.Ticker;
-            LabelMarketCap.Text = stock.MarketCap;
+            LabelMarketCap.Text = stock.MarketCapString;
             circleImage.Source = stock.ImageUrl;
 
             // Bind data to chart.

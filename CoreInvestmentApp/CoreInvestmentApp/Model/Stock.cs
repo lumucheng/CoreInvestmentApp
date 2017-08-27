@@ -9,31 +9,30 @@ namespace CoreInvestmentApp.Model
 {
     public class Stock
     {
-        private string growth;
-        private string dividend;
-        private string average;
-        private string currentValue;
-        private string volume;
-        private string marketCap;
-        private string debtToEquity;
+        public decimal Growth;
+        public decimal Dividend;
+        public decimal CurrentValue;
+        public decimal Volume;
+        public decimal MarketCap;
+        public decimal DebtToEquity;
+        public decimal EpsEstimatedGrowth;
+        public decimal AdjClosePrice { get; set; }
+		public decimal FiftyTwoWeekHigh { get; set; }
+		public decimal FiftyTwoWeekLow { get; set; }
+        public decimal BasicEps { get; set; }
+        public decimal EpsGrowth { get; set; }
+        public decimal PEG { get; set; }
 
-        public string Category { get; set; }
+		public string Sector { get; set; }
         public string ImageUrl { get; set; }
         public string Description { get; set; }
-        public string AdjClosePrice { get; set; }
-        public string FiftyTwoWeekHigh { get; set; }
-        public string FiftyTwoWeekLow { get; set; }
-        public string Sector { get; set; }
-        public List<EarningPerShare> EpsList { get; set; }
-        public List<FreeCashFlow> CashFlowList { get; set; }
-        public List<DebtToEquity> DebtToEquityList { get; set; }
-        public List<ReturnOnEquity> ReturnToEquityList { get; set; }
-        public List<ReturnOnAsset> ReturnToAssetList { get; set; }
-        public string BasicEps { get; set; }
-        public string EpsGrowth { get; set; }
-        public string PEG { get; set; }
-        public string AskPrice { get; set; }
+
         public StockIdentifier StockIdentifier { get; set; }
+		public List<EarningPerShare> EpsList { get; set; }
+		public List<FreeCashFlow> CashFlowList { get; set; }
+		public List<DebtToEquity> DebtToEquityList { get; set; }
+		public List<ReturnOnEquity> ReturnToEquityList { get; set; }
+		public List<ReturnOnAsset> ReturnToAssetList { get; set; }
 
         public Stock()
         {
@@ -48,86 +47,44 @@ namespace CoreInvestmentApp.Model
             get { return StockIdentifier.Name; }
         }
 
-        public string CurrentValue
+        public string CurrentValueString
         {
-            get
-            {
-                decimal percent = Decimal.Parse(currentValue);
-                return percent.ToString("0.##");
-            }
-            set { currentValue = value; }
+            get { return Util.FormatNumberToCurrency(CurrentValue, CURRENCY_TYPE.USD); }
         }
 
-        public string Growth
+        public string VolumeString
         {
-            get
-            {
-                if (growth == "na")
-                {
-                    return "--";
-                }
-
-                decimal percent = Decimal.Parse(growth);
-
-                return String.Format("{0:P2}", percent);
-            }
-            set { growth = value; }
+            get { return Volume.ToString("#,##0.00"); }
         }
 
-        public string Dividend
+        public string AdjClosePriceString
         {
-            get
-            {
-                if (dividend == "na")
-                {
-                    return " --";
-                }
-                return dividend;
-            }
-            set { dividend = value; }
+            get { return Util.FormatNumberToCurrency(AdjClosePrice, CURRENCY_TYPE.DOLLAR_SIGN); }
         }
 
-        public string Average
+        public string FiftyTwoWeekHighString
         {
-            get
-            {
-                if (average == "na")
-                {
-                    return " --";
-                }
-                return average;
-            }
-            set { average = value; }
+            get { return Util.FormatNumberToCurrency(FiftyTwoWeekHigh, CURRENCY_TYPE.DOLLAR_SIGN); }
         }
 
-        public string Volume
+        public string FiftyTwoWeekLowString
         {
-            get
-            {
-                decimal vol = Decimal.Parse(volume);
-                return vol.ToString("#,##0.00");
-            }
-            set { volume = value; }
+            get { return Util.FormatNumberToCurrency(FiftyTwoWeekLow, CURRENCY_TYPE.DOLLAR_SIGN); }
         }
 
-        public string MarketCap
+        public string MarketCapString
         {
-            get
-            {
-                decimal market = Decimal.Parse(marketCap);
-                return Util.FormatNumber(market);
-            }
-            set { marketCap = value; }
+            get { return Util.FormatNumberEnglishUnits(MarketCap); }
         }
 
-        public string DebtToEquity
+        public string BasicEpsString
         {
-            get
-            {
-                decimal debtDecimal = Decimal.Parse(debtToEquity) * 100;
-                return String.Format("{0:P2}", debtDecimal);
-            }
-            set { debtToEquity = value; }
+            get { return Util.FormatNumberToCurrency(BasicEps, CURRENCY_TYPE.DOLLAR_SIGN); }
+        }
+
+        public string EpsGrowthString
+        {
+            get { return Util.FormatNumberToPercent(EpsGrowth); }
         }
     }
 }

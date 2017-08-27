@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -20,11 +19,10 @@ namespace CoreInvestmentApp.Pages
     public partial class WatchlistPage : ContentPage
     {
         public static ObservableCollection<Stock> StockList { get; set; }
-        
+
         public WatchlistPage()
         {
             InitializeComponent();
-            // BindingContext = new StockViewModel();
 
             StockList = new ObservableCollection<Stock>();
             BindingContext = StockList;
@@ -40,11 +38,6 @@ namespace CoreInvestmentApp.Pages
         {
             Stock stock = (Stock)e.SelectedItem;
             Navigation.PushAsync(new DetailedStockPage(stock));
-        }
-
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushModalAsync(new NavigationPage(new SearchPage()));
         }
 
         private async Task LoadTickersFromDBAsync()
@@ -66,7 +59,7 @@ namespace CoreInvestmentApp.Pages
                 }
 
                 string query = string.Format(Util.IntrinioAPIUrl +
-                    "/data_point?identifier={0}&item=revenuegrowth,dividend,average_daily_volume,close_price,company_url", identifierQuery);
+                    "/data_point?identifier={0}&item=close_price,company_url", identifierQuery);
                 HttpClient client = Util.GetAuthHttpClient();
                 var uri = new Uri(query);
 
@@ -86,21 +79,13 @@ namespace CoreInvestmentApp.Pages
 
                         Stock stock = stockDictionary[identifier];
 
-                        if (item == "revenuegrowth")
+                        if (item == "close_price")
                         {
-                            stock.Growth = value;
-                        }
-                        else if (item == "dividend")
-                        {
-                            stock.Dividend = value;
-                        }
-                        else if (item == "average_daily_volume")
-                        {
-                            stock.Average = value;
-                        }
-                        else if (item == "close_price")
-                        {
-                            stock.CurrentValue = value;
+                            decimal currentValue;
+                            if (Decimal.TryParse(value, out currentValue))
+                            {
+                                stock.CurrentValue = currentValue;
+                            }
                         }
                         else if (item == "company_url")
                         {
@@ -115,6 +100,11 @@ namespace CoreInvestmentApp.Pages
                     //TODO: Handle error here
                 }
             }
+        }
+
+        private void Handle_ItemTapped(object sender, System.EventArgs e)
+        {
+            Navigation.PushModalAsync(new NavigationPage(new SearchPage()));
         }
     }
 }

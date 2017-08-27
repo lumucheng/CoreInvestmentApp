@@ -8,6 +8,13 @@ using System.Threading.Tasks;
 
 namespace CoreInvestmentApp.Classes
 {
+    public enum CURRENCY_TYPE
+    {
+        DOLLAR_SIGN,
+        USD,
+        SGD
+    }
+
     public static class Util
     {
         private static string IntrinioID = "773bd894834c1d90100edc4002b8ddc9";
@@ -28,7 +35,7 @@ namespace CoreInvestmentApp.Classes
             return client;
         }
 
-        public static string FormatNumber(decimal n)
+        public static string FormatNumberEnglishUnits(decimal n)
         {
             if (n < 1000)
                 return n.ToString();
@@ -53,5 +60,28 @@ namespace CoreInvestmentApp.Classes
 
             return String.Format("{0:#,,,.##}B", n - 5000000);
         }
+
+        public static string FormatNumberToCurrency(decimal num, CURRENCY_TYPE type)
+        {
+            string sign = "";
+            if (type == CURRENCY_TYPE.DOLLAR_SIGN)
+            {
+                sign = "$";
+            }
+            else if (type == CURRENCY_TYPE.USD)
+            {
+                sign = "USD";
+            }
+            else if (type == CURRENCY_TYPE.SGD)
+            {
+                sign = "SGD";
+            }
+            return sign + num.ToString("0.##");
+        }
+
+        public static string FormatNumberToPercent(decimal num)
+        {
+            return String.Format("{0:P2}", num);
+        }   
     }
 }

@@ -3,12 +3,8 @@ using CoreInvestmentApp.Model;
 using CoreInvestmentApp.Tabs;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -32,7 +28,7 @@ namespace CoreInvestmentApp.Pages
         private async void GetDetailedInfoAsync()
         {
             string query = string.Format(Util.IntrinioAPIUrl +
-                    "/data_point?identifier={0}&item=long_description,adj_close_price,volume,52_week_high,52_week_low,sector,marketcap,basiceps,epsgrowth,peg,ask_price,debttoequity", stock.StockIdentifier.Ticker);
+                    "/data_point?identifier={0}&item=long_description,adj_close_price,volume,52_week_high,52_week_low,sector,marketcap,basiceps,epsgrowth,debttoequity", stock.StockIdentifier.Ticker);
             HttpClient client = Util.GetAuthHttpClient();
             var uri = new Uri(query);
 
@@ -54,19 +50,35 @@ namespace CoreInvestmentApp.Pages
                     }
                     else if (item == "adj_close_price")
                     {
-                        stock.AdjClosePrice = value;
+                        decimal adjClosePrice;
+                        if (Decimal.TryParse(value, out adjClosePrice))
+                        {
+                            stock.AdjClosePrice = adjClosePrice;
+                        }
                     }
                     else if (item == "volume")
                     {
-                        stock.Volume = value;
+                        decimal volume;
+                        if (Decimal.TryParse(value, out volume))
+                        {
+                            stock.Volume = volume;
+                        }
                     }
                     else if (item == "52_week_high")
                     {
-                        stock.FiftyTwoWeekHigh = value;
+                        decimal fiftyTwoWeekHigh;
+                        if (Decimal.TryParse(value, out fiftyTwoWeekHigh))
+                        {
+                            stock.FiftyTwoWeekHigh = fiftyTwoWeekHigh;
+                        }
                     }
                     else if (item == "52_week_low")
                     {
-                        stock.FiftyTwoWeekLow = value;
+                        decimal fiftyTwoWeekLow;
+                        if (Decimal.TryParse(value, out fiftyTwoWeekLow))
+                        {
+                            stock.FiftyTwoWeekLow = fiftyTwoWeekLow;   
+                        }
                     }
                     else if (item == "sector")
                     {
@@ -74,27 +86,35 @@ namespace CoreInvestmentApp.Pages
                     }
                     else if (item == "marketcap")
                     {
-                        stock.MarketCap = value;
+                        decimal marketCap;
+                        if (Decimal.TryParse(value, out marketCap))
+                        {
+                            stock.MarketCap = marketCap;
+                        }
                     }
                     else if (item == "basiceps")
                     {
-                        stock.BasicEps = value;
+                        decimal basicEps;
+                        if (Decimal.TryParse(value, out basicEps))
+                        {
+                            stock.BasicEps = basicEps;
+                        }
                     }
                     else if (item == "epsgrowth")
                     {
-                        stock.EpsGrowth = value;
-                    }
-                    else if (item == "pricetoearnings")
-                    {
-                        stock.PEG = value;
-                    }
-                    else if (item == "ask_price")
-                    {
-                        stock.AskPrice = value;
+                        decimal epsGrowth;
+                        if (Decimal.TryParse(value, out epsGrowth))
+                        {
+                            stock.EpsGrowth = epsGrowth;
+                        }
                     }
                     else if (item == "debttoequity")
                     {
-                        stock.DebtToEquity = value;
+                        decimal debtToEquity;
+                        if (Decimal.TryParse(value, out debtToEquity))
+                        {
+                            stock.DebtToEquity = debtToEquity;
+                        }
                     }
                 }
 
@@ -148,7 +168,7 @@ namespace CoreInvestmentApp.Pages
             DateTime previousDate = currentDate.AddYears(-10);
 
             string query = string.Format(Util.IntrinioAPIUrl +
-                   "/historical_data?identifier={0}&item=freecashflow&type=FY&start_date={1}-01-01&end_date={2}-01-01",
+                   "/historical_data?identifier={0}&item=netcashfromoperatingactivities&type=FY&start_date={1}-01-01&end_date={2}-01-01",
                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
             HttpClient client = Util.GetAuthHttpClient();
             var uri = new Uri(query);
@@ -174,7 +194,6 @@ namespace CoreInvestmentApp.Pages
 
                         cashFlowList.Add(fcf);
                     }
-                    
                 }
 
                 stock.CashFlowList = cashFlowList;
