@@ -11,6 +11,7 @@ namespace CoreInvestmentApp.Model
     {
         public decimal Growth;
         public decimal Dividend;
+        public decimal DividendYield;
         public decimal CurrentValue;
         public decimal Volume;
         public decimal MarketCap;
@@ -33,6 +34,7 @@ namespace CoreInvestmentApp.Model
 		public List<DebtToEquity> DebtToEquityList { get; set; }
 		public List<ReturnOnEquity> ReturnToEquityList { get; set; }
 		public List<ReturnOnAsset> ReturnToAssetList { get; set; }
+        public List<Dividend> DividendList { get; set; }
 
         public Stock()
         {
@@ -86,5 +88,7 @@ namespace CoreInvestmentApp.Model
         {
             get { return Util.FormatNumberToPercent(EpsGrowth); }
         }
+
+        
     }
 }

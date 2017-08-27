@@ -28,7 +28,7 @@ namespace CoreInvestmentApp.Pages
         private async void GetDetailedInfoAsync()
         {
             string query = string.Format(Util.IntrinioAPIUrl +
-                    "/data_point?identifier={0}&item=long_description,adj_close_price,volume,52_week_high,52_week_low,sector,marketcap,basiceps,epsgrowth,debttoequity", stock.StockIdentifier.Ticker);
+                    "/data_point?identifier={0}&item=long_description,adj_close_price,volume,52_week_high,52_week_low,sector,marketcap,basiceps,epsgrowth,debttoequity,cashdividendspershare,dividendyield", stock.StockIdentifier.Ticker);
             HttpClient client = Util.GetAuthHttpClient();
             var uri = new Uri(query);
 
@@ -114,6 +114,22 @@ namespace CoreInvestmentApp.Pages
                         if (Decimal.TryParse(value, out debtToEquity))
                         {
                             stock.DebtToEquity = debtToEquity;
+                        }
+                    }
+                    else if (item == "cashdividendspershare")
+                    {
+                        decimal dividend;
+                        if (Decimal.TryParse(value, out dividend))
+                        {
+                            stock.Dividend = dividend;
+                        }
+                    }
+                    else if (item == "dividendyield")
+                    {
+                        decimal dividendYield;
+                        if (Decimal.TryParse(value, out dividendYield))
+                        {
+                            stock.DividendYield = dividendYield;
                         }
                     }
                 }
@@ -316,6 +332,45 @@ namespace CoreInvestmentApp.Pages
                 }
 
                 stock.ReturnToAssetList = roaList;
+                GetDividend();
+            }
+        }
+
+        private async void GetDividend()
+        {
+            DateTime currentDate = DateTime.Now;
+            DateTime previousDate = currentDate.AddYears(-10);
+
+            string query = string.Format(Util.IntrinioAPIUrl +
+                   "/historical_data?identifier={0}&item=dividend&type=FY&start_date={1}-01-01&end_date={2}-01-01",
+                   stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
+            HttpClient client = Util.GetAuthHttpClient();
+            var uri = new Uri(query);
+
+            var response = await client.GetAsync(uri);
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                JObject jsonObject = JObject.Parse(json);
+                JArray data = (JArray)jsonObject["data"];
+                List<Dividend> dividendList = new List<Dividend>();
+
+                foreach (JToken token in data)
+                {
+                    string date = token["date"].ToString();
+                    string value = token["value"].ToString();
+
+                    if (value.Length > 0 && value != "null")
+                    {
+                        Dividend dividend = new Dividend();
+                        dividend.DateStr = date;
+                        dividend.ValueStr = value;
+
+                        dividendList.Add(dividend);
+                    }
+                }
+
+                stock.DividendList = dividendList;
                 LayoutInterface();
             }
         }

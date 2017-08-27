@@ -41,6 +41,7 @@
     <Compile Include="Classes\CurvedCornersLabel.cs" />
     <Compile Include="Classes\Util.cs" />
     <Compile Include="Model\DebtToEquity.cs" />
+    <Compile Include="Model\Dividend.cs" />
     <Compile Include="Model\EarningPerShare.cs" />
     <Compile Include="Model\FreeCashFlow.cs" />
     <Compile Include="Model\ReturnOnAsset.cs" />
@@ -67,6 +68,9 @@
     <Compile Include="Model\StockHelper.cs" />
     <Compile Include="Pages\SearchPage.xaml.cs">
       <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ValueContentView.xaml.cs">
+      <DependentUpon>ValueContentView.xaml</DependentUpon>
     </Compile>
     <Compile Include="SliderPages\AccountsPage.cs" />
     <Compile Include="SliderPages\ContractsPage.cs" />
@@ -195,6 +199,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ValueContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.267\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.267\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

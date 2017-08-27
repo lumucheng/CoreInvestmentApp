@@ -138,10 +138,15 @@ namespace CoreInvestmentApp.Tabs
                 {
                     view = new AssessContentView(Stock);
                 }
-                else
+                else if (index == 2)
+                {
+                    view = new ValueContentView(Stock);
+                }
+                else 
                 {
                     view = (View)ItemTemplate.CreateContent();
                 }
+
                 var bindableObject = view as BindableObject;
                 if (bindableObject != null)
                     bindableObject.BindingContext = item;

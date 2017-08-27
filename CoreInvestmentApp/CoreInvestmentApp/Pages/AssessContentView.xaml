@@ -7,7 +7,23 @@
              x:Class="CoreInvestmentApp.Pages.AssessContentView">
   <ContentView.Content>
         <StackLayout Orientation="Vertical" BackgroundColor="White">
-            <Label x:Name="LabelScore" FontSize="Large" Text="Investor Confidence: " HorizontalOptions="CenterAndExpand" />
+
+            <local:CurvedCornersLabel
+                Margin="15,15,15,15"
+                x:Name="LabelScore"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                FontSize="18"
+                FontAttributes="Bold"
+                HeightRequest="50"
+                CurvedBackgroundColor="#0040ff"
+                TextColor="White"
+                CurvedCornerRadius="15"
+                HorizontalOptions="Fill"
+                VerticalOptions="FillAndExpand"
+                WidthRequest="100"
+                Text="Investor Confidence: 0.00%"/>
+
             <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
                 <StackLayout BackgroundColor="White" Padding="10, 10, 10, 10"  Orientation="Vertical" VerticalOptions="FillAndExpand">
 
@@ -15,27 +31,27 @@
 
                     <StackLayout Orientation="Horizontal">
                         <messier16:Checkbox WidthRequest="45" />
-                        <Label FontSize="Medium" Text="Network effect" />
+                        <Label FontSize="Medium" Text="Network Effect" />
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
                         <messier16:Checkbox WidthRequest="45" />
-                        <Label FontSize="Medium" Text="Intangible assets" />
+                        <Label FontSize="Medium" Text="Intangible Assets" />
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
                         <messier16:Checkbox WidthRequest="45" />
-                        <Label FontSize="Medium" Text="Cost advantage" />
+                        <Label FontSize="Medium" Text="Cost Advantage" />
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
                         <messier16:Checkbox WidthRequest="45" />
-                        <Label FontSize="Medium" Text="Efficient scale" />
+                        <Label FontSize="Medium" Text="Efficient Scale" />
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
                         <messier16:Checkbox WidthRequest="45" />
-                        <Label FontSize="Medium" Text="Switching cost" />
+                        <Label FontSize="Medium" Text="Switching Cost" />
                     </StackLayout>
 
                     <Label Text="CORE" FontSize="Large" FontAttributes="Bold" />
@@ -238,7 +254,29 @@
                     </StackLayout>
 
                     <oxy:PlotView x:Name="ROAChart"  Model="{Binding ROAModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand"  />
-                    
+
+                    <Label Text="LIST" FontSize="Large" FontAttributes="Bold" />
+
+                    <StackLayout Orientation="Horizontal">
+                        <messier16:Checkbox WidthRequest="45" />
+                        <Label FontSize="Medium" Text="Legal Risk" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <messier16:Checkbox WidthRequest="45" CheckboxBackgroundColor="ForestGreen" />
+                        <Label FontSize="Medium" Text="Inflation Risk" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <messier16:Checkbox WidthRequest="45" />
+                        <Label FontSize="Medium" Text="Structure &amp; System Risk" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <messier16:Checkbox WidthRequest="45" />
+                        <Label FontSize="Medium" Text="Technology Risk" />
+                    </StackLayout>
+
                 </StackLayout>
             </ScrollView>
         </StackLayout>
