@@ -40,10 +40,12 @@
     </Compile>
     <Compile Include="Classes\CurvedCornersLabel.cs" />
     <Compile Include="Classes\Util.cs" />
+    <Compile Include="Model\BookValue.cs" />
     <Compile Include="Model\DebtToEquity.cs" />
     <Compile Include="Model\Dividend.cs" />
     <Compile Include="Model\EarningPerShare.cs" />
     <Compile Include="Model\FreeCashFlow.cs" />
+    <Compile Include="Model\RealmStockJson.cs" />
     <Compile Include="Model\ReturnOnAsset.cs" />
     <Compile Include="Model\ReturnOnEquity.cs" />
     <Compile Include="Model\WatchlistStock.cs" />

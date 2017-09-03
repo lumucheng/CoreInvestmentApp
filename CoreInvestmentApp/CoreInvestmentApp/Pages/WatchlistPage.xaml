@@ -33,37 +33,47 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10" BackgroundColor="#CEE6E5">
+                            <Grid Padding="10" RowSpacing="3" ColumnSpacing="10" BackgroundColor="#CEE6E5">
                                 <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="55*" />
-                                    <ColumnDefinition Width="45*" />
+                                    <ColumnDefinition Width="20*" />
+                                    <ColumnDefinition Width="50*" />
+                                    <ColumnDefinition Width="30*" />
                                 </Grid.ColumnDefinitions>
                                 <controls:CircleImage Aspect="AspectFit" BorderColor="Black" BorderThickness="1" HeightRequest="66" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="66" Grid.RowSpan="3" Source="{Binding ImageUrl}" />
-                                <StackLayout Grid.Column="1" Orientation="Horizontal">
+                                <StackLayout Grid.Column="1" Orientation="Horizontal" Grid.RowSpan="2" Grid.Row="0" VerticalOptions="Start">
                                     <Label Text="{Binding Name}" VerticalOptions="End" TextColor="Black" />
                                     <Label Text="{Binding Category}" VerticalOptions="End" TextColor="Black" BackgroundColor="#faebd6" />
                                 </StackLayout>
-                                <StackLayout Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
-                                    <controls:CircleImage BorderColor="#287d3b" BorderThickness="3" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Aspect="AspectFill" WidthRequest="15" />
+                                <StackLayout Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
+                                    <!--<controls:CircleImage BorderColor="#287d3b" BorderThickness="3" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Aspect="AspectFill" WidthRequest="15" />-->
+                                    <Label Text="MKT" TextColor="#287d3b" FontAttributes="Bold"></Label>
                                     <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding CurrentValueString}" TextColor="Black" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal" Grid.Column="2">
-                                    <controls:CircleImage BorderColor="#ebc361" BorderThickness="3" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="Start" Aspect="AspectFill" WidthRequest="15" />
-                                    <Label Text="{Binding Growth, StringFormat='{0}'}" VerticalOptions="End" TextColor="Black" />
+                                    <!--<controls:CircleImage BorderColor="#ebc361" BorderThickness="3" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="Start" Aspect="AspectFill" WidthRequest="15" />-->
+                                    <Label Text="G" TextColor="#ebc361" FontAttributes="Bold"></Label>
+                                    <Label Text="{Binding GrowthEntryPriceString}" VerticalOptions="End" TextColor="Black" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="1">
-                                    <controls:CircleImage BorderColor="#479eaa" BorderThickness="3" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="Start" Aspect="AspectFill" WidthRequest="15" />
-                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding Dividend, StringFormat='USD{0}'}" TextColor="Black" />
+                                    <!--<controls:CircleImage BorderColor="#479eaa" BorderThickness="3" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="Start" Aspect="AspectFill" WidthRequest="15" />-->
+                                    <Label Text="D" TextColor="#479eaa" FontAttributes="Bold"></Label>
+                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding DivdendEntryPriceString}" TextColor="Black" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="2">
-                                    <controls:CircleImage BorderColor="#efa06a" BorderThickness="3" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="Start" Aspect="AspectFill" WidthRequest="15" />
-                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding Average}" TextColor="Black" />
+                                    <!--<controls:CircleImage BorderColor="#efa06a" BorderThickness="3" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="Start" Aspect="AspectFill" WidthRequest="15" />-->
+                                    <Label Text="A" TextColor="#efa06a" FontAttributes="Bold"></Label>
+                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding AssetEntryPriceString}" TextColor="Black" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="3">
+                                    <!--<controls:CircleImage BorderColor="#efa06a" BorderThickness="3" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="Start" Aspect="AspectFill" WidthRequest="15" />-->
+                                    <Label Text="IC" TextColor="#efa06a" FontAttributes="Bold"></Label>
+                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding InvestorConfidenceString}" TextColor="Black" />
                                 </StackLayout>
                             </Grid>
                         </ViewCell>

@@ -27,7 +27,7 @@
                 <Label x:Name="LabelSector" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                 <Label Text="Market Share" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                 <Label Text="Based on Market Capitalization" FontSize="Medium" HorizontalOptions="CenterAndExpand" />
-
+               
                 <!--<oxy:PlotView x:Name="pieChart" Model="{Binding PieModel}" HeightRequest="400" WidthRequest="250" Margin="5,5,5,10" HorizontalOptions="CenterAndExpand" />-->
 
                 <BoxView Color="Gray" HeightRequest="1"/>

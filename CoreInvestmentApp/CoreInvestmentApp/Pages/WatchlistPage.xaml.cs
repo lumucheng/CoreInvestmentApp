@@ -1,6 +1,7 @@
 ﻿using CoreInvestmentApp.Classes;
 using CoreInvestmentApp.Model;
 using CoreInvestmentApp.ViewModel;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Realms;
 using System;
@@ -43,18 +44,19 @@ namespace CoreInvestmentApp.Pages
         private async Task LoadTickersFromDBAsync()
         {
             var vRealmDb = Realm.GetInstance();
-            var vAllStockIdentifier = vRealmDb.All<StockIdentifier>();
+            var vAllStock = vRealmDb.All<RealmStockJson>();
             Dictionary<string, Stock> stockDictionary = new Dictionary<string, Stock>();
             string identifierQuery = "";
 
-            if (vAllStockIdentifier.Count() > StockList.Count)
+
+            if (vAllStock.Count() > StockList.Count)
             {
-                foreach (StockIdentifier stockIdentifier in vAllStockIdentifier)
+                foreach (RealmStockJson stockJson in vAllStock)
                 {
+                    Stock stock = JsonConvert.DeserializeObject<Stock>(stockJson.JsonObjStr);
+                    StockIdentifier stockIdentifier = stock.StockIdentifier;
                     identifierQuery += stockIdentifier.Ticker + ",";
 
-                    Stock stock = new Stock();
-                    stock.StockIdentifier = stockIdentifier;
                     stockDictionary.Add(stockIdentifier.Ticker, stock);
                 }
 

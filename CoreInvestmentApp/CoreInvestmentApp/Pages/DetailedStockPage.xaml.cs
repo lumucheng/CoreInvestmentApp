@@ -1,7 +1,9 @@
 ﻿using CoreInvestmentApp.Classes;
 using CoreInvestmentApp.Model;
 using CoreInvestmentApp.Tabs;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Realms;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -21,14 +23,44 @@ namespace CoreInvestmentApp.Pages
 
         public DetailedStockPage(Stock stock)
         {
+            Title = "Stock Info";
             this.stock = stock;
-            GetDetailedInfoAsync();
+
+            var saveItem = new ToolbarItem
+            {
+                Text = "Save"
+            };
+
+            saveItem.Clicked += (object sender, System.EventArgs e) =>
+            {
+                var vRealmDb = Realm.GetInstance();
+
+                RealmStockJson stockJson = new RealmStockJson();
+                stockJson.StockTicker = stock.Ticker;
+                stockJson.JsonObjStr = JsonConvert.SerializeObject(stock);
+
+                vRealmDb.Write(() =>
+                {
+                    vRealmDb.Add(stockJson, true);
+                });
+            };
+
+            ToolbarItems.Add(saveItem);
+
+            if (stock.EpsList.Count > 0)
+            {
+                LayoutInterface();
+            }
+            else
+            {
+                GetDetailedInfoAsync();
+            }
         }
 
         private async void GetDetailedInfoAsync()
         {
             string query = string.Format(Util.IntrinioAPIUrl +
-                    "/data_point?identifier={0}&item=long_description,adj_close_price,volume,52_week_high,52_week_low,sector,marketcap,basiceps,epsgrowth,debttoequity,cashdividendspershare,dividendyield", stock.StockIdentifier.Ticker);
+                    "/data_point?identifier={0}&item=long_description,adj_close_price,volume,52_week_high,52_week_low,sector,marketcap,basiceps,epsgrowth,debttoequity,cashdividendspershare,dividendyield,bookvaluepershare,pricetobook", stock.StockIdentifier.Ticker);
             HttpClient client = Util.GetAuthHttpClient();
             var uri = new Uri(query);
 
@@ -77,7 +109,7 @@ namespace CoreInvestmentApp.Pages
                         decimal fiftyTwoWeekLow;
                         if (Decimal.TryParse(value, out fiftyTwoWeekLow))
                         {
-                            stock.FiftyTwoWeekLow = fiftyTwoWeekLow;   
+                            stock.FiftyTwoWeekLow = fiftyTwoWeekLow;
                         }
                     }
                     else if (item == "sector")
@@ -94,6 +126,7 @@ namespace CoreInvestmentApp.Pages
                     }
                     else if (item == "basiceps")
                     {
+
                         decimal basicEps;
                         if (Decimal.TryParse(value, out basicEps))
                         {
@@ -130,6 +163,22 @@ namespace CoreInvestmentApp.Pages
                         if (Decimal.TryParse(value, out dividendYield))
                         {
                             stock.DividendYield = dividendYield;
+                        }
+                    }
+                    else if (item == "pricetobook")
+                    {
+                        decimal priceToBook;
+                        if (Decimal.TryParse(value, out priceToBook))
+                        {
+                            stock.PriceToBook = priceToBook;
+                        }
+                    }
+                    else if (item == "bookvaluepershare")
+                    {
+                        decimal bookValuePerShare;
+                        if (Decimal.TryParse(value, out bookValuePerShare))
+                        {
+                            stock.BookValuePerShare = bookValuePerShare;
                         }
                     }
                 }
@@ -371,6 +420,45 @@ namespace CoreInvestmentApp.Pages
                 }
 
                 stock.DividendList = dividendList;
+                GetBookValue();
+            }
+        }
+
+        private async void GetBookValue()
+        {
+            DateTime currentDate = DateTime.Now;
+            DateTime previousDate = currentDate.AddYears(-10);
+
+            string query = string.Format(Util.IntrinioAPIUrl +
+                   "/historical_data?identifier={0}&item=bookvaluepershare&type=FY&start_date={1}-01-01&end_date={2}-01-01",
+                   stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
+            HttpClient client = Util.GetAuthHttpClient();
+            var uri = new Uri(query);
+
+            var response = await client.GetAsync(uri);
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                JObject jsonObject = JObject.Parse(json);
+                JArray data = (JArray)jsonObject["data"];
+                List<BookValue> bookValueList = new List<BookValue>();
+
+                foreach (JToken token in data)
+                {
+                    string date = token["date"].ToString();
+                    string value = token["value"].ToString();
+
+                    if (value.Length > 0 && value != "null")
+                    {
+                        BookValue bookValue = new BookValue();
+                        bookValue.DateStr = date;
+                        bookValue.ValueStr = value;
+
+                        bookValueList.Add(bookValue);
+                    }
+                }
+
+                stock.BookValueList = bookValueList;
                 LayoutInterface();
             }
         }
@@ -388,8 +476,53 @@ namespace CoreInvestmentApp.Pages
                 Padding = new Thickness(0, 0, 0, 0)
             };
 
-            stackLayout.Children.Add(new Label { Text = stock.StockIdentifier.Ticker, TextColor = Color.White, FontSize = 24, FontAttributes = FontAttributes.Bold, Margin = new Thickness(15, 10, 0, 0) });
-            stackLayout.Children.Add(new Label { Text = stock.StockIdentifier.Name, TextColor = Color.White, FontSize = 16, Margin = new Thickness(15, 10, 0, 0) });
+            Grid grid = new Grid();
+            ColumnDefinition col1 = new ColumnDefinition();
+            col1.Width = new GridLength(73, GridUnitType.Star);
+            ColumnDefinition col2 = new ColumnDefinition();
+            col2.Width = new GridLength(27, GridUnitType.Star);
+
+            grid.ColumnDefinitions.Add(col1);
+            grid.ColumnDefinitions.Add(col2);
+
+            Label LabelTicker = new Label { Text = stock.StockIdentifier.Ticker, TextColor = Color.White, FontSize = 22, FontAttributes = FontAttributes.Bold, Margin = new Thickness(15, 10, 0, 0) };
+            Label LabelIdentifier = new Label { Text = stock.StockIdentifier.Name, TextColor = Color.White, FontSize = 16, Margin = new Thickness(15, 10, 0, 0) };
+            Label LabelClose = new Label { Text = "Price: " + Util.FormatNumberToCurrency(stock.AdjClosePrice, CURRENCY_TYPE.USD), TextColor = Color.White, FontSize = 16, Margin = new Thickness(15, 10, 0, 0) };
+
+            StackLayout leftLayout = new StackLayout
+            {
+                BackgroundColor = Color.FromHex("#09b2c9"),
+                Orientation = StackOrientation.Vertical,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                Padding = new Thickness(0, 0, 0, 0),
+                HeightRequest = 120
+            };
+
+            leftLayout.Children.Add(LabelTicker);
+            leftLayout.Children.Add(LabelIdentifier);
+            leftLayout.Children.Add(LabelClose);
+
+            Label LabelFiftyTwo = new Label { Text = "52-week", FontAttributes = FontAttributes.Bold, TextColor = Color.White, FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
+            Label LabelFiftyTwoHigh = new Label { Text = "Hi: " + stock.FiftyTwoWeekHighString, FontAttributes = FontAttributes.Bold, TextColor = Color.White, FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
+            Label LabelFiftyTwoLow = new Label { Text = "Lo: " + stock.FiftyTwoWeekLowString, FontAttributes = FontAttributes.Bold, TextColor = Color.White, FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
+
+            StackLayout rightLayout = new StackLayout
+            {
+                BackgroundColor = Color.FromHex("#09b2c9"),
+                Orientation = StackOrientation.Vertical,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                Padding = new Thickness(0, 0, 0, 0) ,
+                HeightRequest = 120
+            };
+
+            rightLayout.Children.Add(LabelFiftyTwo);
+            rightLayout.Children.Add(LabelFiftyTwoHigh);
+            rightLayout.Children.Add(LabelFiftyTwoLow);
+
+            grid.Children.Add(leftLayout, 0, 0);
+            grid.Children.Add(rightLayout, 1, 0);
+
+            stackLayout.Children.Add(grid);
 
             relativeLayout = new RelativeLayout
             {
@@ -403,14 +536,14 @@ namespace CoreInvestmentApp.Pages
             var tabsHeight = 50;
             relativeLayout.Children.Add(_tabs,
                 Constraint.RelativeToParent((parent) => { return parent.X; }),
-                Constraint.RelativeToParent((parent) => { return parent.Y - 80; }),
+                Constraint.RelativeToParent((parent) => { return parent.Y - 125; }),
                 Constraint.RelativeToParent(parent => parent.Width),
                 Constraint.Constant(tabsHeight)
             );
 
             relativeLayout.Children.Add(pagesCarousel,
                 Constraint.Constant(0),
-                Constraint.RelativeToParent((parent) => { return parent.Y + tabsHeight - 80; }),
+                Constraint.RelativeToParent((parent) => { return parent.Y + tabsHeight - 125; }),
                 Constraint.RelativeToParent((parent) => { return parent.Width; }),
                 Constraint.RelativeToView(_tabs, (parent, sibling) => { return parent.Height - (sibling.Height); })
             );

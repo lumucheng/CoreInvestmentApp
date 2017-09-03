@@ -71,10 +71,17 @@ namespace CoreInvestmentApp.Pages
         private void StockIdentifierListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var vRealmDb = Realm.GetInstance();
-            StockIdentifier stock = (StockIdentifier)e.SelectedItem;
+            StockIdentifier stockIdentifier = (StockIdentifier)e.SelectedItem;
+            Stock stock = new Stock();
+            stock.StockIdentifier = stockIdentifier;
+
+            string jsonObj = JsonConvert.SerializeObject(stock);
+            RealmStockJson stockJson = new RealmStockJson();
+            stockJson.JsonObjStr = jsonObj;
+            stockJson.StockTicker = stockIdentifier.Ticker;
 
             vRealmDb.Write(() => {
-                vRealmDb.Add(stock, true);
+                vRealmDb.Add(stockJson, true);
             });
 
             Navigation.PopModalAsync();

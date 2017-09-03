@@ -22,6 +22,14 @@ namespace CoreInvestmentApp.Pages
         public PlotModel ROEModel { get; set; }
         public PlotModel ROAModel { get; set; }
 
+        public decimal InvestorScore
+        {
+            get
+            {
+                return stock.GrowthEntryPrice;
+            }
+        }
+
         public AssessContentView(Stock stock)
         {
             InitializeComponent();
@@ -39,43 +47,191 @@ namespace CoreInvestmentApp.Pages
             ROEChart.BindingContext = this;
             ROAChart.BindingContext = this;
 
-            List<EarningPerShare> SortedList = stock.EpsList.OrderByDescending(o => o.Date).ToList();
-
-            double totalThree = 0.0f;
-            double totalFive = 0.0f;
-
-            if (SortedList.Count() >= 3)
-            {
-                totalThree = Math.Pow((SortedList[0].Value - SortedList[2].Value), 0.5) - 1;
-            }
-
-			if (SortedList.Count() >= 5)
-			{
-				totalThree = Math.Pow((SortedList[0].Value - SortedList[4].Value), 0.25) - 1;
-			}
-
-			LabelThreeYears.Text = (totalThree / 3.0).ToString("F2");
-            LabelFiveYears.Text = (totalFive / 5.0).ToString("F2");
-
-            LabelAnnual.Text = SortedList[0].Value.ToString();
-            LabelTTM.Text = stock.BasicEpsString;
-            LabelGrowth.Text = Util.FormatNumberToPercent(stock.EpsGrowth);
-
-            LabelPEG.Text = "--";
-            if (stock.AdjClosePrice > 0 && stock.BasicEps > 0 && stock.EpsGrowth > 0)
-            {
-                decimal peg = (stock.AdjClosePrice / stock.BasicEps) * stock.EpsGrowth;
-                LabelPEG.Text = Util.FormatNumberToCurrency(peg, CURRENCY_TYPE.DOLLAR_SIGN);
-            }
-
-            if (stock.EpsEstimatedGrowth > 0)
-            {
-                EntryEstimate.Text = Util.FormatNumberToPercent(stock.EpsEstimatedGrowth);
-                decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
-                LabelEntryPrice.Text = Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD);
-            }
-
             LabelDebtToEquity.Text = Util.FormatNumberToPercent(stock.DebtToEquity);
+            InitCheckBoxes();
+            UpdateInvestorConfidence();
+        }
+
+        private void InitCheckBoxes()
+        {
+            // NICES
+            ChkBoxNetwork.Checked = stock.NetworkEffect;
+            ChkBoxNetwork.CheckedChanged += (sender, e) =>
+            {
+                stock.NetworkEffect = ChkBoxNetwork.Checked;
+                UpdateInvestorConfidence();
+            };
+
+            ChkBoxIntangible.Checked = stock.IntangibleAssets;
+            ChkBoxIntangible.CheckedChanged += (sender, e) =>
+            {
+                stock.IntangibleAssets = ChkBoxIntangible.Checked;
+                UpdateInvestorConfidence();
+            };
+
+            ChkBoxCost.Checked = stock.CostAdvantage;
+            ChkBoxCost.CheckedChanged += (sender, e) =>
+            {
+                stock.CostAdvantage = ChkBoxCost.Checked;
+                UpdateInvestorConfidence();
+            };
+
+            ChkBoxEfficientScale.Checked = stock.EfficientScale;
+            ChkBoxEfficientScale.CheckedChanged += (sender, e) =>
+            {
+                stock.EfficientScale = ChkBoxEfficientScale.Checked;
+                UpdateInvestorConfidence();
+            };
+
+            ChkBoxSwitch.Checked = stock.SwitchingCost;
+            ChkBoxSwitch.CheckedChanged += (sender, e) =>
+            {
+                stock.SwitchingCost = ChkBoxSwitch.Checked;
+                UpdateInvestorConfidence();
+            };
+
+            // CORE
+            ChkboxConstantEPS.Checked = stock.CostantEPS;
+            ChkboxConstantEPS.CheckedChanged += (sender, e) =>
+            {
+                stock.CostantEPS = ChkboxConstantEPS.Checked;
+                UpdateInvestorConfidence();
+            };
+
+            ChkboxCashFlow.Checked = stock.OperationFlow;
+            ChkboxCashFlow.CheckedChanged += (sender, e) =>
+            {
+                stock.OperationFlow = ChkboxCashFlow.Checked;
+                UpdateInvestorConfidence();
+            };
+
+            ChkboxReliable.Checked = stock.Reliable;
+            ChkboxReliable.CheckedChanged += (sender, e) =>
+            {
+                stock.Reliable = ChkboxReliable.Checked;
+                UpdateInvestorConfidence();
+            };
+
+            ChkboxEfficient.Checked = stock.Efficient;
+            ChkboxEfficient.CheckedChanged += (sender, e) =>
+            {
+                stock.Efficient = ChkboxEfficient.Checked;
+                UpdateInvestorConfidence();
+            };
+
+            // LIST
+            ChkBoxLegal.Checked = stock.LegalRisk;
+            ChkBoxLegal.CheckedChanged += (sender, e) =>
+            {
+                stock.LegalRisk = ChkBoxLegal.Checked;
+                UpdateInvestorConfidence();
+            };
+
+            ChkBoxInflation.Checked = stock.InflationRisk;
+            ChkBoxInflation.CheckedChanged += (sender, e) =>
+            {
+                stock.InflationRisk = ChkBoxInflation.Checked;
+                UpdateInvestorConfidence();
+            };
+
+            ChkBoxStructure.Checked = stock.StructureSystemRisk;
+            ChkBoxStructure.CheckedChanged += (sender, e) =>
+            {
+                stock.StructureSystemRisk = ChkBoxStructure.Checked;
+                UpdateInvestorConfidence();
+            };
+
+            ChkBoxTechnology.Checked = stock.TechnologyRisk;
+            ChkBoxTechnology.CheckedChanged += (sender, e) =>
+            {
+                stock.TechnologyRisk = ChkBoxTechnology.Checked;
+                UpdateInvestorConfidence();
+            };
+        }
+
+        private void UpdateInvestorConfidence()
+        {
+            int percent = 0;
+            int nicesCount = 0;
+            int listCount = 0;
+            int coreCount = 0;
+
+            if (stock.NetworkEffect)
+            {
+                nicesCount++;
+            }
+            if (stock.IntangibleAssets)
+            {
+                nicesCount++;
+            }
+            if (stock.CostAdvantage)
+            {
+                nicesCount++;
+            }
+            if (stock.EfficientScale)
+            {
+                nicesCount++;
+            }
+            if (stock.SwitchingCost)
+            {
+                nicesCount++;
+            }
+
+            if (stock.LegalRisk)
+            {
+                listCount++;
+            }
+            if (stock.InflationRisk)
+            {
+                listCount++;
+            }
+            if (stock.StructureSystemRisk)
+            {
+                listCount++;
+            }
+            if (stock.TechnologyRisk)
+            {
+                listCount++;
+            }
+
+            if (stock.CostantEPS)
+            {
+                coreCount++;
+            }
+            if (stock.OperationFlow)
+            {
+                coreCount++;
+            }
+            if (stock.Reliable)
+            {
+                coreCount++;
+            }
+            if (stock.Efficient)
+            {
+                coreCount++;
+            }
+
+            if (nicesCount >= 2)
+            {
+                percent = 40;
+            }
+            else if (nicesCount >= 1)
+            {
+                percent = 20;
+            }
+
+            int listPercent = listCount * 5;
+            percent += listPercent;
+
+            int corePercent = coreCount * 10;
+            percent += corePercent;
+
+            stock.InvestorConfidence = percent;
+
+            string confidenceString = String.Format("Investor Confidence: {0}%", percent);
+            LabelScore.Text = confidenceString;
+            LabelScore.HorizontalTextAlignment = TextAlignment.Center;
+            LabelScore.LineBreakMode = LineBreakMode.NoWrap;
         }
 
         private void CreateEPSChart()
@@ -210,13 +366,6 @@ namespace CoreInvestmentApp.Pages
             plotModel1.Series.Add(areaSeries1);
 
             ROAModel = plotModel1;
-        }
-
-        void Handle_Completed(object sender, System.EventArgs e)
-        {
-            stock.EpsEstimatedGrowth = Decimal.Parse(EntryEstimate.Text);
-			decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
-			LabelEntryPrice.Text = Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD);
         }
     }
 }
