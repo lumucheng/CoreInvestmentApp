@@ -34,7 +34,6 @@ namespace CoreInvestmentApp.Tabs
             };
 
             Content = _stack;
-            IsEnabled = false;
         }
 
         public IndicatorStyleEnum IndicatorStyle { get; set; }

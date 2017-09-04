@@ -1,4 +1,5 @@
-﻿using CoreInvestmentApp.Classes;
+﻿using Acr.UserDialogs;
+using CoreInvestmentApp.Classes;
 using CoreInvestmentApp.Model;
 using CoreInvestmentApp.Tabs;
 using Newtonsoft.Json;
@@ -7,7 +8,7 @@ using Realms;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -53,11 +54,15 @@ namespace CoreInvestmentApp.Pages
             }
             else
             {
-                GetDetailedInfoAsync();
+                UserDialogs.Instance.ShowLoading("Loading", MaskType.Black);
+                GetDetailedInfoAsync().ContinueWith((task) =>
+                {
+                    UserDialogs.Instance.HideLoading();
+                });
             }
         }
 
-        private async void GetDetailedInfoAsync()
+        private async Task GetDetailedInfoAsync()
         {
             string query = string.Format(Util.IntrinioAPIUrl +
                     "/data_point?identifier={0}&item=long_description,adj_close_price,volume,52_week_high,52_week_low,sector,marketcap,basiceps,epsgrowth,debttoequity,cashdividendspershare,dividendyield,bookvaluepershare,pricetobook", stock.StockIdentifier.Ticker);
@@ -183,11 +188,11 @@ namespace CoreInvestmentApp.Pages
                     }
                 }
 
-                GetHistoricalEPS();
+                await GetHistoricalEPS();
             }
         }
 
-        private async void GetHistoricalEPS()
+        private async Task GetHistoricalEPS()
         {
             DateTime currentDate = DateTime.Now;
             DateTime previousDate = currentDate.AddYears(-10);
@@ -223,11 +228,11 @@ namespace CoreInvestmentApp.Pages
 
                 stock.EpsList = epsList;
 
-                GetFreeCashFlow();
+                await GetFreeCashFlow();
             }
         }
 
-        private async void GetFreeCashFlow()
+        private async Task GetFreeCashFlow()
         {
             DateTime currentDate = DateTime.Now;
             DateTime previousDate = currentDate.AddYears(-10);
@@ -263,11 +268,11 @@ namespace CoreInvestmentApp.Pages
 
                 stock.CashFlowList = cashFlowList;
 
-                GetDebtToEquity();
+                await GetDebtToEquity();
             }
         }
 
-        private async void GetDebtToEquity()
+        private async Task GetDebtToEquity()
         {
             DateTime currentDate = DateTime.Now;
             DateTime previousDate = currentDate.AddYears(-10);
@@ -303,11 +308,11 @@ namespace CoreInvestmentApp.Pages
 
                 stock.DebtToEquityList = debtToEquityList;
 
-                GetReturnOnEquity();
+                await GetReturnOnEquity();
             }
         }
 
-        private async void GetReturnOnEquity()
+        private async Task GetReturnOnEquity()
         {
             DateTime currentDate = DateTime.Now;
             DateTime previousDate = currentDate.AddYears(-10);
@@ -342,11 +347,12 @@ namespace CoreInvestmentApp.Pages
                 }
 
                 stock.ReturnToEquityList = roeList;
-                GetReturnOnAsset();
+
+                await GetReturnOnAsset();
             }
         }
 
-        private async void GetReturnOnAsset()
+        private async Task GetReturnOnAsset()
         {
             DateTime currentDate = DateTime.Now;
             DateTime previousDate = currentDate.AddYears(-10);
@@ -381,11 +387,11 @@ namespace CoreInvestmentApp.Pages
                 }
 
                 stock.ReturnToAssetList = roaList;
-                GetDividend();
+                await GetDividend();
             }
         }
 
-        private async void GetDividend()
+        private async Task GetDividend()
         {
             DateTime currentDate = DateTime.Now;
             DateTime previousDate = currentDate.AddYears(-10);
@@ -420,11 +426,12 @@ namespace CoreInvestmentApp.Pages
                 }
 
                 stock.DividendList = dividendList;
-                GetBookValue();
+
+                await GetBookValue();
             }
         }
 
-        private async void GetBookValue()
+        private async Task GetBookValue()
         {
             DateTime currentDate = DateTime.Now;
             DateTime previousDate = currentDate.AddYears(-10);
@@ -459,6 +466,7 @@ namespace CoreInvestmentApp.Pages
                 }
 
                 stock.BookValueList = bookValueList;
+
                 LayoutInterface();
             }
         }

@@ -9,6 +9,7 @@ using Android.OS;
 using OxyPlot.Xamarin.Forms.Platform.Android;
 using ImageCircle.Forms.Plugin.Droid;
 using Messier16.Forms.Android.Controls;
+using Acr.UserDialogs;
 
 namespace CoreInvestmentApp.Droid
 {
@@ -28,6 +29,7 @@ namespace CoreInvestmentApp.Droid
             PlotViewRenderer.Init();
             ImageCircleRenderer.Init();
             Messier16Controls.InitAll();
+            UserDialogs.Init(this);
 
             LoadApplication(new App());
         }
