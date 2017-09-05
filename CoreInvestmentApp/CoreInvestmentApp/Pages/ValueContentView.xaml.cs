@@ -76,11 +76,10 @@ namespace CoreInvestmentApp.Pages
             if (stock.EpsEstimatedGrowth > 0)
             {
                 EntryEstimate.Text = stock.EpsEstimatedGrowth.ToString();
-                decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
-                LabelEntryPrice.Text = Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD);
             }
 
-            LabelEntryPrice.Text = Util.FormatNumberToCurrency(stock.GrowthEntryPrice, CURRENCY_TYPE.USD);
+            decimal entryPrice = stock.BasicEps * Decimal.Parse(EntryEstimate.Text);
+			LabelEntryPrice.Text = Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD);
         }
 
         private void UpdateDividendLabels()

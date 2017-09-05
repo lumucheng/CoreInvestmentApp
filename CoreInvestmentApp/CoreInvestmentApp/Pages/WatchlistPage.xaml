@@ -89,6 +89,8 @@
                 ItemTapped="Handle_ItemTapped" 
                 AbsoluteLayout.LayoutFlags="PositionProportional" 
                 AbsoluteLayout.LayoutBounds="1.0,1.0,-1,-1" 
+                HeightRequest="75"
+                WidthRequest="75"
                 Margin="10" />
         </AbsoluteLayout>
     </ContentPage.Content>

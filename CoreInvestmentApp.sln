@@ -189,6 +189,8 @@ Global
 		{648A040F-1B55-4839-8E8C-3CC472E179CC}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{648A040F-1B55-4839-8E8C-3CC472E179CC}.Release|x64.ActiveCfg = Release|iPhone
 		{648A040F-1B55-4839-8E8C-3CC472E179CC}.Release|x86.ActiveCfg = Release|iPhone
+		{648A040F-1B55-4839-8E8C-3CC472E179CC}.Debug|Any CPU.Build.0 = Debug|iPhone
+		{648A040F-1B55-4839-8E8C-3CC472E179CC}.Release|Any CPU.Build.0 = Release|iPhone
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -99,6 +99,7 @@
     <Compile Include="Model\StockIdentifier.cs" />
     <Compile Include="Classes\ImageButton.cs" />
     <Compile Include="Classes\PlatformImageExtension.cs" />
+    <Compile Include="Classes\ExtendedEntry.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">

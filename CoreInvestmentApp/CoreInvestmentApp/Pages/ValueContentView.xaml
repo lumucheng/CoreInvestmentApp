@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:messier16="clr-namespace:Messier16.Forms.Controls;assembly=Messier16.Forms.Controls"
@@ -121,7 +121,7 @@
                 </Grid>
 
                 <Label Text="Earning per share estimated growth (%)" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
-                <Entry x:Name="EntryEstimate" FontSize="Large" Text="12.5" Placeholder="Enter Estimate" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Completed="Handle_Completed" Keyboard="Numeric" />
+                <local:ExtendedEntry x:Name="EntryEstimate" FontSize="Large" Text="12.5" Placeholder="Enter Estimate" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Completed="Handle_Completed" Keyboard="Numeric" />
 
                 <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
                     <Grid.RowDefinitions>
@@ -216,7 +216,7 @@
                 </Grid>
 
                 <Label Text="Expected dividend yield (%)" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
-                <Entry x:Name="EntryExpectedDividendYield" Text="7.0" FontSize="Large" Placeholder="Enter Expected" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Completed="Handle_EntryExpectedDividendYield_Completed" Keyboard="Numeric" />
+                <local:ExtendedEntry x:Name="EntryExpectedDividendYield" Text="7.0" FontSize="Large" Placeholder="Enter Expected" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Completed="Handle_EntryExpectedDividendYield_Completed" Keyboard="Numeric" />
 
                 <Label Text="Entry Price" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                 <local:CurvedCornersLabel
@@ -325,7 +325,7 @@
                 </Grid>
 
                 <Label Text="Expected Price to Book" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
-                <Entry x:Name="EntryExpectedBookPrice" FontSize="Large" Text="8" Placeholder="Enter Estimate" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Completed="Handle_EntryExpectedBookPrice_Completed" Keyboard="Numeric" />
+                <local:ExtendedEntry x:Name="EntryExpectedBookPrice" FontSize="Large" Text="8" Placeholder="Enter Estimate" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Completed="Handle_EntryExpectedBookPrice_Completed" Keyboard="Numeric" />
 
                 <Label Text="Entry Price" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                 <local:CurvedCornersLabel
