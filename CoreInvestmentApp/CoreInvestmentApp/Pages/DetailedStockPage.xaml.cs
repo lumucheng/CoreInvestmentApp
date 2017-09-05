@@ -7,6 +7,7 @@ using Newtonsoft.Json.Linq;
 using Realms;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -48,24 +49,27 @@ namespace CoreInvestmentApp.Pages
 
             ToolbarItems.Add(saveItem);
 
-            if (stock.EpsList.Count > 0)
+            UserDialogs.Instance.ShowLoading("Loading..", MaskType.Black);
+            GetDetailedInfoAsync().ContinueWith((task) =>
             {
-                LayoutInterface();
-            }
-            else
-            {
-                UserDialogs.Instance.ShowLoading("Loading", MaskType.Black);
-                GetDetailedInfoAsync().ContinueWith((task) =>
-                {
-                    UserDialogs.Instance.HideLoading();
-                });
-            }
+                UserDialogs.Instance.HideLoading();
+            });
         }
 
         private async Task GetDetailedInfoAsync()
         {
-            string query = string.Format(Util.IntrinioAPIUrl +
+            string query = "";
+
+            if (stock.Description != null)
+            {
+                query = string.Format(Util.IntrinioAPIUrl + "/data_point?identifier={0}&item=,adj_close_price,volume,52_week_high,52_week_low,marketcap,basiceps,epsgrowth,debttoequity,cashdividendspershare,dividendyield,bookvaluepershare,pricetobook", stock.StockIdentifier.Ticker);
+            }
+            else
+            {
+                query = string.Format(Util.IntrinioAPIUrl +
                     "/data_point?identifier={0}&item=long_description,adj_close_price,volume,52_week_high,52_week_low,sector,marketcap,basiceps,epsgrowth,debttoequity,cashdividendspershare,dividendyield,bookvaluepershare,pricetobook", stock.StockIdentifier.Ticker);
+            }
+
             HttpClient client = Util.GetAuthHttpClient();
             var uri = new Uri(query);
 
@@ -196,279 +200,316 @@ namespace CoreInvestmentApp.Pages
         {
             DateTime currentDate = DateTime.Now;
             DateTime previousDate = currentDate.AddYears(-10);
+            List<EarningPerShare> SortedList = stock.EpsList.OrderByDescending(o => o.Date).ToList();
+            EarningPerShare latestEps = SortedList.FirstOrDefault();
 
-            string query = string.Format(Util.IntrinioAPIUrl +
-                   "/historical_data?identifier={0}&item=basiceps&type=FY&start_date={1}-01-01&end_date={2}-01-01",
-                   stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
-            HttpClient client = Util.GetAuthHttpClient();
-            var uri = new Uri(query);
-
-            var response = await client.GetAsync(uri);
-            if (response.IsSuccessStatusCode)
+            if (SortedList.Count == 0 || latestEps.Date.AddYears(1) < currentDate.Date)
             {
-                var json = await response.Content.ReadAsStringAsync();
-                JObject jsonObject = JObject.Parse(json);
-                JArray data = (JArray)jsonObject["data"];
-                List<EarningPerShare> epsList = new List<EarningPerShare>();
+                string query = string.Format(Util.IntrinioAPIUrl + 
+                    "/historical_data?identifier={0}&item=basiceps&type=FY&start_date={1}-01-01&end_date={2}-01-01", 
+                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
+                HttpClient client = Util.GetAuthHttpClient();
+                var uri = new Uri(query);
 
-                foreach (JToken token in data)
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
                 {
-                    string date = token["date"].ToString();
-                    string value = token["value"].ToString();
+                    var json = await response.Content.ReadAsStringAsync();
+                    JObject jsonObject = JObject.Parse(json);
+                    JArray data = (JArray)jsonObject["data"];
+                    List<EarningPerShare> epsList = new List<EarningPerShare>();
 
-                    if (value.Length > 0 && value != "null")
+                    foreach (JToken token in data)
                     {
-                        EarningPerShare eps = new EarningPerShare();
-                        eps.DateStr = date;
-                        eps.ValueStr = value;
+                        string date = token["date"].ToString();
+                        string value = token["value"].ToString();
 
-                        epsList.Add(eps);
+                        if (value.Length > 0 && value != "null")
+                        {
+                            EarningPerShare eps = new EarningPerShare();
+                            eps.DateStr = date;
+                            eps.ValueStr = value;
+
+                            epsList.Add(eps);
+                        }
                     }
+
+                    stock.EpsList = epsList;
+
                 }
-
-                stock.EpsList = epsList;
-
-                await GetFreeCashFlow();
             }
+
+            await GetFreeCashFlow();
         }
 
         private async Task GetFreeCashFlow()
         {
             DateTime currentDate = DateTime.Now;
             DateTime previousDate = currentDate.AddYears(-10);
+            List<FreeCashFlow> SortedList = stock.CashFlowList.OrderByDescending(o => o.Date).ToList();
+            FreeCashFlow latestCashFlow = SortedList.FirstOrDefault();
 
-            string query = string.Format(Util.IntrinioAPIUrl +
+            if (SortedList.Count == 0 || latestCashFlow.Date.AddYears(1) < currentDate.Date)
+            {
+                string query = string.Format(Util.IntrinioAPIUrl +
                    "/historical_data?identifier={0}&item=netcashfromoperatingactivities&type=FY&start_date={1}-01-01&end_date={2}-01-01",
                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
-            HttpClient client = Util.GetAuthHttpClient();
-            var uri = new Uri(query);
+                HttpClient client = Util.GetAuthHttpClient();
+                var uri = new Uri(query);
 
-            var response = await client.GetAsync(uri);
-            if (response.IsSuccessStatusCode)
-            {
-                var json = await response.Content.ReadAsStringAsync();
-                JObject jsonObject = JObject.Parse(json);
-                JArray data = (JArray)jsonObject["data"];
-                List<FreeCashFlow> cashFlowList = new List<FreeCashFlow>();
-
-                foreach (JToken token in data)
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
                 {
-                    string date = token["date"].ToString();
-                    string value = token["value"].ToString();
+                    var json = await response.Content.ReadAsStringAsync();
+                    JObject jsonObject = JObject.Parse(json);
+                    JArray data = (JArray)jsonObject["data"];
+                    List<FreeCashFlow> cashFlowList = new List<FreeCashFlow>();
 
-                    if (value.Length > 0 && value != "null")
+                    foreach (JToken token in data)
                     {
-                        FreeCashFlow fcf = new FreeCashFlow();
-                        fcf.DateStr = date;
-                        fcf.ValueStr = value;
+                        string date = token["date"].ToString();
+                        string value = token["value"].ToString();
 
-                        cashFlowList.Add(fcf);
+                        if (value.Length > 0 && value != "null")
+                        {
+                            FreeCashFlow fcf = new FreeCashFlow();
+                            fcf.DateStr = date;
+                            fcf.ValueStr = value;
+
+                            cashFlowList.Add(fcf);
+                        }
                     }
+
+                    stock.CashFlowList = cashFlowList;
                 }
-
-                stock.CashFlowList = cashFlowList;
-
-                await GetDebtToEquity();
             }
+
+            await GetDebtToEquity();
         }
 
         private async Task GetDebtToEquity()
         {
             DateTime currentDate = DateTime.Now;
             DateTime previousDate = currentDate.AddYears(-10);
+            List<DebtToEquity> SortedList = stock.DebtToEquityList.OrderByDescending(o => o.Date).ToList();
+            DebtToEquity latestDebtToEquity = SortedList.FirstOrDefault();
 
-            string query = string.Format(Util.IntrinioAPIUrl +
+            if (SortedList.Count == 0 || latestDebtToEquity.Date.AddYears(1) < currentDate.Date)
+            {
+                string query = string.Format(Util.IntrinioAPIUrl +
                    "/historical_data?identifier={0}&item=debttoequity&type=FY&start_date={1}-01-01&end_date={2}-01-01",
                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
-            HttpClient client = Util.GetAuthHttpClient();
-            var uri = new Uri(query);
+                HttpClient client = Util.GetAuthHttpClient();
+                var uri = new Uri(query);
 
-            var response = await client.GetAsync(uri);
-            if (response.IsSuccessStatusCode)
-            {
-                var json = await response.Content.ReadAsStringAsync();
-                JObject jsonObject = JObject.Parse(json);
-                JArray data = (JArray)jsonObject["data"];
-                List<DebtToEquity> debtToEquityList = new List<DebtToEquity>();
-
-                foreach (JToken token in data)
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
                 {
-                    string date = token["date"].ToString();
-                    string value = token["value"].ToString();
+                    var json = await response.Content.ReadAsStringAsync();
+                    JObject jsonObject = JObject.Parse(json);
+                    JArray data = (JArray)jsonObject["data"];
+                    List<DebtToEquity> debtToEquityList = new List<DebtToEquity>();
 
-                    if (value.Length > 0 && value != "null")
+                    foreach (JToken token in data)
                     {
-                        DebtToEquity debtToEqu = new DebtToEquity();
-                        debtToEqu.DateStr = date;
-                        debtToEqu.ValueStr = value;
+                        string date = token["date"].ToString();
+                        string value = token["value"].ToString();
 
-                        debtToEquityList.Add(debtToEqu);
+                        if (value.Length > 0 && value != "null")
+                        {
+                            DebtToEquity debtToEqu = new DebtToEquity();
+                            debtToEqu.DateStr = date;
+                            debtToEqu.ValueStr = value;
+
+                            debtToEquityList.Add(debtToEqu);
+                        }
                     }
+
+                    stock.DebtToEquityList = debtToEquityList;
                 }
-
-                stock.DebtToEquityList = debtToEquityList;
-
-                await GetReturnOnEquity();
             }
+
+            await GetReturnOnEquity();
         }
 
         private async Task GetReturnOnEquity()
         {
             DateTime currentDate = DateTime.Now;
             DateTime previousDate = currentDate.AddYears(-10);
+            List<ReturnOnEquity> SortedList = stock.ReturnToEquityList.OrderByDescending(o => o.Date).ToList();
+            ReturnOnEquity latestReturnOnEquity = SortedList.FirstOrDefault();
 
-            string query = string.Format(Util.IntrinioAPIUrl +
+            if (SortedList.Count == 0 || latestReturnOnEquity.Date.AddYears(1) < currentDate.Date)
+            {
+                string query = string.Format(Util.IntrinioAPIUrl +
                    "/historical_data?identifier={0}&item=roe&type=FY&start_date={1}-01-01&end_date={2}-01-01",
                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
-            HttpClient client = Util.GetAuthHttpClient();
-            var uri = new Uri(query);
+                HttpClient client = Util.GetAuthHttpClient();
+                var uri = new Uri(query);
 
-            var response = await client.GetAsync(uri);
-            if (response.IsSuccessStatusCode)
-            {
-                var json = await response.Content.ReadAsStringAsync();
-                JObject jsonObject = JObject.Parse(json);
-                JArray data = (JArray)jsonObject["data"];
-                List<ReturnOnEquity> roeList = new List<ReturnOnEquity>();
-
-                foreach (JToken token in data)
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
                 {
-                    string date = token["date"].ToString();
-                    string value = token["value"].ToString();
+                    var json = await response.Content.ReadAsStringAsync();
+                    JObject jsonObject = JObject.Parse(json);
+                    JArray data = (JArray)jsonObject["data"];
+                    List<ReturnOnEquity> roeList = new List<ReturnOnEquity>();
 
-                    if (value.Length > 0 && value != "null")
+                    foreach (JToken token in data)
                     {
-                        ReturnOnEquity returnToEquity = new ReturnOnEquity();
-                        returnToEquity.DateStr = date;
-                        returnToEquity.ValueStr = value;
+                        string date = token["date"].ToString();
+                        string value = token["value"].ToString();
 
-                        roeList.Add(returnToEquity);
+                        if (value.Length > 0 && value != "null")
+                        {
+                            ReturnOnEquity returnToEquity = new ReturnOnEquity();
+                            returnToEquity.DateStr = date;
+                            returnToEquity.ValueStr = value;
+
+                            roeList.Add(returnToEquity);
+                        }
                     }
+
+                    stock.ReturnToEquityList = roeList;
                 }
-
-                stock.ReturnToEquityList = roeList;
-
-                await GetReturnOnAsset();
             }
+
+            await GetReturnOnAsset();
         }
 
         private async Task GetReturnOnAsset()
         {
             DateTime currentDate = DateTime.Now;
             DateTime previousDate = currentDate.AddYears(-10);
+            List<ReturnOnAsset> SortedList = stock.ReturnToAssetList.OrderByDescending(o => o.Date).ToList();
+            ReturnOnAsset latestReturnOnAsset = SortedList.FirstOrDefault();
 
-            string query = string.Format(Util.IntrinioAPIUrl +
+            if (SortedList.Count == 0 || latestReturnOnAsset.Date.AddYears(1) < currentDate.Date)
+            {
+                string query = string.Format(Util.IntrinioAPIUrl +
                    "/historical_data?identifier={0}&item=roa&type=FY&start_date={1}-01-01&end_date={2}-01-01",
                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
-            HttpClient client = Util.GetAuthHttpClient();
-            var uri = new Uri(query);
+                HttpClient client = Util.GetAuthHttpClient();
+                var uri = new Uri(query);
 
-            var response = await client.GetAsync(uri);
-            if (response.IsSuccessStatusCode)
-            {
-                var json = await response.Content.ReadAsStringAsync();
-                JObject jsonObject = JObject.Parse(json);
-                JArray data = (JArray)jsonObject["data"];
-                List<ReturnOnAsset> roaList = new List<ReturnOnAsset>();
-
-                foreach (JToken token in data)
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
                 {
-                    string date = token["date"].ToString();
-                    string value = token["value"].ToString();
+                    var json = await response.Content.ReadAsStringAsync();
+                    JObject jsonObject = JObject.Parse(json);
+                    JArray data = (JArray)jsonObject["data"];
+                    List<ReturnOnAsset> roaList = new List<ReturnOnAsset>();
 
-                    if (value.Length > 0 && value != "null")
+                    foreach (JToken token in data)
                     {
-                        ReturnOnAsset returnToAssest = new ReturnOnAsset();
-                        returnToAssest.DateStr = date;
-                        returnToAssest.ValueStr = value;
+                        string date = token["date"].ToString();
+                        string value = token["value"].ToString();
 
-                        roaList.Add(returnToAssest);
+                        if (value.Length > 0 && value != "null")
+                        {
+                            ReturnOnAsset returnToAssest = new ReturnOnAsset();
+                            returnToAssest.DateStr = date;
+                            returnToAssest.ValueStr = value;
+
+                            roaList.Add(returnToAssest);
+                        }
                     }
-                }
 
-                stock.ReturnToAssetList = roaList;
-                await GetDividend();
+                    stock.ReturnToAssetList = roaList;
+                }
             }
+
+            await GetDividend();
         }
 
         private async Task GetDividend()
         {
             DateTime currentDate = DateTime.Now;
             DateTime previousDate = currentDate.AddYears(-10);
+            List<Dividend> SortedList = stock.DividendList.OrderByDescending(o => o.Date).ToList();
+            Dividend latestDividend = SortedList.FirstOrDefault();
 
-            string query = string.Format(Util.IntrinioAPIUrl +
+            if (SortedList.Count == 0 || latestDividend.Date.AddYears(1) < currentDate.Date)
+            {
+                string query = string.Format(Util.IntrinioAPIUrl +
                    "/historical_data?identifier={0}&item=dividend&type=FY&start_date={1}-01-01&end_date={2}-01-01",
                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
-            HttpClient client = Util.GetAuthHttpClient();
-            var uri = new Uri(query);
+                HttpClient client = Util.GetAuthHttpClient();
+                var uri = new Uri(query);
 
-            var response = await client.GetAsync(uri);
-            if (response.IsSuccessStatusCode)
-            {
-                var json = await response.Content.ReadAsStringAsync();
-                JObject jsonObject = JObject.Parse(json);
-                JArray data = (JArray)jsonObject["data"];
-                List<Dividend> dividendList = new List<Dividend>();
-
-                foreach (JToken token in data)
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
                 {
-                    string date = token["date"].ToString();
-                    string value = token["value"].ToString();
+                    var json = await response.Content.ReadAsStringAsync();
+                    JObject jsonObject = JObject.Parse(json);
+                    JArray data = (JArray)jsonObject["data"];
+                    List<Dividend> dividendList = new List<Dividend>();
 
-                    if (value.Length > 0 && value != "null")
+                    foreach (JToken token in data)
                     {
-                        Dividend dividend = new Dividend();
-                        dividend.DateStr = date;
-                        dividend.ValueStr = value;
+                        string date = token["date"].ToString();
+                        string value = token["value"].ToString();
 
-                        dividendList.Add(dividend);
+                        if (value.Length > 0 && value != "null")
+                        {
+                            Dividend dividend = new Dividend();
+                            dividend.DateStr = date;
+                            dividend.ValueStr = value;
+
+                            dividendList.Add(dividend);
+                        }
                     }
+
+                    stock.DividendList = dividendList;
                 }
-
-                stock.DividendList = dividendList;
-
-                await GetBookValue();
             }
+
+            await GetBookValue();
         }
 
         private async Task GetBookValue()
         {
             DateTime currentDate = DateTime.Now;
             DateTime previousDate = currentDate.AddYears(-10);
+            List<BookValue> SortedList = stock.BookValueList.OrderByDescending(o => o.Date).ToList();
+            BookValue latestBookValue = SortedList.FirstOrDefault();
 
-            string query = string.Format(Util.IntrinioAPIUrl +
+            if (SortedList.Count == 0 || latestBookValue.Date.AddYears(1) < currentDate.Date)
+            {
+                string query = string.Format(Util.IntrinioAPIUrl +
                    "/historical_data?identifier={0}&item=bookvaluepershare&type=FY&start_date={1}-01-01&end_date={2}-01-01",
                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
-            HttpClient client = Util.GetAuthHttpClient();
-            var uri = new Uri(query);
+                HttpClient client = Util.GetAuthHttpClient();
+                var uri = new Uri(query);
 
-            var response = await client.GetAsync(uri);
-            if (response.IsSuccessStatusCode)
-            {
-                var json = await response.Content.ReadAsStringAsync();
-                JObject jsonObject = JObject.Parse(json);
-                JArray data = (JArray)jsonObject["data"];
-                List<BookValue> bookValueList = new List<BookValue>();
-
-                foreach (JToken token in data)
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
                 {
-                    string date = token["date"].ToString();
-                    string value = token["value"].ToString();
+                    var json = await response.Content.ReadAsStringAsync();
+                    JObject jsonObject = JObject.Parse(json);
+                    JArray data = (JArray)jsonObject["data"];
+                    List<BookValue> bookValueList = new List<BookValue>();
 
-                    if (value.Length > 0 && value != "null")
+                    foreach (JToken token in data)
                     {
-                        BookValue bookValue = new BookValue();
-                        bookValue.DateStr = date;
-                        bookValue.ValueStr = value;
+                        string date = token["date"].ToString();
+                        string value = token["value"].ToString();
 
-                        bookValueList.Add(bookValue);
+                        if (value.Length > 0 && value != "null")
+                        {
+                            BookValue bookValue = new BookValue();
+                            bookValue.DateStr = date;
+                            bookValue.ValueStr = value;
+
+                            bookValueList.Add(bookValue);
+                        }
                     }
+
+                    stock.BookValueList = bookValueList;
                 }
-
-                stock.BookValueList = bookValueList;
-
-                LayoutInterface();
             }
+
+            LayoutInterface();
         }
 
         private void LayoutInterface()
@@ -511,8 +552,8 @@ namespace CoreInvestmentApp.Pages
             leftLayout.Children.Add(LabelClose);
 
             Label LabelFiftyTwo = new Label { Text = "52-week", FontAttributes = FontAttributes.Bold, TextColor = Color.White, FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
-            Label LabelFiftyTwoHigh = new Label { Text = "Hi: " + stock.FiftyTwoWeekHighString, FontAttributes = FontAttributes.Bold, TextColor = Color.White, FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
-            Label LabelFiftyTwoLow = new Label { Text = "Lo: " + stock.FiftyTwoWeekLowString, FontAttributes = FontAttributes.Bold, TextColor = Color.White, FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
+            Label LabelFiftyTwoHigh = new Label { Text = "Hi: " + stock.FiftyTwoWeekHighString, FontAttributes = FontAttributes.Bold, TextColor = Color.FromHex("324F54"), FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
+            Label LabelFiftyTwoLow = new Label { Text = "Lo: " + stock.FiftyTwoWeekLowString, FontAttributes = FontAttributes.Bold, TextColor = Color.FromHex("810915"), FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
 
             StackLayout rightLayout = new StackLayout
             {

@@ -72,7 +72,7 @@
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="3">
                                     <!--<controls:CircleImage BorderColor="#efa06a" BorderThickness="3" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="Start" Aspect="AspectFill" WidthRequest="15" />-->
-                                    <Label Text="IC" TextColor="#efa06a" FontAttributes="Bold"></Label>
+                                    <Label Text="IC" TextColor="#3B5999" FontAttributes="Bold"></Label>
                                     <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding InvestorConfidenceString}" TextColor="Black" />
                                 </StackLayout>
                             </Grid>

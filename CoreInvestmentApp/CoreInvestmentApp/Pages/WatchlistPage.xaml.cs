@@ -1,4 +1,5 @@
-﻿using CoreInvestmentApp.Classes;
+﻿using Acr.UserDialogs;
+using CoreInvestmentApp.Classes;
 using CoreInvestmentApp.Model;
 using CoreInvestmentApp.ViewModel;
 using Newtonsoft.Json;
@@ -41,13 +42,12 @@ namespace CoreInvestmentApp.Pages
             Navigation.PushAsync(new DetailedStockPage(stock));
         }
 
-        private async Task LoadTickersFromDBAsync()
+        private void LoadTickersFromDBAsync()
         {
             var vRealmDb = Realm.GetInstance();
             var vAllStock = vRealmDb.All<RealmStockJson>();
             Dictionary<string, Stock> stockDictionary = new Dictionary<string, Stock>();
             string identifierQuery = "";
-
 
             if (vAllStock.Count() > StockList.Count)
             {
@@ -60,47 +60,56 @@ namespace CoreInvestmentApp.Pages
                     stockDictionary.Add(stockIdentifier.Ticker, stock);
                 }
 
-                string query = string.Format(Util.IntrinioAPIUrl +
-                    "/data_point?identifier={0}&item=close_price,company_url", identifierQuery);
-                HttpClient client = Util.GetAuthHttpClient();
-                var uri = new Uri(query);
-
-                var response = await client.GetAsync(uri);
-                if (response.IsSuccessStatusCode)
+                UserDialogs.Instance.ShowLoading("Getting data..", MaskType.Black);
+                LoadTickersFromAPI(stockDictionary, identifierQuery).ContinueWith((task) =>
                 {
-                    var json = await response.Content.ReadAsStringAsync();
-                    JObject jsonObject = JObject.Parse(json);
-                    JArray data = (JArray)jsonObject["data"];
-                    ObservableCollection<Stock> list = StockList;
+                    UserDialogs.Instance.HideLoading();
+                });
+            }
+        }
 
-                    foreach (JToken token in data)
+        private async Task LoadTickersFromAPI(Dictionary<string, Stock> stockDictionary, string identifierQuery)
+        {
+            string query = string.Format(Util.IntrinioAPIUrl +
+                    "/data_point?identifier={0}&item=close_price,company_url", identifierQuery);
+            HttpClient client = Util.GetAuthHttpClient();
+            var uri = new Uri(query);
+
+            var response = await client.GetAsync(uri);
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                JObject jsonObject = JObject.Parse(json);
+                JArray data = (JArray)jsonObject["data"];
+                ObservableCollection<Stock> list = StockList;
+
+                foreach (JToken token in data)
+                {
+                    string identifier = token["identifier"].ToString();
+                    string item = token["item"].ToString();
+                    string value = token["value"].ToString();
+
+                    Stock stock = stockDictionary[identifier];
+
+                    if (item == "close_price")
                     {
-                        string identifier = token["identifier"].ToString();
-                        string item = token["item"].ToString();
-                        string value = token["value"].ToString();
-
-                        Stock stock = stockDictionary[identifier];
-
-                        if (item == "close_price")
+                        decimal currentValue;
+                        if (Decimal.TryParse(value, out currentValue))
                         {
-                            decimal currentValue;
-                            if (Decimal.TryParse(value, out currentValue))
-                            {
-                                stock.CurrentValue = currentValue;
-                            }
-                        }
-                        else if (item == "company_url")
-                        {
-                            stock.ImageUrl = string.Format("https://logo.clearbit.com/{0}", value);
+                            stock.CurrentValue = currentValue;
                         }
                     }
+                    else if (item == "company_url")
+                    {
+                        stock.ImageUrl = string.Format("https://logo.clearbit.com/{0}", value);
+                    }
+                }
 
-                    StockListView.ItemsSource = new ObservableCollection<Stock>(stockDictionary.Values.ToList());
-                }
-                else
-                {
-                    //TODO: Handle error here
-                }
+                StockListView.ItemsSource = new ObservableCollection<Stock>(stockDictionary.Values.ToList());
+            }
+            else
+            {
+                UserDialogs.Instance.Alert("Something went wrong with the network", "Error", "OK");
             }
         }
 

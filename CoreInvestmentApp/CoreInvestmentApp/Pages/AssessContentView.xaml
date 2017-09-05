@@ -17,7 +17,7 @@
                 FontSize="Medium"
                 FontAttributes="Bold"
                 HeightRequest="75"
-                CurvedBackgroundColor="#0040ff"
+                CurvedBackgroundColor="#6595EF"
                 TextColor="White"
                 CurvedCornerRadius="15"
                 VerticalOptions="Fill"
@@ -54,7 +54,7 @@
 
                     <Label Text="CORE" FontSize="Large" FontAttributes="Bold" />
 
-                    <oxy:PlotView x:Name="EPSChart"  Model="{Binding EPSModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand"  />
+                    <oxy:PlotView x:Name="EPSChart" Model="{Binding EPSModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand"  />
 
                     <Label Text="Based on the chart, do you think that the company is profitable?" FontSize="Medium" HorizontalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
                     <Label Text="Profitable companies usually have positive &amp; consistent earning per share for the last 5 to 10 years?" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />

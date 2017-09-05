@@ -115,9 +115,11 @@ namespace CoreInvestmentApp.Pages
             var areaSeries1 = new AreaSeries
             {
                 MarkerType = MarkerType.Circle,
-                MarkerSize = 2,
+                MarkerSize = 3,
                 MarkerStroke = OxyColors.Black,
-                StrokeThickness = 1,
+                StrokeThickness = 3,
+                Color = OxyColor.FromRgb(210, 198, 1),
+                Fill = OxyColor.FromRgb(209, 220, 114)
             };
 
             foreach (EarningPerShare eps in stock.EpsList)
@@ -136,9 +138,11 @@ namespace CoreInvestmentApp.Pages
             var areaSeries1 = new AreaSeries
             {
                 MarkerType = MarkerType.Circle,
-                MarkerSize = 2,
+                MarkerSize = 3,
                 MarkerStroke = OxyColors.Black,
-                StrokeThickness = 1,
+                StrokeThickness = 3,
+                Color = OxyColor.FromRgb(85, 161, 77),
+                Fill = OxyColor.FromRgb(143, 199, 150)
             };
 
             Dictionary<int, decimal> dividendByYear = new Dictionary<int, decimal>();
@@ -175,9 +179,11 @@ namespace CoreInvestmentApp.Pages
             var areaSeries1 = new AreaSeries
             {
                 MarkerType = MarkerType.Circle,
-                MarkerSize = 2,
+                MarkerSize = 3,
                 MarkerStroke = OxyColors.Black,
-                StrokeThickness = 1,
+                StrokeThickness = 3,
+                Color = OxyColor.FromRgb(174, 86, 20),
+                Fill = OxyColor.FromRgb(190, 160, 126)
             };
 
             foreach (BookValue bookValue in stock.BookValueList)
