@@ -63,6 +63,1642 @@ namespace CoreInvestmentApp.Droid
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahText = global::CoreInvestmentApp.Droid.Resource.Styleable.ProgressWheel_ahText;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::CoreInvestmentApp.Droid.Resource.Styleable.ProgressWheel_ahTextColor;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::CoreInvestmentApp.Droid.Resource.Styleable.ProgressWheel_ahTextSize;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.abc_fade_in = global::CoreInvestmentApp.Droid.Resource.Animation.abc_fade_in;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.abc_fade_out = global::CoreInvestmentApp.Droid.Resource.Animation.abc_fade_out;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::CoreInvestmentApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.abc_popup_enter = global::CoreInvestmentApp.Droid.Resource.Animation.abc_popup_enter;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.abc_popup_exit = global::CoreInvestmentApp.Droid.Resource.Animation.abc_popup_exit;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::CoreInvestmentApp.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.abc_slide_in_bottom = global::CoreInvestmentApp.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.abc_slide_in_top = global::CoreInvestmentApp.Droid.Resource.Animation.abc_slide_in_top;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.abc_slide_out_bottom = global::CoreInvestmentApp.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.abc_slide_out_top = global::CoreInvestmentApp.Droid.Resource.Animation.abc_slide_out_top;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.design_bottom_sheet_slide_in = global::CoreInvestmentApp.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.design_bottom_sheet_slide_out = global::CoreInvestmentApp.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.design_fab_in = global::CoreInvestmentApp.Droid.Resource.Animation.design_fab_in;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.design_fab_out = global::CoreInvestmentApp.Droid.Resource.Animation.design_fab_out;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.design_snackbar_in = global::CoreInvestmentApp.Droid.Resource.Animation.design_snackbar_in;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Animation.design_snackbar_out = global::CoreInvestmentApp.Droid.Resource.Animation.design_snackbar_out;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionBarDivider = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarDivider;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionBarItemBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarItemBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionBarPopupTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionBarSize = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarSize;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionBarSplitStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionBarStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionBarTabBarStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionBarTabStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarTabStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionBarTabTextStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionBarTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionBarWidgetTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionDropDownStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionDropDownStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.actionLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionMenuTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionMenuTextColor = global::CoreInvestmentApp.Droid.Resource.Attribute.actionMenuTextColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionModeBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionModeCloseDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionModeCopyDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionModeCutDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionModeFindDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionModePasteDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionModePopupWindowStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionModeShareDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionModeSplitBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionModeStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionOverflowButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionOverflowMenuStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionProviderClass = global::CoreInvestmentApp.Droid.Resource.Attribute.actionProviderClass;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.actionViewClass = global::CoreInvestmentApp.Droid.Resource.Attribute.actionViewClass;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.activityChooserViewStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.alertDialogCenterButtons = global::CoreInvestmentApp.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.alertDialogStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.alertDialogStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.alertDialogTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.alertDialogTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.allowStacking = global::CoreInvestmentApp.Droid.Resource.Attribute.allowStacking;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.arrowHeadLength = global::CoreInvestmentApp.Droid.Resource.Attribute.arrowHeadLength;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.arrowShaftLength = global::CoreInvestmentApp.Droid.Resource.Attribute.arrowShaftLength;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.background = global::CoreInvestmentApp.Droid.Resource.Attribute.background;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.backgroundSplit = global::CoreInvestmentApp.Droid.Resource.Attribute.backgroundSplit;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.backgroundStacked = global::CoreInvestmentApp.Droid.Resource.Attribute.backgroundStacked;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.backgroundTint = global::CoreInvestmentApp.Droid.Resource.Attribute.backgroundTint;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.backgroundTintMode = global::CoreInvestmentApp.Droid.Resource.Attribute.backgroundTintMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.barLength = global::CoreInvestmentApp.Droid.Resource.Attribute.barLength;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.behavior_hideable = global::CoreInvestmentApp.Droid.Resource.Attribute.behavior_hideable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.behavior_overlapTop = global::CoreInvestmentApp.Droid.Resource.Attribute.behavior_overlapTop;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.behavior_peekHeight = global::CoreInvestmentApp.Droid.Resource.Attribute.behavior_peekHeight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.borderWidth = global::CoreInvestmentApp.Droid.Resource.Attribute.borderWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.borderlessButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.bottomSheetDialogTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.bottomSheetStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.bottomSheetStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.buttonBarButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.buttonBarStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonBarStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.buttonPanelSideLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.buttonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.buttonStyleSmall = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonStyleSmall;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.buttonTint = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonTint;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.buttonTintMode = global::CoreInvestmentApp.Droid.Resource.Attribute.buttonTintMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.cardBackgroundColor = global::CoreInvestmentApp.Droid.Resource.Attribute.cardBackgroundColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.cardCornerRadius = global::CoreInvestmentApp.Droid.Resource.Attribute.cardCornerRadius;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.cardElevation = global::CoreInvestmentApp.Droid.Resource.Attribute.cardElevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.cardMaxElevation = global::CoreInvestmentApp.Droid.Resource.Attribute.cardMaxElevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.cardPreventCornerOverlap = global::CoreInvestmentApp.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.cardUseCompatPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.checkboxStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.checkboxStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.checkedTextViewStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.closeIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.closeIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.closeItemLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.closeItemLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.collapseContentDescription = global::CoreInvestmentApp.Droid.Resource.Attribute.collapseContentDescription;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.collapseIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.collapseIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.collapsedTitleGravity = global::CoreInvestmentApp.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.collapsedTitleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.color = global::CoreInvestmentApp.Droid.Resource.Attribute.color;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.colorAccent = global::CoreInvestmentApp.Droid.Resource.Attribute.colorAccent;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.colorButtonNormal = global::CoreInvestmentApp.Droid.Resource.Attribute.colorButtonNormal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.colorControlActivated = global::CoreInvestmentApp.Droid.Resource.Attribute.colorControlActivated;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.colorControlHighlight = global::CoreInvestmentApp.Droid.Resource.Attribute.colorControlHighlight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.colorControlNormal = global::CoreInvestmentApp.Droid.Resource.Attribute.colorControlNormal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.colorPrimary = global::CoreInvestmentApp.Droid.Resource.Attribute.colorPrimary;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.colorPrimaryDark = global::CoreInvestmentApp.Droid.Resource.Attribute.colorPrimaryDark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.colorSwitchThumbNormal = global::CoreInvestmentApp.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.commitIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.commitIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.contentInsetEnd = global::CoreInvestmentApp.Droid.Resource.Attribute.contentInsetEnd;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.contentInsetLeft = global::CoreInvestmentApp.Droid.Resource.Attribute.contentInsetLeft;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.contentInsetRight = global::CoreInvestmentApp.Droid.Resource.Attribute.contentInsetRight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.contentInsetStart = global::CoreInvestmentApp.Droid.Resource.Attribute.contentInsetStart;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.contentPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.contentPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.contentPaddingBottom = global::CoreInvestmentApp.Droid.Resource.Attribute.contentPaddingBottom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.contentPaddingLeft = global::CoreInvestmentApp.Droid.Resource.Attribute.contentPaddingLeft;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.contentPaddingRight = global::CoreInvestmentApp.Droid.Resource.Attribute.contentPaddingRight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.contentPaddingTop = global::CoreInvestmentApp.Droid.Resource.Attribute.contentPaddingTop;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.contentScrim = global::CoreInvestmentApp.Droid.Resource.Attribute.contentScrim;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.controlBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.controlBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.counterEnabled = global::CoreInvestmentApp.Droid.Resource.Attribute.counterEnabled;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.counterMaxLength = global::CoreInvestmentApp.Droid.Resource.Attribute.counterMaxLength;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.counterOverflowTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.counterTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.counterTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.customNavigationLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.customNavigationLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.defaultQueryHint = global::CoreInvestmentApp.Droid.Resource.Attribute.defaultQueryHint;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.dialogPreferredPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.dialogTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.dialogTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.displayOptions = global::CoreInvestmentApp.Droid.Resource.Attribute.displayOptions;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.divider = global::CoreInvestmentApp.Droid.Resource.Attribute.divider;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.dividerHorizontal = global::CoreInvestmentApp.Droid.Resource.Attribute.dividerHorizontal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.dividerPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.dividerPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.dividerVertical = global::CoreInvestmentApp.Droid.Resource.Attribute.dividerVertical;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.drawableSize = global::CoreInvestmentApp.Droid.Resource.Attribute.drawableSize;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.drawerArrowStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.drawerArrowStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.dropDownListViewStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::CoreInvestmentApp.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.editTextBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.editTextBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.editTextColor = global::CoreInvestmentApp.Droid.Resource.Attribute.editTextColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.editTextStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.editTextStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.elevation = global::CoreInvestmentApp.Droid.Resource.Attribute.elevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.errorEnabled = global::CoreInvestmentApp.Droid.Resource.Attribute.errorEnabled;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.errorTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.errorTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.expanded = global::CoreInvestmentApp.Droid.Resource.Attribute.expanded;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.expandedTitleGravity = global::CoreInvestmentApp.Droid.Resource.Attribute.expandedTitleGravity;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.expandedTitleMargin = global::CoreInvestmentApp.Droid.Resource.Attribute.expandedTitleMargin;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.expandedTitleMarginBottom = global::CoreInvestmentApp.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.expandedTitleMarginEnd = global::CoreInvestmentApp.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.expandedTitleMarginStart = global::CoreInvestmentApp.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.expandedTitleMarginTop = global::CoreInvestmentApp.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.expandedTitleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.externalRouteEnabledDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.externalRouteEnabledDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.fabSize = global::CoreInvestmentApp.Droid.Resource.Attribute.fabSize;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.foregroundInsidePadding = global::CoreInvestmentApp.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.gapBetweenBars = global::CoreInvestmentApp.Droid.Resource.Attribute.gapBetweenBars;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.goIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.goIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.headerLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.headerLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.height = global::CoreInvestmentApp.Droid.Resource.Attribute.height;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.hideOnContentScroll = global::CoreInvestmentApp.Droid.Resource.Attribute.hideOnContentScroll;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.hintAnimationEnabled = global::CoreInvestmentApp.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.hintEnabled = global::CoreInvestmentApp.Droid.Resource.Attribute.hintEnabled;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.hintTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.hintTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.homeAsUpIndicator = global::CoreInvestmentApp.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.homeLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.homeLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.icon = global::CoreInvestmentApp.Droid.Resource.Attribute.icon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.iconifiedByDefault = global::CoreInvestmentApp.Droid.Resource.Attribute.iconifiedByDefault;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.imageButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.imageButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.indeterminateProgressStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.initialActivityCount = global::CoreInvestmentApp.Droid.Resource.Attribute.initialActivityCount;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.insetForeground = global::CoreInvestmentApp.Droid.Resource.Attribute.insetForeground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.isLightTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.isLightTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.itemBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.itemBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.itemIconTint = global::CoreInvestmentApp.Droid.Resource.Attribute.itemIconTint;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.itemPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.itemPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.itemTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.itemTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.itemTextColor = global::CoreInvestmentApp.Droid.Resource.Attribute.itemTextColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.keylines = global::CoreInvestmentApp.Droid.Resource.Attribute.keylines;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.layout = global::CoreInvestmentApp.Droid.Resource.Attribute.layout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.layoutManager = global::CoreInvestmentApp.Droid.Resource.Attribute.layoutManager;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.layout_anchor = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_anchor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.layout_anchorGravity = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_anchorGravity;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.layout_behavior = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_behavior;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.layout_collapseMode = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_collapseMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.layout_collapseParallaxMultiplier = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.layout_keyline = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_keyline;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.layout_scrollFlags = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_scrollFlags;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.layout_scrollInterpolator = global::CoreInvestmentApp.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::CoreInvestmentApp.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.listDividerAlertDialog = global::CoreInvestmentApp.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.listItemLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.listItemLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.listLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.listLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.listPopupWindowStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.listPreferredItemHeight = global::CoreInvestmentApp.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::CoreInvestmentApp.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::CoreInvestmentApp.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::CoreInvestmentApp.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::CoreInvestmentApp.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.logo = global::CoreInvestmentApp.Droid.Resource.Attribute.logo;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.logoDescription = global::CoreInvestmentApp.Droid.Resource.Attribute.logoDescription;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.maxActionInlineWidth = global::CoreInvestmentApp.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.maxButtonHeight = global::CoreInvestmentApp.Droid.Resource.Attribute.maxButtonHeight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.measureWithLargestChild = global::CoreInvestmentApp.Droid.Resource.Attribute.measureWithLargestChild;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.mediaRouteButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRouteButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.mediaRouteCloseDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRouteCloseDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.mediaRoutePauseDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRoutePauseDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.mediaRoutePlayDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRoutePlayDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.mediaRouteTvIconDrawable = global::CoreInvestmentApp.Droid.Resource.Attribute.mediaRouteTvIconDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.menu = global::CoreInvestmentApp.Droid.Resource.Attribute.menu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.multiChoiceItemLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.navigationContentDescription = global::CoreInvestmentApp.Droid.Resource.Attribute.navigationContentDescription;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.navigationIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.navigationIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.navigationMode = global::CoreInvestmentApp.Droid.Resource.Attribute.navigationMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.overlapAnchor = global::CoreInvestmentApp.Droid.Resource.Attribute.overlapAnchor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.paddingEnd = global::CoreInvestmentApp.Droid.Resource.Attribute.paddingEnd;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.paddingStart = global::CoreInvestmentApp.Droid.Resource.Attribute.paddingStart;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.panelBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.panelBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.panelMenuListTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.panelMenuListTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.panelMenuListWidth = global::CoreInvestmentApp.Droid.Resource.Attribute.panelMenuListWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.popupMenuStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.popupMenuStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.popupTheme = global::CoreInvestmentApp.Droid.Resource.Attribute.popupTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.popupWindowStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.popupWindowStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.preserveIconSpacing = global::CoreInvestmentApp.Droid.Resource.Attribute.preserveIconSpacing;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.pressedTranslationZ = global::CoreInvestmentApp.Droid.Resource.Attribute.pressedTranslationZ;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.progressBarPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.progressBarPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.progressBarStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.progressBarStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.queryBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.queryBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.queryHint = global::CoreInvestmentApp.Droid.Resource.Attribute.queryHint;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.radioButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.radioButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.ratingBarStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.ratingBarStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.ratingBarStyleIndicator = global::CoreInvestmentApp.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.ratingBarStyleSmall = global::CoreInvestmentApp.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.reverseLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.reverseLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.rippleColor = global::CoreInvestmentApp.Droid.Resource.Attribute.rippleColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.searchHintIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.searchHintIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.searchIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.searchIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.searchViewStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.searchViewStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.seekBarStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.seekBarStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.selectableItemBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.selectableItemBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::CoreInvestmentApp.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.showAsAction = global::CoreInvestmentApp.Droid.Resource.Attribute.showAsAction;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.showDividers = global::CoreInvestmentApp.Droid.Resource.Attribute.showDividers;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.showText = global::CoreInvestmentApp.Droid.Resource.Attribute.showText;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.singleChoiceItemLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.spanCount = global::CoreInvestmentApp.Droid.Resource.Attribute.spanCount;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.spinBars = global::CoreInvestmentApp.Droid.Resource.Attribute.spinBars;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.spinnerStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.spinnerStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.splitTrack = global::CoreInvestmentApp.Droid.Resource.Attribute.splitTrack;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.srcCompat = global::CoreInvestmentApp.Droid.Resource.Attribute.srcCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.stackFromEnd = global::CoreInvestmentApp.Droid.Resource.Attribute.stackFromEnd;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.state_above_anchor = global::CoreInvestmentApp.Droid.Resource.Attribute.state_above_anchor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.statusBarBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.statusBarBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.statusBarScrim = global::CoreInvestmentApp.Droid.Resource.Attribute.statusBarScrim;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.submitBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.submitBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.subtitle = global::CoreInvestmentApp.Droid.Resource.Attribute.subtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.subtitleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.subtitleTextColor = global::CoreInvestmentApp.Droid.Resource.Attribute.subtitleTextColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.subtitleTextStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.subtitleTextStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.suggestionRowLayout = global::CoreInvestmentApp.Droid.Resource.Attribute.suggestionRowLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.switchMinWidth = global::CoreInvestmentApp.Droid.Resource.Attribute.switchMinWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.switchPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.switchPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.switchStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.switchStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.switchTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.switchTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabBackground = global::CoreInvestmentApp.Droid.Resource.Attribute.tabBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabContentStart = global::CoreInvestmentApp.Droid.Resource.Attribute.tabContentStart;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabGravity = global::CoreInvestmentApp.Droid.Resource.Attribute.tabGravity;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabIndicatorColor = global::CoreInvestmentApp.Droid.Resource.Attribute.tabIndicatorColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabIndicatorHeight = global::CoreInvestmentApp.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabMaxWidth = global::CoreInvestmentApp.Droid.Resource.Attribute.tabMaxWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabMinWidth = global::CoreInvestmentApp.Droid.Resource.Attribute.tabMinWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabMode = global::CoreInvestmentApp.Droid.Resource.Attribute.tabMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.tabPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabPaddingBottom = global::CoreInvestmentApp.Droid.Resource.Attribute.tabPaddingBottom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabPaddingEnd = global::CoreInvestmentApp.Droid.Resource.Attribute.tabPaddingEnd;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabPaddingStart = global::CoreInvestmentApp.Droid.Resource.Attribute.tabPaddingStart;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabPaddingTop = global::CoreInvestmentApp.Droid.Resource.Attribute.tabPaddingTop;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabSelectedTextColor = global::CoreInvestmentApp.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.tabTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.tabTextColor = global::CoreInvestmentApp.Droid.Resource.Attribute.tabTextColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.textAllCaps = global::CoreInvestmentApp.Droid.Resource.Attribute.textAllCaps;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::CoreInvestmentApp.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.textAppearanceListItem = global::CoreInvestmentApp.Droid.Resource.Attribute.textAppearanceListItem;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.textAppearanceListItemSmall = global::CoreInvestmentApp.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::CoreInvestmentApp.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::CoreInvestmentApp.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::CoreInvestmentApp.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.textColorAlertDialogListItem = global::CoreInvestmentApp.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.textColorError = global::CoreInvestmentApp.Droid.Resource.Attribute.textColorError;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.textColorSearchUrl = global::CoreInvestmentApp.Droid.Resource.Attribute.textColorSearchUrl;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.theme = global::CoreInvestmentApp.Droid.Resource.Attribute.theme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.thickness = global::CoreInvestmentApp.Droid.Resource.Attribute.thickness;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.thumbTextPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.thumbTextPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.title = global::CoreInvestmentApp.Droid.Resource.Attribute.title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.titleEnabled = global::CoreInvestmentApp.Droid.Resource.Attribute.titleEnabled;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.titleMarginBottom = global::CoreInvestmentApp.Droid.Resource.Attribute.titleMarginBottom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.titleMarginEnd = global::CoreInvestmentApp.Droid.Resource.Attribute.titleMarginEnd;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.titleMarginStart = global::CoreInvestmentApp.Droid.Resource.Attribute.titleMarginStart;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.titleMarginTop = global::CoreInvestmentApp.Droid.Resource.Attribute.titleMarginTop;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.titleMargins = global::CoreInvestmentApp.Droid.Resource.Attribute.titleMargins;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.titleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Attribute.titleTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.titleTextColor = global::CoreInvestmentApp.Droid.Resource.Attribute.titleTextColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.titleTextStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.titleTextStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.toolbarId = global::CoreInvestmentApp.Droid.Resource.Attribute.toolbarId;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.toolbarStyle = global::CoreInvestmentApp.Droid.Resource.Attribute.toolbarStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.track = global::CoreInvestmentApp.Droid.Resource.Attribute.track;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.useCompatPadding = global::CoreInvestmentApp.Droid.Resource.Attribute.useCompatPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.voiceIcon = global::CoreInvestmentApp.Droid.Resource.Attribute.voiceIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.windowActionBar = global::CoreInvestmentApp.Droid.Resource.Attribute.windowActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.windowActionBarOverlay = global::CoreInvestmentApp.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.windowActionModeOverlay = global::CoreInvestmentApp.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.windowFixedHeightMajor = global::CoreInvestmentApp.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.windowFixedHeightMinor = global::CoreInvestmentApp.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.windowFixedWidthMajor = global::CoreInvestmentApp.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.windowFixedWidthMinor = global::CoreInvestmentApp.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.windowMinWidthMajor = global::CoreInvestmentApp.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.windowMinWidthMinor = global::CoreInvestmentApp.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Attribute.windowNoTitle = global::CoreInvestmentApp.Droid.Resource.Attribute.windowNoTitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::CoreInvestmentApp.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::CoreInvestmentApp.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::CoreInvestmentApp.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::CoreInvestmentApp.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::CoreInvestmentApp.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::CoreInvestmentApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.abc_color_highlight_material = global::CoreInvestmentApp.Droid.Resource.Color.abc_color_highlight_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.abc_input_method_navigation_guard = global::CoreInvestmentApp.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::CoreInvestmentApp.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.abc_primary_text_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.abc_primary_text_material_light = global::CoreInvestmentApp.Droid.Resource.Color.abc_primary_text_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.abc_search_url_text = global::CoreInvestmentApp.Droid.Resource.Color.abc_search_url_text;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.abc_search_url_text_normal = global::CoreInvestmentApp.Droid.Resource.Color.abc_search_url_text_normal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.abc_search_url_text_pressed = global::CoreInvestmentApp.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.abc_search_url_text_selected = global::CoreInvestmentApp.Droid.Resource.Color.abc_search_url_text_selected;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.abc_secondary_text_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.abc_secondary_text_material_light = global::CoreInvestmentApp.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.accent_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.accent_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.accent_material_light = global::CoreInvestmentApp.Droid.Resource.Color.accent_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.background_floating_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.background_floating_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.background_floating_material_light = global::CoreInvestmentApp.Droid.Resource.Color.background_floating_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.background_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.background_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.background_material_light = global::CoreInvestmentApp.Droid.Resource.Color.background_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.bright_foreground_disabled_material_light = global::CoreInvestmentApp.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.bright_foreground_inverse_material_light = global::CoreInvestmentApp.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.bright_foreground_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.bright_foreground_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.bright_foreground_material_light = global::CoreInvestmentApp.Droid.Resource.Color.bright_foreground_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.button_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.button_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.button_material_light = global::CoreInvestmentApp.Droid.Resource.Color.button_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.cardview_dark_background = global::CoreInvestmentApp.Droid.Resource.Color.cardview_dark_background;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.cardview_light_background = global::CoreInvestmentApp.Droid.Resource.Color.cardview_light_background;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.cardview_shadow_end_color = global::CoreInvestmentApp.Droid.Resource.Color.cardview_shadow_end_color;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.cardview_shadow_start_color = global::CoreInvestmentApp.Droid.Resource.Color.cardview_shadow_start_color;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.design_fab_shadow_end_color = global::CoreInvestmentApp.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.design_fab_shadow_mid_color = global::CoreInvestmentApp.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.design_fab_shadow_start_color = global::CoreInvestmentApp.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.design_fab_stroke_end_inner_color = global::CoreInvestmentApp.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.design_fab_stroke_end_outer_color = global::CoreInvestmentApp.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.design_fab_stroke_top_inner_color = global::CoreInvestmentApp.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.design_fab_stroke_top_outer_color = global::CoreInvestmentApp.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.design_snackbar_background_color = global::CoreInvestmentApp.Droid.Resource.Color.design_snackbar_background_color;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.design_textinput_error_color_dark = global::CoreInvestmentApp.Droid.Resource.Color.design_textinput_error_color_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.design_textinput_error_color_light = global::CoreInvestmentApp.Droid.Resource.Color.design_textinput_error_color_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.dim_foreground_disabled_material_light = global::CoreInvestmentApp.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.dim_foreground_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.dim_foreground_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.dim_foreground_material_light = global::CoreInvestmentApp.Droid.Resource.Color.dim_foreground_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.foreground_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.foreground_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.foreground_material_light = global::CoreInvestmentApp.Droid.Resource.Color.foreground_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.highlighted_text_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.highlighted_text_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.highlighted_text_material_light = global::CoreInvestmentApp.Droid.Resource.Color.highlighted_text_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.material_blue_grey_800 = global::CoreInvestmentApp.Droid.Resource.Color.material_blue_grey_800;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.material_blue_grey_900 = global::CoreInvestmentApp.Droid.Resource.Color.material_blue_grey_900;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.material_blue_grey_950 = global::CoreInvestmentApp.Droid.Resource.Color.material_blue_grey_950;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.material_deep_teal_200 = global::CoreInvestmentApp.Droid.Resource.Color.material_deep_teal_200;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.material_deep_teal_500 = global::CoreInvestmentApp.Droid.Resource.Color.material_deep_teal_500;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.material_grey_100 = global::CoreInvestmentApp.Droid.Resource.Color.material_grey_100;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.material_grey_300 = global::CoreInvestmentApp.Droid.Resource.Color.material_grey_300;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.material_grey_50 = global::CoreInvestmentApp.Droid.Resource.Color.material_grey_50;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.material_grey_600 = global::CoreInvestmentApp.Droid.Resource.Color.material_grey_600;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.material_grey_800 = global::CoreInvestmentApp.Droid.Resource.Color.material_grey_800;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.material_grey_850 = global::CoreInvestmentApp.Droid.Resource.Color.material_grey_850;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.material_grey_900 = global::CoreInvestmentApp.Droid.Resource.Color.material_grey_900;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.primary_dark_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.primary_dark_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.primary_dark_material_light = global::CoreInvestmentApp.Droid.Resource.Color.primary_dark_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.primary_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.primary_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.primary_material_light = global::CoreInvestmentApp.Droid.Resource.Color.primary_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.primary_text_default_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.primary_text_default_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.primary_text_default_material_light = global::CoreInvestmentApp.Droid.Resource.Color.primary_text_default_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.primary_text_disabled_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.primary_text_disabled_material_light = global::CoreInvestmentApp.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.ripple_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.ripple_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.ripple_material_light = global::CoreInvestmentApp.Droid.Resource.Color.ripple_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.secondary_text_default_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.secondary_text_default_material_light = global::CoreInvestmentApp.Droid.Resource.Color.secondary_text_default_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.secondary_text_disabled_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.secondary_text_disabled_material_light = global::CoreInvestmentApp.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.switch_thumb_disabled_material_light = global::CoreInvestmentApp.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.switch_thumb_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.switch_thumb_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.switch_thumb_material_light = global::CoreInvestmentApp.Droid.Resource.Color.switch_thumb_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.switch_thumb_normal_material_dark = global::CoreInvestmentApp.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Color.switch_thumb_normal_material_light = global::CoreInvestmentApp.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_action_bar_progress_bar_size = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_progress_bar_size;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_action_button_min_height_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_action_button_min_width_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_control_corner_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_control_corner_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_control_inset_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_control_inset_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_control_padding_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_control_padding_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_dialog_min_width_major = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_dialog_padding_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_floating_window_z = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_floating_window_z;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_panel_menu_list_width = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_search_view_preferred_width = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_switch_padding = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_switch_padding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_body_1_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_body_2_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_button_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_caption_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_display_1_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_display_2_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_display_3_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_display_4_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_headline_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_large_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_medium_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_menu_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_small_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_subhead_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_title_material = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::CoreInvestmentApp.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.cardview_compat_inset_shadow = global::CoreInvestmentApp.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.cardview_default_elevation = global::CoreInvestmentApp.Droid.Resource.Dimension.cardview_default_elevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.cardview_default_radius = global::CoreInvestmentApp.Droid.Resource.Dimension.cardview_default_radius;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_appbar_elevation = global::CoreInvestmentApp.Droid.Resource.Dimension.design_appbar_elevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation = global::CoreInvestmentApp.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_fab_border_width = global::CoreInvestmentApp.Droid.Resource.Dimension.design_fab_border_width;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_fab_elevation = global::CoreInvestmentApp.Droid.Resource.Dimension.design_fab_elevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_fab_image_size = global::CoreInvestmentApp.Droid.Resource.Dimension.design_fab_image_size;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_fab_size_mini = global::CoreInvestmentApp.Droid.Resource.Dimension.design_fab_size_mini;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_fab_size_normal = global::CoreInvestmentApp.Droid.Resource.Dimension.design_fab_size_normal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_fab_translation_z_pressed = global::CoreInvestmentApp.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_navigation_elevation = global::CoreInvestmentApp.Droid.Resource.Dimension.design_navigation_elevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_navigation_icon_padding = global::CoreInvestmentApp.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_navigation_icon_size = global::CoreInvestmentApp.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_navigation_max_width = global::CoreInvestmentApp.Droid.Resource.Dimension.design_navigation_max_width;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_navigation_padding_bottom = global::CoreInvestmentApp.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_navigation_separator_vertical_padding = global::CoreInvestmentApp.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_snackbar_action_inline_max_width = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_snackbar_background_corner_radius = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_snackbar_elevation = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_snackbar_max_width = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_snackbar_min_width = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_snackbar_padding_horizontal = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_snackbar_padding_vertical = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_snackbar_text_size = global::CoreInvestmentApp.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_tab_max_width = global::CoreInvestmentApp.Droid.Resource.Dimension.design_tab_max_width;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_tab_scrollable_min_width = global::CoreInvestmentApp.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_tab_text_size = global::CoreInvestmentApp.Droid.Resource.Dimension.design_tab_text_size;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.design_tab_text_size_2line = global::CoreInvestmentApp.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.disabled_alpha_material_dark = global::CoreInvestmentApp.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.disabled_alpha_material_light = global::CoreInvestmentApp.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.highlight_alpha_material_colored = global::CoreInvestmentApp.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.highlight_alpha_material_dark = global::CoreInvestmentApp.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.highlight_alpha_material_light = global::CoreInvestmentApp.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::CoreInvestmentApp.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::CoreInvestmentApp.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::CoreInvestmentApp.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height = global::CoreInvestmentApp.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::CoreInvestmentApp.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height = global::CoreInvestmentApp.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::CoreInvestmentApp.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.mr_dialog_fixed_width_major = global::CoreInvestmentApp.Droid.Resource.Dimension.mr_dialog_fixed_width_major;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.mr_dialog_fixed_width_minor = global::CoreInvestmentApp.Droid.Resource.Dimension.mr_dialog_fixed_width_minor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.notification_large_icon_height = global::CoreInvestmentApp.Droid.Resource.Dimension.notification_large_icon_height;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.notification_large_icon_width = global::CoreInvestmentApp.Droid.Resource.Dimension.notification_large_icon_width;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Dimension.notification_subtext_size = global::CoreInvestmentApp.Droid.Resource.Dimension.notification_subtext_size;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_btn_borderless_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_btn_check_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_check_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_btn_colored_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_btn_radio_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_cab_background_top_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_control_background_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_control_background_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_edit_text_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_edit_text_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_item_background_holo_dark = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_item_background_holo_light = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_list_focused_holo = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_list_longpressed_holo = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_list_selector_holo_light = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_ratingbar_small_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_seekbar_track_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_switch_thumb_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_tab_indicator_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_text_cursor_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.abc_textfield_search_material = global::CoreInvestmentApp.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.design_fab_background = global::CoreInvestmentApp.Droid.Resource.Drawable.design_fab_background;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.design_snackbar_background = global::CoreInvestmentApp.Droid.Resource.Drawable.design_snackbar_background;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.fct_ic_clear_icon = global::CoreInvestmentApp.Droid.Resource.Drawable.fct_ic_clear_icon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.ic_audiotrack_light = global::CoreInvestmentApp.Droid.Resource.Drawable.ic_audiotrack_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.mr_dialog_material_background_dark = global::CoreInvestmentApp.Droid.Resource.Drawable.mr_dialog_material_background_dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.mr_dialog_material_background_light = global::CoreInvestmentApp.Droid.Resource.Drawable.mr_dialog_material_background_light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Drawable.notification_template_icon_bg = global::CoreInvestmentApp.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.action0 = global::CoreInvestmentApp.Droid.Resource.Id.action0;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.action_bar = global::CoreInvestmentApp.Droid.Resource.Id.action_bar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.action_bar_activity_content = global::CoreInvestmentApp.Droid.Resource.Id.action_bar_activity_content;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.action_bar_container = global::CoreInvestmentApp.Droid.Resource.Id.action_bar_container;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.action_bar_root = global::CoreInvestmentApp.Droid.Resource.Id.action_bar_root;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.action_bar_spinner = global::CoreInvestmentApp.Droid.Resource.Id.action_bar_spinner;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.action_bar_subtitle = global::CoreInvestmentApp.Droid.Resource.Id.action_bar_subtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.action_bar_title = global::CoreInvestmentApp.Droid.Resource.Id.action_bar_title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.action_context_bar = global::CoreInvestmentApp.Droid.Resource.Id.action_context_bar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.action_divider = global::CoreInvestmentApp.Droid.Resource.Id.action_divider;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.action_menu_divider = global::CoreInvestmentApp.Droid.Resource.Id.action_menu_divider;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.action_menu_presenter = global::CoreInvestmentApp.Droid.Resource.Id.action_menu_presenter;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.action_mode_bar = global::CoreInvestmentApp.Droid.Resource.Id.action_mode_bar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.action_mode_bar_stub = global::CoreInvestmentApp.Droid.Resource.Id.action_mode_bar_stub;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.action_mode_close_button = global::CoreInvestmentApp.Droid.Resource.Id.action_mode_close_button;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.activity_chooser_view_content = global::CoreInvestmentApp.Droid.Resource.Id.activity_chooser_view_content;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.alertTitle = global::CoreInvestmentApp.Droid.Resource.Id.alertTitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.always = global::CoreInvestmentApp.Droid.Resource.Id.always;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.beginning = global::CoreInvestmentApp.Droid.Resource.Id.beginning;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.bottom = global::CoreInvestmentApp.Droid.Resource.Id.bottom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.buttonPanel = global::CoreInvestmentApp.Droid.Resource.Id.buttonPanel;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.cancel_action = global::CoreInvestmentApp.Droid.Resource.Id.cancel_action;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.center = global::CoreInvestmentApp.Droid.Resource.Id.center;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.center_horizontal = global::CoreInvestmentApp.Droid.Resource.Id.center_horizontal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.center_vertical = global::CoreInvestmentApp.Droid.Resource.Id.center_vertical;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.checkbox = global::CoreInvestmentApp.Droid.Resource.Id.checkbox;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.chronometer = global::CoreInvestmentApp.Droid.Resource.Id.chronometer;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.clip_horizontal = global::CoreInvestmentApp.Droid.Resource.Id.clip_horizontal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.clip_vertical = global::CoreInvestmentApp.Droid.Resource.Id.clip_vertical;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.collapseActionView = global::CoreInvestmentApp.Droid.Resource.Id.collapseActionView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.contentPanel = global::CoreInvestmentApp.Droid.Resource.Id.contentPanel;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.custom = global::CoreInvestmentApp.Droid.Resource.Id.custom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.customPanel = global::CoreInvestmentApp.Droid.Resource.Id.customPanel;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.decor_content_parent = global::CoreInvestmentApp.Droid.Resource.Id.decor_content_parent;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.default_activity_button = global::CoreInvestmentApp.Droid.Resource.Id.default_activity_button;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.design_bottom_sheet = global::CoreInvestmentApp.Droid.Resource.Id.design_bottom_sheet;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.design_menu_item_action_area = global::CoreInvestmentApp.Droid.Resource.Id.design_menu_item_action_area;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.design_menu_item_action_area_stub = global::CoreInvestmentApp.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.design_menu_item_text = global::CoreInvestmentApp.Droid.Resource.Id.design_menu_item_text;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.design_navigation_view = global::CoreInvestmentApp.Droid.Resource.Id.design_navigation_view;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.disableHome = global::CoreInvestmentApp.Droid.Resource.Id.disableHome;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.edit_query = global::CoreInvestmentApp.Droid.Resource.Id.edit_query;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.end = global::CoreInvestmentApp.Droid.Resource.Id.end;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.end_padder = global::CoreInvestmentApp.Droid.Resource.Id.end_padder;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.enterAlways = global::CoreInvestmentApp.Droid.Resource.Id.enterAlways;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.enterAlwaysCollapsed = global::CoreInvestmentApp.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.exitUntilCollapsed = global::CoreInvestmentApp.Droid.Resource.Id.exitUntilCollapsed;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.expand_activities_button = global::CoreInvestmentApp.Droid.Resource.Id.expand_activities_button;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.expanded_menu = global::CoreInvestmentApp.Droid.Resource.Id.expanded_menu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.fill = global::CoreInvestmentApp.Droid.Resource.Id.fill;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.fill_horizontal = global::CoreInvestmentApp.Droid.Resource.Id.fill_horizontal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.fill_vertical = global::CoreInvestmentApp.Droid.Resource.Id.fill_vertical;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.@fixed = global::CoreInvestmentApp.Droid.Resource.Id.@fixed;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.home = global::CoreInvestmentApp.Droid.Resource.Id.home;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.homeAsUp = global::CoreInvestmentApp.Droid.Resource.Id.homeAsUp;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.icon = global::CoreInvestmentApp.Droid.Resource.Id.icon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.ifRoom = global::CoreInvestmentApp.Droid.Resource.Id.ifRoom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.image = global::CoreInvestmentApp.Droid.Resource.Id.image;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.info = global::CoreInvestmentApp.Droid.Resource.Id.info;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.item_touch_helper_previous_elevation = global::CoreInvestmentApp.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.left = global::CoreInvestmentApp.Droid.Resource.Id.left;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.line1 = global::CoreInvestmentApp.Droid.Resource.Id.line1;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.line3 = global::CoreInvestmentApp.Droid.Resource.Id.line3;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.listMode = global::CoreInvestmentApp.Droid.Resource.Id.listMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.list_item = global::CoreInvestmentApp.Droid.Resource.Id.list_item;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.media_actions = global::CoreInvestmentApp.Droid.Resource.Id.media_actions;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.middle = global::CoreInvestmentApp.Droid.Resource.Id.middle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mini = global::CoreInvestmentApp.Droid.Resource.Id.mini;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_art = global::CoreInvestmentApp.Droid.Resource.Id.mr_art;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_chooser_list = global::CoreInvestmentApp.Droid.Resource.Id.mr_chooser_list;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_chooser_route_desc = global::CoreInvestmentApp.Droid.Resource.Id.mr_chooser_route_desc;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_chooser_route_icon = global::CoreInvestmentApp.Droid.Resource.Id.mr_chooser_route_icon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_chooser_route_name = global::CoreInvestmentApp.Droid.Resource.Id.mr_chooser_route_name;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_close = global::CoreInvestmentApp.Droid.Resource.Id.mr_close;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_control_divider = global::CoreInvestmentApp.Droid.Resource.Id.mr_control_divider;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_control_subtitle = global::CoreInvestmentApp.Droid.Resource.Id.mr_control_subtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_control_title = global::CoreInvestmentApp.Droid.Resource.Id.mr_control_title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_control_title_container = global::CoreInvestmentApp.Droid.Resource.Id.mr_control_title_container;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_custom_control = global::CoreInvestmentApp.Droid.Resource.Id.mr_custom_control;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_default_control = global::CoreInvestmentApp.Droid.Resource.Id.mr_default_control;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_dialog_area = global::CoreInvestmentApp.Droid.Resource.Id.mr_dialog_area;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_expandable_area = global::CoreInvestmentApp.Droid.Resource.Id.mr_expandable_area;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_group_expand_collapse = global::CoreInvestmentApp.Droid.Resource.Id.mr_group_expand_collapse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_media_main_control = global::CoreInvestmentApp.Droid.Resource.Id.mr_media_main_control;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_name = global::CoreInvestmentApp.Droid.Resource.Id.mr_name;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_playback_control = global::CoreInvestmentApp.Droid.Resource.Id.mr_playback_control;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_title_bar = global::CoreInvestmentApp.Droid.Resource.Id.mr_title_bar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_volume_control = global::CoreInvestmentApp.Droid.Resource.Id.mr_volume_control;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_volume_group_list = global::CoreInvestmentApp.Droid.Resource.Id.mr_volume_group_list;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_volume_item_icon = global::CoreInvestmentApp.Droid.Resource.Id.mr_volume_item_icon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.mr_volume_slider = global::CoreInvestmentApp.Droid.Resource.Id.mr_volume_slider;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.multiply = global::CoreInvestmentApp.Droid.Resource.Id.multiply;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.navigation_header_container = global::CoreInvestmentApp.Droid.Resource.Id.navigation_header_container;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.never = global::CoreInvestmentApp.Droid.Resource.Id.never;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.none = global::CoreInvestmentApp.Droid.Resource.Id.none;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.normal = global::CoreInvestmentApp.Droid.Resource.Id.normal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.parallax = global::CoreInvestmentApp.Droid.Resource.Id.parallax;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.parentPanel = global::CoreInvestmentApp.Droid.Resource.Id.parentPanel;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.pin = global::CoreInvestmentApp.Droid.Resource.Id.pin;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.progress_circular = global::CoreInvestmentApp.Droid.Resource.Id.progress_circular;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.progress_horizontal = global::CoreInvestmentApp.Droid.Resource.Id.progress_horizontal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.radio = global::CoreInvestmentApp.Droid.Resource.Id.radio;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.right = global::CoreInvestmentApp.Droid.Resource.Id.right;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.screen = global::CoreInvestmentApp.Droid.Resource.Id.screen;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.scroll = global::CoreInvestmentApp.Droid.Resource.Id.scroll;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.scrollIndicatorDown = global::CoreInvestmentApp.Droid.Resource.Id.scrollIndicatorDown;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.scrollIndicatorUp = global::CoreInvestmentApp.Droid.Resource.Id.scrollIndicatorUp;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.scrollView = global::CoreInvestmentApp.Droid.Resource.Id.scrollView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.scrollable = global::CoreInvestmentApp.Droid.Resource.Id.scrollable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.search_badge = global::CoreInvestmentApp.Droid.Resource.Id.search_badge;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.search_bar = global::CoreInvestmentApp.Droid.Resource.Id.search_bar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.search_button = global::CoreInvestmentApp.Droid.Resource.Id.search_button;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.search_close_btn = global::CoreInvestmentApp.Droid.Resource.Id.search_close_btn;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.search_edit_frame = global::CoreInvestmentApp.Droid.Resource.Id.search_edit_frame;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.search_go_btn = global::CoreInvestmentApp.Droid.Resource.Id.search_go_btn;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.search_mag_icon = global::CoreInvestmentApp.Droid.Resource.Id.search_mag_icon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.search_plate = global::CoreInvestmentApp.Droid.Resource.Id.search_plate;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.search_src_text = global::CoreInvestmentApp.Droid.Resource.Id.search_src_text;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.search_voice_btn = global::CoreInvestmentApp.Droid.Resource.Id.search_voice_btn;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.select_dialog_listview = global::CoreInvestmentApp.Droid.Resource.Id.select_dialog_listview;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.shortcut = global::CoreInvestmentApp.Droid.Resource.Id.shortcut;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.showCustom = global::CoreInvestmentApp.Droid.Resource.Id.showCustom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.showHome = global::CoreInvestmentApp.Droid.Resource.Id.showHome;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.showTitle = global::CoreInvestmentApp.Droid.Resource.Id.showTitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.snackbar_action = global::CoreInvestmentApp.Droid.Resource.Id.snackbar_action;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.snackbar_text = global::CoreInvestmentApp.Droid.Resource.Id.snackbar_text;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.snap = global::CoreInvestmentApp.Droid.Resource.Id.snap;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.spacer = global::CoreInvestmentApp.Droid.Resource.Id.spacer;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.split_action_bar = global::CoreInvestmentApp.Droid.Resource.Id.split_action_bar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.src_atop = global::CoreInvestmentApp.Droid.Resource.Id.src_atop;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.src_in = global::CoreInvestmentApp.Droid.Resource.Id.src_in;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.src_over = global::CoreInvestmentApp.Droid.Resource.Id.src_over;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.start = global::CoreInvestmentApp.Droid.Resource.Id.start;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.status_bar_latest_event_content = global::CoreInvestmentApp.Droid.Resource.Id.status_bar_latest_event_content;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.submit_area = global::CoreInvestmentApp.Droid.Resource.Id.submit_area;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.tabMode = global::CoreInvestmentApp.Droid.Resource.Id.tabMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.text = global::CoreInvestmentApp.Droid.Resource.Id.text;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.text2 = global::CoreInvestmentApp.Droid.Resource.Id.text2;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.textSpacerNoButtons = global::CoreInvestmentApp.Droid.Resource.Id.textSpacerNoButtons;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.time = global::CoreInvestmentApp.Droid.Resource.Id.time;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.title = global::CoreInvestmentApp.Droid.Resource.Id.title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.title_template = global::CoreInvestmentApp.Droid.Resource.Id.title_template;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.top = global::CoreInvestmentApp.Droid.Resource.Id.top;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.topPanel = global::CoreInvestmentApp.Droid.Resource.Id.topPanel;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.touch_outside = global::CoreInvestmentApp.Droid.Resource.Id.touch_outside;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.up = global::CoreInvestmentApp.Droid.Resource.Id.up;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.useLogo = global::CoreInvestmentApp.Droid.Resource.Id.useLogo;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.view_offset_helper = global::CoreInvestmentApp.Droid.Resource.Id.view_offset_helper;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.volume_item_container = global::CoreInvestmentApp.Droid.Resource.Id.volume_item_container;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.withText = global::CoreInvestmentApp.Droid.Resource.Id.withText;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Id.wrap_content = global::CoreInvestmentApp.Droid.Resource.Id.wrap_content;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Integer.abc_config_activityDefaultDur = global::CoreInvestmentApp.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Integer.abc_config_activityShortDur = global::CoreInvestmentApp.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Integer.bottom_sheet_slide_duration = global::CoreInvestmentApp.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Integer.cancel_button_image_alpha = global::CoreInvestmentApp.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Integer.design_snackbar_text_max_lines = global::CoreInvestmentApp.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::CoreInvestmentApp.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::CoreInvestmentApp.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::CoreInvestmentApp.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::CoreInvestmentApp.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Interpolator.mr_fast_out_slow_in = global::CoreInvestmentApp.Droid.Resource.Interpolator.mr_fast_out_slow_in;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Interpolator.mr_linear_out_slow_in = global::CoreInvestmentApp.Droid.Resource.Interpolator.mr_linear_out_slow_in;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_action_bar_title_item = global::CoreInvestmentApp.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_action_bar_up_container = global::CoreInvestmentApp.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_action_bar_view_list_nav_layout = global::CoreInvestmentApp.Droid.Resource.Layout.abc_action_bar_view_list_nav_layout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_action_menu_item_layout = global::CoreInvestmentApp.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_action_menu_layout = global::CoreInvestmentApp.Droid.Resource.Layout.abc_action_menu_layout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_action_mode_bar = global::CoreInvestmentApp.Droid.Resource.Layout.abc_action_mode_bar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_action_mode_close_item_material = global::CoreInvestmentApp.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_activity_chooser_view = global::CoreInvestmentApp.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::CoreInvestmentApp.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::CoreInvestmentApp.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_alert_dialog_material = global::CoreInvestmentApp.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_dialog_title_material = global::CoreInvestmentApp.Droid.Resource.Layout.abc_dialog_title_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_expanded_menu_layout = global::CoreInvestmentApp.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::CoreInvestmentApp.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_list_menu_item_icon = global::CoreInvestmentApp.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_list_menu_item_layout = global::CoreInvestmentApp.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_list_menu_item_radio = global::CoreInvestmentApp.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_popup_menu_item_layout = global::CoreInvestmentApp.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_screen_content_include = global::CoreInvestmentApp.Droid.Resource.Layout.abc_screen_content_include;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_screen_simple = global::CoreInvestmentApp.Droid.Resource.Layout.abc_screen_simple;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::CoreInvestmentApp.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_screen_toolbar = global::CoreInvestmentApp.Droid.Resource.Layout.abc_screen_toolbar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::CoreInvestmentApp.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_search_view = global::CoreInvestmentApp.Droid.Resource.Layout.abc_search_view;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.abc_select_dialog_material = global::CoreInvestmentApp.Droid.Resource.Layout.abc_select_dialog_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.design_bottom_sheet_dialog = global::CoreInvestmentApp.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.design_layout_snackbar = global::CoreInvestmentApp.Droid.Resource.Layout.design_layout_snackbar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.design_layout_snackbar_include = global::CoreInvestmentApp.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.design_layout_tab_icon = global::CoreInvestmentApp.Droid.Resource.Layout.design_layout_tab_icon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.design_layout_tab_text = global::CoreInvestmentApp.Droid.Resource.Layout.design_layout_tab_text;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.design_menu_item_action_area = global::CoreInvestmentApp.Droid.Resource.Layout.design_menu_item_action_area;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.design_navigation_item = global::CoreInvestmentApp.Droid.Resource.Layout.design_navigation_item;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.design_navigation_item_header = global::CoreInvestmentApp.Droid.Resource.Layout.design_navigation_item_header;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.design_navigation_item_separator = global::CoreInvestmentApp.Droid.Resource.Layout.design_navigation_item_separator;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.design_navigation_item_subheader = global::CoreInvestmentApp.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.design_navigation_menu = global::CoreInvestmentApp.Droid.Resource.Layout.design_navigation_menu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.design_navigation_menu_item = global::CoreInvestmentApp.Droid.Resource.Layout.design_navigation_menu_item;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.mr_chooser_dialog = global::CoreInvestmentApp.Droid.Resource.Layout.mr_chooser_dialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.mr_chooser_list_item = global::CoreInvestmentApp.Droid.Resource.Layout.mr_chooser_list_item;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.mr_controller_material_dialog_b = global::CoreInvestmentApp.Droid.Resource.Layout.mr_controller_material_dialog_b;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.mr_controller_volume_item = global::CoreInvestmentApp.Droid.Resource.Layout.mr_controller_volume_item;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.mr_playback_control = global::CoreInvestmentApp.Droid.Resource.Layout.mr_playback_control;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.mr_volume_control = global::CoreInvestmentApp.Droid.Resource.Layout.mr_volume_control;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.notification_media_action = global::CoreInvestmentApp.Droid.Resource.Layout.notification_media_action;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.notification_media_cancel_action = global::CoreInvestmentApp.Droid.Resource.Layout.notification_media_cancel_action;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.notification_template_big_media = global::CoreInvestmentApp.Droid.Resource.Layout.notification_template_big_media;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.notification_template_big_media_narrow = global::CoreInvestmentApp.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.notification_template_media = global::CoreInvestmentApp.Droid.Resource.Layout.notification_template_media;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.notification_template_part_chronometer = global::CoreInvestmentApp.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.notification_template_part_time = global::CoreInvestmentApp.Droid.Resource.Layout.notification_template_part_time;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.select_dialog_item_material = global::CoreInvestmentApp.Droid.Resource.Layout.select_dialog_item_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.select_dialog_multichoice_material = global::CoreInvestmentApp.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.select_dialog_singlechoice_material = global::CoreInvestmentApp.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::CoreInvestmentApp.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_action_bar_home_description = global::CoreInvestmentApp.Droid.Resource.String.abc_action_bar_home_description;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_action_bar_home_description_format = global::CoreInvestmentApp.Droid.Resource.String.abc_action_bar_home_description_format;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_action_bar_home_subtitle_description_format = global::CoreInvestmentApp.Droid.Resource.String.abc_action_bar_home_subtitle_description_format;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_action_bar_up_description = global::CoreInvestmentApp.Droid.Resource.String.abc_action_bar_up_description;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_action_menu_overflow_description = global::CoreInvestmentApp.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_action_mode_done = global::CoreInvestmentApp.Droid.Resource.String.abc_action_mode_done;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_activity_chooser_view_see_all = global::CoreInvestmentApp.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_activitychooserview_choose_application = global::CoreInvestmentApp.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_capital_off = global::CoreInvestmentApp.Droid.Resource.String.abc_capital_off;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_capital_on = global::CoreInvestmentApp.Droid.Resource.String.abc_capital_on;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_search_hint = global::CoreInvestmentApp.Droid.Resource.String.abc_search_hint;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_searchview_description_clear = global::CoreInvestmentApp.Droid.Resource.String.abc_searchview_description_clear;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_searchview_description_query = global::CoreInvestmentApp.Droid.Resource.String.abc_searchview_description_query;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_searchview_description_search = global::CoreInvestmentApp.Droid.Resource.String.abc_searchview_description_search;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_searchview_description_submit = global::CoreInvestmentApp.Droid.Resource.String.abc_searchview_description_submit;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_searchview_description_voice = global::CoreInvestmentApp.Droid.Resource.String.abc_searchview_description_voice;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_shareactionprovider_share_with = global::CoreInvestmentApp.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::CoreInvestmentApp.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.abc_toolbar_collapse_description = global::CoreInvestmentApp.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.appbar_scrolling_view_behavior = global::CoreInvestmentApp.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.bottom_sheet_behavior = global::CoreInvestmentApp.Droid.Resource.String.bottom_sheet_behavior;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.character_counter_pattern = global::CoreInvestmentApp.Droid.Resource.String.character_counter_pattern;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.mr_button_content_description = global::CoreInvestmentApp.Droid.Resource.String.mr_button_content_description;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.mr_chooser_searching = global::CoreInvestmentApp.Droid.Resource.String.mr_chooser_searching;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.mr_chooser_title = global::CoreInvestmentApp.Droid.Resource.String.mr_chooser_title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.mr_controller_casting_screen = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_casting_screen;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.mr_controller_close_description = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_close_description;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.mr_controller_collapse_group = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_collapse_group;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.mr_controller_disconnect = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_disconnect;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.mr_controller_expand_group = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_expand_group;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.mr_controller_no_info_available = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_no_info_available;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.mr_controller_no_media_selected = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_no_media_selected;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.mr_controller_pause = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_pause;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.mr_controller_play = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_play;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.mr_controller_stop = global::CoreInvestmentApp.Droid.Resource.String.mr_controller_stop;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.mr_system_route_name = global::CoreInvestmentApp.Droid.Resource.String.mr_system_route_name;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.mr_user_route_category_name = global::CoreInvestmentApp.Droid.Resource.String.mr_user_route_category_name;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.String.status_bar_notification_info_overflow = global::CoreInvestmentApp.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.AlertDialog_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Animation_AppCompat_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::CoreInvestmentApp.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Animation_Design_BottomSheetDialog = global::CoreInvestmentApp.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::CoreInvestmentApp.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_CardView = global::CoreInvestmentApp.Droid.Resource.Style.Base_CardView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::CoreInvestmentApp.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Theme_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::CoreInvestmentApp.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::CoreInvestmentApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::CoreInvestmentApp.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::CoreInvestmentApp.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::CoreInvestmentApp.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::CoreInvestmentApp.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Base_Widget_Design_TabLayout = global::CoreInvestmentApp.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.CardView = global::CoreInvestmentApp.Droid.Resource.Style.CardView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.CardView_Dark = global::CoreInvestmentApp.Droid.Resource.Style.CardView_Dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.CardView_Light = global::CoreInvestmentApp.Droid.Resource.Style.CardView_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Platform_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Platform_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Platform_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::CoreInvestmentApp.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Platform_V11_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Platform_V11_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Platform_V11_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Platform_V11_AppCompat_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Platform_V14_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Platform_V14_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Platform_V14_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Platform_V14_AppCompat_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::CoreInvestmentApp.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::CoreInvestmentApp.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::CoreInvestmentApp.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_Design_Counter = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_Design_Error = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_Design_Hint = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_Design_Tab = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_StatusBar_EventContent = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_StatusBar_EventContent;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Info = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Info;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Line2 = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Line2;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Time = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Time;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Title = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::CoreInvestmentApp.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_DayNight = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_Design = global::CoreInvestmentApp.Droid.Resource.Style.Theme_Design;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_Design_BottomSheetDialog = global::CoreInvestmentApp.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_Design_Light = global::CoreInvestmentApp.Droid.Resource.Style.Theme_Design_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::CoreInvestmentApp.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_Design_Light_NoActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_Design_NoActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_MediaRouter = global::CoreInvestmentApp.Droid.Resource.Style.Theme_MediaRouter;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_MediaRouter_Light = global::CoreInvestmentApp.Droid.Resource.Style.Theme_MediaRouter_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::CoreInvestmentApp.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel = global::CoreInvestmentApp.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.ThemeOverlay_AppCompat = global::CoreInvestmentApp.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::CoreInvestmentApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::CoreInvestmentApp.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Button = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_EditText = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ListView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_SearchView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Spinner = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::CoreInvestmentApp.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_Design_AppBarLayout = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_Design_BottomSheet_Modal = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_Design_CollapsingToolbar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_Design_CoordinatorLayout = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_CoordinatorLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_Design_FloatingActionButton = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_Design_NavigationView = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_Design_Snackbar = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_Design_TabLayout = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_Design_TextInputLayout = global::CoreInvestmentApp.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::CoreInvestmentApp.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::CoreInvestmentApp.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_background = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_background;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_displayOptions = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_divider = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_divider;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_elevation = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_elevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_height = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_height;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_homeLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_icon = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_icon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_itemPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_logo = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_logo;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_navigationMode = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_popupTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_subtitle = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_title = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBarLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBarLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionMenuItemView = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMenuItemView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionMenuView = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMenuView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionMode = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionMode_background = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMode_background;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionMode_height = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMode_height;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActivityChooserView = global::CoreInvestmentApp.Droid.Resource.Styleable.ActivityChooserView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::CoreInvestmentApp.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AlertDialog = global::CoreInvestmentApp.Droid.Resource.Styleable.AlertDialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AlertDialog_android_layout = global::CoreInvestmentApp.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AlertDialog_listLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppBarLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.AppBarLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppBarLayout_android_background = global::CoreInvestmentApp.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppBarLayout_elevation = global::CoreInvestmentApp.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppBarLayout_expanded = global::CoreInvestmentApp.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatImageView = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatImageView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatImageView_android_src = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTextView = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTextView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::CoreInvestmentApp.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ButtonBarLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.ButtonBarLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::CoreInvestmentApp.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CardView = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CardView_android_minHeight = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CardView_android_minWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CardView_cardBackgroundColor = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CardView_cardCornerRadius = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CardView_cardElevation = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_cardElevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CardView_cardMaxElevation = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CardView_cardUseCompatPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CardView_contentPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_contentPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CardView_contentPaddingBottom = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CardView_contentPaddingLeft = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CardView_contentPaddingRight = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CardView_contentPaddingTop = global::CoreInvestmentApp.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CollapsingToolbarLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CollapsingToolbarLayout_title = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::CoreInvestmentApp.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CompoundButton = global::CoreInvestmentApp.Droid.Resource.Styleable.CompoundButton;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CompoundButton_android_button = global::CoreInvestmentApp.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CompoundButton_buttonTint = global::CoreInvestmentApp.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::CoreInvestmentApp.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CoordinatorLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.CoordinatorLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CoordinatorLayout_keylines = global::CoreInvestmentApp.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.DesignTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.DesignTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.DesignTheme_textColorError = global::CoreInvestmentApp.Droid.Resource.Styleable.DesignTheme_textColorError;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.DrawerArrowToggle = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.DrawerArrowToggle_color = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::CoreInvestmentApp.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.FloatingActionButton = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.FloatingActionButton_backgroundTint = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.FloatingActionButton_borderWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.FloatingActionButton_elevation = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.FloatingActionButton_fabSize = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.FloatingActionButton_rippleColor = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ForegroundLinearLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::CoreInvestmentApp.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::CoreInvestmentApp.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::CoreInvestmentApp.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.LinearLayoutCompat = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::CoreInvestmentApp.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ListPopupWindow = global::CoreInvestmentApp.Droid.Resource.Styleable.ListPopupWindow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::CoreInvestmentApp.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::CoreInvestmentApp.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MediaRouteButton = global::CoreInvestmentApp.Droid.Resource.Styleable.MediaRouteButton;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MediaRouteButton_android_minHeight = global::CoreInvestmentApp.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MediaRouteButton_android_minWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::CoreInvestmentApp.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuGroup = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuGroup;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuGroup_android_enabled = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuGroup_android_id = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuGroup_android_visible = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_actionLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_actionViewClass = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_android_checkable = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_android_checked = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_android_enabled = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_android_icon = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_android_id = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_id;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_android_onClick = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_android_title = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_android_visible = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuItem_showAsAction = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuView = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuView_android_headerBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuView_android_itemBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::CoreInvestmentApp.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.NavigationView = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.NavigationView_android_background = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_android_background;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.NavigationView_android_maxWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.NavigationView_elevation = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_elevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.NavigationView_headerLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.NavigationView_itemBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.NavigationView_itemIconTint = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.NavigationView_itemTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.NavigationView_itemTextColor = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.NavigationView_menu = global::CoreInvestmentApp.Droid.Resource.Styleable.NavigationView_menu;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.PopupWindow = global::CoreInvestmentApp.Droid.Resource.Styleable.PopupWindow;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::CoreInvestmentApp.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.PopupWindowBackgroundState = global::CoreInvestmentApp.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::CoreInvestmentApp.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.RecyclerView = global::CoreInvestmentApp.Droid.Resource.Styleable.RecyclerView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.RecyclerView_android_orientation = global::CoreInvestmentApp.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.RecyclerView_layoutManager = global::CoreInvestmentApp.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.RecyclerView_reverseLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.RecyclerView_spanCount = global::CoreInvestmentApp.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.RecyclerView_stackFromEnd = global::CoreInvestmentApp.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ScrimInsetsFrameLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::CoreInvestmentApp.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_android_focusable = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_android_imeOptions = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_android_inputType = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_android_maxWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_closeIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_commitIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_goIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_goIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_layout = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_layout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_queryBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_queryHint = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_queryHint;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_searchHintIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_searchIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_submitBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SearchView_voiceIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SnackbarLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.SnackbarLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SnackbarLayout_elevation = global::CoreInvestmentApp.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Spinner = global::CoreInvestmentApp.Droid.Resource.Styleable.Spinner;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Spinner_android_entries = global::CoreInvestmentApp.Droid.Resource.Styleable.Spinner_android_entries;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Spinner_android_popupBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Spinner_android_prompt = global::CoreInvestmentApp.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Spinner_popupTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SwitchCompat = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SwitchCompat_showText = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.SwitchCompat_track = global::CoreInvestmentApp.Droid.Resource.Styleable.SwitchCompat_track;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabItem = global::CoreInvestmentApp.Droid.Resource.Styleable.TabItem;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabItem_android_icon = global::CoreInvestmentApp.Droid.Resource.Styleable.TabItem_android_icon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabItem_android_layout = global::CoreInvestmentApp.Droid.Resource.Styleable.TabItem_android_layout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabItem_android_text = global::CoreInvestmentApp.Droid.Resource.Styleable.TabItem_android_text;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabBackground = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabContentStart = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabGravity = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabIndicatorColor = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabMaxWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabMinWidth = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabMode = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabPadding = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabPaddingBottom = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabPaddingEnd = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabPaddingStart = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabPaddingTop = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TabLayout_tabTextColor = global::CoreInvestmentApp.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextAppearance_android_textColor = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextAppearance_android_textSize = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextAppearance_android_typeface = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::CoreInvestmentApp.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextInputLayout = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextInputLayout_android_hint = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextInputLayout_android_textColorHint = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextInputLayout_counterEnabled = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextInputLayout_counterMaxLength = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextInputLayout_errorEnabled = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextInputLayout_hintEnabled = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_android_gravity = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_android_minHeight = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_collapseIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_logo = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_logo;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_logoDescription = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_navigationIcon = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_popupTheme = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_subtitle = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_title = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_title;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_titleMargins = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.Toolbar_titleTextColor = global::CoreInvestmentApp.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.View = global::CoreInvestmentApp.Droid.Resource.Styleable.View;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.View_android_focusable = global::CoreInvestmentApp.Droid.Resource.Styleable.View_android_focusable;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.View_android_theme = global::CoreInvestmentApp.Droid.Resource.Styleable.View_android_theme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.View_paddingEnd = global::CoreInvestmentApp.Droid.Resource.Styleable.View_paddingEnd;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.View_paddingStart = global::CoreInvestmentApp.Droid.Resource.Styleable.View_paddingStart;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.View_theme = global::CoreInvestmentApp.Droid.Resource.Styleable.View_theme;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ViewBackgroundHelper = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ViewStubCompat = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewStubCompat;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ViewStubCompat_android_id = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::FormsCommunityToolkit.Effects.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::CoreInvestmentApp.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 			global::Messier16.Forms.Android.Controls.Resource.Animation.abc_fade_in = global::CoreInvestmentApp.Droid.Resource.Animation.abc_fade_in;
 			global::Messier16.Forms.Android.Controls.Resource.Animation.abc_fade_out = global::CoreInvestmentApp.Droid.Resource.Animation.abc_fade_out;
 			global::Messier16.Forms.Android.Controls.Resource.Animation.abc_grow_fade_in_from_bottom = global::CoreInvestmentApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -5595,26 +7231,26 @@ namespace CoreInvestmentApp.Droid
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f02011e
-			public const int avd_hide_password_1 = 2130837790;
-			
 			// aapt resource value: 0x7f02011f
-			public const int avd_hide_password_2 = 2130837791;
+			public const int avd_hide_password_1 = 2130837791;
 			
 			// aapt resource value: 0x7f020120
-			public const int avd_hide_password_3 = 2130837792;
+			public const int avd_hide_password_2 = 2130837792;
+			
+			// aapt resource value: 0x7f020121
+			public const int avd_hide_password_3 = 2130837793;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f020121
-			public const int avd_show_password_1 = 2130837793;
-			
 			// aapt resource value: 0x7f020122
-			public const int avd_show_password_2 = 2130837794;
+			public const int avd_show_password_1 = 2130837794;
 			
 			// aapt resource value: 0x7f020123
-			public const int avd_show_password_3 = 2130837795;
+			public const int avd_show_password_2 = 2130837795;
+			
+			// aapt resource value: 0x7f020124
+			public const int avd_show_password_3 = 2130837796;
 			
 			// aapt resource value: 0x7f020056
 			public const int book = 2130837590;
@@ -5647,574 +7283,577 @@ namespace CoreInvestmentApp.Droid
 			public const int document = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int ic_audiotrack_dark = 2130837600;
+			public const int fct_ic_clear_icon = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int ic_audiotrack_light = 2130837601;
+			public const int ic_audiotrack_dark = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int ic_dialog_close_dark = 2130837602;
+			public const int ic_audiotrack_light = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int ic_dialog_close_light = 2130837603;
+			public const int ic_dialog_close_dark = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int ic_errorstatus = 2130837604;
+			public const int ic_dialog_close_light = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int ic_group_collapse_00 = 2130837605;
+			public const int ic_errorstatus = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int ic_group_collapse_01 = 2130837606;
+			public const int ic_group_collapse_00 = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int ic_group_collapse_02 = 2130837607;
+			public const int ic_group_collapse_01 = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int ic_group_collapse_03 = 2130837608;
+			public const int ic_group_collapse_02 = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int ic_group_collapse_04 = 2130837609;
+			public const int ic_group_collapse_03 = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int ic_group_collapse_05 = 2130837610;
+			public const int ic_group_collapse_04 = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int ic_group_collapse_06 = 2130837611;
+			public const int ic_group_collapse_05 = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int ic_group_collapse_07 = 2130837612;
+			public const int ic_group_collapse_06 = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int ic_group_collapse_08 = 2130837613;
+			public const int ic_group_collapse_07 = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int ic_group_collapse_09 = 2130837614;
+			public const int ic_group_collapse_08 = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int ic_group_collapse_10 = 2130837615;
+			public const int ic_group_collapse_09 = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int ic_group_collapse_11 = 2130837616;
+			public const int ic_group_collapse_10 = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int ic_group_collapse_12 = 2130837617;
+			public const int ic_group_collapse_11 = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int ic_group_collapse_13 = 2130837618;
+			public const int ic_group_collapse_12 = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int ic_group_collapse_14 = 2130837619;
+			public const int ic_group_collapse_13 = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int ic_group_collapse_15 = 2130837620;
+			public const int ic_group_collapse_14 = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int ic_group_expand_00 = 2130837621;
+			public const int ic_group_collapse_15 = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int ic_group_expand_01 = 2130837622;
+			public const int ic_group_expand_00 = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int ic_group_expand_02 = 2130837623;
+			public const int ic_group_expand_01 = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int ic_group_expand_03 = 2130837624;
+			public const int ic_group_expand_02 = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int ic_group_expand_04 = 2130837625;
+			public const int ic_group_expand_03 = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int ic_group_expand_05 = 2130837626;
+			public const int ic_group_expand_04 = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int ic_group_expand_06 = 2130837627;
+			public const int ic_group_expand_05 = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int ic_group_expand_07 = 2130837628;
+			public const int ic_group_expand_06 = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int ic_group_expand_08 = 2130837629;
+			public const int ic_group_expand_07 = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int ic_group_expand_09 = 2130837630;
+			public const int ic_group_expand_08 = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int ic_group_expand_10 = 2130837631;
+			public const int ic_group_expand_09 = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int ic_group_expand_11 = 2130837632;
+			public const int ic_group_expand_10 = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int ic_group_expand_12 = 2130837633;
+			public const int ic_group_expand_11 = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int ic_group_expand_13 = 2130837634;
+			public const int ic_group_expand_12 = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int ic_group_expand_14 = 2130837635;
+			public const int ic_group_expand_13 = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int ic_group_expand_15 = 2130837636;
+			public const int ic_group_expand_14 = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int ic_media_pause_dark = 2130837637;
+			public const int ic_group_expand_15 = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int ic_media_pause_light = 2130837638;
+			public const int ic_media_pause_dark = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int ic_media_play_dark = 2130837639;
+			public const int ic_media_pause_light = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int ic_media_play_light = 2130837640;
+			public const int ic_media_play_dark = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int ic_media_stop_dark = 2130837641;
+			public const int ic_media_play_light = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int ic_media_stop_light = 2130837642;
+			public const int ic_media_stop_dark = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int ic_mr_button_connected_00_dark = 2130837643;
+			public const int ic_media_stop_light = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int ic_mr_button_connected_00_light = 2130837644;
+			public const int ic_mr_button_connected_00_dark = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int ic_mr_button_connected_01_dark = 2130837645;
+			public const int ic_mr_button_connected_00_light = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int ic_mr_button_connected_01_light = 2130837646;
+			public const int ic_mr_button_connected_01_dark = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int ic_mr_button_connected_02_dark = 2130837647;
+			public const int ic_mr_button_connected_01_light = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int ic_mr_button_connected_02_light = 2130837648;
+			public const int ic_mr_button_connected_02_dark = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int ic_mr_button_connected_03_dark = 2130837649;
+			public const int ic_mr_button_connected_02_light = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int ic_mr_button_connected_03_light = 2130837650;
+			public const int ic_mr_button_connected_03_dark = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int ic_mr_button_connected_04_dark = 2130837651;
+			public const int ic_mr_button_connected_03_light = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int ic_mr_button_connected_04_light = 2130837652;
+			public const int ic_mr_button_connected_04_dark = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int ic_mr_button_connected_05_dark = 2130837653;
+			public const int ic_mr_button_connected_04_light = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int ic_mr_button_connected_05_light = 2130837654;
+			public const int ic_mr_button_connected_05_dark = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int ic_mr_button_connected_06_dark = 2130837655;
+			public const int ic_mr_button_connected_05_light = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int ic_mr_button_connected_06_light = 2130837656;
+			public const int ic_mr_button_connected_06_dark = 2130837656;
 			
 			// aapt resource value: 0x7f020099
-			public const int ic_mr_button_connected_07_dark = 2130837657;
+			public const int ic_mr_button_connected_06_light = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int ic_mr_button_connected_07_light = 2130837658;
+			public const int ic_mr_button_connected_07_dark = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int ic_mr_button_connected_08_dark = 2130837659;
+			public const int ic_mr_button_connected_07_light = 2130837659;
 			
 			// aapt resource value: 0x7f02009c
-			public const int ic_mr_button_connected_08_light = 2130837660;
+			public const int ic_mr_button_connected_08_dark = 2130837660;
 			
 			// aapt resource value: 0x7f02009d
-			public const int ic_mr_button_connected_09_dark = 2130837661;
+			public const int ic_mr_button_connected_08_light = 2130837661;
 			
 			// aapt resource value: 0x7f02009e
-			public const int ic_mr_button_connected_09_light = 2130837662;
+			public const int ic_mr_button_connected_09_dark = 2130837662;
 			
 			// aapt resource value: 0x7f02009f
-			public const int ic_mr_button_connected_10_dark = 2130837663;
+			public const int ic_mr_button_connected_09_light = 2130837663;
 			
 			// aapt resource value: 0x7f0200a0
-			public const int ic_mr_button_connected_10_light = 2130837664;
+			public const int ic_mr_button_connected_10_dark = 2130837664;
 			
 			// aapt resource value: 0x7f0200a1
-			public const int ic_mr_button_connected_11_dark = 2130837665;
+			public const int ic_mr_button_connected_10_light = 2130837665;
 			
 			// aapt resource value: 0x7f0200a2
-			public const int ic_mr_button_connected_11_light = 2130837666;
+			public const int ic_mr_button_connected_11_dark = 2130837666;
 			
 			// aapt resource value: 0x7f0200a3
-			public const int ic_mr_button_connected_12_dark = 2130837667;
+			public const int ic_mr_button_connected_11_light = 2130837667;
 			
 			// aapt resource value: 0x7f0200a4
-			public const int ic_mr_button_connected_12_light = 2130837668;
+			public const int ic_mr_button_connected_12_dark = 2130837668;
 			
 			// aapt resource value: 0x7f0200a5
-			public const int ic_mr_button_connected_13_dark = 2130837669;
+			public const int ic_mr_button_connected_12_light = 2130837669;
 			
 			// aapt resource value: 0x7f0200a6
-			public const int ic_mr_button_connected_13_light = 2130837670;
+			public const int ic_mr_button_connected_13_dark = 2130837670;
 			
 			// aapt resource value: 0x7f0200a7
-			public const int ic_mr_button_connected_14_dark = 2130837671;
+			public const int ic_mr_button_connected_13_light = 2130837671;
 			
 			// aapt resource value: 0x7f0200a8
-			public const int ic_mr_button_connected_14_light = 2130837672;
+			public const int ic_mr_button_connected_14_dark = 2130837672;
 			
 			// aapt resource value: 0x7f0200a9
-			public const int ic_mr_button_connected_15_dark = 2130837673;
+			public const int ic_mr_button_connected_14_light = 2130837673;
 			
 			// aapt resource value: 0x7f0200aa
-			public const int ic_mr_button_connected_15_light = 2130837674;
+			public const int ic_mr_button_connected_15_dark = 2130837674;
 			
 			// aapt resource value: 0x7f0200ab
-			public const int ic_mr_button_connected_16_dark = 2130837675;
+			public const int ic_mr_button_connected_15_light = 2130837675;
 			
 			// aapt resource value: 0x7f0200ac
-			public const int ic_mr_button_connected_16_light = 2130837676;
+			public const int ic_mr_button_connected_16_dark = 2130837676;
 			
 			// aapt resource value: 0x7f0200ad
-			public const int ic_mr_button_connected_17_dark = 2130837677;
+			public const int ic_mr_button_connected_16_light = 2130837677;
 			
 			// aapt resource value: 0x7f0200ae
-			public const int ic_mr_button_connected_17_light = 2130837678;
+			public const int ic_mr_button_connected_17_dark = 2130837678;
 			
 			// aapt resource value: 0x7f0200af
-			public const int ic_mr_button_connected_18_dark = 2130837679;
+			public const int ic_mr_button_connected_17_light = 2130837679;
 			
 			// aapt resource value: 0x7f0200b0
-			public const int ic_mr_button_connected_18_light = 2130837680;
+			public const int ic_mr_button_connected_18_dark = 2130837680;
 			
 			// aapt resource value: 0x7f0200b1
-			public const int ic_mr_button_connected_19_dark = 2130837681;
+			public const int ic_mr_button_connected_18_light = 2130837681;
 			
 			// aapt resource value: 0x7f0200b2
-			public const int ic_mr_button_connected_19_light = 2130837682;
+			public const int ic_mr_button_connected_19_dark = 2130837682;
 			
 			// aapt resource value: 0x7f0200b3
-			public const int ic_mr_button_connected_20_dark = 2130837683;
+			public const int ic_mr_button_connected_19_light = 2130837683;
 			
 			// aapt resource value: 0x7f0200b4
-			public const int ic_mr_button_connected_20_light = 2130837684;
+			public const int ic_mr_button_connected_20_dark = 2130837684;
 			
 			// aapt resource value: 0x7f0200b5
-			public const int ic_mr_button_connected_21_dark = 2130837685;
+			public const int ic_mr_button_connected_20_light = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int ic_mr_button_connected_21_light = 2130837686;
+			public const int ic_mr_button_connected_21_dark = 2130837686;
 			
 			// aapt resource value: 0x7f0200b7
-			public const int ic_mr_button_connected_22_dark = 2130837687;
+			public const int ic_mr_button_connected_21_light = 2130837687;
 			
 			// aapt resource value: 0x7f0200b8
-			public const int ic_mr_button_connected_22_light = 2130837688;
+			public const int ic_mr_button_connected_22_dark = 2130837688;
 			
 			// aapt resource value: 0x7f0200b9
-			public const int ic_mr_button_connecting_00_dark = 2130837689;
+			public const int ic_mr_button_connected_22_light = 2130837689;
 			
 			// aapt resource value: 0x7f0200ba
-			public const int ic_mr_button_connecting_00_light = 2130837690;
+			public const int ic_mr_button_connecting_00_dark = 2130837690;
 			
 			// aapt resource value: 0x7f0200bb
-			public const int ic_mr_button_connecting_01_dark = 2130837691;
+			public const int ic_mr_button_connecting_00_light = 2130837691;
 			
 			// aapt resource value: 0x7f0200bc
-			public const int ic_mr_button_connecting_01_light = 2130837692;
+			public const int ic_mr_button_connecting_01_dark = 2130837692;
 			
 			// aapt resource value: 0x7f0200bd
-			public const int ic_mr_button_connecting_02_dark = 2130837693;
+			public const int ic_mr_button_connecting_01_light = 2130837693;
 			
 			// aapt resource value: 0x7f0200be
-			public const int ic_mr_button_connecting_02_light = 2130837694;
+			public const int ic_mr_button_connecting_02_dark = 2130837694;
 			
 			// aapt resource value: 0x7f0200bf
-			public const int ic_mr_button_connecting_03_dark = 2130837695;
+			public const int ic_mr_button_connecting_02_light = 2130837695;
 			
 			// aapt resource value: 0x7f0200c0
-			public const int ic_mr_button_connecting_03_light = 2130837696;
+			public const int ic_mr_button_connecting_03_dark = 2130837696;
 			
 			// aapt resource value: 0x7f0200c1
-			public const int ic_mr_button_connecting_04_dark = 2130837697;
+			public const int ic_mr_button_connecting_03_light = 2130837697;
 			
 			// aapt resource value: 0x7f0200c2
-			public const int ic_mr_button_connecting_04_light = 2130837698;
+			public const int ic_mr_button_connecting_04_dark = 2130837698;
 			
 			// aapt resource value: 0x7f0200c3
-			public const int ic_mr_button_connecting_05_dark = 2130837699;
+			public const int ic_mr_button_connecting_04_light = 2130837699;
 			
 			// aapt resource value: 0x7f0200c4
-			public const int ic_mr_button_connecting_05_light = 2130837700;
+			public const int ic_mr_button_connecting_05_dark = 2130837700;
 			
 			// aapt resource value: 0x7f0200c5
-			public const int ic_mr_button_connecting_06_dark = 2130837701;
+			public const int ic_mr_button_connecting_05_light = 2130837701;
 			
 			// aapt resource value: 0x7f0200c6
-			public const int ic_mr_button_connecting_06_light = 2130837702;
+			public const int ic_mr_button_connecting_06_dark = 2130837702;
 			
 			// aapt resource value: 0x7f0200c7
-			public const int ic_mr_button_connecting_07_dark = 2130837703;
+			public const int ic_mr_button_connecting_06_light = 2130837703;
 			
 			// aapt resource value: 0x7f0200c8
-			public const int ic_mr_button_connecting_07_light = 2130837704;
+			public const int ic_mr_button_connecting_07_dark = 2130837704;
 			
 			// aapt resource value: 0x7f0200c9
-			public const int ic_mr_button_connecting_08_dark = 2130837705;
+			public const int ic_mr_button_connecting_07_light = 2130837705;
 			
 			// aapt resource value: 0x7f0200ca
-			public const int ic_mr_button_connecting_08_light = 2130837706;
+			public const int ic_mr_button_connecting_08_dark = 2130837706;
 			
 			// aapt resource value: 0x7f0200cb
-			public const int ic_mr_button_connecting_09_dark = 2130837707;
+			public const int ic_mr_button_connecting_08_light = 2130837707;
 			
 			// aapt resource value: 0x7f0200cc
-			public const int ic_mr_button_connecting_09_light = 2130837708;
+			public const int ic_mr_button_connecting_09_dark = 2130837708;
 			
 			// aapt resource value: 0x7f0200cd
-			public const int ic_mr_button_connecting_10_dark = 2130837709;
+			public const int ic_mr_button_connecting_09_light = 2130837709;
 			
 			// aapt resource value: 0x7f0200ce
-			public const int ic_mr_button_connecting_10_light = 2130837710;
+			public const int ic_mr_button_connecting_10_dark = 2130837710;
 			
 			// aapt resource value: 0x7f0200cf
-			public const int ic_mr_button_connecting_11_dark = 2130837711;
+			public const int ic_mr_button_connecting_10_light = 2130837711;
 			
 			// aapt resource value: 0x7f0200d0
-			public const int ic_mr_button_connecting_11_light = 2130837712;
+			public const int ic_mr_button_connecting_11_dark = 2130837712;
 			
 			// aapt resource value: 0x7f0200d1
-			public const int ic_mr_button_connecting_12_dark = 2130837713;
+			public const int ic_mr_button_connecting_11_light = 2130837713;
 			
 			// aapt resource value: 0x7f0200d2
-			public const int ic_mr_button_connecting_12_light = 2130837714;
+			public const int ic_mr_button_connecting_12_dark = 2130837714;
 			
 			// aapt resource value: 0x7f0200d3
-			public const int ic_mr_button_connecting_13_dark = 2130837715;
+			public const int ic_mr_button_connecting_12_light = 2130837715;
 			
 			// aapt resource value: 0x7f0200d4
-			public const int ic_mr_button_connecting_13_light = 2130837716;
+			public const int ic_mr_button_connecting_13_dark = 2130837716;
 			
 			// aapt resource value: 0x7f0200d5
-			public const int ic_mr_button_connecting_14_dark = 2130837717;
+			public const int ic_mr_button_connecting_13_light = 2130837717;
 			
 			// aapt resource value: 0x7f0200d6
-			public const int ic_mr_button_connecting_14_light = 2130837718;
+			public const int ic_mr_button_connecting_14_dark = 2130837718;
 			
 			// aapt resource value: 0x7f0200d7
-			public const int ic_mr_button_connecting_15_dark = 2130837719;
+			public const int ic_mr_button_connecting_14_light = 2130837719;
 			
 			// aapt resource value: 0x7f0200d8
-			public const int ic_mr_button_connecting_15_light = 2130837720;
+			public const int ic_mr_button_connecting_15_dark = 2130837720;
 			
 			// aapt resource value: 0x7f0200d9
-			public const int ic_mr_button_connecting_16_dark = 2130837721;
+			public const int ic_mr_button_connecting_15_light = 2130837721;
 			
 			// aapt resource value: 0x7f0200da
-			public const int ic_mr_button_connecting_16_light = 2130837722;
+			public const int ic_mr_button_connecting_16_dark = 2130837722;
 			
 			// aapt resource value: 0x7f0200db
-			public const int ic_mr_button_connecting_17_dark = 2130837723;
+			public const int ic_mr_button_connecting_16_light = 2130837723;
 			
 			// aapt resource value: 0x7f0200dc
-			public const int ic_mr_button_connecting_17_light = 2130837724;
+			public const int ic_mr_button_connecting_17_dark = 2130837724;
 			
 			// aapt resource value: 0x7f0200dd
-			public const int ic_mr_button_connecting_18_dark = 2130837725;
+			public const int ic_mr_button_connecting_17_light = 2130837725;
 			
 			// aapt resource value: 0x7f0200de
-			public const int ic_mr_button_connecting_18_light = 2130837726;
+			public const int ic_mr_button_connecting_18_dark = 2130837726;
 			
 			// aapt resource value: 0x7f0200df
-			public const int ic_mr_button_connecting_19_dark = 2130837727;
+			public const int ic_mr_button_connecting_18_light = 2130837727;
 			
 			// aapt resource value: 0x7f0200e0
-			public const int ic_mr_button_connecting_19_light = 2130837728;
+			public const int ic_mr_button_connecting_19_dark = 2130837728;
 			
 			// aapt resource value: 0x7f0200e1
-			public const int ic_mr_button_connecting_20_dark = 2130837729;
+			public const int ic_mr_button_connecting_19_light = 2130837729;
 			
 			// aapt resource value: 0x7f0200e2
-			public const int ic_mr_button_connecting_20_light = 2130837730;
+			public const int ic_mr_button_connecting_20_dark = 2130837730;
 			
 			// aapt resource value: 0x7f0200e3
-			public const int ic_mr_button_connecting_21_dark = 2130837731;
+			public const int ic_mr_button_connecting_20_light = 2130837731;
 			
 			// aapt resource value: 0x7f0200e4
-			public const int ic_mr_button_connecting_21_light = 2130837732;
+			public const int ic_mr_button_connecting_21_dark = 2130837732;
 			
 			// aapt resource value: 0x7f0200e5
-			public const int ic_mr_button_connecting_22_dark = 2130837733;
+			public const int ic_mr_button_connecting_21_light = 2130837733;
 			
 			// aapt resource value: 0x7f0200e6
-			public const int ic_mr_button_connecting_22_light = 2130837734;
+			public const int ic_mr_button_connecting_22_dark = 2130837734;
 			
 			// aapt resource value: 0x7f0200e7
-			public const int ic_mr_button_disabled_dark = 2130837735;
+			public const int ic_mr_button_connecting_22_light = 2130837735;
 			
 			// aapt resource value: 0x7f0200e8
-			public const int ic_mr_button_disabled_light = 2130837736;
+			public const int ic_mr_button_disabled_dark = 2130837736;
 			
 			// aapt resource value: 0x7f0200e9
-			public const int ic_mr_button_disconnected_dark = 2130837737;
+			public const int ic_mr_button_disabled_light = 2130837737;
 			
 			// aapt resource value: 0x7f0200ea
-			public const int ic_mr_button_disconnected_light = 2130837738;
+			public const int ic_mr_button_disconnected_dark = 2130837738;
 			
 			// aapt resource value: 0x7f0200eb
-			public const int ic_mr_button_grey = 2130837739;
+			public const int ic_mr_button_disconnected_light = 2130837739;
 			
 			// aapt resource value: 0x7f0200ec
-			public const int ic_successstatus = 2130837740;
+			public const int ic_mr_button_grey = 2130837740;
 			
 			// aapt resource value: 0x7f0200ed
-			public const int ic_vol_type_speaker_dark = 2130837741;
+			public const int ic_successstatus = 2130837741;
 			
 			// aapt resource value: 0x7f0200ee
-			public const int ic_vol_type_speaker_group_dark = 2130837742;
+			public const int ic_vol_type_speaker_dark = 2130837742;
 			
 			// aapt resource value: 0x7f0200ef
-			public const int ic_vol_type_speaker_group_light = 2130837743;
+			public const int ic_vol_type_speaker_group_dark = 2130837743;
 			
 			// aapt resource value: 0x7f0200f0
-			public const int ic_vol_type_speaker_light = 2130837744;
+			public const int ic_vol_type_speaker_group_light = 2130837744;
 			
 			// aapt resource value: 0x7f0200f1
-			public const int ic_vol_type_tv_dark = 2130837745;
+			public const int ic_vol_type_speaker_light = 2130837745;
 			
 			// aapt resource value: 0x7f0200f2
-			public const int ic_vol_type_tv_light = 2130837746;
+			public const int ic_vol_type_tv_dark = 2130837746;
 			
 			// aapt resource value: 0x7f0200f3
-			public const int icon = 2130837747;
+			public const int ic_vol_type_tv_light = 2130837747;
 			
 			// aapt resource value: 0x7f0200f4
-			public const int IconFAB = 2130837748;
+			public const int icon = 2130837748;
 			
 			// aapt resource value: 0x7f0200f5
-			public const int leads = 2130837749;
+			public const int IconFAB = 2130837749;
 			
 			// aapt resource value: 0x7f0200f6
-			public const int mr_button_connected_dark = 2130837750;
+			public const int leads = 2130837750;
 			
 			// aapt resource value: 0x7f0200f7
-			public const int mr_button_connected_light = 2130837751;
+			public const int mr_button_connected_dark = 2130837751;
 			
 			// aapt resource value: 0x7f0200f8
-			public const int mr_button_connecting_dark = 2130837752;
+			public const int mr_button_connected_light = 2130837752;
 			
 			// aapt resource value: 0x7f0200f9
-			public const int mr_button_connecting_light = 2130837753;
+			public const int mr_button_connecting_dark = 2130837753;
 			
 			// aapt resource value: 0x7f0200fa
-			public const int mr_button_dark = 2130837754;
+			public const int mr_button_connecting_light = 2130837754;
 			
 			// aapt resource value: 0x7f0200fb
-			public const int mr_button_light = 2130837755;
+			public const int mr_button_dark = 2130837755;
 			
 			// aapt resource value: 0x7f0200fc
-			public const int mr_dialog_close_dark = 2130837756;
+			public const int mr_button_light = 2130837756;
 			
 			// aapt resource value: 0x7f0200fd
-			public const int mr_dialog_close_light = 2130837757;
+			public const int mr_dialog_close_dark = 2130837757;
 			
 			// aapt resource value: 0x7f0200fe
-			public const int mr_dialog_material_background_dark = 2130837758;
+			public const int mr_dialog_close_light = 2130837758;
 			
 			// aapt resource value: 0x7f0200ff
-			public const int mr_dialog_material_background_light = 2130837759;
+			public const int mr_dialog_material_background_dark = 2130837759;
 			
 			// aapt resource value: 0x7f020100
-			public const int mr_group_collapse = 2130837760;
+			public const int mr_dialog_material_background_light = 2130837760;
 			
 			// aapt resource value: 0x7f020101
-			public const int mr_group_expand = 2130837761;
+			public const int mr_group_collapse = 2130837761;
 			
 			// aapt resource value: 0x7f020102
-			public const int mr_media_pause_dark = 2130837762;
+			public const int mr_group_expand = 2130837762;
 			
 			// aapt resource value: 0x7f020103
-			public const int mr_media_pause_light = 2130837763;
+			public const int mr_media_pause_dark = 2130837763;
 			
 			// aapt resource value: 0x7f020104
-			public const int mr_media_play_dark = 2130837764;
+			public const int mr_media_pause_light = 2130837764;
 			
 			// aapt resource value: 0x7f020105
-			public const int mr_media_play_light = 2130837765;
+			public const int mr_media_play_dark = 2130837765;
 			
 			// aapt resource value: 0x7f020106
-			public const int mr_media_stop_dark = 2130837766;
+			public const int mr_media_play_light = 2130837766;
 			
 			// aapt resource value: 0x7f020107
-			public const int mr_media_stop_light = 2130837767;
+			public const int mr_media_stop_dark = 2130837767;
 			
 			// aapt resource value: 0x7f020108
-			public const int mr_vol_type_audiotrack_dark = 2130837768;
+			public const int mr_media_stop_light = 2130837768;
 			
 			// aapt resource value: 0x7f020109
-			public const int mr_vol_type_audiotrack_light = 2130837769;
+			public const int mr_vol_type_audiotrack_dark = 2130837769;
 			
 			// aapt resource value: 0x7f02010a
-			public const int navigation_empty_icon = 2130837770;
+			public const int mr_vol_type_audiotrack_light = 2130837770;
 			
 			// aapt resource value: 0x7f02010b
-			public const int notification_action_background = 2130837771;
+			public const int navigation_empty_icon = 2130837771;
 			
 			// aapt resource value: 0x7f02010c
-			public const int notification_bg = 2130837772;
+			public const int notification_action_background = 2130837772;
 			
 			// aapt resource value: 0x7f02010d
-			public const int notification_bg_low = 2130837773;
+			public const int notification_bg = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int notification_bg_low_normal = 2130837774;
+			public const int notification_bg_low = 2130837774;
 			
 			// aapt resource value: 0x7f02010f
-			public const int notification_bg_low_pressed = 2130837775;
+			public const int notification_bg_low_normal = 2130837775;
 			
 			// aapt resource value: 0x7f020110
-			public const int notification_bg_normal = 2130837776;
+			public const int notification_bg_low_pressed = 2130837776;
 			
 			// aapt resource value: 0x7f020111
-			public const int notification_bg_normal_pressed = 2130837777;
+			public const int notification_bg_normal = 2130837777;
 			
 			// aapt resource value: 0x7f020112
-			public const int notification_icon_background = 2130837778;
-			
-			// aapt resource value: 0x7f02011c
-			public const int notification_template_icon_bg = 2130837788;
-			
-			// aapt resource value: 0x7f02011d
-			public const int notification_template_icon_low_bg = 2130837789;
+			public const int notification_bg_normal_pressed = 2130837778;
 			
 			// aapt resource value: 0x7f020113
-			public const int notification_tile_bg = 2130837779;
+			public const int notification_icon_background = 2130837779;
+			
+			// aapt resource value: 0x7f02011d
+			public const int notification_template_icon_bg = 2130837789;
+			
+			// aapt resource value: 0x7f02011e
+			public const int notification_template_icon_low_bg = 2130837790;
 			
 			// aapt resource value: 0x7f020114
-			public const int notify_panel_notification_icon_bg = 2130837780;
+			public const int notification_tile_bg = 2130837780;
 			
 			// aapt resource value: 0x7f020115
-			public const int opportunities = 2130837781;
+			public const int notify_panel_notification_icon_bg = 2130837781;
 			
 			// aapt resource value: 0x7f020116
-			public const int roundedbg = 2130837782;
+			public const int opportunities = 2130837782;
 			
 			// aapt resource value: 0x7f020117
-			public const int roundedbgdark = 2130837783;
+			public const int roundedbg = 2130837783;
 			
 			// aapt resource value: 0x7f020118
-			public const int segmented_control_background = 2130837784;
+			public const int roundedbgdark = 2130837784;
 			
 			// aapt resource value: 0x7f020119
-			public const int segmented_control_first_background = 2130837785;
+			public const int segmented_control_background = 2130837785;
 			
 			// aapt resource value: 0x7f02011a
-			public const int segmented_control_last_background = 2130837786;
+			public const int segmented_control_first_background = 2130837786;
 			
 			// aapt resource value: 0x7f02011b
-			public const int settings = 2130837787;
+			public const int segmented_control_last_background = 2130837787;
+			
+			// aapt resource value: 0x7f02011c
+			public const int settings = 2130837788;
 			
 			static Drawable()
 			{

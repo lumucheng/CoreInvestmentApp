@@ -183,6 +183,12 @@
     <Reference Include="Remotion.Linq, Version=2.1.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Remotion.Linq.2.1.1\lib\portable-net45+win+wpa81+wp80\Remotion.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="FormsCommunityToolkit.Effects.Android">
+      <HintPath>..\..\packages\FormsCommunityToolkit.Effects.1.0.0.49-beta\lib\MonoAndroid403\FormsCommunityToolkit.Effects.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="FormsCommunityToolkit.Effects">
+      <HintPath>..\..\packages\FormsCommunityToolkit.Effects.1.0.0.49-beta\lib\MonoAndroid403\FormsCommunityToolkit.Effects.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Renderers\CurvedCornersLabelRenderer.cs" />

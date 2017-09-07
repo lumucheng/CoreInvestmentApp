@@ -10,6 +10,7 @@ using OxyPlot.Xamarin.Forms.Platform.Android;
 using ImageCircle.Forms.Plugin.Droid;
 using Messier16.Forms.Android.Controls;
 using Acr.UserDialogs;
+using FormsCommunityToolkit.Effects.Droid;
 
 namespace CoreInvestmentApp.Droid
 {
@@ -30,6 +31,7 @@ namespace CoreInvestmentApp.Droid
             ImageCircleRenderer.Init();
             Messier16Controls.InitAll();
             UserDialogs.Init(this);
+            Effects.Init();
 
             LoadApplication(new App());
         }

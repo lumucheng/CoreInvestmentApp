@@ -5,6 +5,7 @@
     xmlns:design="clr-namespace:CoreInvestmentApp;assembly=CoreInvestmentApp" 
     xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" 
     xmlns:segcontrol="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions" 
+    xmlns:effects="clr-namespace:FormsCommunityToolkit.Effects;assembly=FormsCommunityToolkit.Effects"
     xmlns:local="clr-namespace:CoreInvestmentApp.Classes"
     Title="Watchlist">
     <ContentPage.Content>
@@ -33,7 +34,13 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid Padding="10" RowSpacing="3" ColumnSpacing="10" BackgroundColor="#CEE6E5">
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="OnDelete" 
+                                    CommandParameter="{Binding .}" 
+                                    Text="Delete" 
+                                    IsDestructive="true" />
+                            </ViewCell.ContextActions>
+                            <Grid Padding="5" RowSpacing="0" ColumnSpacing="10" BackgroundColor="{Binding .,Converter={StaticResource StripedBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="*" />
@@ -47,33 +54,49 @@
                                 </Grid.ColumnDefinitions>
                                 <controls:CircleImage Aspect="AspectFit" BorderColor="Black" BorderThickness="1" HeightRequest="66" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="66" Grid.RowSpan="3" Source="{Binding ImageUrl}" />
                                 <StackLayout Grid.Column="1" Orientation="Horizontal" Grid.RowSpan="2" Grid.Row="0" VerticalOptions="Start">
-                                    <Label Text="{Binding Name}" VerticalOptions="End" TextColor="Black" />
+                                    <Label Text="{Binding Name}" VerticalOptions="End" TextColor="Black" FontAttributes="Bold">
+                                    </Label>
                                     <Label Text="{Binding Category}" VerticalOptions="End" TextColor="Black" BackgroundColor="#faebd6" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
-                                    <!--<controls:CircleImage BorderColor="#287d3b" BorderThickness="3" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Aspect="AspectFill" WidthRequest="15" />-->
                                     <Label Text="MKT" TextColor="#287d3b" FontAttributes="Bold"></Label>
-                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding CurrentValueString}" TextColor="Black" />
+                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding CurrentValueString}" TextColor="Black">
+                                        <Label.Effects>
+                                            <effects:SizeFontToFitEffect />
+                                        </Label.Effects>
+                                    </Label>    
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal" Grid.Column="2">
-                                    <!--<controls:CircleImage BorderColor="#ebc361" BorderThickness="3" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="Start" Aspect="AspectFill" WidthRequest="15" />-->
                                     <Label Text="G" TextColor="#ebc361" FontAttributes="Bold"></Label>
-                                    <Label Text="{Binding GrowthEntryPriceString}" VerticalOptions="End" TextColor="Black" />
+                                    <Label Text="{Binding GrowthEntryPriceString}" VerticalOptions="Start" HorizontalOptions="StartAndExpand" TextColor="Black">
+                                        <Label.Effects>
+                                            <effects:SizeFontToFitEffect />
+                                        </Label.Effects>
+                                    </Label>    
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="1">
-                                    <!--<controls:CircleImage BorderColor="#479eaa" BorderThickness="3" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="Start" Aspect="AspectFill" WidthRequest="15" />-->
                                     <Label Text="D" TextColor="#479eaa" FontAttributes="Bold"></Label>
-                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding DivdendEntryPriceString}" TextColor="Black" />
+                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding DivdendEntryPriceString}" TextColor="Black">
+                                        <Label.Effects>
+                                            <effects:SizeFontToFitEffect />
+                                        </Label.Effects>
+                                    </Label>
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="2">
-                                    <!--<controls:CircleImage BorderColor="#efa06a" BorderThickness="3" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="Start" Aspect="AspectFill" WidthRequest="15" />-->
                                     <Label Text="A" TextColor="#efa06a" FontAttributes="Bold"></Label>
-                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding AssetEntryPriceString}" TextColor="Black" />
+                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding AssetEntryPriceString}" TextColor="Black">
+                                        <Label.Effects>
+                                            <effects:SizeFontToFitEffect />
+                                        </Label.Effects>
+                                    </Label>
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="3">
-                                    <!--<controls:CircleImage BorderColor="#efa06a" BorderThickness="3" HeightRequest="15" HorizontalOptions="Start" VerticalOptions="Start" Aspect="AspectFill" WidthRequest="15" />-->
                                     <Label Text="IC" TextColor="#3B5999" FontAttributes="Bold"></Label>
-                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding InvestorConfidenceString}" TextColor="Black" />
+                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding InvestorConfidenceString}" TextColor="Black">
+                                        <Label.Effects>
+                                            <effects:SizeFontToFitEffect />
+                                        </Label.Effects>
+                                    </Label>
                                 </StackLayout>
                             </Grid>
                         </ViewCell>
@@ -89,8 +112,8 @@
                 ItemTapped="Handle_ItemTapped" 
                 AbsoluteLayout.LayoutFlags="PositionProportional" 
                 AbsoluteLayout.LayoutBounds="1.0,1.0,-1,-1" 
-                HeightRequest="75"
-                WidthRequest="75"
+                HeightRequest="50"
+                WidthRequest="50"
                 Margin="10" />
         </AbsoluteLayout>
     </ContentPage.Content>

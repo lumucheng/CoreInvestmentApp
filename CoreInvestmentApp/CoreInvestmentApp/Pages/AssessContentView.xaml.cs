@@ -9,6 +9,7 @@ using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using CoreInvestmentApp.Classes;
+using OxyPlot.Annotations;
 
 namespace CoreInvestmentApp.Pages
 {
@@ -236,7 +237,7 @@ namespace CoreInvestmentApp.Pages
 
         private void CreateEPSChart()
         {
-            var plotModel1 = new PlotModel { Title = "Earnings Per Share (USD)" };
+            var plotModel1 = new PlotModel { Title = "Earnings Per Share (USD)" };	
             var areaSeries1 = new AreaSeries
             {
                 MarkerType = MarkerType.Circle,
@@ -244,17 +245,22 @@ namespace CoreInvestmentApp.Pages
                 MarkerStroke = OxyColors.Black,
                 StrokeThickness = 3,
                 Color = OxyColor.FromRgb(210, 198, 1),
-                Fill = OxyColor.FromRgb(209, 220, 114)
+                Fill = OxyColor.FromRgb(209, 220, 114),
             };
 
             foreach (EarningPerShare eps in stock.EpsList)
             {
+				var pointAnnotation1 = new PointAnnotation();
+                pointAnnotation1.X = Convert.ToDouble(eps.Date.Year);
+                pointAnnotation1.Y = Convert.ToDouble(eps.Value);
+                pointAnnotation1.Text = String.Format("{0}", eps.Value);
+                plotModel1.Annotations.Add(pointAnnotation1);
                 areaSeries1.Points.Add(new DataPoint(eps.Date.Year, eps.Value));
             }
-
+                     
             plotModel1.Series.Add(areaSeries1);
-
-            EPSModel =  plotModel1;
+            EPSModel = plotModel1;
+            EPSChart.IsEnabled = false;
         }
 
         private void CreateOCFChart()
@@ -297,16 +303,22 @@ namespace CoreInvestmentApp.Pages
                 unit = hundredthousands;
             }
 
-            foreach (FreeCashFlow fcf in stock.CashFlowList)
+			string title = String.Format("Operating Cash Flow ({0} USD)", unitStr);
+			var plotModel1 = new PlotModel { Title = title };
+			plotModel1.Series.Add(areaSeries1);
+
+			foreach (FreeCashFlow fcf in stock.CashFlowList)
             {
+				var pointAnnotation1 = new PointAnnotation();
+				pointAnnotation1.X = Convert.ToDouble(fcf.Date.Year);
+				pointAnnotation1.Y = Convert.ToDouble(fcf.Value / unit);
+				pointAnnotation1.Text = String.Format("{0}", fcf.Value / unit);
+				plotModel1.Annotations.Add(pointAnnotation1);
                 areaSeries1.Points.Add(new DataPoint(fcf.Date.Year, fcf.Value / unit));
             }
 
-            string title = String.Format("Operating Cash Flow ({0} USD)", unitStr);
-            var plotModel1 = new PlotModel { Title = title };
-            plotModel1.Series.Add(areaSeries1);
-
             OCFModel = plotModel1;
+            OCFChart.IsEnabled = false;
         }
 
         private void CreateDTEChart()
@@ -324,12 +336,18 @@ namespace CoreInvestmentApp.Pages
 
             foreach (DebtToEquity dte in stock.DebtToEquityList)
             {
+				var pointAnnotation1 = new PointAnnotation();
+				pointAnnotation1.X = Convert.ToDouble(dte.Date.Year);
+				pointAnnotation1.Y = Convert.ToDouble(dte.Value);
+				pointAnnotation1.Text = String.Format("{0}", dte.Value);
+				plotModel1.Annotations.Add(pointAnnotation1);
                 areaSeries1.Points.Add(new DataPoint(dte.Date.Year, dte.Value));
             }
 
             plotModel1.Series.Add(areaSeries1);
 
             DTEModel = plotModel1;
+            DTEChart.IsEnabled = false;
         }
 
         private void CreateROEChart()
@@ -347,12 +365,18 @@ namespace CoreInvestmentApp.Pages
 
             foreach (ReturnOnEquity roe in stock.ReturnToEquityList)
             {
+				var pointAnnotation1 = new PointAnnotation();
+				pointAnnotation1.X = Convert.ToDouble(roe.Date.Year);
+				pointAnnotation1.Y = Convert.ToDouble(roe.Value);
+				pointAnnotation1.Text = String.Format("{0}", roe.Value);
+				plotModel1.Annotations.Add(pointAnnotation1);
                 areaSeries1.Points.Add(new DataPoint(roe.Date.Year, roe.Value));
             }
 
             plotModel1.Series.Add(areaSeries1);
 
             ROEModel = plotModel1;
+            ROEChart.IsEnabled = false;
         }
 
         private void CreateROAChart()
@@ -370,12 +394,18 @@ namespace CoreInvestmentApp.Pages
 
             foreach (ReturnOnAsset roa in stock.ReturnToAssetList)
             {
+				var pointAnnotation1 = new PointAnnotation();
+				pointAnnotation1.X = Convert.ToDouble(roa.Date.Year);
+				pointAnnotation1.Y = Convert.ToDouble(roa.Value);
+				pointAnnotation1.Text = String.Format("{0}", roa.Value);
+				plotModel1.Annotations.Add(pointAnnotation1);
                 areaSeries1.Points.Add(new DataPoint(roa.Date.Year, roa.Value));
             }
 
             plotModel1.Series.Add(areaSeries1);
 
             ROAModel = plotModel1;
+            ROAChart.IsEnabled = false;
         }
     }
 }

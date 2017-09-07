@@ -29,6 +29,18 @@ namespace CoreInvestmentApp.Pages
             StockList = new ObservableCollection<Stock>();
             BindingContext = StockList;
             this.Appearing += Page_Appearing;
+
+			var addItem = new ToolbarItem
+			{
+				Text = "Add"
+			};
+
+			addItem.Clicked += (object sender, System.EventArgs e) =>
+			{
+				Navigation.PushModalAsync(new NavigationPage(new SearchPage()));
+			};
+
+            ToolbarItems.Add(addItem);
         }
 
         private void Page_Appearing(object sender, EventArgs e)
@@ -116,6 +128,23 @@ namespace CoreInvestmentApp.Pages
         private void Handle_ItemTapped(object sender, System.EventArgs e)
         {
             Navigation.PushModalAsync(new NavigationPage(new SearchPage()));
+        }
+
+        private void OnDelete(object sender, System.EventArgs e)
+        {
+            var menuItem = (MenuItem)sender;
+            Stock stock = (Stock)menuItem.CommandParameter;
+			var vRealmDb = Realm.GetInstance();
+
+			var realmJsonObj = vRealmDb.All<RealmStockJson>()
+										   .Where(s => s.StockTicker == stock.StockIdentifier.Ticker)
+										   .FirstOrDefault();
+			vRealmDb.Write(() =>
+		    {
+                vRealmDb.Remove(realmJsonObj);   
+		    });
+
+            LoadTickersFromDBAsync();
         }
     }
 }

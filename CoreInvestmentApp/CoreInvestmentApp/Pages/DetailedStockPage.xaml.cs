@@ -12,6 +12,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using FormsCommunityToolkit.Effects;
 
 namespace CoreInvestmentApp.Pages
 {
@@ -535,8 +536,8 @@ namespace CoreInvestmentApp.Pages
             grid.ColumnDefinitions.Add(col2);
 
             Label LabelTicker = new Label { Text = stock.StockIdentifier.Ticker, TextColor = Color.White, FontSize = 22, FontAttributes = FontAttributes.Bold, Margin = new Thickness(15, 10, 0, 0) };
-            Label LabelIdentifier = new Label { Text = stock.StockIdentifier.Name, TextColor = Color.White, FontSize = 16, Margin = new Thickness(15, 10, 0, 0) };
-            Label LabelClose = new Label { Text = "Price: " + Util.FormatNumberToCurrency(stock.AdjClosePrice, CURRENCY_TYPE.USD), TextColor = Color.White, FontSize = 16, Margin = new Thickness(15, 10, 0, 0) };
+            Label LabelIdentifier = new Label { Text = stock.StockIdentifier.Name, TextColor = Color.White, FontSize = 16, FontAttributes = FontAttributes.Bold, Margin = new Thickness(15, 10, 0, 0) };
+            Label LabelClose = new Label { Text = "Price: " + Util.FormatNumberToCurrency(stock.AdjClosePrice, CURRENCY_TYPE.USD), TextColor = Color.White, FontSize = 16, FontAttributes = FontAttributes.Bold, Margin = new Thickness(15, 10, 0, 0) };
 
             StackLayout leftLayout = new StackLayout
             {
@@ -552,8 +553,12 @@ namespace CoreInvestmentApp.Pages
             leftLayout.Children.Add(LabelClose);
 
             Label LabelFiftyTwo = new Label { Text = "52-week", FontAttributes = FontAttributes.Bold, TextColor = Color.White, FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
+
             Label LabelFiftyTwoHigh = new Label { Text = "Hi: " + stock.FiftyTwoWeekHighString, FontAttributes = FontAttributes.Bold, TextColor = Color.FromHex("324F54"), FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
+            LabelFiftyTwoHigh.Effects.Add(new SizeFontToFitEffect());
+
             Label LabelFiftyTwoLow = new Label { Text = "Lo: " + stock.FiftyTwoWeekLowString, FontAttributes = FontAttributes.Bold, TextColor = Color.FromHex("810915"), FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
+            LabelFiftyTwoLow.Effects.Add(new SizeFontToFitEffect());
 
             StackLayout rightLayout = new StackLayout
             {

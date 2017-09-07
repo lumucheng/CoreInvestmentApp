@@ -7,6 +7,7 @@ using UIKit;
 using OxyPlot.Xamarin.Forms.Platform.iOS;
 using ImageCircle.Forms.Plugin.iOS;
 using Messier16.Forms.iOS.Controls;
+using FormsCommunityToolkit.Effects.iOS;
 
 namespace CoreInvestmentApp.iOS
 {
@@ -31,6 +32,7 @@ namespace CoreInvestmentApp.iOS
             PlotViewRenderer.Init();
             ImageCircleRenderer.Init();
             Messier16Controls.InitAll();
+            Effects.Init();
 
             LoadApplication(new App());
 

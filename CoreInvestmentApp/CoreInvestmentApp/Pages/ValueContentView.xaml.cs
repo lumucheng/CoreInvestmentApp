@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using OxyPlot.Annotations;
 
 namespace CoreInvestmentApp.Pages
 {
@@ -123,14 +124,20 @@ namespace CoreInvestmentApp.Pages
 
             foreach (EarningPerShare eps in stock.EpsList)
             {
+				var pointAnnotation1 = new PointAnnotation();
+				pointAnnotation1.X = Convert.ToDouble(eps.Date.Year);
+				pointAnnotation1.Y = Convert.ToDouble(eps.Value);
+				pointAnnotation1.Text = String.Format("{0}", eps.Value);
+				plotModel1.Annotations.Add(pointAnnotation1);
                 areaSeries1.Points.Add(new DataPoint(eps.Date.Year, eps.Value));
             }
 
             plotModel1.Series.Add(areaSeries1);
 
             EPSModel = plotModel1;
-
+            EPSChart.IsEnabled = false;
         }
+
         private void CreateDividendChart()
         {
             var plotModel1 = new PlotModel { Title = "Dividend (USD)" };
@@ -164,12 +171,20 @@ namespace CoreInvestmentApp.Pages
 
             foreach (int key in dividendByYear.Keys)
             {
-                areaSeries1.Points.Add(new DataPoint(key, Convert.ToDouble(dividendByYear[key])));
+                var val = Convert.ToDouble(dividendByYear[key]);
+                                             
+				var pointAnnotation1 = new PointAnnotation();
+				pointAnnotation1.X = Convert.ToDouble(key);
+                pointAnnotation1.Y = val;
+				pointAnnotation1.Text = String.Format("{0}", val);
+				plotModel1.Annotations.Add(pointAnnotation1);
+                areaSeries1.Points.Add(new DataPoint(key, val));
             }
 
             plotModel1.Series.Add(areaSeries1);
 
             DividendModel = plotModel1;
+            DividendChart.IsEnabled = false;
         }
 
         private void CreateBookValueChart()
@@ -187,12 +202,18 @@ namespace CoreInvestmentApp.Pages
 
             foreach (BookValue bookValue in stock.BookValueList)
             {
+				var pointAnnotation1 = new PointAnnotation();
+				pointAnnotation1.X = Convert.ToDouble(bookValue.Date.Year);
+				pointAnnotation1.Y = Convert.ToDouble(bookValue.Value);
+				pointAnnotation1.Text = String.Format("{0}", bookValue.Value);
+				plotModel1.Annotations.Add(pointAnnotation1);
                 areaSeries1.Points.Add(new DataPoint(bookValue.Date.Year, bookValue.Value));
             }
 
             plotModel1.Series.Add(areaSeries1);
 
             BookValueModel = plotModel1;
+            BookValueChart.IsEnabled = false;
         }
 
         void Handle_EntryExpectedBookPrice_Completed(object sender, System.EventArgs e)

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using CoreInvestmentApp.Model;
 using Xamarin.Forms;
+using CoreInvestmentApp.Classes;
 
 namespace CoreInvestmentApp
 {
