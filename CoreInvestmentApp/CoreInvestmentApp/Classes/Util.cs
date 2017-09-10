@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CoreInvestmentApp.Model;
+using Newtonsoft.Json;
+using Realms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -82,6 +85,20 @@ namespace CoreInvestmentApp.Classes
         public static string FormatNumberToPercent(decimal num)
         {
             return String.Format("{0:P2}", num);
-        }   
+        }
+        
+        public static void SaveStockToDB(Stock stock)
+        {
+            var vRealmDb = Realm.GetInstance();
+
+            RealmStockJson stockJson = new RealmStockJson();
+            stockJson.StockTicker = stock.Ticker;
+            stockJson.JsonObjStr = JsonConvert.SerializeObject(stock);
+
+            vRealmDb.Write(() =>
+            {
+                vRealmDb.Add(stockJson, true);
+            });
+        }
     }
 }

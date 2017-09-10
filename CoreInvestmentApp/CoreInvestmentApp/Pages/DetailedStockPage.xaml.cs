@@ -30,18 +30,6 @@ namespace CoreInvestmentApp.Pages
             Title = "Stock Info";
             this.stock = stock;
 
-            saveItem = new ToolbarItem
-            {
-                Text = "Save"
-            };
-
-            saveItem.Clicked += (object sender, System.EventArgs e) =>
-            {
-                SaveToDB();
-            };
-
-            ToolbarItems.Add(saveItem);
-
             UserDialogs.Instance.ShowLoading("Loading..", MaskType.Black);
             GetDetailedInfoAsync().ContinueWith((task) =>
             {
@@ -605,7 +593,7 @@ namespace CoreInvestmentApp.Pages
             Content = stackLayout;
 
             // Save stock
-            SaveToDB();
+            Util.SaveStockToDB(stock);
         }
 
         CarouselLayout CreatePagesCarousel()
@@ -657,20 +645,6 @@ namespace CoreInvestmentApp.Pages
             pagerIndicator.SetBinding(PagerIndicatorTabs.SelectedItemProperty, "CurrentPage");
 
             return pagerIndicator;
-        }
-
-        private void SaveToDB()
-        {
-            var vRealmDb = Realm.GetInstance();
-
-            RealmStockJson stockJson = new RealmStockJson();
-            stockJson.StockTicker = stock.Ticker;
-            stockJson.JsonObjStr = JsonConvert.SerializeObject(stock);
-
-            vRealmDb.Write(() =>
-            {
-                vRealmDb.Add(stockJson, true);
-            });
         }
     }
 

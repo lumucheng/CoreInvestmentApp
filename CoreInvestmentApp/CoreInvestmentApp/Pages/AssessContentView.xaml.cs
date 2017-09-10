@@ -237,6 +237,9 @@ namespace CoreInvestmentApp.Pages
             LabelScore.Text = confidenceString;
             LabelScore.HorizontalTextAlignment = TextAlignment.Center;
             LabelScore.LineBreakMode = LineBreakMode.NoWrap;
+
+            // Save to DB
+            Util.SaveStockToDB(stock);
         }
 
         private void CreateEPSChart()

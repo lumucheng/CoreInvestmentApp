@@ -20,14 +20,12 @@ namespace CoreInvestmentApp.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WatchlistPage : ContentPage
     {
-        public static ObservableCollection<Stock> StockList { get; set; }
+        public ObservableCollection<Stock> StockList { get; set; }
 
         public WatchlistPage()
         {
             InitializeComponent();
-
             StockList = new ObservableCollection<Stock>();
-            BindingContext = StockList;
             this.Appearing += Page_Appearing;
 
 			var addItem = new ToolbarItem
@@ -81,7 +79,6 @@ namespace CoreInvestmentApp.Pages
                 LoadTickersFromAPI(stockDictionary, identifierQuery).ContinueWith((task) =>
                 {
                     UserDialogs.Instance.HideLoading();
-                    
                 });
             }
             else
@@ -128,6 +125,7 @@ namespace CoreInvestmentApp.Pages
                 }
 
                 StockList = new ObservableCollection<Stock>(stockDictionary.Values.ToList());
+                StockListView.ItemsSource = null;
                 StockListView.ItemsSource = StockList;
             }
             else

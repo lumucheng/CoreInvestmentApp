@@ -70,9 +70,17 @@ namespace CoreInvestmentApp.Pages
             LabelThreeYears.Text = totalThree.ToString("F2");
             LabelFiveYears.Text = totalFive.ToString("F2");
 
-            double estimatedGrowth = (totalFive > totalThree) ? totalThree : totalFive; 
+            double estimatedGrowth = (totalFive > totalThree) ? totalThree : totalFive;
 
-            LabelAnnual.Text = SortedList[0].Value.ToString();
+            if (SortedList.Count > 0)
+            {
+                LabelAnnual.Text = SortedList[0].Value.ToString();
+            }
+            else
+            {
+                LabelAnnual.Text = "-";
+            }
+
             LabelTTM.Text = stock.BasicEpsString;
             LabelGrowth.Text = Util.FormatNumberToPercent(stock.EpsGrowth);
 
@@ -97,6 +105,8 @@ namespace CoreInvestmentApp.Pages
             LabelDivdendReviewPrice.Text = Util.FormatNumberToCurrency(dividendReviewPrice, CURRENCY_TYPE.USD);
 
             stock.DivdendEntryPrice = dividendEntry;
+
+            Util.SaveStockToDB(stock);
         }
 
         private void UpdateBookLabels()
@@ -286,8 +296,16 @@ namespace CoreInvestmentApp.Pages
             decimal tryParse = 0.0M;
             Decimal.TryParse(EntryExpectedDividendYield.Text, out tryParse);
             
-            EntryExpectedDividendYield.Text = tryParse.ToString();
-            UpdateDividendLabels();
+            if (tryParse != 0.0M)
+            {
+                EntryExpectedDividendYield.Text = tryParse.ToString();
+                UpdateDividendLabels();
+            }
+            else
+            {
+                LabelDivdendReviewPrice.Text = Util.FormatNumberToCurrency(tryParse, CURRENCY_TYPE.USD);
+                LabelDividendEntryPrice.Text = Util.FormatNumberToCurrency(tryParse, CURRENCY_TYPE.USD);
+            }
         }
 
         void Handle_Completed(object sender, System.EventArgs e)

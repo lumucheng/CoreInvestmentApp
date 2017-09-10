@@ -1,6 +1,7 @@
 ﻿using CoreInvestmentApp.Classes;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace CoreInvestmentApp.Model
         public decimal MarketCap;
         public decimal DebtToEquity;
         public decimal EpsEstimatedGrowth;
+
         public decimal AdjClosePrice { get; set; }
 		public decimal FiftyTwoWeekHigh { get; set; }
 		public decimal FiftyTwoWeekLow { get; set; }

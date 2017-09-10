@@ -21,7 +21,7 @@
                 AbsoluteLayout.LayoutFlags="All"
                 AbsoluteLayout.LayoutBounds="0,1,1,1"
                 x:Name="StockListView" 
-                ItemsSource="{Binding StockList}" 
+                ItemsSource="{Binding StockList}"
                 HasUnevenRows="true" 
                 ItemSelected="ListView_ItemSelected" 
                 SeparatorVisibility="None"
@@ -62,43 +62,82 @@
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
                                     <Label Text="MKT" TextColor="#287d3b" FontAttributes="Bold"></Label>
-                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding CurrentValueString}" TextColor="Black">
-                                        <Label.Effects>
-                                            <effects:SizeFontToFitEffect />
-                                        </Label.Effects>
-                                    </Label>    
+                                    <OnPlatform x:TypeArguments="View">
+                                        <OnPlatform.Android>
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding CurrentValueString}" TextColor="Black" />
+                                        </OnPlatform.Android>
+                                        <OnPlatform.iOS>
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding CurrentValueString}" TextColor="Black">
+                                                <Label.Effects>
+                                                    <effects:SizeFontToFitEffect />
+                                                </Label.Effects>
+                                            </Label>
+                                        </OnPlatform.iOS>
+                                    </OnPlatform>
                                 </StackLayout>
+                                    
                                 <StackLayout Orientation="Horizontal" Grid.Column="2">
                                     <Label Text="G" TextColor="#ebc361" FontAttributes="Bold"></Label>
-                                    <Label Text="{Binding GrowthEntryPriceString}" VerticalOptions="Start" HorizontalOptions="StartAndExpand" TextColor="Black">
-                                        <Label.Effects>
-                                            <effects:SizeFontToFitEffect />
-                                        </Label.Effects>
-                                    </Label>    
+                                    <OnPlatform x:TypeArguments="View">
+                                        <OnPlatform.Android>
+                                            <Label Text="{Binding GrowthEntryPriceString}" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" TextColor="Black" />
+                                        </OnPlatform.Android>
+                                        <OnPlatform.iOS>
+                                            <Label Text="{Binding GrowthEntryPriceString}" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" TextColor="Black">
+                                                <Label.Effects>
+                                                    <effects:SizeFontToFitEffect />
+                                                </Label.Effects>
+                                            </Label>
+                                        </OnPlatform.iOS>
+                                    </OnPlatform>
                                 </StackLayout>
+                                
                                 <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="1">
                                     <Label Text="D" TextColor="#479eaa" FontAttributes="Bold"></Label>
-                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding DivdendEntryPriceString}" TextColor="Black">
-                                        <Label.Effects>
-                                            <effects:SizeFontToFitEffect />
-                                        </Label.Effects>
-                                    </Label>
+                                    <OnPlatform x:TypeArguments="View">
+                                        <OnPlatform.Android>
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding DivdendEntryPriceString}" TextColor="Black" />
+                                        </OnPlatform.Android>
+                                        <OnPlatform.iOS>
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding DivdendEntryPriceString}" TextColor="Black">
+                                                <Label.Effects>
+                                                    <effects:SizeFontToFitEffect />
+                                                </Label.Effects>
+                                            </Label>
+                                        </OnPlatform.iOS>
+                                    </OnPlatform>
                                 </StackLayout>
+                                
                                 <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="2">
                                     <Label Text="A" TextColor="#efa06a" FontAttributes="Bold"></Label>
-                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding AssetEntryPriceString}" TextColor="Black">
-                                        <Label.Effects>
-                                            <effects:SizeFontToFitEffect />
-                                        </Label.Effects>
-                                    </Label>
+                                    <OnPlatform x:TypeArguments="View">
+                                        <OnPlatform.Android>
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding AssetEntryPriceString}" TextColor="Black" />
+                                        </OnPlatform.Android>
+                                        <OnPlatform.iOS>
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding AssetEntryPriceString}" TextColor="Black">
+                                                <Label.Effects>
+                                                    <effects:SizeFontToFitEffect />
+                                                </Label.Effects>
+                                            </Label>
+                                        </OnPlatform.iOS>
+                                    </OnPlatform>
                                 </StackLayout>
+                                
                                 <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="3">
                                     <Label Text="IC" TextColor="#3B5999" FontAttributes="Bold"></Label>
-                                    <Label VerticalOptions="Start" HorizontalOptions="StartAndExpand" Text="{Binding InvestorConfidenceString}" TextColor="Black">
-                                        <Label.Effects>
-                                            <effects:SizeFontToFitEffect />
-                                        </Label.Effects>
-                                    </Label>
+                                    <OnPlatform x:TypeArguments="View">
+                                        <OnPlatform.Android>
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding InvestorConfidenceString}" TextColor="Black" />
+                                        </OnPlatform.Android>
+                                        <OnPlatform.iOS>
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding InvestorConfidenceString}" TextColor="Black" >
+                                                <Label.Effects>
+                                                    <effects:SizeFontToFitEffect />
+                                                </Label.Effects>
+                                            </Label>
+                                        </OnPlatform.iOS>
+                                    </OnPlatform>
                                 </StackLayout>
                             </Grid>
                         </ViewCell>

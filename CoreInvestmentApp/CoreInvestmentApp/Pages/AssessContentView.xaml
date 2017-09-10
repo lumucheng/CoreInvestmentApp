@@ -125,47 +125,47 @@
 
                     <StackLayout Orientation="Vertical">
                         <Label FontSize="Medium" Text="Legal Risk" VerticalOptions="Center" HorizontalOptions="Center" />
+                        <Label Text="Risk involving legal &amp; regulations by local or overseas countries" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
                         <segcontrol:SegmentedControl x:Name="SegControlLegal" TintColor="#64A68C" SelectedSegment="0" HorizontalOptions="Center" WidthRequest="150"  >
                             <segcontrol:SegmentedControl.Children>
                                 <segcontrol:SegmentedControlOption Text="LOW" />
                                 <segcontrol:SegmentedControlOption Text="HIGH" />
                             </segcontrol:SegmentedControl.Children>
                         </segcontrol:SegmentedControl>
-                        <Label Text="Risk involving legal &amp; regulations by local or overseas countries" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical">
                         <Label FontSize="Medium" Text="Inflation Risk" VerticalOptions="Center" HorizontalOptions="Center" />
+                        <Label Text="Risk involving ability that the company can increase their revenue (e.g pricing power)" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
                         <segcontrol:SegmentedControl x:Name="SegControlInflation" TintColor="#64A68C" SelectedSegment="0" HorizontalOptions="Center" WidthRequest="150" >
                             <segcontrol:SegmentedControl.Children>
                                 <segcontrol:SegmentedControlOption Text="LOW" />
                                 <segcontrol:SegmentedControlOption Text="HIGH" />
                             </segcontrol:SegmentedControl.Children>
                         </segcontrol:SegmentedControl>
-                        <Label Text="Risk involving ability that the company can increase their revenue (e.g pricing power)" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical">
                         <Label FontSize="Medium" Text="Structure &amp; System Risk" VerticalOptions="Center" HorizontalOptions="Center" />
+                        <Label Text="Risk involving ability the structure &amp; size of the company, the death or disablement of a key person" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
                         <segcontrol:SegmentedControl x:Name="SegControlStruct" TintColor="#64A68C" SelectedSegment="0" HorizontalOptions="Center" WidthRequest="150" >
                             <segcontrol:SegmentedControl.Children>
                                 <segcontrol:SegmentedControlOption Text="LOW" />
                                 <segcontrol:SegmentedControlOption Text="HIGH" />
                             </segcontrol:SegmentedControl.Children>
                         </segcontrol:SegmentedControl>
-                        <Label Text="Risk involving ability the structure &amp; size of the company, the death or disablement of a key person" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical">
                         <!--<messier16:Checkbox WidthRequest="45" x:Name="ChkBoxTechnology" />-->
                         <Label FontSize="Medium" Text="Technology Risk" VerticalOptions="Center" HorizontalOptions="Center" />
+                        <Label Text="Risk involving ability that the company has to keep upgrading &amp; researtching to stay ahead" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
                         <segcontrol:SegmentedControl x:Name="SegControlTechnology" TintColor="#64A68C" SelectedSegment="0" HorizontalOptions="Center" WidthRequest="150" >
                             <segcontrol:SegmentedControl.Children>
                                 <segcontrol:SegmentedControlOption Text="LOW" />
                                 <segcontrol:SegmentedControlOption Text="HIGH" />
                             </segcontrol:SegmentedControl.Children>
                         </segcontrol:SegmentedControl>
-                        <Label Text="Risk involving ability that the company has to keep upgrading &amp; researtching to stay ahead" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
                     </StackLayout>
                 </StackLayout>
             </ScrollView>

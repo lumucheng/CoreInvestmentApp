@@ -4,7 +4,7 @@
              x:Class="CoreInvestmentApp.Pages.SearchPage">
     <ContentPage.Content>
         <StackLayout Padding="10,10,10,10">
-            <Entry x:Name="EntrySearch" FontSize="Medium" Placeholder="Enter Stock Identifier" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Completed="Entry_Completed" />
+            <Entry x:Name="EntrySearch" FontSize="Medium" Placeholder="Enter Stock Identifier" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Completed="Entry_Completed" />
             <Button Text="Search" FontSize="Medium" FontAttributes="Bold" Clicked="Entry_Completed" />
 
             <ListView x:Name="StockIdentifierListView" HasUnevenRows="False" ItemsSource="{Binding IdentifierList}" RowHeight="100" ItemSelected="StockIdentifierListView_ItemSelected">
