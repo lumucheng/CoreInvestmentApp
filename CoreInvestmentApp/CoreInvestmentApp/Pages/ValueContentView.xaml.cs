@@ -70,7 +70,8 @@ namespace CoreInvestmentApp.Pages
             LabelPEG.Text = "--";
             if (stock.AdjClosePrice > 0 && stock.BasicEps > 0 && stock.EpsGrowth > 0)
             {
-                decimal peg = (stock.AdjClosePrice / stock.BasicEps) * stock.EpsGrowth;
+                // decimal peg = (stock.AdjClosePrice / stock.BasicEps) * stock.EpsGrowth;
+                decimal peg = stock.PriceToEarnings / stock.EpsGrowth;
                 LabelPEG.Text = Util.FormatNumberToCurrency(peg, CURRENCY_TYPE.DOLLAR_SIGN);
             }
 
@@ -85,7 +86,7 @@ namespace CoreInvestmentApp.Pages
 
         private void UpdateDividendLabels()
         {
-            decimal dividendEntry = (stock.DividendYield / Decimal.Parse(EntryExpectedDividendYield.Text)) * 100;
+            decimal dividendEntry = (stock.Dividend / Decimal.Parse(EntryExpectedDividendYield.Text)) * 100;
             stock.DivdendEntryPrice = dividendEntry;
             LabelDividendEntryPrice.Text = Util.FormatNumberToCurrency(dividendEntry, CURRENCY_TYPE.USD);
 
@@ -98,8 +99,7 @@ namespace CoreInvestmentApp.Pages
 
         private void UpdateBookLabels()
         {
-            decimal entryPriceBookValue = stock.PriceToBook * (1 - Decimal.Parse(EntryExpectedBookPrice.Text));
-            stock.AssetEntryPrice = entryPriceBookValue;
+            decimal entryPriceBookValue = stock.BookValuePerShare * 0.80M;
             LabelEntryBookValuePrice.Text = Util.FormatNumberToCurrency(entryPriceBookValue, CURRENCY_TYPE.USD);
 
             decimal bookExpectedReturn = entryPriceBookValue * 1.25M;
@@ -162,6 +162,7 @@ namespace CoreInvestmentApp.Pages
                 {
                     value = dividendByYear[year];
                     value += divdend.Value;
+                    dividendByYear[year] = value;
                 }
                 else
                 {

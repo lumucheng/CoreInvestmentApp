@@ -32,7 +32,7 @@ namespace CoreInvestmentApp.Model
 
         public double Value
         {
-            get { return Math.Round(Double.Parse(valueStr), 2) * 100; }
+            get { return Math.Round(Double.Parse(valueStr), 2); }
         }
     }
 }

@@ -25,6 +25,7 @@ namespace CoreInvestmentApp.Model
         public decimal PEG { get; set; }
         public decimal BookValuePerShare { get; set; }
         public decimal PriceToBook { get; set; }
+        public decimal PriceToEarnings { get; set; }
 
 		public string Sector { get; set; }
         public string ImageUrl { get; set; }

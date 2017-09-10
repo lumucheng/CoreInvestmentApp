@@ -66,6 +66,8 @@
 
                     <oxy:PlotView x:Name="OCFChart"  Model="{Binding OCFModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand"  />
 
+                    <Label Text="Based on the chart, do you think that the company has positive operating cash flow?" FontSize="Medium" HorizontalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
+                    
                     <StackLayout Orientation="Horizontal">
                         <messier16:Checkbox x:Name="ChkboxCashFlow" WidthRequest="45" />
                         <Label FontSize="Medium" Text="Operation Cash Flow" VerticalOptions="Center" />
@@ -117,11 +119,15 @@
                         <Label FontSize="Medium" Text="Legal Risk" VerticalOptions="Center" />
                     </StackLayout>
 
+                    <Label Text="Risk involving legal &amp; regulations by local or overseas countries" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
+
                     <StackLayout Orientation="Horizontal">
                         <messier16:Checkbox WidthRequest="45"  x:Name="ChkBoxInflation" />
                         <Label FontSize="Medium" Text="Inflation Risk" VerticalOptions="Center" />
                     </StackLayout>
 
+                    <Label Text="Risk involving ability that the company can increase their revenue (e.g pricing power)" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
+                    
                     <StackLayout Orientation="Horizontal">
                         <messier16:Checkbox WidthRequest="45"  x:Name="ChkBoxStructure" />
                         <Label FontSize="Medium" Text="Structure &amp; System Risk" VerticalOptions="Center" />

@@ -68,7 +68,7 @@ namespace CoreInvestmentApp.Pages
             else
             {
                 query = string.Format(Util.IntrinioAPIUrl +
-                    "/data_point?identifier={0}&item=long_description,adj_close_price,volume,52_week_high,52_week_low,sector,marketcap,basiceps,epsgrowth,debttoequity,cashdividendspershare,dividendyield,bookvaluepershare,pricetobook", stock.StockIdentifier.Ticker);
+                    "/data_point?identifier={0}&item=long_description,adj_close_price,volume,52_week_high,52_week_low,sector,marketcap,basiceps,epsgrowth,debttoequity,cashdividendspershare,dividendyield,bookvaluepershare,pricetobook,pricetoearnings", stock.StockIdentifier.Ticker);
             }
 
             HttpClient client = Util.GetAuthHttpClient();
@@ -189,6 +189,14 @@ namespace CoreInvestmentApp.Pages
                         if (Decimal.TryParse(value, out bookValuePerShare))
                         {
                             stock.BookValuePerShare = bookValuePerShare;
+                        }
+                    }
+                    else if (item == "pricetoearnings")
+                    {
+                        decimal priceToEarnings;
+                        if (Decimal.TryParse(value, out priceToEarnings))
+                        {
+                            stock.PriceToEarnings = priceToEarnings;
                         }
                     }
                 }
