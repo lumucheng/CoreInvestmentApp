@@ -45,23 +45,28 @@ namespace CoreInvestmentApp.Pages
 
         private void Page_Appearing(object sender, EventArgs e)
         {
-            LoadTickersFromDBAsync();
+            LoadTickersFromDBAsync(false);
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            Stock stock = (Stock)e.SelectedItem;
-            Navigation.PushAsync(new DetailedStockPage(stock));
+            if (e.SelectedItem != null)
+            {
+                Stock stock = (Stock)e.SelectedItem;
+                Navigation.PushAsync(new DetailedStockPage(stock));
+                ((ListView)sender).SelectedItem = null;
+            }    
         }
 
-        private void LoadTickersFromDBAsync()
+        private void LoadTickersFromDBAsync(bool check)
         {
             var vRealmDb = Realm.GetInstance();
             var vAllStock = vRealmDb.All<RealmStockJson>();
+
             Dictionary<string, Stock> stockDictionary = new Dictionary<string, Stock>();
             string identifierQuery = "";
 
-            if (vAllStock.Count() > StockList.Count)
+            if (check || vAllStock.Count() > StockList.Count)
             {
                 foreach (RealmStockJson stockJson in vAllStock)
                 {
@@ -76,7 +81,13 @@ namespace CoreInvestmentApp.Pages
                 LoadTickersFromAPI(stockDictionary, identifierQuery).ContinueWith((task) =>
                 {
                     UserDialogs.Instance.HideLoading();
+                    
                 });
+            }
+            else
+            {
+                StockListView.IsRefreshing = false;
+                StockListView.EndRefresh();
             }
         }
 
@@ -93,7 +104,6 @@ namespace CoreInvestmentApp.Pages
                 var json = await response.Content.ReadAsStringAsync();
                 JObject jsonObject = JObject.Parse(json);
                 JArray data = (JArray)jsonObject["data"];
-                ObservableCollection<Stock> list = StockList;
 
                 foreach (JToken token in data)
                 {
@@ -117,7 +127,8 @@ namespace CoreInvestmentApp.Pages
                     }
                 }
 
-                StockListView.ItemsSource = new ObservableCollection<Stock>(stockDictionary.Values.ToList());
+                StockList = new ObservableCollection<Stock>(stockDictionary.Values.ToList());
+                StockListView.ItemsSource = StockList;
             }
             else
             {
@@ -128,6 +139,7 @@ namespace CoreInvestmentApp.Pages
         private void Handle_ItemTapped(object sender, System.EventArgs e)
         {
             Navigation.PushModalAsync(new NavigationPage(new SearchPage()));
+            StockListView.SelectedItem = null;
         }
 
         private void OnDelete(object sender, System.EventArgs e)
@@ -144,7 +156,14 @@ namespace CoreInvestmentApp.Pages
                 vRealmDb.Remove(realmJsonObj);   
 		    });
 
-            LoadTickersFromDBAsync();
+            LoadTickersFromDBAsync(true);
+        }
+
+        private void StockListView_Refreshing(object sender, EventArgs e)
+        {
+            LoadTickersFromDBAsync(true);
+            StockListView.IsRefreshing = false;
+            StockListView.EndRefresh();
         }
     }
 }

@@ -4,6 +4,7 @@
              xmlns:messier16="clr-namespace:Messier16.Forms.Controls;assembly=Messier16.Forms.Controls"
              xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
              xmlns:local="clr-namespace:CoreInvestmentApp.Classes"
+             xmlns:segcontrol="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
              x:Class="CoreInvestmentApp.Pages.AssessContentView">
   <ContentView.Content>
         <StackLayout Orientation="Vertical" BackgroundColor="White" VerticalOptions="FillAndExpand">
@@ -54,6 +55,8 @@
 
                     <Label Text="CORE" FontSize="Large" FontAttributes="Bold" />
 
+                    <Label Text="C" FontSize="Medium" FontAttributes="Bold" />
+
                     <oxy:PlotView x:Name="EPSChart" Model="{Binding EPSModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand" />
 
                     <Label Text="Based on the chart, do you think that the company is profitable?" FontSize="Medium" HorizontalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
@@ -64,6 +67,8 @@
                         <Label FontSize="Medium" Text="Constant EPS" VerticalOptions="Center" />
                     </StackLayout>
 
+                    <Label Text="O" FontSize="Medium" FontAttributes="Bold" />
+                    
                     <oxy:PlotView x:Name="OCFChart"  Model="{Binding OCFModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand"  />
 
                     <Label Text="Based on the chart, do you think that the company has positive operating cash flow?" FontSize="Medium" HorizontalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
@@ -72,7 +77,9 @@
                         <messier16:Checkbox x:Name="ChkboxCashFlow" WidthRequest="45" />
                         <Label FontSize="Medium" Text="Operation Cash Flow" VerticalOptions="Center" />
                     </StackLayout>
-                    
+
+                    <Label Text="R" FontSize="Medium" FontAttributes="Bold" />
+
                     <oxy:PlotView x:Name="DTEChart"  Model="{Binding DTEModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand"  />
 
                     <Label Text="Latest Debt to Equity" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
@@ -83,11 +90,11 @@
                                 VerticalTextAlignment="Center"
                                 FontSize="Medium"
                                 HeightRequest="30"
-                                CurvedBackgroundColor="#0040ff"
+                                CurvedBackgroundColor="#5E9EA0"
                                 TextColor="White"
                                 CurvedCornerRadius="15"
                                 HorizontalOptions="CenterAndExpand"
-                                WidthRequest="80">
+                                WidthRequest="100">
                     </local:CurvedCornersLabel>
 
                     <Label Text="Based on the chart and the latest debt to equity ratio, do you think that the company has healthy financial leverage?" FontSize="Medium" HorizontalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
@@ -97,6 +104,8 @@
                         <messier16:Checkbox x:Name="ChkboxReliable"  WidthRequest="45" />
                         <Label FontSize="Medium" Text="Reliable" VerticalOptions="Center"  />
                     </StackLayout>
+
+                    <Label Text="E" FontSize="Medium" FontAttributes="Bold" />
 
                     <oxy:PlotView x:Name="ROEChart"  Model="{Binding ROEModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand"  />
 
@@ -114,30 +123,50 @@
                     
                     <Label Text="LIST" FontSize="Large" FontAttributes="Bold" />
 
-                    <StackLayout Orientation="Horizontal">
-                        <messier16:Checkbox WidthRequest="45" x:Name="ChkBoxLegal" />
-                        <Label FontSize="Medium" Text="Legal Risk" VerticalOptions="Center" />
+                    <StackLayout Orientation="Vertical">
+                        <Label FontSize="Medium" Text="Legal Risk" VerticalOptions="Center" HorizontalOptions="Center" />
+                        <segcontrol:SegmentedControl x:Name="SegControlLegal" TintColor="#64A68C" SelectedSegment="0" HorizontalOptions="Center" WidthRequest="150"  >
+                            <segcontrol:SegmentedControl.Children>
+                                <segcontrol:SegmentedControlOption Text="LOW" />
+                                <segcontrol:SegmentedControlOption Text="HIGH" />
+                            </segcontrol:SegmentedControl.Children>
+                        </segcontrol:SegmentedControl>
+                        <Label Text="Risk involving legal &amp; regulations by local or overseas countries" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
                     </StackLayout>
 
-                    <Label Text="Risk involving legal &amp; regulations by local or overseas countries" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
-
-                    <StackLayout Orientation="Horizontal">
-                        <messier16:Checkbox WidthRequest="45"  x:Name="ChkBoxInflation" />
-                        <Label FontSize="Medium" Text="Inflation Risk" VerticalOptions="Center" />
+                    <StackLayout Orientation="Vertical">
+                        <Label FontSize="Medium" Text="Inflation Risk" VerticalOptions="Center" HorizontalOptions="Center" />
+                        <segcontrol:SegmentedControl x:Name="SegControlInflation" TintColor="#64A68C" SelectedSegment="0" HorizontalOptions="Center" WidthRequest="150" >
+                            <segcontrol:SegmentedControl.Children>
+                                <segcontrol:SegmentedControlOption Text="LOW" />
+                                <segcontrol:SegmentedControlOption Text="HIGH" />
+                            </segcontrol:SegmentedControl.Children>
+                        </segcontrol:SegmentedControl>
+                        <Label Text="Risk involving ability that the company can increase their revenue (e.g pricing power)" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
                     </StackLayout>
 
-                    <Label Text="Risk involving ability that the company can increase their revenue (e.g pricing power)" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
-                    
-                    <StackLayout Orientation="Horizontal">
-                        <messier16:Checkbox WidthRequest="45"  x:Name="ChkBoxStructure" />
-                        <Label FontSize="Medium" Text="Structure &amp; System Risk" VerticalOptions="Center" />
+                    <StackLayout Orientation="Vertical">
+                        <Label FontSize="Medium" Text="Structure &amp; System Risk" VerticalOptions="Center" HorizontalOptions="Center" />
+                        <segcontrol:SegmentedControl x:Name="SegControlStruct" TintColor="#64A68C" SelectedSegment="0" HorizontalOptions="Center" WidthRequest="150" >
+                            <segcontrol:SegmentedControl.Children>
+                                <segcontrol:SegmentedControlOption Text="LOW" />
+                                <segcontrol:SegmentedControlOption Text="HIGH" />
+                            </segcontrol:SegmentedControl.Children>
+                        </segcontrol:SegmentedControl>
+                        <Label Text="Risk involving ability the structure &amp; size of the company, the death or disablement of a key person" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
                     </StackLayout>
 
-                    <StackLayout Orientation="Horizontal">
-                        <messier16:Checkbox WidthRequest="45" x:Name="ChkBoxTechnology" />
-                        <Label FontSize="Medium" Text="Technology Risk" VerticalOptions="Center" />
+                    <StackLayout Orientation="Vertical">
+                        <!--<messier16:Checkbox WidthRequest="45" x:Name="ChkBoxTechnology" />-->
+                        <Label FontSize="Medium" Text="Technology Risk" VerticalOptions="Center" HorizontalOptions="Center" />
+                        <segcontrol:SegmentedControl x:Name="SegControlTechnology" TintColor="#64A68C" SelectedSegment="0" HorizontalOptions="Center" WidthRequest="150" >
+                            <segcontrol:SegmentedControl.Children>
+                                <segcontrol:SegmentedControlOption Text="LOW" />
+                                <segcontrol:SegmentedControlOption Text="HIGH" />
+                            </segcontrol:SegmentedControl.Children>
+                        </segcontrol:SegmentedControl>
+                        <Label Text="Risk involving ability that the company has to keep upgrading &amp; researtching to stay ahead" HorizontalTextAlignment="Center" FontSize="Small" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
                     </StackLayout>
-
                 </StackLayout>
             </ScrollView>
         </StackLayout>

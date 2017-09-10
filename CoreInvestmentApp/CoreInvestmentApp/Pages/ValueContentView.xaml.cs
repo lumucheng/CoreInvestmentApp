@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using OxyPlot.Annotations;
+using Acr.UserDialogs;
+using OxyPlot.Axes;
 
 namespace CoreInvestmentApp.Pages
 {
@@ -41,47 +43,47 @@ namespace CoreInvestmentApp.Pages
             UpdateDividendLabels();
                    
             LabelBookValue.Text = Util.FormatNumberToCurrency(stock.BookValuePerShare, CURRENCY_TYPE.USD);
-            LabelPriceToBook.Text = stock.PriceToBook.ToString("0.##");
+            LabelPriceToBook.Text = Util.FormatNumberToCurrency(stock.PriceToBook, CURRENCY_TYPE.USD);
 
             UpdateBookLabels();
 
+            UpdateEpsLabels();
+        }
+
+        private void UpdateEpsLabels()
+        {
             List<EarningPerShare> SortedList = stock.EpsList.OrderByDescending(o => o.Date).ToList();
 
             double totalThree = 0.0f;
             double totalFive = 0.0f;
 
-            if (SortedList.Count() >= 3)
+            if (SortedList.Count() >= 4)
             {
-                totalThree = Math.Pow((SortedList[0].Value - SortedList[2].Value), 0.5) - 1;
+                totalThree = (Math.Pow(Math.Abs((SortedList[0].Value / SortedList[3].Value)), (1.0 / 3.0)) - 1) * 100;
             }
 
-            if (SortedList.Count() >= 5)
+            if (SortedList.Count() >= 6)
             {
-                totalThree = Math.Pow((SortedList[0].Value - SortedList[4].Value), 0.25) - 1;
-
+                totalFive = (Math.Pow(Math.Abs((SortedList[0].Value / SortedList[5].Value)), 0.2) - 1) * 100;
             }
-            LabelThreeYears.Text = (totalThree / 3.0).ToString("F2");
-            LabelFiveYears.Text = (totalFive / 5.0).ToString("F2");
+
+            LabelThreeYears.Text = totalThree.ToString("F2");
+            LabelFiveYears.Text = totalFive.ToString("F2");
+
+            double estimatedGrowth = (totalFive > totalThree) ? totalThree : totalFive; 
 
             LabelAnnual.Text = SortedList[0].Value.ToString();
             LabelTTM.Text = stock.BasicEpsString;
             LabelGrowth.Text = Util.FormatNumberToPercent(stock.EpsGrowth);
 
-            LabelPEG.Text = "--";
-            if (stock.AdjClosePrice > 0 && stock.BasicEps > 0 && stock.EpsGrowth > 0)
-            {
-                // decimal peg = (stock.AdjClosePrice / stock.BasicEps) * stock.EpsGrowth;
-                decimal peg = stock.PriceToEarnings / stock.EpsGrowth;
-                LabelPEG.Text = Util.FormatNumberToCurrency(peg, CURRENCY_TYPE.DOLLAR_SIGN);
-            }
+            stock.EpsEstimatedGrowth = Convert.ToDecimal(Math.Round(estimatedGrowth, 2));
+            EntryEstimate.Text = stock.EpsEstimatedGrowth.ToString();
 
-            if (stock.EpsEstimatedGrowth > 0)
-            {
-                EntryEstimate.Text = stock.EpsEstimatedGrowth.ToString();
-            }
+            decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
+            LabelEpsEntryPrice.Text = "  " + Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD) + "  ";
 
-            decimal entryPrice = stock.BasicEps * Decimal.Parse(EntryEstimate.Text);
-			LabelEntryPrice.Text = Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD);
+            decimal reviewPrice = 1.2M * entryPrice;
+            LabelEpsReviewPrice.Text = "  " + Util.FormatNumberToCurrency(reviewPrice, CURRENCY_TYPE.USD) + "  ";
         }
 
         private void UpdateDividendLabels()
@@ -90,11 +92,8 @@ namespace CoreInvestmentApp.Pages
             stock.DivdendEntryPrice = dividendEntry;
             LabelDividendEntryPrice.Text = Util.FormatNumberToCurrency(dividendEntry, CURRENCY_TYPE.USD);
 
-            decimal dividendExpectedReturn = dividendEntry * 1.25M;
-            LabelDividendExpectedReturn.Text = Util.FormatNumberToPercent(dividendExpectedReturn);
-
-            decimal dividendStopLoss = dividendEntry * 0.8M;
-            LabelDivdendStopLoss.Text = Util.FormatNumberToPercent(dividendStopLoss);
+            decimal dividendReviewPrice = dividendEntry * 1.25M;
+            LabelDivdendReviewPrice.Text = Util.FormatNumberToCurrency(dividendReviewPrice, CURRENCY_TYPE.USD);
         }
 
         private void UpdateBookLabels()
@@ -103,10 +102,7 @@ namespace CoreInvestmentApp.Pages
             LabelEntryBookValuePrice.Text = Util.FormatNumberToCurrency(entryPriceBookValue, CURRENCY_TYPE.USD);
 
             decimal bookExpectedReturn = entryPriceBookValue * 1.25M;
-            LabelBookValueExpectedReturn.Text = Util.FormatNumberToPercent(bookExpectedReturn);
-
-            decimal bookStopLoss = entryPriceBookValue * 0.8M;
-            LabelBookValueStopLoss.Text = Util.FormatNumberToPercent(bookStopLoss);
+            LabelBookValuerReviewPrice.Text = Util.FormatNumberToCurrency(bookExpectedReturn, CURRENCY_TYPE.USD);
         }
 
         private void CreateEPSChart()
@@ -121,6 +117,24 @@ namespace CoreInvestmentApp.Pages
                 Color = OxyColor.FromRgb(210, 198, 1),
                 Fill = OxyColor.FromRgb(209, 220, 114)
             };
+
+            var xAxis = new LinearAxis();
+            xAxis.Position = AxisPosition.Bottom;
+            xAxis.IsZoomEnabled = false;
+            xAxis.IsPanEnabled = false;
+            xAxis.Key = "x";
+
+            var yAxis = new LinearAxis();
+            yAxis.Position = AxisPosition.Left;
+            yAxis.IsZoomEnabled = false;
+            yAxis.IsPanEnabled = false;
+            yAxis.Key = "y";
+
+            plotModel1.Axes.Add(xAxis);
+            plotModel1.Axes.Add(yAxis);
+
+            areaSeries1.XAxisKey = "x";
+            areaSeries1.YAxisKey = "y";
 
             foreach (EarningPerShare eps in stock.EpsList)
             {
@@ -150,6 +164,24 @@ namespace CoreInvestmentApp.Pages
                 Color = OxyColor.FromRgb(85, 161, 77),
                 Fill = OxyColor.FromRgb(143, 199, 150)
             };
+
+            var xAxis = new LinearAxis();
+            xAxis.Position = AxisPosition.Bottom;
+            xAxis.IsZoomEnabled = false;
+            xAxis.IsPanEnabled = false;
+            xAxis.Key = "x";
+
+            var yAxis = new LinearAxis();
+            yAxis.Position = AxisPosition.Left;
+            yAxis.IsZoomEnabled = false;
+            yAxis.IsPanEnabled = false;
+            yAxis.Key = "y";
+
+            plotModel1.Axes.Add(xAxis);
+            plotModel1.Axes.Add(yAxis);
+
+            areaSeries1.XAxisKey = "x";
+            areaSeries1.YAxisKey = "y";
 
             Dictionary<int, decimal> dividendByYear = new Dictionary<int, decimal>();
 
@@ -201,6 +233,24 @@ namespace CoreInvestmentApp.Pages
                 Fill = OxyColor.FromRgb(190, 160, 126)
             };
 
+            var xAxis = new LinearAxis();
+            xAxis.Position = AxisPosition.Bottom;
+            xAxis.IsZoomEnabled = false;
+            xAxis.IsPanEnabled = false;
+            xAxis.Key = "x";
+
+            var yAxis = new LinearAxis();
+            yAxis.Position = AxisPosition.Left;
+            yAxis.IsZoomEnabled = false;
+            yAxis.IsPanEnabled = false;
+            yAxis.Key = "y";
+
+            plotModel1.Axes.Add(xAxis);
+            plotModel1.Axes.Add(yAxis);
+
+            areaSeries1.XAxisKey = "x";
+            areaSeries1.YAxisKey = "y";
+
             foreach (BookValue bookValue in stock.BookValueList)
             {
 				var pointAnnotation1 = new PointAnnotation();
@@ -219,21 +269,33 @@ namespace CoreInvestmentApp.Pages
 
         void Handle_EntryExpectedBookPrice_Completed(object sender, System.EventArgs e)
         {
-            UpdateBookLabels();
+            //decimal tryParse = 0.0M;
+            //Decimal.TryParse(EntryExpectedBookPrice.Text, out tryParse);
+
+            //EntryExpectedBookPrice.Text = tryParse.ToString();
+            //UpdateBookLabels();
         }
 
         void Handle_EntryExpectedDividendYield_Completed(object sender, System.EventArgs e)
         {
+            decimal tryParse = 0.0M;
+            Decimal.TryParse(EntryExpectedDividendYield.Text, out tryParse);
+            
+            EntryExpectedDividendYield.Text = tryParse.ToString();
             UpdateDividendLabels();
         }
 
         void Handle_Completed(object sender, System.EventArgs e)
         {
-            stock.EpsEstimatedGrowth = Decimal.Parse(EntryEstimate.Text);
-            decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
-            stock.GrowthEntryPrice = entryPrice;
+            //decimal tryParse = 0.0M;
+            //Decimal.TryParse(EntryEstimate.Text, out tryParse);
 
-            LabelEntryPrice.Text = Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD);
+            //EntryExpectedDividendYield.Text = tryParse.ToString();
+
+            //stock.EpsEstimatedGrowth = tryParse;
+            //decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
+            //stock.GrowthEntryPrice = entryPrice;
+            //LabelEntryPrice.Text = Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD);
         }
     }
 }

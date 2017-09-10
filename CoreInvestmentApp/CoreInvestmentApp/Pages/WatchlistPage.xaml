@@ -24,7 +24,9 @@
                 ItemsSource="{Binding StockList}" 
                 HasUnevenRows="true" 
                 ItemSelected="ListView_ItemSelected" 
-                SeparatorVisibility="None">
+                SeparatorVisibility="None"
+                IsPullToRefreshEnabled="True"
+                Refreshing="StockListView_Refreshing">
                 
                 <ListView.Header>
                     <StackLayout Padding="20,20,20,20" BackgroundColor="#64A68C">

@@ -50,6 +50,7 @@ namespace CoreInvestmentApp.Pages
 
             LabelDebtToEquity.Text = Util.FormatNumberToPercent(stock.DebtToEquity);
             InitCheckBoxes();
+            InitSegControl();
             UpdateInvestorConfidence();
         }
 
@@ -119,33 +120,36 @@ namespace CoreInvestmentApp.Pages
                 stock.Efficient = ChkboxEfficient.Checked;
                 UpdateInvestorConfidence();
             };
+        }
 
+        private void InitSegControl()
+        {
             // LIST
-            ChkBoxLegal.Checked = stock.LegalRisk;
-            ChkBoxLegal.CheckedChanged += (sender, e) =>
+            SegControlLegal.SelectedSegment = (stock.LegalRisk) ? 1 : 0;
+            SegControlLegal.PropertyChanged += (sender, e) =>
             {
-                stock.LegalRisk = ChkBoxLegal.Checked;
+                stock.LegalRisk = Convert.ToBoolean(SegControlLegal.SelectedSegment);
                 UpdateInvestorConfidence();
             };
 
-            ChkBoxInflation.Checked = stock.InflationRisk;
-            ChkBoxInflation.CheckedChanged += (sender, e) =>
+            SegControlInflation.SelectedSegment = (stock.InflationRisk) ? 1 : 0;
+            SegControlInflation.PropertyChanged += (sender, e) =>
             {
-                stock.InflationRisk = ChkBoxInflation.Checked;
+                stock.InflationRisk = Convert.ToBoolean(SegControlInflation.SelectedSegment);
                 UpdateInvestorConfidence();
             };
 
-            ChkBoxStructure.Checked = stock.StructureSystemRisk;
-            ChkBoxStructure.CheckedChanged += (sender, e) =>
+            SegControlStruct.SelectedSegment = (stock.StructureSystemRisk) ? 1 : 0;
+            SegControlStruct.PropertyChanged += (sender, e) =>
             {
-                stock.StructureSystemRisk = ChkBoxStructure.Checked;
+                stock.StructureSystemRisk = Convert.ToBoolean(SegControlStruct.SelectedSegment);
                 UpdateInvestorConfidence();
             };
 
-            ChkBoxTechnology.Checked = stock.TechnologyRisk;
-            ChkBoxTechnology.CheckedChanged += (sender, e) =>
+            SegControlTechnology.SelectedSegment = (stock.TechnologyRisk) ? 1 : 0;
+            SegControlTechnology.PropertyChanged += (sender, e) =>
             {
-                stock.TechnologyRisk = ChkBoxTechnology.Checked;
+                stock.TechnologyRisk = Convert.ToBoolean(SegControlTechnology.SelectedSegment);
                 UpdateInvestorConfidence();
             };
         }
@@ -178,19 +182,19 @@ namespace CoreInvestmentApp.Pages
                 nicesCount++;
             }
 
-            if (stock.LegalRisk)
+            if (!stock.LegalRisk)
             {
                 listCount++;
             }
-            if (stock.InflationRisk)
+            if (!stock.InflationRisk)
             {
                 listCount++;
             }
-            if (stock.StructureSystemRisk)
+            if (!stock.StructureSystemRisk)
             {
                 listCount++;
             }
-            if (stock.TechnologyRisk)
+            if (!stock.TechnologyRisk)
             {
                 listCount++;
             }
@@ -248,6 +252,24 @@ namespace CoreInvestmentApp.Pages
                 Fill = OxyColor.FromRgb(209, 220, 114),
             };
 
+            var xAxis = new LinearAxis();
+            xAxis.Position = AxisPosition.Bottom;
+            xAxis.IsZoomEnabled = false;
+            xAxis.IsPanEnabled = false;
+            xAxis.Key = "x";
+
+            var yAxis = new LinearAxis();
+            yAxis.Position = AxisPosition.Left;
+            yAxis.IsZoomEnabled = false;
+            yAxis.IsPanEnabled = false;
+            yAxis.Key = "y";
+
+            plotModel1.Axes.Add(xAxis);
+            plotModel1.Axes.Add(yAxis);
+
+            areaSeries1.XAxisKey = "x";
+            areaSeries1.YAxisKey = "y";
+
             foreach (EarningPerShare eps in stock.EpsList)
             {
 				var pointAnnotation1 = new PointAnnotation();
@@ -299,13 +321,32 @@ namespace CoreInvestmentApp.Pages
                 unit = million;
             }
             else{
-                unitStr = "Hundred Thousands";
+                unitStr = "Hundred K";
                 unit = hundredthousands;
             }
 
-			string title = String.Format("Operating Cash Flow ({0} USD)", unitStr);
+			string title = String.Format("Operating Cash Flow{0}({1} USD)", Environment.NewLine, unitStr);
 			var plotModel1 = new PlotModel { Title = title };
-			plotModel1.Series.Add(areaSeries1);
+
+            var xAxis = new LinearAxis();
+            xAxis.Position = AxisPosition.Bottom;
+            xAxis.IsZoomEnabled = false;
+            xAxis.IsPanEnabled = false;
+            xAxis.Key = "x";
+
+            var yAxis = new LinearAxis();
+            yAxis.Position = AxisPosition.Left;
+            yAxis.IsZoomEnabled = false;
+            yAxis.IsPanEnabled = false;
+            yAxis.Key = "y";
+
+            plotModel1.Axes.Add(xAxis);
+            plotModel1.Axes.Add(yAxis);
+
+            areaSeries1.XAxisKey = "x";
+            areaSeries1.YAxisKey = "y";
+
+            plotModel1.Series.Add(areaSeries1);
 
 			foreach (FreeCashFlow fcf in stock.CashFlowList)
             {
@@ -333,6 +374,25 @@ namespace CoreInvestmentApp.Pages
                 Color = OxyColor.FromRgb(193, 70, 53),
                 Fill = OxyColor.FromRgb(212, 151, 141)
             };
+
+
+            var xAxis = new LinearAxis();
+            xAxis.Position = AxisPosition.Bottom;
+            xAxis.IsZoomEnabled = false;
+            xAxis.IsPanEnabled = false;
+            xAxis.Key = "x";
+
+            var yAxis = new LinearAxis();
+            yAxis.Position = AxisPosition.Left;
+            yAxis.IsZoomEnabled = false;
+            yAxis.IsPanEnabled = false;
+            yAxis.Key = "y";
+
+            plotModel1.Axes.Add(xAxis);
+            plotModel1.Axes.Add(yAxis);
+
+            areaSeries1.XAxisKey = "x";
+            areaSeries1.YAxisKey = "y";
 
             foreach (DebtToEquity dte in stock.DebtToEquityList)
             {
@@ -363,6 +423,24 @@ namespace CoreInvestmentApp.Pages
                 Fill = OxyColor.FromRgb(129, 148, 144)
             };
 
+            var xAxis = new LinearAxis();
+            xAxis.Position = AxisPosition.Bottom;
+            xAxis.IsZoomEnabled = false;
+            xAxis.IsPanEnabled = false;
+            xAxis.Key = "x";
+
+            var yAxis = new LinearAxis();
+            yAxis.Position = AxisPosition.Left;
+            yAxis.IsZoomEnabled = false;
+            yAxis.IsPanEnabled = false;
+            yAxis.Key = "y";
+
+            plotModel1.Axes.Add(xAxis);
+            plotModel1.Axes.Add(yAxis);
+
+            areaSeries1.XAxisKey = "x";
+            areaSeries1.YAxisKey = "y";
+
             foreach (ReturnOnEquity roe in stock.ReturnToEquityList)
             {
 				var pointAnnotation1 = new PointAnnotation();
@@ -391,6 +469,23 @@ namespace CoreInvestmentApp.Pages
                 Color = OxyColor.FromRgb(182, 136, 68),
                 Fill = OxyColor.FromRgb(194, 184, 188)
             };
+            var xAxis = new LinearAxis();
+            xAxis.Position = AxisPosition.Bottom;
+            xAxis.IsZoomEnabled = false;
+            xAxis.IsPanEnabled = false;
+            xAxis.Key = "x";
+
+            var yAxis = new LinearAxis();
+            yAxis.Position = AxisPosition.Left;
+            yAxis.IsZoomEnabled = false;
+            yAxis.IsPanEnabled = false;
+            yAxis.Key = "y";
+
+            plotModel1.Axes.Add(xAxis);
+            plotModel1.Axes.Add(yAxis);
+
+            areaSeries1.XAxisKey = "x";
+            areaSeries1.YAxisKey = "y";
 
             foreach (ReturnOnAsset roa in stock.ReturnToAssetList)
             {
