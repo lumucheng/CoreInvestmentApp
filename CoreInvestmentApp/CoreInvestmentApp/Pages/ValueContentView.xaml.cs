@@ -81,6 +81,7 @@ namespace CoreInvestmentApp.Pages
 
             decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
             LabelEpsEntryPrice.Text = "  " + Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD) + "  ";
+            stock.GrowthEntryPrice = entryPrice;
 
             decimal reviewPrice = 1.2M * entryPrice;
             LabelEpsReviewPrice.Text = "  " + Util.FormatNumberToCurrency(reviewPrice, CURRENCY_TYPE.USD) + "  ";
@@ -94,6 +95,8 @@ namespace CoreInvestmentApp.Pages
 
             decimal dividendReviewPrice = dividendEntry * 1.25M;
             LabelDivdendReviewPrice.Text = Util.FormatNumberToCurrency(dividendReviewPrice, CURRENCY_TYPE.USD);
+
+            stock.DivdendEntryPrice = dividendEntry;
         }
 
         private void UpdateBookLabels()
@@ -103,6 +106,8 @@ namespace CoreInvestmentApp.Pages
 
             decimal bookExpectedReturn = entryPriceBookValue * 1.25M;
             LabelBookValuerReviewPrice.Text = Util.FormatNumberToCurrency(bookExpectedReturn, CURRENCY_TYPE.USD);
+
+            stock.AssetEntryPrice = entryPriceBookValue;
         }
 
         private void CreateEPSChart()

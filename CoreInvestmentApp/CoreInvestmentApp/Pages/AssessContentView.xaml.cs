@@ -325,8 +325,9 @@ namespace CoreInvestmentApp.Pages
                 unit = hundredthousands;
             }
 
-			string title = String.Format("Operating Cash Flow{0}({1} USD)", Environment.NewLine, unitStr);
-			var plotModel1 = new PlotModel { Title = title };
+            string title = "Operating Cash Flow";
+            string subTitle = String.Format("({0} USD)", unitStr);
+            var plotModel1 = new PlotModel { Title = title, Subtitle = subTitle };
 
             var xAxis = new LinearAxis();
             xAxis.Position = AxisPosition.Bottom;

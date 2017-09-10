@@ -109,14 +109,14 @@
                 </ListView.Footer>
             </ListView>
             
-            <local:ImageButton
+           <!-- <local:ImageButton
                 Source="{local:PlatformImage SourceImage='IconFAB'}"
                 ItemTapped="Handle_ItemTapped" 
                 AbsoluteLayout.LayoutFlags="PositionProportional" 
                 AbsoluteLayout.LayoutBounds="1.0,1.0,-1,-1" 
                 HeightRequest="50"
                 WidthRequest="50"
-                Margin="10" />
+                Margin="10" />-->
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
