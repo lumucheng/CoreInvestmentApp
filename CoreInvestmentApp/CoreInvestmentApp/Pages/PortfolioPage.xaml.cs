@@ -49,51 +49,54 @@ namespace CoreInvestmentApp.Pages
 
             portfolioList = vAllPortfolio.ToList();
 
-            foreach (PortfolioStock portfolio in portfolioList)
+            if (portfolioList.Count > 0)
             {
-                identifierQuery += portfolio.StockTicker + ",";
-                portfolioDictionary[portfolio.StockTicker] = portfolio;
-            }
+				foreach (PortfolioStock portfolio in portfolioList)
+				{
+					identifierQuery += portfolio.StockTicker + ",";
+					portfolioDictionary[portfolio.StockTicker] = portfolio;
+				}
 
-            string query = string.Format(Util.IntrinioAPIUrl +
-                    "/data_point?identifier={0}&item=close_price", identifierQuery);
-            HttpClient client = Util.GetAuthHttpClient();
-            var uri = new Uri(query);
+				string query = string.Format(Util.IntrinioAPIUrl +
+						"/data_point?identifier={0}&item=close_price,company_url", identifierQuery);
+				HttpClient client = Util.GetAuthHttpClient();
+				var uri = new Uri(query);
 
-            var response = await client.GetAsync(uri);
-            if (response.IsSuccessStatusCode)
-            {
-                var json = await response.Content.ReadAsStringAsync();
-                JObject jsonObject = JObject.Parse(json);
-                JArray data = (JArray)jsonObject["data"];
+				var response = await client.GetAsync(uri);
+				if (response.IsSuccessStatusCode)
+				{
+					var json = await response.Content.ReadAsStringAsync();
+					JObject jsonObject = JObject.Parse(json);
+					JArray data = (JArray)jsonObject["data"];
 
-                foreach (JToken token in data)
-                {
-                    string identifier = token["identifier"].ToString();
-                    string item = token["item"].ToString();
-                    string value = token["value"].ToString();
+					foreach (JToken token in data)
+					{
+						string identifier = token["identifier"].ToString();
+						string item = token["item"].ToString();
+						string value = token["value"].ToString();
 
-                    foreach (PortfolioStock portfolio in portfolioList)
-                    {
-                        if (portfolio.StockTicker == identifier)
-                        {
-                            if (item == "close_price")
-                            {
-                                decimal currentValue;
-                                if (Decimal.TryParse(value, out currentValue))
-                                {
-                                    portfolio.CurrentValue = currentValue;
-                                }
-                            }
-                        }
-                    }
-                }
+						foreach (PortfolioStock portfolio in portfolioList)
+						{
+							if (portfolio.StockTicker == identifier)
+							{
+								if (item == "close_price")
+								{
+									decimal currentValue;
+									if (Decimal.TryParse(value, out currentValue))
+									{
+										portfolio.CurrentValue = currentValue;
+									}
+								}
+							}
+						}
+					}
 
-                InitLayout();
-            }
-            else
-            {
-                UserDialogs.Instance.Alert("Something went wrong with the network", "Error", "OK");
+					InitLayout();
+				}
+				else
+				{
+					UserDialogs.Instance.Alert("Something went wrong with the network", "Error", "OK");
+				}
             }
         }
 
