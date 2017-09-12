@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using CoreInvestmentApp.SliderPages;
+using CoreInvestmentApp.Pages;
 
 namespace CoreInvestmentApp.Menu
 {
@@ -14,23 +15,16 @@ namespace CoreInvestmentApp.Menu
         {
             this.Add(new MenuItem()
             {
-                Title = "Home",
+                Title = "Watch List",
                 IconSource = "contacts.png",
-                TargetType = typeof(ContractsPage)
+                TargetType = typeof(WatchlistPage)
             });
 
             this.Add(new MenuItem()
             {
-                Title = "Assesssment",
+                Title = "Portfolio",
                 IconSource = "leads.png",
-                TargetType = typeof(LeadsPage)
-            });
-
-            this.Add(new MenuItem()
-            {
-                Title = "Payment",
-                IconSource = "accounts.png",
-                TargetType = typeof(AccountsPage)
+                TargetType = typeof(PortfolioPage)
             });
 
             this.Add(new MenuItem()

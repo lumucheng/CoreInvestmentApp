@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoreInvestmentApp.Pages.AddPortfolioPage">
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <StackLayout Orientation="Vertical" Padding="10,10,10,10">
+                <Label Text="Stock Name" FontAttributes="Bold" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
+                <Label x:Name="LabelStockName" HorizontalOptions="StartAndExpand"></Label>
+                <Label Text="Stock Ticker" FontAttributes="Bold" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
+                <Label x:Name="LabelStockTicker" HorizontalOptions="StartAndExpand"></Label>
+                <Label Text="Sector" FontAttributes="Bold" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
+                <Label x:Name="LabelSector" HorizontalOptions="StartAndExpand"></Label>
+                <Label Text="Current Close Price" FontAttributes="Bold" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
+                <Label x:Name="LabelClosePrice" HorizontalOptions="StartAndExpand"></Label>
+
+                <Label Text="Enter Quantity" FontAttributes="Bold" HorizontalOptions="StartAndExpand"></Label>
+                <Entry x:Name="EntryQuantity" FontSize="Medium" Placeholder="Quantity" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" />
+
+                <Label Text="Enter Purchase Price" FontAttributes="Bold" HorizontalOptions="StartAndExpand"></Label>
+                <Entry x:Name="EntryPrice" FontSize="Medium" Placeholder="Price" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" />
+
+                <Label Text="Select Purchase Date" FontAttributes="Bold" HorizontalOptions="StartAndExpand"></Label>
+                <DatePicker x:Name="PickerPurchaseDate" Format="dd MMM yyyy" />
+
+                <Button Text="Add to Portfolio" FontSize="Medium" FontAttributes="Bold" Clicked="Button_Clicked" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

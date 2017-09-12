@@ -30,6 +30,12 @@ namespace CoreInvestmentApp.Pages
             Title = "Stock Info";
             this.stock = stock;
 
+            ToolbarItems.Add(new ToolbarItem
+            {
+                Text = "Add",
+                Command = new Command(() => Navigation.PushModalAsync(new NavigationPage(new AddPortfolioPage(stock))))
+            });
+
             UserDialogs.Instance.ShowLoading("Loading..", MaskType.Black);
             GetDetailedInfoAsync().ContinueWith((task) =>
             {
@@ -542,10 +548,10 @@ namespace CoreInvestmentApp.Pages
 
             Label LabelFiftyTwo = new Label { Text = "52-week", FontAttributes = FontAttributes.Bold, TextColor = Color.White, FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
 
-            Label LabelFiftyTwoHigh = new Label { Text = "Hi: " + stock.FiftyTwoWeekHighString, FontAttributes = FontAttributes.Bold, TextColor = Color.FromHex("324F54"), FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
+            Label LabelFiftyTwoHigh = new Label { Text = "Hi: " + stock.FiftyTwoWeekHighString, FontAttributes = FontAttributes.Bold, TextColor = Color.FromHex("38DE40"), FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
             LabelFiftyTwoHigh.Effects.Add(new SizeFontToFitEffect());
 
-            Label LabelFiftyTwoLow = new Label { Text = "Lo: " + stock.FiftyTwoWeekLowString, FontAttributes = FontAttributes.Bold, TextColor = Color.FromHex("810915"), FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
+            Label LabelFiftyTwoLow = new Label { Text = "Lo: " + stock.FiftyTwoWeekLowString, FontAttributes = FontAttributes.Bold, TextColor = Color.FromHex("FF0000"), FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
             LabelFiftyTwoLow.Effects.Add(new SizeFontToFitEffect());
 
             StackLayout rightLayout = new StackLayout

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+             x:Class="CoreInvestmentApp.Pages.PortfolioPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" BackgroundColor="White">
+            <StackLayout Orientation="Vertical" VerticalOptions="Fill" BackgroundColor="#09b2c9" Padding="10, 10, 10, 10">
+                <Label x:Name="LabelTotalCapital" FontAttributes="Bold" TextColor="White" FontSize="Medium"></Label>
+                <StackLayout Orientation="Horizontal">
+                    <Label FontAttributes="Bold" Text="P/L" TextColor="White" FontSize="Medium"></Label>
+                    <Label x:Name="LabelPortfolioValue" FontAttributes="Bold" FontSize="Medium"></Label>
+                </StackLayout>
+                <Label x:Name="LabelPortfolioPercent" TextColor="White" FontSize="Medium" FontAttributes="Bold"></Label>
+            </StackLayout>
+
+            <ListView 
+                x:Name="ListViewPortfolio" 
+                HasUnevenRows="false" 
+                ItemSelected="ListViewPortfolio_ItemSelected" 
+                SeparatorVisibility="None"
+                RowHeight="80">
+                <ListView.Header>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Portfolio" FontSize="Medium" HorizontalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" />
+                        <Label Text="Based on Recorded Transactions" FontSize="Small" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" />
+
+                        <oxy:PlotView x:Name="PlotPortfolio" Model="{Binding PortfolioModel}" HeightRequest="300" WidthRequest="300" Margin="5,20,5,20" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
+                        <StackLayout Padding="20,5,20,5" BackgroundColor="#64A68C">
+                            <Label Text="Portfolio Information" TextColor="White" FontSize="Medium" FontFamily="Bold" />
+                        </StackLayout>
+                    </StackLayout>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="MenuItem_Clicked" 
+                                    CommandParameter="{Binding .}" 
+                                    Text="Delete" 
+                                    IsDestructive="true" />
+                            </ViewCell.ContextActions>
+                            <Grid Padding="10, 10, 10, 10" RowSpacing="0" ColumnSpacing="10" BackgroundColor="{Binding .,Converter={StaticResource StripedBackgroundIndexConverter}, ConverterParameter={x:Reference ListViewPortfolio}}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60*" />
+                                    <ColumnDefinition Width="40*" />
+                                </Grid.ColumnDefinitions>
+
+                                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Grid.Column="0">
+                                    <Label Text="{Binding StockName}" TextColor="Black" FontAttributes="Bold" ></Label>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding StockTicker}" TextColor="Black" />
+                                        <Label Text=";" TextColor="Black" />
+                                        <Label Text="{Binding StockSector}" TextColor="Black" />
+                                    </StackLayout>
+                                    <Label Text="{Binding DateAddedString}" TextColor="Black" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Grid.Column="1">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Quantity" TextColor="#ebc361" FontAttributes="Bold"></Label>
+                                        <Label Text="{Binding Quantity}" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" TextColor="Black"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="P. Price" TextColor="#efa06a" FontAttributes="Bold" ></Label>
+                                        <Label Text="{Binding PurchasePriceString}" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" TextColor="Black" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <Label />
+                </ListView.Footer>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
