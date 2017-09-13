@@ -23,7 +23,7 @@ namespace CoreInvestmentApp.Classes
         private static string IntrinioID = "773bd894834c1d90100edc4002b8ddc9";
         private static string IntrinioPassword = "e6614f242403f487ebac88401a931fdc";
         public static string IntrinioAPIUrl = "https://api.intrinio.com";
-        public static string ContactEmail = "lumucheng@gmail.com";
+        public static string ContactEmail = "contact@coreinvest.me";
 
         private static string GetBasicAuth()
         {

@@ -4,8 +4,8 @@
              xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
              x:Class="CoreInvestmentApp.Pages.PortfolioPage">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" BackgroundColor="White" VerticalOptions="FillAndExpand">
-            <StackLayout Orientation="Vertical" VerticalOptions="Fill" BackgroundColor="#09b2c9" Padding="10, 10, 10, 10">
+        <StackLayout x:Name="StackLay" Orientation="Vertical" BackgroundColor="White" VerticalOptions="Start">
+            <StackLayout Orientation="Vertical" VerticalOptions="Fill" BackgroundColor="#09b2c9" Padding="10, 10, 10, 0">
                 <Label x:Name="LabelTotalCapital" FontAttributes="Bold" TextColor="White" FontSize="Medium"></Label>
                 <StackLayout Orientation="Horizontal">
                     <Label FontAttributes="Bold" Text="P/L" TextColor="White" FontSize="Medium"></Label>

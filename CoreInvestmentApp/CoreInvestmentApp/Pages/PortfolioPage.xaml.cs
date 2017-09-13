@@ -28,6 +28,15 @@ namespace CoreInvestmentApp.Pages
             Title = "Portfolio";
             InitializeComponent();
 
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                StackLay.VerticalOptions = LayoutOptions.FillAndExpand;
+			}
+            else if (Device.RuntimePlatform == Device.iOS)
+            {
+                StackLay.VerticalOptions = LayoutOptions.StartAndExpand;
+            }
+
             Init();
         }
 
@@ -103,6 +112,7 @@ namespace CoreInvestmentApp.Pages
                 ListViewPortfolio.ItemsSource = null;
                 LabelPortfolioPercent.Text = "";
                 LabelPortfolioValue.Text = "";
+                LabelTotalCapital.Text = "";
                 PortfolioModel = null;
                 PlotPortfolio.BindingContext = null;
             }
