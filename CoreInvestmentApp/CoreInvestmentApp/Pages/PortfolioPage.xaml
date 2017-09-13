@@ -4,7 +4,7 @@
              xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
              x:Class="CoreInvestmentApp.Pages.PortfolioPage">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" BackgroundColor="White" VerticalOptions="StartAndExpand">
+        <StackLayout Orientation="Vertical" BackgroundColor="White" VerticalOptions="FillAndExpand">
             <StackLayout Orientation="Vertical" VerticalOptions="Fill" BackgroundColor="#09b2c9" Padding="10, 10, 10, 10">
                 <Label x:Name="LabelTotalCapital" FontAttributes="Bold" TextColor="White" FontSize="Medium"></Label>
                 <StackLayout Orientation="Horizontal">
@@ -25,7 +25,7 @@
                         <Label Text="Portfolio" FontSize="Medium" HorizontalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" />
                         <Label Text="Based on Recorded Transactions" FontSize="Small" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" />
 
-                        <oxy:PlotView x:Name="PlotPortfolio" Model="{Binding PortfolioModel}" HeightRequest="300" WidthRequest="300" Margin="5,20,5,20" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
+                        <oxy:PlotView x:Name="PlotPortfolio" IsEnabled="False" Model="{Binding PortfolioModel}" HeightRequest="300" WidthRequest="300" Margin="5,20,5,20" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
                         <StackLayout Padding="20,5,20,5" BackgroundColor="#64A68C">
                             <Label Text="Portfolio Information" TextColor="White" FontSize="Medium" FontFamily="Bold" />
                         </StackLayout>

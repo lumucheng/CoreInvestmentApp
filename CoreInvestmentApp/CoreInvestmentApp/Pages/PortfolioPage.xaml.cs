@@ -98,6 +98,14 @@ namespace CoreInvestmentApp.Pages
 					UserDialogs.Instance.Alert("Something went wrong with the network", "Error", "OK");
 				}
             }
+            else
+            {
+                ListViewPortfolio.ItemsSource = null;
+                LabelPortfolioPercent.Text = "";
+                LabelPortfolioValue.Text = "";
+                PortfolioModel = null;
+                PlotPortfolio.BindingContext = null;
+            }
         }
 
         private void InitLayout()
@@ -151,8 +159,8 @@ namespace CoreInvestmentApp.Pages
 
             var ps = new PieSeries
             {
-                StrokeThickness = .25,
-                InsideLabelPosition = .5,
+                StrokeThickness = 2.0,
+                InsideLabelPosition = 0.5,
                 OutsideLabelFormat = "",
                 TickHorizontalLength = 0.0,
                 TickRadialLength = 0.0,

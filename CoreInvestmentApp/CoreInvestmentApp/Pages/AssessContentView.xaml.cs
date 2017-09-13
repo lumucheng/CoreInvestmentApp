@@ -247,6 +247,7 @@ namespace CoreInvestmentApp.Pages
             var plotModel1 = new PlotModel { Title = "Earnings Per Share (USD)" };	
             var areaSeries1 = new AreaSeries
             {
+                LabelFormatString = "{1}",
                 MarkerType = MarkerType.Circle,
                 MarkerSize = 3,
                 MarkerStroke = OxyColors.Black,
@@ -273,13 +274,17 @@ namespace CoreInvestmentApp.Pages
             areaSeries1.XAxisKey = "x";
             areaSeries1.YAxisKey = "y";
 
+            List<EarningPerShare> yearList = stock.EpsList.OrderBy(o => o.Date).ToList();
+            List<EarningPerShare> valueList = stock.EpsList.OrderBy(o => o.Value).ToList();
+
             foreach (EarningPerShare eps in stock.EpsList)
             {
-				var pointAnnotation1 = new PointAnnotation();
+                var pointAnnotation1 = new PointAnnotation();
                 pointAnnotation1.X = Convert.ToDouble(eps.Date.Year);
                 pointAnnotation1.Y = Convert.ToDouble(eps.Value);
                 pointAnnotation1.Text = String.Format("{0}", eps.Value);
                 plotModel1.Annotations.Add(pointAnnotation1);
+
                 areaSeries1.Points.Add(new DataPoint(eps.Date.Year, eps.Value));
             }
                      

@@ -29,6 +29,12 @@ namespace CoreInvestmentApp.Menu
 
             this.Add(new MenuItem()
             {
+                Title = "Feedback",
+                TargetType = typeof(FeedbackPage)
+            });
+
+            this.Add(new MenuItem()
+            {
                 Title = "Logout",
                 TargetType = typeof(OpportunitiesPage)
             });

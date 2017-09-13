@@ -22,6 +22,8 @@ namespace CoreInvestmentApp.Menu
 
             ItemTemplate = cell;
             SelectedItem = data[0];
+
+            Footer = new Label(); 
         }
     }
 }

@@ -23,6 +23,7 @@ namespace CoreInvestmentApp.Classes
         private static string IntrinioID = "773bd894834c1d90100edc4002b8ddc9";
         private static string IntrinioPassword = "e6614f242403f487ebac88401a931fdc";
         public static string IntrinioAPIUrl = "https://api.intrinio.com";
+        public static string ContactEmail = "lumucheng@gmail.com";
 
         private static string GetBasicAuth()
         {
@@ -79,7 +80,7 @@ namespace CoreInvestmentApp.Classes
             {
                 sign = "SGD";
             }
-            return sign + num.ToString("0.##");
+            return sign + num.ToString("F2");
         }
 
         public static string FormatNumberToPercent(decimal num)

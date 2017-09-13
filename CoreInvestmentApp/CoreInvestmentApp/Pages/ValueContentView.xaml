@@ -27,7 +27,7 @@
                     </Grid.ColumnDefinitions>
 
                     <StackLayout Orientation="Vertical" Grid.Column="0" HorizontalOptions="FillAndExpand">
-                        <local:CurvedCornersLabel
+                        <!--<local:CurvedCornersLabel
                                 x:Name="LabelThreeYears"
                                 HorizontalTextAlignment="Center"
                                 VerticalTextAlignment="Center"
@@ -38,12 +38,16 @@
                                 CurvedCornerRadius="15"
                                 HorizontalOptions="CenterAndExpand"
                                 WidthRequest="100">
-                        </local:CurvedCornersLabel>
+                        </local:CurvedCornersLabel>-->
+                        <Entry x:Name="EntryThreeYears"  HorizontalTextAlignment="Center"
+                                FontSize="Medium"
+                                HeightRequest="40" BackgroundColor="#5E9EA0" TextColor="White" HorizontalOptions="CenterAndExpand" WidthRequest="100" Completed="EntryThreeYears_Completed" Keyboard="Numeric">
+                        </Entry>
                         <Label Text="3 Years" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" Grid.Column="1" HorizontalOptions="FillAndExpand">
-                        <local:CurvedCornersLabel
+                        <!--<local:CurvedCornersLabel
                                 x:Name="LabelFiveYears"
                                 HorizontalTextAlignment="Center"
                                 VerticalTextAlignment="Center"
@@ -54,7 +58,11 @@
                                 CurvedCornerRadius="15"
                                 HorizontalOptions="CenterAndExpand"
                                 WidthRequest="100">
-                        </local:CurvedCornersLabel>
+                        </local:CurvedCornersLabel>-->
+                        <Entry x:Name="EntryFiveYears"  HorizontalTextAlignment="Center"
+                                FontSize="Medium"
+                                HeightRequest="40" BackgroundColor="#5E9EA0" TextColor="White" HorizontalOptions="CenterAndExpand" WidthRequest="100" Completed="EntryFiveYears_Completed" Keyboard="Numeric">
+                        </Entry>
                         <Label Text="5 Years" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                     </StackLayout>
                 </Grid>
@@ -121,7 +129,7 @@
                 </Grid>
 
                 <Label Text="Earning per share estimated growth (%)" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
-                <local:ExtendedEntry x:Name="EntryEstimate" FontSize="Large" Text="12.5" Placeholder="Enter Estimate" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Completed="Handle_Completed" Keyboard="Numeric" IsEnabled="False" />
+                <local:ExtendedEntry x:Name="EntryEstimate" FontSize="Large" Text="12.5" Placeholder="Enter Estimate" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Completed="EntryEstimate_Completed" Keyboard="Numeric" />
 
                 <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
                     <Grid.RowDefinitions>
@@ -183,7 +191,7 @@
                     </Grid.ColumnDefinitions>
 
                     <StackLayout Orientation="Vertical" Grid.Column="0" HorizontalOptions="FillAndExpand">
-                        <local:CurvedCornersLabel
+                        <!--<local:CurvedCornersLabel
                                 x:Name="LabelCashDividend"
                                 HorizontalTextAlignment="Center"
                                 VerticalTextAlignment="Center"
@@ -194,7 +202,11 @@
                                 CurvedCornerRadius="15"
                                 HorizontalOptions="CenterAndExpand"
                                 WidthRequest="100">
-                        </local:CurvedCornersLabel>
+                        </local:CurvedCornersLabel>-->
+                        <Entry x:Name="EntryCashDividend"  HorizontalTextAlignment="Center"
+                                FontSize="Medium"
+                                HeightRequest="40" BackgroundColor="#5E9EA0" TextColor="White" HorizontalOptions="CenterAndExpand" WidthRequest="100" Completed="EntryCashDividend_Completed" Keyboard="Numeric">
+                        </Entry>
                         <Label Text="Cash Dividend" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                     </StackLayout>
 

@@ -5,6 +5,7 @@ using OxyPlot.Series;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +14,7 @@ using Xamarin.Forms.Xaml;
 using OxyPlot.Annotations;
 using Acr.UserDialogs;
 using OxyPlot.Axes;
+using System.Text.RegularExpressions;
 
 namespace CoreInvestmentApp.Pages
 {
@@ -37,7 +39,16 @@ namespace CoreInvestmentApp.Pages
             DividendChart.BindingContext = this;
             BookValueChart.BindingContext = this;
 
-            LabelCashDividend.Text = Util.FormatNumberToCurrency(stock.Dividend, CURRENCY_TYPE.USD);
+
+            if (stock.Dividend > 0)
+            {
+                EntryCashDividend.Text = Util.FormatNumberToCurrency(stock.Dividend, CURRENCY_TYPE.USD);
+            }
+            else
+            {
+                EntryCashDividend.Text = Util.FormatNumberToCurrency(stock.UserEnteredDividend, CURRENCY_TYPE.USD);
+            }
+            
             LabelCurrentYield.Text = Util.FormatNumberToPercent(stock.DividendYield);
 
             UpdateDividendLabels();
@@ -67,10 +78,30 @@ namespace CoreInvestmentApp.Pages
                 totalFive = (Math.Pow(Math.Abs((SortedList[0].Value / SortedList[5].Value)), 0.2) - 1) * 100;
             }
 
-            LabelThreeYears.Text = totalThree.ToString("F2");
-            LabelFiveYears.Text = totalFive.ToString("F2");
+            // LabelThreeYears.Text = totalThree.ToString("F2");
+            // LabelFiveYears.Text = totalFive.ToString("F2");
 
-            double estimatedGrowth = (totalFive > totalThree) ? totalThree : totalFive;
+            if (stock.ThreeYearsGrowth > 0)
+            {
+                EntryThreeYears.Text = stock.ThreeYearsGrowth.ToString("F2");
+            }
+            else
+            {
+                EntryThreeYears.Text = totalThree.ToString("F2");
+            }
+
+            if (stock.FiveYearsGrowth > 0)
+            {
+                EntryFiveYears.Text = stock.FiveYearsGrowth.ToString("F2");
+            }
+            else
+            {
+                EntryFiveYears.Text = totalFive.ToString("F2");
+            }
+
+            decimal threeYears = Convert.ToDecimal(EntryFiveYears.Text);
+            decimal fiveYears = Convert.ToDecimal(EntryThreeYears.Text);
+            decimal estimatedGrowth = (fiveYears > threeYears) ? threeYears : fiveYears;
 
             if (SortedList.Count > 0)
             {
@@ -97,9 +128,12 @@ namespace CoreInvestmentApp.Pages
 
         private void UpdateDividendLabels()
         {
-            decimal dividendEntry = (stock.Dividend / Decimal.Parse(EntryExpectedDividendYield.Text)) * 100;
+            decimal dividendValue = (stock.Dividend > 0) ? stock.Dividend : stock.UserEnteredDividend;
+            decimal dividendEntry = (dividendValue / Decimal.Parse(EntryExpectedDividendYield.Text)) * 100;
+
             stock.DivdendEntryPrice = dividendEntry;
             LabelDividendEntryPrice.Text = Util.FormatNumberToCurrency(dividendEntry, CURRENCY_TYPE.USD);
+            EntryCashDividend.Text = Util.FormatNumberToCurrency(dividendValue, CURRENCY_TYPE.USD);
 
             decimal dividendReviewPrice = dividendEntry * 1.25M;
             LabelDivdendReviewPrice.Text = Util.FormatNumberToCurrency(dividendReviewPrice, CURRENCY_TYPE.USD);
@@ -308,17 +342,98 @@ namespace CoreInvestmentApp.Pages
             }
         }
 
-        void Handle_Completed(object sender, System.EventArgs e)
+        private void EntryEstimate_Completed(object sender, EventArgs e)
         {
-            //decimal tryParse = 0.0M;
-            //Decimal.TryParse(EntryEstimate.Text, out tryParse);
+            decimal estimate = 0.0M;
+            bool result = Decimal.TryParse(EntryEstimate.Text, out estimate);
 
-            //EntryExpectedDividendYield.Text = tryParse.ToString();
+            if (result)
+            {
+                stock.EpsEstimatedGrowth = estimate;
+            }
 
-            //stock.EpsEstimatedGrowth = tryParse;
-            //decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
-            //stock.GrowthEntryPrice = entryPrice;
-            //LabelEntryPrice.Text = Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD);
+            EntryEstimate.Text = estimate.ToString("F2");
+
+            decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
+            LabelEpsEntryPrice.Text = "  " + Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD) + "  ";
+            stock.GrowthEntryPrice = entryPrice;
+
+            decimal reviewPrice = 1.2M * entryPrice;
+            LabelEpsReviewPrice.Text = "  " + Util.FormatNumberToCurrency(reviewPrice, CURRENCY_TYPE.USD) + "  ";
+
+            Util.SaveStockToDB(stock);
+        }
+
+        private void EntryThreeYears_Completed(object sender, EventArgs e)
+        {
+            decimal threeYear = 0.0M;
+            bool result = Decimal.TryParse(EntryThreeYears.Text, out threeYear);
+
+            if (result)
+            {
+                stock.ThreeYearsGrowth = threeYear;
+            }
+
+            EntryThreeYears.Text = threeYear.ToString("F2");
+
+            decimal fiveYear = Convert.ToDecimal(EntryFiveYears.Text);
+            decimal estimatedGrowth = (threeYear > fiveYear) ? fiveYear : threeYear;
+
+            stock.EpsEstimatedGrowth = estimatedGrowth;
+            EntryEstimate.Text = stock.EpsEstimatedGrowth.ToString("F2");
+
+            decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
+            LabelEpsEntryPrice.Text = "  " + Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD) + "  ";
+            stock.GrowthEntryPrice = entryPrice;
+
+            decimal reviewPrice = 1.2M * entryPrice;
+            LabelEpsReviewPrice.Text = "  " + Util.FormatNumberToCurrency(reviewPrice, CURRENCY_TYPE.USD) + "  ";
+
+            Util.SaveStockToDB(stock);
+        }
+
+        private void EntryFiveYears_Completed(object sender, EventArgs e)
+        {
+            decimal fiveYear = 0.0M;
+            bool result = Decimal.TryParse(EntryFiveYears.Text, out fiveYear);
+
+            if (result)
+            {
+                stock.FiveYearsGrowth = fiveYear;
+            }
+
+            EntryFiveYears.Text = fiveYear.ToString("F2");
+
+            decimal threeYear = Convert.ToDecimal(EntryFiveYears.Text);
+            decimal estimatedGrowth = (fiveYear > threeYear) ? threeYear : fiveYear;
+
+            stock.EpsEstimatedGrowth = estimatedGrowth;
+            EntryEstimate.Text = stock.EpsEstimatedGrowth.ToString("F2");
+
+            decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
+            LabelEpsEntryPrice.Text = "  " + Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD) + "  ";
+            stock.GrowthEntryPrice = entryPrice;
+
+            decimal reviewPrice = 1.2M * entryPrice;
+            LabelEpsReviewPrice.Text = "  " + Util.FormatNumberToCurrency(reviewPrice, CURRENCY_TYPE.USD) + "  ";
+
+            Util.SaveStockToDB(stock);
+        }
+
+        private void EntryCashDividend_Completed(object sender, EventArgs e)
+        {
+            string text = EntryCashDividend.Text;
+            text = Regex.Replace(text, @"[^\d]", "");
+
+            decimal dividend = 0.0M;
+            bool result = Decimal.TryParse(text, out dividend);
+
+            if (result)
+            {
+                stock.UserEnteredDividend = dividend;
+            }
+
+            UpdateDividendLabels();
         }
     }
 }

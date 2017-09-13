@@ -18,10 +18,10 @@
                 <Label x:Name="LabelVolume" TextColor="Black" FontSize="Medium" FontAttributes="Bold" />
                 <BoxView Color="Gray" HeightRequest="1"/>
                 <Label Text="52 Week High" FontSize="Medium" FontAttributes="Bold" />
-                <Label x:Name="LabelFiftyTwoHigh" TextColor="#324F54" FontSize="Medium" FontAttributes="Bold" />
+                <Label x:Name="LabelFiftyTwoHigh" TextColor="#38DE40" FontSize="Medium" FontAttributes="Bold" />
                 <BoxView Color="Gray" HeightRequest="1"/>
                 <Label Text="52 Week Low" FontSize="Medium" FontAttributes="Bold" />
-                <Label x:Name="LabelFiftyTwoLow" TextColor="#810915" FontSize="Medium" FontAttributes="Bold" />
+                <Label x:Name="LabelFiftyTwoLow" TextColor="#FF0000" FontSize="Medium" FontAttributes="Bold" />
                 <BoxView Color="Gray" HeightRequest="1"/>
 
                 <Label x:Name="LabelSector" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />

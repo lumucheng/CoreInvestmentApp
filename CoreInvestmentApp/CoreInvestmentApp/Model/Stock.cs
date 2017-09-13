@@ -29,6 +29,10 @@ namespace CoreInvestmentApp.Model
         public decimal PriceToBook { get; set; }
         public decimal PriceToEarnings { get; set; }
 
+        public decimal ThreeYearsGrowth { get; set; }
+        public decimal FiveYearsGrowth { get; set; }
+        public decimal UserEnteredDividend { get; set; }
+
 		public string Sector { get; set; }
         public string ImageUrl { get; set; }
         public string Description { get; set; }
