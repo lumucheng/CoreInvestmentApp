@@ -140,6 +140,7 @@
     <BundleResource Include="Resources\IconFAB%402x.png" />
     <BundleResource Include="Resources\IconFAB%403x.png" />
     <BundleResource Include="Resources\Icon.png" />
+    <BundleResource Include="Resources\splash-core.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.Support.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

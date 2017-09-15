@@ -29,7 +29,7 @@ namespace CoreInvestmentApp.Pages
 
             ToolbarItems.Add(new ToolbarItem
             {
-                Text = "Done",
+                Text = "Cancel",
                 Command = new Command(() => Navigation.PopModalAsync()),
             });
 

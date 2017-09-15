@@ -53,9 +53,6 @@ namespace CoreInvestmentApp.Pages
 
             UpdateDividendLabels();
                    
-            LabelBookValue.Text = Util.FormatNumberToCurrency(stock.BookValuePerShare, CURRENCY_TYPE.USD);
-            LabelPriceToBook.Text = Util.FormatNumberToCurrency(stock.PriceToBook, CURRENCY_TYPE.USD);
-
             UpdateBookLabels();
 
             UpdateEpsLabels();
@@ -70,38 +67,23 @@ namespace CoreInvestmentApp.Pages
 
             if (SortedList.Count() >= 4)
             {
-                totalThree = (Math.Pow(Math.Abs((SortedList[0].Value / SortedList[3].Value)), (1.0 / 3.0)) - 1) * 100;
+                if (SortedList[0].Value > 0 && SortedList[3].Value >=0)
+                {
+                    totalThree = (Math.Pow(Math.Abs((SortedList[0].Value / SortedList[3].Value)), (1.0 / 3.0)) - 1) * 100;
+                }
             }
-
             if (SortedList.Count() >= 6)
             {
-                totalFive = (Math.Pow(Math.Abs((SortedList[0].Value / SortedList[5].Value)), 0.2) - 1) * 100;
+                if (SortedList[0].Value >= 0 && SortedList[5].Value >= 0)
+                {
+                    totalFive = (Math.Pow(Math.Abs((SortedList[0].Value / SortedList[5].Value)), 0.2) - 1) * 100;
+                }
             }
 
-            // LabelThreeYears.Text = totalThree.ToString("F2");
-            // LabelFiveYears.Text = totalFive.ToString("F2");
+            LabelThreeYears.Text = totalThree.ToString("F2");
+            LabelFiveYears.Text = totalFive.ToString("F2");
 
-            if (stock.ThreeYearsGrowth > 0)
-            {
-                EntryThreeYears.Text = stock.ThreeYearsGrowth.ToString("F2");
-            }
-            else
-            {
-                EntryThreeYears.Text = totalThree.ToString("F2");
-            }
-
-            if (stock.FiveYearsGrowth > 0)
-            {
-                EntryFiveYears.Text = stock.FiveYearsGrowth.ToString("F2");
-            }
-            else
-            {
-                EntryFiveYears.Text = totalFive.ToString("F2");
-            }
-
-            decimal threeYears = Convert.ToDecimal(EntryFiveYears.Text);
-            decimal fiveYears = Convert.ToDecimal(EntryThreeYears.Text);
-            decimal estimatedGrowth = (fiveYears > threeYears) ? threeYears : fiveYears;
+            double estimatedGrowth = (totalFive > totalThree) ? totalThree : totalFive;
 
             if (SortedList.Count > 0)
             {
@@ -115,20 +97,30 @@ namespace CoreInvestmentApp.Pages
             LabelTTM.Text = stock.BasicEpsString;
             LabelGrowth.Text = Util.FormatNumberToPercent(stock.EpsGrowth);
 
-            stock.EpsEstimatedGrowth = Convert.ToDecimal(Math.Round(estimatedGrowth, 2));
-            EntryEstimate.Text = stock.EpsEstimatedGrowth.ToString();
+            if (!stock.UserEnteredGrowthPercent)
+            {
+                stock.EpsEstimatedGrowth = Convert.ToDecimal(Math.Round(estimatedGrowth, 2));
+            }
 
+            EntryEstimate.Text = stock.EpsEstimatedGrowth.ToString("F2");
             decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
             LabelEpsEntryPrice.Text = "  " + Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD) + "  ";
             stock.GrowthEntryPrice = entryPrice;
 
-            decimal reviewPrice = 1.2M * entryPrice;
+            decimal reviewPrice = 1.25M * entryPrice;
             LabelEpsReviewPrice.Text = "  " + Util.FormatNumberToCurrency(reviewPrice, CURRENCY_TYPE.USD) + "  ";
         }
 
         private void UpdateDividendLabels()
         {
-            decimal dividendValue = (stock.Dividend > 0) ? stock.Dividend : stock.UserEnteredDividend;
+            decimal dividendValue = stock.Dividend;
+
+            if (stock.Dividend == 0)
+            {
+                dividendValue = stock.UserEnteredDividend;
+                EntryCashDividend.IsEnabled = true;
+            }
+
             decimal dividendEntry = (dividendValue / Decimal.Parse(EntryExpectedDividendYield.Text)) * 100;
 
             stock.DivdendEntryPrice = dividendEntry;
@@ -145,6 +137,26 @@ namespace CoreInvestmentApp.Pages
 
         private void UpdateBookLabels()
         {
+            decimal priceToBook = stock.PriceToBook;
+            decimal currentRatio = stock.CurrentRatio;
+
+            if (stock.PriceToBook == 0) 
+            {
+                priceToBook = stock.UserEnteredPriceToBook;
+                EntryPriceToBook.IsEnabled = true;
+            }
+            EntryPriceToBook.Text = Util.FormatNumberToCurrency(priceToBook, CURRENCY_TYPE.USD);
+
+            if (stock.CurrentRatio == 0)
+            {
+                currentRatio = stock.UserEnteredCurrentRatio;
+                EntryCurrentRatio.IsEnabled = true;
+            }
+            EntryCurrentRatio.Text = currentRatio.ToString("F2");
+
+			LabelBookValue.Text = Util.FormatNumberToCurrency(stock.BookValuePerShare, CURRENCY_TYPE.USD);
+			EntryPriceToBook.Text = Util.FormatNumberToCurrency(priceToBook, CURRENCY_TYPE.USD);
+
             decimal entryPriceBookValue = stock.BookValuePerShare * 0.80M;
             LabelEntryBookValuePrice.Text = Util.FormatNumberToCurrency(entryPriceBookValue, CURRENCY_TYPE.USD);
 
@@ -361,61 +373,7 @@ namespace CoreInvestmentApp.Pages
             decimal reviewPrice = 1.2M * entryPrice;
             LabelEpsReviewPrice.Text = "  " + Util.FormatNumberToCurrency(reviewPrice, CURRENCY_TYPE.USD) + "  ";
 
-            Util.SaveStockToDB(stock);
-        }
-
-        private void EntryThreeYears_Completed(object sender, EventArgs e)
-        {
-            decimal threeYear = 0.0M;
-            bool result = Decimal.TryParse(EntryThreeYears.Text, out threeYear);
-
-            if (result)
-            {
-                stock.ThreeYearsGrowth = threeYear;
-            }
-
-            EntryThreeYears.Text = threeYear.ToString("F2");
-
-            decimal fiveYear = Convert.ToDecimal(EntryFiveYears.Text);
-            decimal estimatedGrowth = (threeYear > fiveYear) ? fiveYear : threeYear;
-
-            stock.EpsEstimatedGrowth = estimatedGrowth;
-            EntryEstimate.Text = stock.EpsEstimatedGrowth.ToString("F2");
-
-            decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
-            LabelEpsEntryPrice.Text = "  " + Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD) + "  ";
-            stock.GrowthEntryPrice = entryPrice;
-
-            decimal reviewPrice = 1.2M * entryPrice;
-            LabelEpsReviewPrice.Text = "  " + Util.FormatNumberToCurrency(reviewPrice, CURRENCY_TYPE.USD) + "  ";
-
-            Util.SaveStockToDB(stock);
-        }
-
-        private void EntryFiveYears_Completed(object sender, EventArgs e)
-        {
-            decimal fiveYear = 0.0M;
-            bool result = Decimal.TryParse(EntryFiveYears.Text, out fiveYear);
-
-            if (result)
-            {
-                stock.FiveYearsGrowth = fiveYear;
-            }
-
-            EntryFiveYears.Text = fiveYear.ToString("F2");
-
-            decimal threeYear = Convert.ToDecimal(EntryFiveYears.Text);
-            decimal estimatedGrowth = (fiveYear > threeYear) ? threeYear : fiveYear;
-
-            stock.EpsEstimatedGrowth = estimatedGrowth;
-            EntryEstimate.Text = stock.EpsEstimatedGrowth.ToString("F2");
-
-            decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
-            LabelEpsEntryPrice.Text = "  " + Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD) + "  ";
-            stock.GrowthEntryPrice = entryPrice;
-
-            decimal reviewPrice = 1.2M * entryPrice;
-            LabelEpsReviewPrice.Text = "  " + Util.FormatNumberToCurrency(reviewPrice, CURRENCY_TYPE.USD) + "  ";
+            stock.UserEnteredGrowthPercent = true;
 
             Util.SaveStockToDB(stock);
         }
@@ -423,7 +381,7 @@ namespace CoreInvestmentApp.Pages
         private void EntryCashDividend_Completed(object sender, EventArgs e)
         {
             string text = EntryCashDividend.Text;
-            text = Regex.Replace(text, @"[^\d]", "");
+            text = Regex.Replace(text, "[^0-9.]", "");
 
             decimal dividend = 0.0M;
             bool result = Decimal.TryParse(text, out dividend);
@@ -434,6 +392,38 @@ namespace CoreInvestmentApp.Pages
             }
 
             UpdateDividendLabels();
+        }
+
+        private void EntryPriceToBook_Completed(object sender, System.EventArgs e)
+        {
+			string text = EntryCashDividend.Text;
+            text = Regex.Replace(text, "[^0-9.]", "");
+
+			decimal priceToBook = 0.0M;
+			bool result = Decimal.TryParse(text, out priceToBook);
+
+			if (result)
+			{
+				stock.UserEnteredPriceToBook = priceToBook;
+			}
+
+            UpdateBookLabels();
+        }
+
+        private void EntryCurrentRatio_Completed(object sender, System.EventArgs e)
+        {
+			string text = EntryCurrentRatio.Text;
+			text = Regex.Replace(text, @"[^\d]", "");
+
+			decimal currentRatio = 0.0M;
+			bool result = Decimal.TryParse(text, out currentRatio);
+
+			if (result)
+			{
+                stock.CurrentRatio = currentRatio;
+			}
+
+            UpdateBookLabels();
         }
     }
 }

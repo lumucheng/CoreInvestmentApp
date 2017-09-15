@@ -40,12 +40,12 @@
 
                     <StackLayout Orientation="Horizontal">
                         <messier16:Checkbox x:Name="ChkBoxCost" WidthRequest="45" />
-                        <Label FontSize="Medium" Text="Cost Advantage" VerticalOptions="Center" />
+                        <Label FontSize="Medium" Text="Cost Advantages" VerticalOptions="Center" />
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
                         <messier16:Checkbox x:Name="ChkBoxEfficientScale" WidthRequest="45" />
-                        <Label FontSize="Medium" Text="Efficient Scale" VerticalOptions="Center" />
+                        <Label FontSize="Medium" Text="Economies Of Scope" VerticalOptions="Center" />
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
@@ -54,8 +54,6 @@
                     </StackLayout>
 
                     <Label Text="CORE" FontSize="Large" FontAttributes="Bold" />
-
-                    <Label Text="C" FontSize="Medium" FontAttributes="Bold" />
 
                     <oxy:PlotView x:Name="EPSChart" Model="{Binding EPSModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand" />
 
@@ -67,7 +65,7 @@
                         <Label FontSize="Medium" Text="Constant EPS" VerticalOptions="Center" />
                     </StackLayout>
 
-                    <Label Text="O" FontSize="Medium" FontAttributes="Bold" />
+                    <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="Black" Margin="5, 10, 5, 10" />
                     
                     <oxy:PlotView x:Name="OCFChart"  Model="{Binding OCFModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand"  />
 
@@ -78,7 +76,7 @@
                         <Label FontSize="Medium" Text="Operation Cash Flow" VerticalOptions="Center" />
                     </StackLayout>
 
-                    <Label Text="R" FontSize="Medium" FontAttributes="Bold" />
+                    <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="Black" Margin="5, 10, 5, 10" />
 
                     <oxy:PlotView x:Name="DTEChart"  Model="{Binding DTEModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand"  />
 
@@ -105,7 +103,7 @@
                         <Label FontSize="Medium" Text="Reliable" VerticalOptions="Center"  />
                     </StackLayout>
 
-                    <Label Text="E" FontSize="Medium" FontAttributes="Bold" />
+                    <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="Black" Margin="5, 10, 5, 10" />
 
                     <oxy:PlotView x:Name="ROEChart"  Model="{Binding ROEModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand"  />
 

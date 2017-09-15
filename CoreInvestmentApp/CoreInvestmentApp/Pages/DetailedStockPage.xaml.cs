@@ -36,11 +36,19 @@ namespace CoreInvestmentApp.Pages
                 Command = new Command(() => Navigation.PushModalAsync(new NavigationPage(new AddPortfolioPage(stock))))
             });
 
-            UserDialogs.Instance.ShowLoading("Loading..", MaskType.Black);
-            GetDetailedInfoAsync().ContinueWith((task) =>
+
+            if (DateTime.Now > stock.LastUpdated.AddHours(1))
             {
-                UserDialogs.Instance.HideLoading();
-            });
+				UserDialogs.Instance.ShowLoading("Loading..", MaskType.Black);
+				GetDetailedInfoAsync().ContinueWith((task) =>
+				{
+					UserDialogs.Instance.HideLoading();
+				});
+            }
+            else 
+            {
+                LayoutInterface();
+            }
         }
 
         private async Task GetDetailedInfoAsync()
@@ -49,12 +57,12 @@ namespace CoreInvestmentApp.Pages
 
             if (stock.Description != null)
             {
-                query = string.Format(Util.IntrinioAPIUrl + "/data_point?identifier={0}&item=,adj_close_price,volume,52_week_high,52_week_low,marketcap,basiceps,epsgrowth,debttoequity,cashdividendspershare,dividendyield,bookvaluepershare,pricetobook", stock.StockIdentifier.Ticker);
+                query = string.Format(Util.IntrinioAPIUrl + "/data_point?identifier={0}&item=,adj_close_price,volume,52_week_high,52_week_low,marketcap,basiceps,epsgrowth,debttoequity,cashdividendspershare,dividendyield,bookvaluepershare,pricetobook,currentratio", stock.StockIdentifier.Ticker);
             }
             else
             {
                 query = string.Format(Util.IntrinioAPIUrl +
-                    "/data_point?identifier={0}&item=long_description,adj_close_price,volume,52_week_high,52_week_low,sector,marketcap,basiceps,epsgrowth,debttoequity,cashdividendspershare,dividendyield,bookvaluepershare,pricetobook,pricetoearnings", stock.StockIdentifier.Ticker);
+                    "/data_point?identifier={0}&item=long_description,adj_close_price,volume,52_week_high,52_week_low,sector,marketcap,basiceps,epsgrowth,debttoequity,cashdividendspershare,dividendyield,bookvaluepershare,pricetobook,pricetoearnings,currentratio", stock.StockIdentifier.Ticker);
             }
 
             HttpClient client = Util.GetAuthHttpClient();
@@ -185,8 +193,17 @@ namespace CoreInvestmentApp.Pages
                             stock.PriceToEarnings = priceToEarnings;
                         }
                     }
+					else if (item == "currentratio")
+					{
+						decimal currentRatio;
+						if (Decimal.TryParse(value, out currentRatio))
+						{
+                            stock.CurrentRatio = currentRatio;
+						}
+					}
                 }
 
+                stock.LastUpdated = DateTime.Now;
                 await GetHistoricalEPS();
             }
         }

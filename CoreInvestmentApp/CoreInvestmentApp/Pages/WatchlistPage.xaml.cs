@@ -43,7 +43,7 @@ namespace CoreInvestmentApp.Pages
 
         private void Page_Appearing(object sender, EventArgs e)
         {
-            LoadTickersFromDBAsync(false);
+            LoadTickersFromDBAsync(true);
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -64,7 +64,13 @@ namespace CoreInvestmentApp.Pages
             Dictionary<string, Stock> stockDictionary = new Dictionary<string, Stock>();
             string identifierQuery = "";
 
-            if (check || vAllStock.Count() > StockList.Count)
+            if (vAllStock.Count() == 0)
+            {
+                StockListView.ItemsSource = null;
+				StockListView.IsRefreshing = false;
+				StockListView.EndRefresh();
+            }
+            else if (check || vAllStock.Count() > StockList.Count)
             {
                 foreach (RealmStockJson stockJson in vAllStock)
                 {

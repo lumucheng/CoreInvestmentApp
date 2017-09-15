@@ -28,14 +28,19 @@ namespace CoreInvestmentApp.Model
         public decimal BookValuePerShare { get; set; }
         public decimal PriceToBook { get; set; }
         public decimal PriceToEarnings { get; set; }
+        public decimal CurrentRatio { get; set; }
 
-        public decimal ThreeYearsGrowth { get; set; }
-        public decimal FiveYearsGrowth { get; set; }
+        public bool UserEnteredGrowthPercent { get; set; }
+        public decimal UserEnteredGrowthValue { get; set; }
         public decimal UserEnteredDividend { get; set; }
+        public decimal UserEnteredPriceToBook { get; set; }
+        public decimal UserEnteredCurrentRatio { get; set; }
 
 		public string Sector { get; set; }
         public string ImageUrl { get; set; }
         public string Description { get; set; }
+
+        public DateTimeOffset LastUpdated;
 
         // NICES
         public bool NetworkEffect { get; set; }
@@ -149,7 +154,5 @@ namespace CoreInvestmentApp.Model
         {
             get { return Util.FormatNumberToPercent(EpsGrowth); }
         }
-
-        
     }
 }

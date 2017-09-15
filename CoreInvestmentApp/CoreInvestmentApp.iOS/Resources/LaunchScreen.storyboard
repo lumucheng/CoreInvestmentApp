@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X5k-f2-b5h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="X5k-f2-b5h" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -9,23 +9,43 @@
             <objects>
                 <viewController id="X5k-f2-b5h" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Y8P-hJ-Z43"/>
-                        <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
+                        <viewControllerLayoutGuide type="top" id="126"/>
+                        <viewControllerLayoutGuide type="bottom" id="127"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="Icon-60.png" translatesAutoresizingMaskIntoConstraints="NO" id="23">
-                                <rect key="frame" x="270" y="270" width="60" height="60"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" image="splash-core.jpg" id="23" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                        <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                         <constraints>
-                            <constraint firstItem="23" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" priority="1" id="39"/>
-                            <constraint firstItem="23" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" priority="1" id="41"/>
+                            <constraint id="140" firstItem="23" firstAttribute="width" secondItem="yd7-JS-zBw" secondAttribute="width"/>
+                            <constraint id="142" firstItem="23" firstAttribute="height" secondItem="yd7-JS-zBw" secondAttribute="height"/>
+                            <constraint id="151" firstItem="yd7-JS-zBw" firstAttribute="trailing" secondItem="23" secondAttribute="trailing"/>
+                            <constraint id="152" firstItem="yd7-JS-zBw" firstAttribute="bottom" secondItem="23" secondAttribute="bottom"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="140"/>
+                                <exclude reference="142"/>
+                                <exclude reference="151"/>
+                                <exclude reference="152"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="140"/>
+                                <include reference="142"/>
+                                <include reference="151"/>
+                                <include reference="152"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -34,6 +54,37 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon-60.png" width="180" height="180"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default-Portrait.png" width="768" height="1004"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Icon-76.png" width="76" height="76"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Icon-16.png" width="16" height="16"/>
+        <image name="Icon-24.png" width="24" height="24"/>
+        <image name="Icon-32.png" width="32" height="32"/>
+        <image name="Icon-40.png" width="40" height="40"/>
+        <image name="Icon-64.png" width="64" height="64"/>
+        <image name="Icon-72.png" width="72" height="72"/>
+        <image name="Icon-120.png" width="120" height="120"/>
+        <image name="Icon-152.png" width="152" height="152"/>
+        <image name="Icon-167.png" width="167" height="167"/>
+        <image name="Icon-180.png" width="180" height="180"/>
+        <image name="Icon-Small-50.png" width="50" height="50"/>
+        <image name="Icon.png" width="57" height="57"/>
+        <image name="IconFAB.png" width="133" height="133"/>
+        <image name="accounts.png" width="102" height="102"/>
+        <image name="contacts.png" width="102" height="100"/>
+        <image name="leads.png" width="102" height="102"/>
+        <image name="opportunities.png" width="102" height="102"/>
+        <image name="settings.png" width="14" height="15"/>
+        <image name="book.png" width="512" height="512"/>
+        <image name="chart.png" width="512" height="512"/>
+        <image name="document.png" width="512" height="512"/>
+        <image name="splash-core.jpg" width="351" height="196"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="retina55"/>
+    </simulatedMetricsContainer>
 </document>

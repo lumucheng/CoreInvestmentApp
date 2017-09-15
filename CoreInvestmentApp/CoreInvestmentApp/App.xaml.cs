@@ -24,7 +24,10 @@ namespace CoreInvestmentApp
         {
             InitializeComponent();
 
-            MainPage = new RootPage();
+            if (DateTime.Now < new DateTime(2017, 10, 1))
+            {
+                MainPage = new RootPage();
+            }
         }
 
         protected override void OnStart()
