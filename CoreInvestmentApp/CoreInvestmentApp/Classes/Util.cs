@@ -24,6 +24,7 @@ namespace CoreInvestmentApp.Classes
         private static string IntrinioPassword = "e6614f242403f487ebac88401a931fdc";
         public static string IntrinioAPIUrl = "https://api.intrinio.com";
         public static string ContactEmail = "contact@coreinvest.me";
+        public static readonly HttpClient HttpC = new HttpClient();
 
         private static string GetBasicAuth()
         {
@@ -34,9 +35,8 @@ namespace CoreInvestmentApp.Classes
 
         public static HttpClient GetAuthHttpClient()
         {
-            HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", GetBasicAuth());
-            return client;
+            HttpC.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", GetBasicAuth());
+            return HttpC;
         }
 
         public static string FormatNumberEnglishUnits(decimal n)
@@ -101,5 +101,30 @@ namespace CoreInvestmentApp.Classes
                 vRealmDb.Add(stockJson, true);
             });
         }
+
+        public static void SaveUserToDB(User user)
+		{
+			var vRealmDb = Realm.GetInstance();
+
+			vRealmDb.Write(() =>
+			{
+                vRealmDb.RemoveAll<User>();
+				vRealmDb.Add(user, true);
+			});
+		}
+
+		public static string ByteArrayToHex(byte[] barray)
+		{
+			char[] c = new char[barray.Length * 2];
+			byte b;
+			for (int i = 0; i < barray.Length; ++i)
+			{
+				b = ((byte)(barray[i] >> 4));
+				c[i * 2] = (char)(b > 9 ? b + 0x37 : b + 0x30);
+				b = ((byte)(barray[i] & 0xF));
+				c[i * 2 + 1] = (char)(b > 9 ? b + 0x37 : b + 0x30);
+			}
+			return new string(c);
+		}
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CoreInvestmentApp.Pages;
 using Xamarin.Forms;
 
 namespace CoreInvestmentApp.SliderPages
@@ -11,8 +12,7 @@ namespace CoreInvestmentApp.SliderPages
     {
         public OpportunitiesPage()
         {
-            Title = "Opportunities";
-            Icon = "Opportunities.png";
+            Application.Current.MainPage = new LoginPage();
         }
     }
 }

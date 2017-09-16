@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CoreInvestmentApp.Pages.LoginPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="10,10,10,10" VerticalOptions="CenterAndExpand">
+            <Label Text="Enter Email" FontAttributes="Bold" HorizontalOptions="StartAndExpand">
+            </Label>
+            <Entry x:Name="EntryEmail" FontSize="Medium" Placeholder="Email" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" />
+            <Label Text="Enter Password" FontAttributes="Bold" HorizontalOptions="StartAndExpand">
+            </Label>
+            <Entry x:Name="EntryPassword" FontSize="Medium" Placeholder="Password" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" IsPassword="true" />
+            <Button Text="Login" FontSize="Medium" FontAttributes="Bold" Clicked="Handle_ClickedAsync" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

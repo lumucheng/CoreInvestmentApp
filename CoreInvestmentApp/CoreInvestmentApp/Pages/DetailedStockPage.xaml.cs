@@ -23,7 +23,6 @@ namespace CoreInvestmentApp.Pages
         RelativeLayout relativeLayout;
         SwitcherPageViewModel viewModel;
         Stock stock;
-        ToolbarItem saveItem;
 
         public DetailedStockPage(Stock stock)
         {
