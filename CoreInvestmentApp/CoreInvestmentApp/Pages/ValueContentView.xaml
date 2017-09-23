@@ -116,11 +116,11 @@
                                 HorizontalOptions="CenterAndExpand"
                                 WidthRequest="100">
                         </local:CurvedCornersLabel>
-                        <Label Text="Growth (%)" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                        <Label Text="Growth (%)" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
                     </StackLayout>
                 </Grid>
 
-                <Label Text="Earning per share estimated growth (%)" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                <Label Text="Earning per share estimated growth (%)" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
                 <local:ExtendedEntry x:Name="EntryEstimate" FontSize="Large" Text="12.5" Placeholder="Enter Estimate" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Completed="EntryEstimate_Completed" Keyboard="Numeric" />
 
                 <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
@@ -183,21 +183,8 @@
                     </Grid.ColumnDefinitions>
 
                     <StackLayout Orientation="Vertical" Grid.Column="0" HorizontalOptions="FillAndExpand">
-                        <!--<local:CurvedCornersLabel
-                                x:Name="LabelCashDividend"
-                                HorizontalTextAlignment="Center"
-                                VerticalTextAlignment="Center"
-                                FontSize="Medium"
-                                HeightRequest="30"
-                                CurvedBackgroundColor="#5E9EA0"
-                                TextColor="White"
-                                CurvedCornerRadius="15"
-                                HorizontalOptions="CenterAndExpand"
-                                WidthRequest="100">
-                        </local:CurvedCornersLabel>-->
-                        <local:ExtendedEntry x:Name="EntryCashDividend"  HorizontalTextAlignment="Center"
-                                FontSize="Medium"
-                                TextColor="Black" HorizontalOptions="CenterAndExpand" WidthRequest="100" Completed="EntryCashDividend_Completed" Keyboard="Numeric" IsEnabled="false">
+                        <local:ExtendedEntry x:Name="EntryCashDividend" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="White"
+                            HorizontalOptions="CenterAndExpand" WidthRequest="120" Completed="EntryCashDividend_Completed" Keyboard="Numeric" IsEnabled="false" BackgroundColor="#5E9EA0" >
                         </local:ExtendedEntry>
                         <Label Text="Cash Dividend" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                     </StackLayout>
@@ -213,7 +200,7 @@
                                 TextColor="White"
                                 CurvedCornerRadius="15"
                                 HorizontalOptions="CenterAndExpand"
-                                WidthRequest="100">
+                                WidthRequest="120">
                         </local:CurvedCornersLabel>
                         <Label Text="Current Yield" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                     </StackLayout>
@@ -272,7 +259,7 @@
 
                 <Label Text="Current Book Value" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
 
-                <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+                <Grid Padding="5" RowSpacing="10" ColumnSpacing="10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
@@ -282,23 +269,11 @@
                     </Grid.ColumnDefinitions>
 
                     <StackLayout Orientation="Vertical" Grid.Column="0" HorizontalOptions="FillAndExpand">
-                        <local:CurvedCornersLabel
-                                x:Name="LabelBookValue"
-                                HorizontalTextAlignment="Center"
-                                VerticalTextAlignment="Center"
-                                FontSize="Medium"
-                                HeightRequest="30"
-                                CurvedBackgroundColor="#5E9EA0"
-                                TextColor="White"
-                                CurvedCornerRadius="15"
-                                HorizontalOptions="CenterAndExpand"
-                                WidthRequest="100">
-                        </local:CurvedCornersLabel>
+                        <local:ExtendedEntry x:Name="EntryBookValue" FontSize="Medium" Placeholder="Enter Price To Book" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" BackgroundColor="#5E9EA0" Completed="EntryBookValue_Completed" Keyboard="Numeric" IsEnabled="false" />
                         <Label Text="Book Value" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" Grid.Column="1" HorizontalOptions="FillAndExpand">
-                    <!--
                         <local:CurvedCornersLabel
                                 x:Name="LabelPriceToBook"
                                 HorizontalTextAlignment="Center"
@@ -309,16 +284,13 @@
                                 TextColor="White"
                                 CurvedCornerRadius="15"
                                 HorizontalOptions="CenterAndExpand"
-                                WidthRequest="100">
+                                WidthRequest="120">
                         </local:CurvedCornersLabel>
-                        -->
-                        
-                        <local:ExtendedEntry x:Name="EntryPriceToBook" FontSize="Medium" Placeholder="Enter Price To Book" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Completed="EntryPriceToBook_Completed" Keyboard="Numeric" IsEnabled="false" />
                         <Label Text="Price to Book" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                     </StackLayout>
                 </Grid>
 
-                <local:ExtendedEntry x:Name="EntryCurrentRatio" FontSize="Large" Placeholder="Enter Ratio" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Completed="EntryCurrentRatio_Completed" Keyboard="Numeric" IsEnabled="false" />
+                <local:ExtendedEntry x:Name="EntryCurrentRatio" FontSize="Medium" Placeholder="Enter Ratio" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" Completed="EntryCurrentRatio_Completed" Keyboard="Numeric" IsEnabled="false" BackgroundColor="#5E9EA0" />
                 <Label Text="Current Ratio" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
 
                 <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
@@ -362,7 +334,6 @@
                         <Label Text="Review Price" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                     </StackLayout>
                 </Grid>
-
             </StackLayout>
         </ScrollView>
     </ContentView.Content>

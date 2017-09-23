@@ -15,7 +15,7 @@ namespace CoreInvestmentApp.Menu
         {
             this.Add(new MenuItem()
             {
-                Title = "Watch List",
+                Title = "Watchlist",
                 IconSource = "contacts.png",
                 TargetType = typeof(WatchlistPage)
             });

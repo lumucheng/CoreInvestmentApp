@@ -119,6 +119,8 @@ namespace CoreInvestmentApp.Pages
             {
                 dividendValue = stock.UserEnteredDividend;
                 EntryCashDividend.IsEnabled = true;
+                EntryCashDividend.BackgroundColor = Color.White;
+                EntryCashDividend.TextColor = Color.Black;
             }
 
             decimal dividendEntry = (dividendValue / Decimal.Parse(EntryExpectedDividendYield.Text)) * 100;
@@ -137,30 +139,32 @@ namespace CoreInvestmentApp.Pages
 
         private void UpdateBookLabels()
         {
-            decimal priceToBook = stock.PriceToBook;
+            decimal bookValuePerShare = stock.BookValuePerShare;
             decimal currentRatio = stock.CurrentRatio;
 
-            if (stock.PriceToBook == 0) 
+            LabelPriceToBook.Text = Util.FormatNumberToCurrency(stock.PriceToBook, CURRENCY_TYPE.USD);
+
+            if (stock.BookValuePerShare == 0) 
             {
-                priceToBook = stock.UserEnteredPriceToBook;
-                EntryPriceToBook.IsEnabled = true;
+                bookValuePerShare = stock.UserBookValuePerShare;
+                EntryBookValue.IsEnabled = true;
+				EntryBookValue.BackgroundColor = Color.White;
+				EntryBookValue.TextColor = Color.Black;
             }
-            EntryPriceToBook.Text = Util.FormatNumberToCurrency(priceToBook, CURRENCY_TYPE.USD);
+            EntryBookValue.Text = Util.FormatNumberToCurrency(bookValuePerShare, CURRENCY_TYPE.USD);
 
             if (stock.CurrentRatio == 0)
             {
                 currentRatio = stock.UserEnteredCurrentRatio;
                 EntryCurrentRatio.IsEnabled = true;
+
             }
             EntryCurrentRatio.Text = currentRatio.ToString("F2");
 
-			LabelBookValue.Text = Util.FormatNumberToCurrency(stock.BookValuePerShare, CURRENCY_TYPE.USD);
-			EntryPriceToBook.Text = Util.FormatNumberToCurrency(priceToBook, CURRENCY_TYPE.USD);
-
-            decimal entryPriceBookValue = stock.BookValuePerShare * 0.80M;
+            decimal entryPriceBookValue = bookValuePerShare * 0.80M;
             LabelEntryBookValuePrice.Text = Util.FormatNumberToCurrency(entryPriceBookValue, CURRENCY_TYPE.USD);
 
-            decimal bookExpectedReturn = entryPriceBookValue * 1.25M;
+            decimal bookExpectedReturn = bookValuePerShare * 1.25M;
             LabelBookValuerReviewPrice.Text = Util.FormatNumberToCurrency(bookExpectedReturn, CURRENCY_TYPE.USD);
 
             stock.AssetEntryPrice = entryPriceBookValue;
@@ -394,17 +398,17 @@ namespace CoreInvestmentApp.Pages
             UpdateDividendLabels();
         }
 
-        private void EntryPriceToBook_Completed(object sender, System.EventArgs e)
+        private void EntryBookValue_Completed(object sender, System.EventArgs e)
         {
-			string text = EntryCashDividend.Text;
+            string text = EntryBookValue.Text;
             text = Regex.Replace(text, "[^0-9.]", "");
 
-			decimal priceToBook = 0.0M;
-			bool result = Decimal.TryParse(text, out priceToBook);
+			decimal bookValue = 0.0M;
+			bool result = Decimal.TryParse(text, out bookValue);
 
 			if (result)
 			{
-				stock.UserEnteredPriceToBook = priceToBook;
+				stock.UserBookValuePerShare = bookValue;
 			}
 
             UpdateBookLabels();

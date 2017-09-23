@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using CoreInvestmentApp.Classes;
 
 namespace CoreInvestmentApp.Pages
 {
@@ -28,10 +29,18 @@ namespace CoreInvestmentApp.Pages
             LabelName.Text = stock.Name;
             LabelTicker.Text = stock.StockIdentifier.Ticker;
             LabelMarketCap.Text = stock.MarketCapString;
+            EditorRemarks.Text = stock.Remarks;
             circleImage.Source = stock.ImageUrl;
 
             // Bind data to chart.
             // pieChart.BindingContext = ViewModelLocator.OxyExData;
         }
-	}
+
+        private void Handle_Completed(object sender, System.EventArgs e)
+        {
+            stock.Remarks = EditorRemarks.Text.Trim();
+
+            Util.SaveStockToDB(stock);
+        }
+    }
 }

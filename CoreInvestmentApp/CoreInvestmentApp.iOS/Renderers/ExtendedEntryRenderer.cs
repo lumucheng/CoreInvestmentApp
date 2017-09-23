@@ -21,6 +21,11 @@ namespace CoreInvestmentApp.iOS.Renderers
 			// Check only for Numeric keyboard
 			if (this.Element.Keyboard == Keyboard.Numeric)
 				this.AddDoneButton();
+
+            if (!this.Element.IsEnabled)
+            {
+                this.Control.TextColor = UIColor.White;
+            }
 		}
 
 		/// <summary>

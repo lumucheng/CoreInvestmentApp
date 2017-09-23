@@ -17,6 +17,8 @@ namespace CoreInvestmentApp.Pages
         public LoginPage()
         {
             InitializeComponent();
+
+            ImageLogo.Source = ImageSource.FromFile("core_logo.jpg");
         }
 
         void Handle_ClickedAsync(object sender, System.EventArgs e)
@@ -57,10 +59,12 @@ namespace CoreInvestmentApp.Pages
                 // Login success
 
                 // Save to DB for future login
-                User user = new User();
-                user.Email = email;
-                user.P = hashHex;
-                Util.SaveUserToDB(user);
+                // User user = new User();
+                // user.Email = email;
+                // user.P = hashHex;
+                // Util.SaveUserToDB(user);
+
+                Util.SaveCredentials(email, hashHex);
 
 				Application.Current.MainPage = new RootPage();
             }

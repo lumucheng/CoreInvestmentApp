@@ -37,6 +37,11 @@ namespace CoreInvestmentApp.Pages
                 StackLay.VerticalOptions = LayoutOptions.StartAndExpand;
             }
 
+            this.Appearing += Page_Appearing;
+        }
+
+        private void Page_Appearing(object sender, EventArgs e)
+        {
             Init();
         }
 
@@ -210,7 +215,12 @@ namespace CoreInvestmentApp.Pages
 
         private void ListViewPortfolio_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            // TODO: Update Page
+			if (e.SelectedItem != null)
+			{
+                PortfolioStock portfolio = (PortfolioStock)e.SelectedItem;
+                Navigation.PushModalAsync(new NavigationPage(new EditPortfolioPage(portfolio)));
+				((ListView)sender).SelectedItem = null;
+			}
         }
 
         private void MenuItem_Clicked(object sender, EventArgs e)

@@ -30,12 +30,6 @@ namespace CoreInvestmentApp.Model
         public decimal PriceToEarnings { get; set; }
         public decimal CurrentRatio { get; set; }
 
-        public bool UserEnteredGrowthPercent { get; set; }
-        public decimal UserEnteredGrowthValue { get; set; }
-        public decimal UserEnteredDividend { get; set; }
-        public decimal UserEnteredPriceToBook { get; set; }
-        public decimal UserEnteredCurrentRatio { get; set; }
-
 		public string Sector { get; set; }
         public string ImageUrl { get; set; }
         public string Description { get; set; }
@@ -60,6 +54,14 @@ namespace CoreInvestmentApp.Model
         public bool InflationRisk { get; set; }
         public bool StructureSystemRisk { get; set; }
         public bool TechnologyRisk { get; set; }
+
+		// User Entered Data
+		public bool UserEnteredGrowthPercent { get; set; }
+		public decimal UserEnteredGrowthValue { get; set; }
+		public decimal UserEnteredDividend { get; set; }
+		public decimal UserBookValuePerShare { get; set; }
+		public decimal UserEnteredCurrentRatio { get; set; }
+        public string Remarks;
 
         // Calculated based on user input
         public decimal GrowthEntryPrice { get; set; }

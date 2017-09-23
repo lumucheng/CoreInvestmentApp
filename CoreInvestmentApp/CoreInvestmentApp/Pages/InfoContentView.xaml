@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
@@ -23,7 +23,14 @@
                 <Label Text="52 Week Low" FontSize="Medium" FontAttributes="Bold" />
                 <Label x:Name="LabelFiftyTwoLow" TextColor="#FF0000" FontSize="Medium" FontAttributes="Bold" />
                 <BoxView Color="Gray" HeightRequest="1"/>
+                <Label Text="Remarks" FontSize="Medium" FontAttributes="Bold" />
 
+                <Frame OutlineColor="Silver" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                    <Editor x:Name="EditorRemarks" HorizontalOptions="FillAndExpand" HeightRequest="125" Completed="Handle_Completed" ></Editor>
+                </Frame>
+
+                <BoxView Color="Gray" HeightRequest="1"/>
+                
                 <Label x:Name="LabelSector" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                 <Label Text="Market Share" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
                 <Label Text="Based on Market Capitalization" FontSize="Medium" HorizontalOptions="CenterAndExpand" />

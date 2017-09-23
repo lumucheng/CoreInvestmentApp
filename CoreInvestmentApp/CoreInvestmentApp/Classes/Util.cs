@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Auth;
 
 namespace CoreInvestmentApp.Classes
 {
@@ -25,6 +26,7 @@ namespace CoreInvestmentApp.Classes
         public static string IntrinioAPIUrl = "https://api.intrinio.com";
         public static string ContactEmail = "contact@coreinvest.me";
         public static readonly HttpClient HttpC = new HttpClient();
+        private static readonly string AppName = "CoreInvest";
 
         private static string GetBasicAuth()
         {
@@ -125,6 +127,46 @@ namespace CoreInvestmentApp.Classes
 				c[i * 2 + 1] = (char)(b > 9 ? b + 0x37 : b + 0x30);
 			}
 			return new string(c);
+		}
+
+		public static void SaveCredentials(string userName, string password)
+		{
+			if (!string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(password))
+			{
+				Account account = new Account
+				{
+					Username = userName
+				};
+				account.Properties.Add("Password", password);
+                AccountStore.Create().Save(account, AppName);
+			}
+		}
+
+        public static void RemoveCredentials()
+		{
+			var account = AccountStore.Create().FindAccountsForService(AppName).FirstOrDefault();
+			if (account != null)
+			{
+				AccountStore.Create().Delete(account, AppName);
+			}
+		}
+
+		public static string UserName
+		{
+			get
+			{
+				var account = AccountStore.Create().FindAccountsForService(AppName).FirstOrDefault();
+				return (account != null) ? account.Username : null;
+			}
+		}
+
+		public static string Password
+		{
+			get
+			{
+				var account = AccountStore.Create().FindAccountsForService(AppName).FirstOrDefault();
+				return (account != null) ? account.Properties["Password"] : null;
+			}
 		}
     }
 }

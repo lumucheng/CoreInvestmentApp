@@ -30,14 +30,17 @@ namespace CoreInvestmentApp
         {
             InitializeComponent();
 
-			var vRealmDb = Realm.GetInstance();
-            var vUser = vRealmDb.All<User>().FirstOrDefault();
+            // var vRealmDb = Realm.GetInstance();
+            // var vUser = vRealmDb.All<User>().FirstOrDefault();
 
-            if (vUser != null)
+            string email = Util.UserName;
+            string p = Util.Password;
+
+            if (email != null && p != null)
             {
                 // Placeholder Page
                 MainPage = new Page();
-                CheckAPI(vUser);
+                CheckAPI(email, p);
             }
             else 
             {
@@ -45,14 +48,14 @@ namespace CoreInvestmentApp
             }
         }
 
-        private async void CheckAPI(User user)
+        private async void CheckAPI(string email, string p)
         {
 			HttpClient client = Util.HttpC;
 
 			var values = new Dictionary<string, string>
 			{
-					{ "email", user.Email },
-					{ "p", user.P }
+					{ "email", email },
+					{ "p", p }
 			};
 
 			var content = new FormUrlEncodedContent(values);
