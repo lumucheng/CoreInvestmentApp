@@ -42,9 +42,14 @@ namespace CoreInvestmentApp.Pages
 			ToolbarItems.Add(new ToolbarItem
 			{
 				Text = "Cancel",
-				Command = new Command(() => Navigation.PopModalAsync()),
+				Command = new Command(() => DismissPage()),
 			});
 		}
+
+        private void DismissPage()
+        {
+            Navigation.PopModalAsync();
+        }
 
         private void Entry_Completed(object sender, EventArgs e)
         {
@@ -57,21 +62,23 @@ namespace CoreInvestmentApp.Pages
 
         private async Task SearchAPI()
         {
-            string query = EntrySearch.Text;
+            string query = EntrySearch.Text.ToUpper();
             query = query.Trim();
 
             HttpClient client = Util.GetAuthHttpClient();
-            var uri = new Uri(string.Format(Util.IntrinioAPIUrl + "/companies?query={0}", query));
+            // var uri = new Uri(string.Format(Util.IntrinioAPIUrl + "/companies?query={0}", query));
+            var uri = new Uri(string.Format(Util.IntrinioAPIUrl + "/companies?identifier={0}", query));
             var response = await client.GetAsync(uri);
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync();
-                JObject jsonObject = JObject.Parse(json);
-                JArray data = (JArray)jsonObject["data"];
-                IdentifierList = JsonConvert.DeserializeObject<ObservableCollection<StockIdentifier>>(data.ToString());
+                JObject jObject = JObject.Parse(json);
+                StockIdentifier stockIdentifier = JsonConvert.DeserializeObject<StockIdentifier>(jObject.ToString());
 
-                if (IdentifierList.Count > 0)
+                if (stockIdentifier != null)
                 {
+                    IdentifierList = new ObservableCollection<StockIdentifier>();
+                    IdentifierList.Add(stockIdentifier);
                     StockIdentifierListView.ItemsSource = IdentifierList;
                 }
                 else
@@ -81,7 +88,7 @@ namespace CoreInvestmentApp.Pages
             }
             else
             {
-                UserDialogs.Instance.Alert("Something went wrong with the network", "Error", "OK");
+                UserDialogs.Instance.Toast("No results found", TimeSpan.FromMilliseconds(1000));
             }
         }
 
@@ -101,6 +108,7 @@ namespace CoreInvestmentApp.Pages
                 vRealmDb.Add(stockJson, true);
             });
 
+            MessagingCenter.Send<string>("refresh", "refresh");
             Navigation.PopModalAsync();
         }
     }

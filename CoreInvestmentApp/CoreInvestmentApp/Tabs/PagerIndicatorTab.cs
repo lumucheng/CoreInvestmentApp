@@ -18,7 +18,7 @@ namespace CoreInvestmentApp.Tabs
             HorizontalOptions = LayoutOptions.CenterAndExpand;
             VerticalOptions = LayoutOptions.Center;
             DotColor = Color.Black;
-            BackgroundColor = Color.FromHex("#09b2c9");
+            BackgroundColor = Color.FromHex("89C4F4");
 
             var assembly = typeof(PagerIndicatorTabs).GetTypeInfo().Assembly;
             foreach (var res in assembly.GetManifestResourceNames())
@@ -62,7 +62,7 @@ namespace CoreInvestmentApp.Tabs
                 }
 
                 tab.Children.Add(new Image { Source = img, HeightRequest = 25 });
-                tab.Children.Add(new Label { Text = title, FontSize = 11, VerticalOptions = LayoutOptions.CenterAndExpand, TextColor = Color.White });
+                tab.Children.Add(new Label { Text = title, FontSize = 12, FontAttributes = FontAttributes.Bold, VerticalOptions = LayoutOptions.CenterAndExpand, TextColor = Color.White });
 
                 var tgr = new TapGestureRecognizer();
                 tgr.Command = new Command(() =>

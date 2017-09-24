@@ -39,6 +39,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\CurvedCornersLabel.cs" />
+    <Compile Include="Classes\StripeLabelBackgroundIndexConverter.cs" />
     <Compile Include="Classes\Util.cs" />
     <Compile Include="Model\BookValue.cs" />
     <Compile Include="Model\DebtToEquity.cs" />
@@ -84,9 +85,6 @@
     <Compile Include="Pages\ValueContentView.xaml.cs">
       <DependentUpon>ValueContentView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SliderPages\AccountsPage.cs" />
-    <Compile Include="SliderPages\ContractsPage.cs" />
-    <Compile Include="SliderPages\LeadsPage.cs" />
     <Compile Include="SliderPages\OpportunitiesPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RootPage.cs" />

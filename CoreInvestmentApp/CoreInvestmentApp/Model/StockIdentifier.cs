@@ -13,9 +13,6 @@ namespace CoreInvestmentApp.Model
 		[JsonProperty("name")]
 		public string Name { get; set; }
 
-		[JsonProperty("lei")]
-		public string Lei { get; set; }
-
 		[JsonProperty("cik")]
 		public string Cik { get; set; }
 

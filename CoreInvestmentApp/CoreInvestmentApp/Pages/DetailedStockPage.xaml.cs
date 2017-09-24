@@ -32,9 +32,12 @@ namespace CoreInvestmentApp.Pages
             ToolbarItems.Add(new ToolbarItem
             {
                 Text = "Add",
-                Command = new Command(() => Navigation.PushModalAsync(new NavigationPage(new AddPortfolioPage(stock))))
+                Command = new Command(() => Navigation.PushModalAsync(new NavigationPage(new AddPortfolioPage(stock))
+                {
+                    BarBackgroundColor = Color.FromHex("4B77BE"),
+                    BarTextColor = Color.White
+                }))
             });
-
 
             if (DateTime.Now > stock.LastUpdated.AddHours(1))
             {
@@ -48,6 +51,12 @@ namespace CoreInvestmentApp.Pages
             {
                 LayoutInterface();
             }
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            MessagingCenter.Send<string>("refresh", "refresh");
         }
 
         private async Task GetDetailedInfoAsync()
@@ -530,7 +539,7 @@ namespace CoreInvestmentApp.Pages
 
             StackLayout stackLayout = new StackLayout
             {
-                BackgroundColor = Color.FromHex("#09b2c9"),
+                BackgroundColor = Color.FromHex("#89C4F4"),
                 Orientation = StackOrientation.Vertical,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 Padding = new Thickness(0, 0, 0, 0)
@@ -551,7 +560,7 @@ namespace CoreInvestmentApp.Pages
 
             StackLayout leftLayout = new StackLayout
             {
-                BackgroundColor = Color.FromHex("#09b2c9"),
+                BackgroundColor = Color.FromHex("#89C4F4"),
                 Orientation = StackOrientation.Vertical,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 Padding = new Thickness(0, 0, 0, 0),
@@ -564,7 +573,7 @@ namespace CoreInvestmentApp.Pages
 
             Label LabelFiftyTwo = new Label { Text = "52-week", FontAttributes = FontAttributes.Bold, TextColor = Color.White, FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
 
-            Label LabelFiftyTwoHigh = new Label { Text = "Hi: " + stock.FiftyTwoWeekHighString, FontAttributes = FontAttributes.Bold, TextColor = Color.FromHex("38DE40"), FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
+            Label LabelFiftyTwoHigh = new Label { Text = "Hi: " + stock.FiftyTwoWeekHighString, FontAttributes = FontAttributes.Bold, TextColor = Color.FromHex("#27ae60"), FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
             LabelFiftyTwoHigh.Effects.Add(new SizeFontToFitEffect());
 
             Label LabelFiftyTwoLow = new Label { Text = "Lo: " + stock.FiftyTwoWeekLowString, FontAttributes = FontAttributes.Bold, TextColor = Color.FromHex("FF0000"), FontSize = 16, Margin = new Thickness(10, 5, 0, 5) };
@@ -572,7 +581,7 @@ namespace CoreInvestmentApp.Pages
 
             StackLayout rightLayout = new StackLayout
             {
-                BackgroundColor = Color.FromHex("#09b2c9"),
+                BackgroundColor = Color.FromHex("#89C4F4"),
                 Orientation = StackOrientation.Vertical,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 Padding = new Thickness(0, 0, 0, 0) ,

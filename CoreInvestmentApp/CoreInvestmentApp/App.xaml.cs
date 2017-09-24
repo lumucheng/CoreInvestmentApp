@@ -30,9 +30,6 @@ namespace CoreInvestmentApp
         {
             InitializeComponent();
 
-            // var vRealmDb = Realm.GetInstance();
-            // var vUser = vRealmDb.All<User>().FirstOrDefault();
-
             string email = Util.UserName;
             string p = Util.Password;
 

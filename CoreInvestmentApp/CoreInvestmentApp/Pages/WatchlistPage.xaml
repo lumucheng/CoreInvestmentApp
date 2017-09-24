@@ -10,13 +10,6 @@
     Title="Watchlist">
     <ContentPage.Content>
         <AbsoluteLayout Grid.Row="1">
-            <!--<segcontrol:SegmentedControl x:Name="SegControl" TintColor="#007AFF" SelectedSegment="0" BackgroundColor="#CEE6E5" HorizontalOptions="FillAndExpand" >
-                    <segcontrol:SegmentedControl.Children>
-                        <segcontrol:SegmentedControlOption Text="US" />
-                        <segcontrol:SegmentedControlOption Text="SG" />
-                    </segcontrol:SegmentedControl.Children>
-                </segcontrol:SegmentedControl>
-            <StackLayout x:Name="SegContent"  BackgroundColor="#CEE6E5" Margin="0,0,0,-12" />-->
             <ListView 
                 AbsoluteLayout.LayoutFlags="All"
                 AbsoluteLayout.LayoutBounds="0,1,1,1"
@@ -29,8 +22,8 @@
                 Refreshing="StockListView_Refreshing">
                 
                 <ListView.Header>
-                    <StackLayout Padding="20,20,20,20" BackgroundColor="#64A68C">
-                        <Label Text="Company Information" TextColor="White" FontSize="Medium" FontFamily="Bold" />
+                    <StackLayout Padding="10, 10, 10, 10" BackgroundColor="#89C4F4">
+                        <Label HorizontalOptions="Center" Text="Company Information" TextColor="White" FontSize="Medium" FontFamily="Bold" />
                     </StackLayout>
                 </ListView.Header>
                 <ListView.ItemTemplate>
@@ -54,20 +47,19 @@
                                     <ColumnDefinition Width="50*" />
                                     <ColumnDefinition Width="30*" />
                                 </Grid.ColumnDefinitions>
-                                <controls:CircleImage Aspect="AspectFit" BorderColor="Black" BorderThickness="1" HeightRequest="66" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="66" Grid.RowSpan="3" Source="{Binding ImageUrl}" />
+                                <controls:CircleImage Aspect="AspectFit" BorderColor="Black" BorderThickness="1" HeightRequest="70" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" WidthRequest="70" Grid.RowSpan="3" Source="{Binding ImageUrl}" />
                                 <StackLayout Grid.Column="1" Orientation="Horizontal" Grid.RowSpan="2" Grid.Row="0" VerticalOptions="Start">
-                                    <Label Text="{Binding Name}" VerticalOptions="End" TextColor="Black" FontAttributes="Bold">
-                                    </Label>
+                                    <Label Text="{Binding Name}" VerticalOptions="End" FontAttributes="Bold" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" />
                                     <Label Text="{Binding Category}" VerticalOptions="End" TextColor="Black" BackgroundColor="#faebd6" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
-                                    <Label Text="MKT" TextColor="#287d3b" FontAttributes="Bold"></Label>
+                                    <Label Text="MKT" TextColor="#2ecc71" FontAttributes="Bold"></Label>
                                     <OnPlatform x:TypeArguments="View">
                                         <OnPlatform.Android>
-                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding CurrentValueString}" TextColor="Black" />
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding CurrentValueString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" />
                                         </OnPlatform.Android>
                                         <OnPlatform.iOS>
-                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding CurrentValueString}" TextColor="Black">
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding CurrentValueString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}">
                                                 <Label.Effects>
                                                     <effects:SizeFontToFitEffect />
                                                 </Label.Effects>
@@ -80,10 +72,10 @@
                                     <Label Text="G" TextColor="#ebc361" FontAttributes="Bold"></Label>
                                     <OnPlatform x:TypeArguments="View">
                                         <OnPlatform.Android>
-                                            <Label Text="{Binding GrowthEntryPriceString}" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" TextColor="Black" />
+                                            <Label Text="{Binding GrowthEntryPriceString}" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" />
                                         </OnPlatform.Android>
                                         <OnPlatform.iOS>
-                                            <Label Text="{Binding GrowthEntryPriceString}" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" TextColor="Black">
+                                            <Label Text="{Binding GrowthEntryPriceString}" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}">
                                                 <Label.Effects>
                                                     <effects:SizeFontToFitEffect />
                                                 </Label.Effects>
@@ -96,10 +88,10 @@
                                     <Label Text="D" TextColor="#479eaa" FontAttributes="Bold"></Label>
                                     <OnPlatform x:TypeArguments="View">
                                         <OnPlatform.Android>
-                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding DivdendEntryPriceString}" TextColor="Black" />
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding DivdendEntryPriceString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" />
                                         </OnPlatform.Android>
                                         <OnPlatform.iOS>
-                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding DivdendEntryPriceString}" TextColor="Black">
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding DivdendEntryPriceString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}">
                                                 <Label.Effects>
                                                     <effects:SizeFontToFitEffect />
                                                 </Label.Effects>
@@ -112,10 +104,10 @@
                                     <Label Text="A" TextColor="#efa06a" FontAttributes="Bold"></Label>
                                     <OnPlatform x:TypeArguments="View">
                                         <OnPlatform.Android>
-                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding AssetEntryPriceString}" TextColor="Black" />
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding AssetEntryPriceString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" />
                                         </OnPlatform.Android>
                                         <OnPlatform.iOS>
-                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding AssetEntryPriceString}" TextColor="Black">
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding AssetEntryPriceString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}">
                                                 <Label.Effects>
                                                     <effects:SizeFontToFitEffect />
                                                 </Label.Effects>
@@ -125,13 +117,13 @@
                                 </StackLayout>
                                 
                                 <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="3">
-                                    <Label Text="IC" TextColor="#3B5999" FontAttributes="Bold"></Label>
+                                    <Label Text="IC" TextColor="#ff4081" FontAttributes="Bold"></Label>
                                     <OnPlatform x:TypeArguments="View">
                                         <OnPlatform.Android>
-                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding InvestorConfidenceString}" TextColor="Black" />
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding InvestorConfidenceString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" />
                                         </OnPlatform.Android>
                                         <OnPlatform.iOS>
-                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding InvestorConfidenceString}" TextColor="Black" >
+                                            <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding InvestorConfidenceString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" >
                                                 <Label.Effects>
                                                     <effects:SizeFontToFitEffect />
                                                 </Label.Effects>

@@ -26,7 +26,6 @@ namespace CoreInvestmentApp.Pages
         {
             InitializeComponent();
             StockList = new ObservableCollection<Stock>();
-            this.Appearing += Page_Appearing;
 
 			var addItem = new ToolbarItem
 			{
@@ -35,15 +34,20 @@ namespace CoreInvestmentApp.Pages
 
 			addItem.Clicked += (object sender, System.EventArgs e) =>
 			{
-				Navigation.PushModalAsync(new NavigationPage(new SearchPage()));
+				Navigation.PushModalAsync(new NavigationPage(new SearchPage())
+                {
+                    BarBackgroundColor = Color.FromHex("#4B77BE"),
+                    BarTextColor = Color.White
+                });
 			};
 
             ToolbarItems.Add(addItem);
-        }
 
-        private void Page_Appearing(object sender, EventArgs e)
-        {
-            LoadTickersFromDBAsync(true);
+            MessagingCenter.Subscribe<string>("refresh", "refresh", (sender) => {
+                LoadTickersFromDBAsync();
+            });
+
+            LoadTickersFromDBAsync();
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -56,7 +60,7 @@ namespace CoreInvestmentApp.Pages
             }    
         }
 
-        private void LoadTickersFromDBAsync(bool check)
+        private void LoadTickersFromDBAsync()
         {
             var vRealmDb = Realm.GetInstance();
             var vAllStock = vRealmDb.All<RealmStockJson>();
@@ -70,7 +74,7 @@ namespace CoreInvestmentApp.Pages
 				StockListView.IsRefreshing = false;
 				StockListView.EndRefresh();
             }
-            else if (check || vAllStock.Count() > StockList.Count)
+            else
             {
                 foreach (RealmStockJson stockJson in vAllStock)
                 {
@@ -86,11 +90,6 @@ namespace CoreInvestmentApp.Pages
                 {
                     UserDialogs.Instance.HideLoading();
                 });
-            }
-            else
-            {
-                StockListView.IsRefreshing = false;
-                StockListView.EndRefresh();
             }
         }
 
@@ -160,12 +159,12 @@ namespace CoreInvestmentApp.Pages
                 vRealmDb.Remove(realmJsonObj);   
 		    });
 
-            LoadTickersFromDBAsync(true);
+            LoadTickersFromDBAsync();
         }
 
         private void StockListView_Refreshing(object sender, EventArgs e)
         {
-            LoadTickersFromDBAsync(true);
+            LoadTickersFromDBAsync();
             StockListView.IsRefreshing = false;
             StockListView.EndRefresh();
         }

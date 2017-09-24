@@ -18,7 +18,9 @@ namespace CoreInvestmentApp.Pages
         {
             InitializeComponent();
 
-            ImageLogo.Source = ImageSource.FromFile("core_logo.jpg");
+            ImageLogo.Source = ImageSource.FromFile("core_logo.png");
+            ImageUsername.Source = ImageSource.FromFile("username.png");
+            ImageLock.Source = ImageSource.FromFile("lock.png");
         }
 
         void Handle_ClickedAsync(object sender, System.EventArgs e)
@@ -57,15 +59,7 @@ namespace CoreInvestmentApp.Pages
             if ((bool)jsonObject["status"])
             {
                 // Login success
-
-                // Save to DB for future login
-                // User user = new User();
-                // user.Email = email;
-                // user.P = hashHex;
-                // Util.SaveUserToDB(user);
-
                 Util.SaveCredentials(email, hashHex);
-
 				Application.Current.MainPage = new RootPage();
             }
             else

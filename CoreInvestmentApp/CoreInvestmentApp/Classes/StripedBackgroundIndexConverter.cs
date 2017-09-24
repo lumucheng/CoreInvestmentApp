@@ -11,7 +11,7 @@ namespace CoreInvestmentApp.Classes
 		{
 			if (value == null || parameter == null) return Color.White;
 			var index = ((ListView)parameter).ItemsSource.Cast<object>().ToList().IndexOf(value);
-            return index % 2 == 0 ? Color.FromHex("#E5E5E5") : Color.FromHex("CEE6E5");
+            return index % 2 == 0 ? Color.FromHex("ecf0f1") : Color.FromHex("4B77BE");
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

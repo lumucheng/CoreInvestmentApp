@@ -5,6 +5,9 @@
         <ResourceDictionary>
             <local:StripedBackgroundIndexConverter x:Key="StripedBackgroundIndexConverter">
             </local:StripedBackgroundIndexConverter>
+
+            <local:StripeLabelBackgroundIndexConverter x:Key="StripeLabelBackgroundIndexConverter">
+            </local:StripeLabelBackgroundIndexConverter>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

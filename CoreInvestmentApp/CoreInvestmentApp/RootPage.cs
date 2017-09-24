@@ -15,18 +15,25 @@ namespace CoreInvestmentApp
         public RootPage()
         {
             var menuPage = new MenuPage();
-
             menuPage.Menu.ItemSelected += (sender, e) => NavigateTo(e.SelectedItem as Menu.MenuItem);
 
             Master = menuPage;
-            Detail = new NavigationPage(new WatchlistPage());
+            Detail = new NavigationPage(new WatchlistPage())
+            {
+                BarBackgroundColor = Color.FromHex("#4B77BE"),
+                BarTextColor = Color.White
+            };
         }
 
         void NavigateTo(Menu.MenuItem menu)
         {
             Page displayPage = (Page)Activator.CreateInstance(menu.TargetType);
 
-            Detail = new NavigationPage(displayPage);
+            Detail = new NavigationPage(displayPage)
+            {
+                BarBackgroundColor = Color.FromHex("#4B77BE"),
+                BarTextColor = Color.White
+            };
 
             IsPresented = false;
         }

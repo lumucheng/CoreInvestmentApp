@@ -3,18 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CoreInvestmentApp.Pages.FeedbackPage">
     <ContentPage.Content>
-            <StackLayout Orientation="Vertical" Padding="10,10,10,10">
-                <Label Text="Email To" FontAttributes="Bold" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
-                <Label x:Name="LabelEmailAddress" HorizontalOptions="StartAndExpand"></Label>
+        <StackLayout Orientation="Vertical" Padding="10,10,10,10">
+            <Label Text="Email To" FontAttributes="Bold" HorizontalOptions="StartAndExpand" FontSize="Medium" TextColor="#4B77BE"></Label>
+            <Label x:Name="LabelEmailAddress" HorizontalOptions="StartAndExpand" TextColor="Black" FontAttributes="Bold" FontSize="Large"></Label>
+            <Label Text="Subject" FontAttributes="Bold" HorizontalOptions="StartAndExpand" FontSize="Medium" TextColor="#4B77BE"></Label>
 
-                <Label Text="Subject" FontAttributes="Bold" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
-                <Entry x:Name="EntrySubject" HorizontalOptions="FillAndExpand" ></Entry>
+            <Frame OutlineColor="Silver" VerticalOptions="Fill" HorizontalOptions="FillAndExpand">
+                <Entry x:Name="EntrySubject" HorizontalOptions="FillAndExpand" TextColor="Black" FontAttributes="Bold"></Entry>
+            </Frame>
 
-                <Label Text="Message" FontAttributes="Bold" HorizontalOptions="StartAndExpand" FontSize="Medium"></Label>
+            <Label Text="Message" FontAttributes="Bold" HorizontalOptions="StartAndExpand" FontSize="Medium" TextColor="#4B77BE"></Label>
 
-                <Editor x:Name="EditorMessage" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Editor>
-            
-                <Button x:Name="ButtonSend" Text="Send" FontSize="Medium" FontAttributes="Bold" Clicked="Button_Clicked" />
-            </StackLayout>
+            <Frame OutlineColor="Silver" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Editor x:Name="EditorMessage" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="Black"></Editor>
+            </Frame>
+
+            <Button x:Name="ButtonSend" Text="Send" FontSize="Medium" FontAttributes="Bold" Clicked="Button_Clicked" BackgroundColor="#4B77BE" TextColor="White" />
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

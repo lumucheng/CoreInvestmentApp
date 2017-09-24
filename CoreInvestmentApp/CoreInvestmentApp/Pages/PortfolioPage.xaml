@@ -5,7 +5,7 @@
              x:Class="CoreInvestmentApp.Pages.PortfolioPage">
     <ContentPage.Content>
         <StackLayout x:Name="StackLay" Orientation="Vertical" BackgroundColor="White" VerticalOptions="Start">
-            <StackLayout Orientation="Vertical" VerticalOptions="Fill" BackgroundColor="#09b2c9" Padding="10, 10, 10, 0">
+            <StackLayout Orientation="Vertical" VerticalOptions="Fill" BackgroundColor="#89C4F4" Padding="10, 10, 10, 0">
                 <Label x:Name="LabelTotalCapital" FontAttributes="Bold" TextColor="White" FontSize="Medium"></Label>
                 <StackLayout Orientation="Horizontal">
                     <Label FontAttributes="Bold" Text="P/L" TextColor="White" FontSize="Medium"></Label>
@@ -22,12 +22,12 @@
                 RowHeight="140">
                 <ListView.Header>
                     <StackLayout Orientation="Vertical">
-                        <Label Text="Portfolio" FontSize="Medium" HorizontalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" />
-                        <Label Text="Based on Recorded Transactions" FontSize="Small" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" />
+                        <Label Text="Portfolio" FontSize="Large" HorizontalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" TextColor="#4B77BE"/>
+                        <Label Text="Based on Recorded Transactions" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" TextColor="#4B77BE" />
 
                         <oxy:PlotView x:Name="PlotPortfolio" IsEnabled="False" Model="{Binding PortfolioModel}" HeightRequest="300" WidthRequest="300" Margin="5,20,5,20" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
-                        <StackLayout Padding="20,5,20,5" BackgroundColor="#64A68C">
-                            <Label Text="Portfolio Information" TextColor="White" FontSize="Medium" FontFamily="Bold" />
+                        <StackLayout Padding="20,5,20,5" BackgroundColor="#89C4F4">
+                            <Label Text="Portfolio Information" TextColor="White" FontSize="Medium" FontFamily="Bold" HorizontalOptions="Center" />
                         </StackLayout>
                     </StackLayout>
                 </ListView.Header>
@@ -46,21 +46,25 @@
                                 </Grid.ColumnDefinitions>
 
                                 <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Grid.Column="0">
-                                    <Label Text="{Binding StockName}" TextColor="Black" FontAttributes="Bold" ></Label>
+                                    <Label Text="{Binding StockName}" FontAttributes="Bold" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference ListViewPortfolio}}" />
                                     <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding StockTicker}" TextColor="Black" />
-                                        <Label Text=";" TextColor="Black" />
-                                        <Label Text="{Binding StockSector}" TextColor="Black" />
+                                        <Label Text="{Binding StockTicker}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference ListViewPortfolio}}" />
+                                        <Label Text=";" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference ListViewPortfolio}}" />
+                                        <Label Text="{Binding StockSector}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference ListViewPortfolio}}" />
                                     </StackLayout>
-                                    <Label Text="{Binding DateAddedString}" TextColor="Black" />
                                     <StackLayout Orientation="Horizontal">
-                                        <Label Text="Quantity:" TextColor="#ebc361" FontAttributes="Bold"></Label>
-                                        <Label Text="{Binding Quantity}" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" TextColor="Black"/>
+                                        <Label Text="Date Purchased:" FontAttributes="Bold" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference ListViewPortfolio}}" />
+                                        <Label Text="{Binding DateAddedString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference ListViewPortfolio}}" />
+                                    </StackLayout>
+                                    
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Quantity:" FontAttributes="Bold" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference ListViewPortfolio}}" />
+                                        <Label Text="{Binding Quantity}" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference ListViewPortfolio}}" />
                                     </StackLayout>
 
                                     <StackLayout Orientation="Horizontal">
-                                        <Label Text="P. Price:" TextColor="#efa06a" FontAttributes="Bold" ></Label>
-                                        <Label Text="{Binding PurchasePriceString}" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" TextColor="Black" />
+                                        <Label Text="P. Price:" FontAttributes="Bold" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference ListViewPortfolio}}" />
+                                        <Label Text="{Binding PurchasePriceString}" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference ListViewPortfolio}}" />
                                     </StackLayout>
                                 </StackLayout>
                             </Grid>

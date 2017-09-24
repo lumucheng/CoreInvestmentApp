@@ -7,37 +7,31 @@
     <ContentView.Content>
         <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
             <StackLayout BackgroundColor="White" Padding="15, 10, 10, 10"  Orientation="Vertical" VerticalOptions="FillAndExpand">
-                <Label Text="PROFILE" FontSize="Large" FontAttributes="Bold" />
+                <Label Text="PROFILE" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
                 <Label x:Name="LabelDescription" FontSize="Medium" TextColor="Black" />
 
-                <Label Text="MARKET" FontSize="Large" FontAttributes="Bold" />
-                <Label Text="Adjusted Close Price" FontSize="Medium" FontAttributes="Bold" />
+                <Label Text="MARKET" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
+                <Label Text="Adjusted Close Price" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE" />
                 <Label x:Name="LabelAdjClosePrice" TextColor="Black" FontSize="Medium" FontAttributes="Bold" />
                 <BoxView Color="Gray" HeightRequest="1"/>
-                <Label Text="Volume" FontSize="Medium" FontAttributes="Bold" />
+                <Label Text="Volume" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE" />
                 <Label x:Name="LabelVolume" TextColor="Black" FontSize="Medium" FontAttributes="Bold" />
                 <BoxView Color="Gray" HeightRequest="1"/>
-                <Label Text="52 Week High" FontSize="Medium" FontAttributes="Bold" />
-                <Label x:Name="LabelFiftyTwoHigh" TextColor="#38DE40" FontSize="Medium" FontAttributes="Bold" />
+                <Label Text="52 Week High" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE" />
+                <Label x:Name="LabelFiftyTwoHigh" TextColor="#27ae60" FontSize="Medium" FontAttributes="Bold" />
                 <BoxView Color="Gray" HeightRequest="1"/>
-                <Label Text="52 Week Low" FontSize="Medium" FontAttributes="Bold" />
+                <Label Text="52 Week Low" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE" />
                 <Label x:Name="LabelFiftyTwoLow" TextColor="#FF0000" FontSize="Medium" FontAttributes="Bold" />
                 <BoxView Color="Gray" HeightRequest="1"/>
-                <Label Text="Remarks" FontSize="Medium" FontAttributes="Bold" />
+                <Label Text="Remarks" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE" />
 
                 <Frame OutlineColor="Silver" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
                     <Editor x:Name="EditorRemarks" HorizontalOptions="FillAndExpand" HeightRequest="125" Completed="Handle_Completed" ></Editor>
                 </Frame>
 
                 <BoxView Color="Gray" HeightRequest="1"/>
-                
-                <Label x:Name="LabelSector" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
-                <Label Text="Market Share" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
-                <Label Text="Based on Market Capitalization" FontSize="Medium" HorizontalOptions="CenterAndExpand" />
-               
-                <!--<oxy:PlotView x:Name="pieChart" Model="{Binding PieModel}" HeightRequest="400" WidthRequest="250" Margin="5,5,5,10" HorizontalOptions="CenterAndExpand" />-->
 
-                <BoxView Color="Gray" HeightRequest="1"/>
+                <Label x:Name="LabelSector" FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="#4B77BE" />
 
                 <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
                     <Grid.RowDefinitions>
@@ -76,22 +70,24 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         FontSize="Medium"
-                        TextColor="Black"/>
+                        TextColor="Black"
+                        FontAttributes="Bold"/>
 
                     <Label
                         Grid.Row="1"
                         Grid.Column="1"
                         Text="Market Capitalization"
                         FontSize="Medium"
-                        TextColor="Black"/>
+                        TextColor="Black"
+                        FontAttributes="Bold"/>
 
                     <Label
                         x:Name="LabelMarketCap"
                         Grid.Row="2"
                         Grid.Column="1"
                         FontSize="Medium"
-                        TextColor="Black"/>
-
+                        TextColor="Black"
+                        FontAttributes="Bold"/>
                 </Grid>
             </StackLayout>
         </ScrollView>

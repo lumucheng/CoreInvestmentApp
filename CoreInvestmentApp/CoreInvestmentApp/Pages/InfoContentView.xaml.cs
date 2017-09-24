@@ -38,9 +38,12 @@ namespace CoreInvestmentApp.Pages
 
         private void Handle_Completed(object sender, System.EventArgs e)
         {
-            stock.Remarks = EditorRemarks.Text.Trim();
-
-            Util.SaveStockToDB(stock);
+            string remarks = EditorRemarks.Text;
+            if (remarks != null)
+            {
+                stock.Remarks = EditorRemarks.Text.Trim();
+                Util.SaveStockToDB(stock);
+            }
         }
     }
 }

@@ -31,7 +31,7 @@ namespace CoreInvestmentApp.Model
         {
             get
             {
-                string price = string.Format("USD{0}.{1}", PurchasePriceBeforeDecimalPoint.ToString(), PurchasePriceAfterDecimalPoint.ToString());
+                string price = string.Format("USD{0}.{1}", PurchasePriceBeforeDecimalPoint.ToString(), PurchasePriceAfterDecimalPoint.ToString() + "0");
                 return price;
             }
         }
@@ -41,7 +41,7 @@ namespace CoreInvestmentApp.Model
         {
             get
             {
-                string date = "Date Purchased: " + DateAdded.ToString("dd MMM yyyy");
+                string date = DateAdded.ToString("dd MMM yyyy");
                 return date;
             }
         }

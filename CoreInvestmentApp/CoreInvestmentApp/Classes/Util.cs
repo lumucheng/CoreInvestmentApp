@@ -9,6 +9,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Auth;
+using Xamarin.Forms;
 
 namespace CoreInvestmentApp.Classes
 {
@@ -103,17 +104,6 @@ namespace CoreInvestmentApp.Classes
                 vRealmDb.Add(stockJson, true);
             });
         }
-
-        public static void SaveUserToDB(User user)
-		{
-			var vRealmDb = Realm.GetInstance();
-
-			vRealmDb.Write(() =>
-			{
-                vRealmDb.RemoveAll<User>();
-				vRealmDb.Add(user, true);
-			});
-		}
 
 		public static string ByteArrayToHex(byte[] barray)
 		{

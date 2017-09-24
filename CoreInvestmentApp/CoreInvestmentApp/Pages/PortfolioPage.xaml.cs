@@ -154,8 +154,8 @@ namespace CoreInvestmentApp.Pages
             else
             {
                 LabelPortfolioPercent.Text = Util.FormatNumberToPercent(percent - 1);
-                LabelPortfolioPercent.TextColor = Color.FromHex("38DE40");
-                LabelPortfolioValue.TextColor = Color.FromHex("38DE40");
+                LabelPortfolioPercent.TextColor = Color.FromHex("00FA9A");
+                LabelPortfolioValue.TextColor = Color.FromHex("00FA9A");
             }
 
             LabelTotalCapital.Text = "Total Capital: " + Util.FormatNumberToCurrency(totalCapital, CURRENCY_TYPE.USD);
@@ -218,7 +218,11 @@ namespace CoreInvestmentApp.Pages
 			if (e.SelectedItem != null)
 			{
                 PortfolioStock portfolio = (PortfolioStock)e.SelectedItem;
-                Navigation.PushModalAsync(new NavigationPage(new EditPortfolioPage(portfolio)));
+                Navigation.PushModalAsync(new NavigationPage(new EditPortfolioPage(portfolio))
+                {
+                    BarBackgroundColor = Color.FromHex("4B77BE"),
+                    BarTextColor = Color.White
+                });
 				((ListView)sender).SelectedItem = null;
 			}
         }

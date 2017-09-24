@@ -19,6 +19,7 @@ namespace CoreInvestmentApp.Menu
             var cell = new DataTemplate(typeof(ImageCell));
             cell.SetBinding(TextCell.TextProperty, "Title");
             cell.SetBinding(ImageCell.ImageSourceProperty, "IconSource");
+            cell.SetValue(TextCell.TextColorProperty, Color.White);
 
             ItemTemplate = cell;
             SelectedItem = data[0];

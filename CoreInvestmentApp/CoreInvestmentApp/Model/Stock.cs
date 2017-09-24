@@ -124,7 +124,7 @@ namespace CoreInvestmentApp.Model
 
         public string VolumeString
         {
-            get { return Volume.ToString("#,##0.00"); }
+            get { return Volume.ToString("#,##"); }
         }
 
         public string AdjClosePriceString

@@ -16,26 +16,28 @@ namespace CoreInvestmentApp.Menu
             this.Add(new MenuItem()
             {
                 Title = "Watchlist",
-                IconSource = "contacts.png",
+                IconSource = "watchlist.png",
                 TargetType = typeof(WatchlistPage)
             });
 
             this.Add(new MenuItem()
             {
                 Title = "Portfolio",
-                IconSource = "leads.png",
+                IconSource = "portfolio.png",
                 TargetType = typeof(PortfolioPage)
             });
 
             this.Add(new MenuItem()
             {
                 Title = "Feedback",
+                IconSource = "feedback.png",
                 TargetType = typeof(FeedbackPage)
             });
 
             this.Add(new MenuItem()
             {
                 Title = "Logout",
+                IconSource = "logout.png",
                 TargetType = typeof(OpportunitiesPage)
             });
         }

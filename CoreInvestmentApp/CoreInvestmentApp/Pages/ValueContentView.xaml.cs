@@ -142,7 +142,7 @@ namespace CoreInvestmentApp.Pages
             decimal bookValuePerShare = stock.BookValuePerShare;
             decimal currentRatio = stock.CurrentRatio;
 
-            LabelPriceToBook.Text = Util.FormatNumberToCurrency(stock.PriceToBook, CURRENCY_TYPE.USD);
+            LabelPriceToBook.Text = stock.PriceToBook.ToString();
 
             if (stock.BookValuePerShare == 0) 
             {
