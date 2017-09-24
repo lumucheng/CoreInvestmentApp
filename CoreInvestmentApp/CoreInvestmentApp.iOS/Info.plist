@@ -24,7 +24,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.coreinvest.app</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.9</string>
+	<string>1.0.10</string>
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Icon-60@2x</string>
@@ -49,5 +49,11 @@
 	<string>Core Invest</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.0</string>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>UIStatusBarHidden</key>
+	<true/>
 </dict>
 </plist>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CoreInvestmentApp.Pages.LoginPage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#4B77BE" Orientation="Vertical" Padding="20,50,20,10" VerticalOptions="FillAndExpand">
+        <StackLayout BackgroundColor="#4B77BE" Orientation="Vertical" Padding="20,100,20,10" VerticalOptions="FillAndExpand">
             <Image x:Name="ImageLogo" Aspect="AspectFill" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <Image x:Name="ImageUsername" Aspect="AspectFit" WidthRequest="30" HeightRequest="30" />
-                <Entry x:Name="EntryEmail"  Placeholder="Email" FontSize="Medium" TextColor="White" FontAttributes="Bold" PlaceholderColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" />
+                <Entry x:Name="EntryEmail"  Placeholder="Email" FontSize="Medium" TextColor="White" FontAttributes="Bold" BackgroundColor="Transparent" PlaceholderColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" />
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <Image x:Name="ImageLock" Aspect="AspectFit" WidthRequest="30" HeightRequest="30" />
-                <Entry x:Name="EntryPassword" Placeholder="Password" FontSize="Medium" TextColor="White" FontAttributes="Bold" PlaceholderColor="White"  HorizontalOptions="FillAndExpand" VerticalOptions="Fill" IsPassword="true" />
+                <Entry x:Name="EntryPassword" Placeholder="Password" FontSize="Medium" TextColor="White" FontAttributes="Bold" BackgroundColor="Transparent" PlaceholderColor="White"  HorizontalOptions="FillAndExpand" VerticalOptions="Fill" IsPassword="true" />
             </StackLayout>
             <Button Text="Login" FontSize="Large" TextColor="White" BackgroundColor="#1F4788" FontAttributes="Bold" Clicked="Handle_ClickedAsync" />
         </StackLayout>

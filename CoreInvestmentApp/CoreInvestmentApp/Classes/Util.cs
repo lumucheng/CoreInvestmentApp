@@ -22,8 +22,8 @@ namespace CoreInvestmentApp.Classes
 
     public static class Util
     {
-        private static string IntrinioID = "773bd894834c1d90100edc4002b8ddc9";
-        private static string IntrinioPassword = "e6614f242403f487ebac88401a931fdc";
+        private static string IntrinioID = "f485cd417985d7083e5cf43300fe71fb";
+        private static string IntrinioPassword = "173402da49b5f4a1ed0edbf38c330052";
         public static string IntrinioAPIUrl = "https://api.intrinio.com";
         public static string ContactEmail = "contact@coreinvest.me";
         public static readonly HttpClient HttpC = new HttpClient();

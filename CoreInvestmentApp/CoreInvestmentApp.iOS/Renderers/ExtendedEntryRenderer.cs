@@ -24,7 +24,7 @@ namespace CoreInvestmentApp.iOS.Renderers
 
             if (!this.Element.IsEnabled)
             {
-                this.Control.TextColor = UIColor.White;
+                this.Control.TextColor = UIColor.Black;
             }
 		}
 

@@ -104,11 +104,6 @@
     <Compile Include="Renderers\ExtendedEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Default-568h%402x.png" />
-    <BundleResource Include="Resources\Default-Portrait.png" />
-    <BundleResource Include="Resources\Default-Portrait%402x.png" />
-    <BundleResource Include="Resources\Default.png" />
-    <BundleResource Include="Resources\Default%402x.png" />
     <BundleResource Include="Resources\Icon-60%402x.png" />
     <BundleResource Include="Resources\Icon-60%403x.png" />
     <BundleResource Include="Resources\Icon-76.png" />
@@ -138,12 +133,18 @@
     <BundleResource Include="Resources\Icon-Small-50%402x.png" />
     <BundleResource Include="Resources\Icon%402x.png" />
     <BundleResource Include="Resources\Icon%403x.png" />
-    <BundleResource Include="Resources\IconFAB.png" />
-    <BundleResource Include="Resources\IconFAB%402x.png" />
-    <BundleResource Include="Resources\IconFAB%403x.png" />
     <BundleResource Include="Resources\Icon.png" />
     <BundleResource Include="Resources\splash-core.jpg" />
     <BundleResource Include="Resources\core_logo.jpg" />
+    <BundleResource Include="Resources\core_logo.png" />
+    <BundleResource Include="Resources\feedback.png" />
+    <BundleResource Include="Resources\lock.png" />
+    <BundleResource Include="Resources\logout.png" />
+    <BundleResource Include="Resources\portfolio.png" />
+    <BundleResource Include="Resources\username.png" />
+    <BundleResource Include="Resources\watchlist.png" />
+    <BundleResource Include="Resources\settings%402x.png" />
+    <BundleResource Include="Resources\settings%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.Support.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -262,18 +263,6 @@
       <Project>{B4B49A74-6C42-4B59-9888-BDF3529B16BE}</Project>
       <Name>CoreInvestmentApp</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\accounts.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\contacts.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\leads.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\opportunities.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\settings.png" />

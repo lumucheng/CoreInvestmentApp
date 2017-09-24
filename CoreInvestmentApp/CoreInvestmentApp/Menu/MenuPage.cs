@@ -14,6 +14,7 @@ namespace CoreInvestmentApp
 
         public MenuPage()
         {
+            Icon = "settings.png";
             Title = "menu"; // The Title property must be set.
             BackgroundColor = Color.FromHex("59ABE3");
 
@@ -26,6 +27,7 @@ namespace CoreInvestmentApp
                 {
                     TextColor = Color.White,
                     Text = "MENU",
+                    FontAttributes = FontAttributes.Bold
                 }
             };
 

@@ -34,6 +34,8 @@ namespace CoreInvestmentApp.iOS
             Messier16Controls.InitAll();
             Effects.Init();
 
+			UIApplication.SharedApplication.SetStatusBarStyle(UIStatusBarStyle.LightContent, false);
+			UIApplication.SharedApplication.SetStatusBarHidden(false, false);
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
