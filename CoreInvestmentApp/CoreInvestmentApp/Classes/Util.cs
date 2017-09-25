@@ -1,5 +1,6 @@
 ﻿using CoreInvestmentApp.Model;
 using Newtonsoft.Json;
+using Plugin.Connectivity;
 using Realms;
 using System;
 using System.Collections.Generic;
@@ -25,9 +26,15 @@ namespace CoreInvestmentApp.Classes
         private static string IntrinioID = "f485cd417985d7083e5cf43300fe71fb";
         private static string IntrinioPassword = "173402da49b5f4a1ed0edbf38c330052";
         public static string IntrinioAPIUrl = "https://api.intrinio.com";
+        public static string CoreInvestUrlLogin = "http://www.coreinvest.me/login_api.php";
         public static string ContactEmail = "contact@coreinvest.me";
         public static readonly HttpClient HttpC = new HttpClient();
         private static readonly string AppName = "CoreInvest";
+
+        public static bool IsNetworkAvailable()
+        {
+            return CrossConnectivity.Current.IsConnected;
+        }
 
         private static string GetBasicAuth()
         {

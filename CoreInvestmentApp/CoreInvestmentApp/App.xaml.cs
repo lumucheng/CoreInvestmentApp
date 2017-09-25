@@ -12,6 +12,7 @@ using Realms;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 
 namespace CoreInvestmentApp
 {
@@ -30,18 +31,26 @@ namespace CoreInvestmentApp
         {
             InitializeComponent();
 
-            string email = Util.UserName;
-            string p = Util.Password;
-
-            if (email != null && p != null)
+            if (Util.IsNetworkAvailable())
             {
-                // Placeholder Page
-                MainPage = new Page();
-                CheckAPI(email, p);
+                string email = Util.UserName;
+                string p = Util.Password;
+
+                if (email != null && p != null)
+                {
+                    // Placeholder Page
+                    MainPage = new Page();
+                    CheckAPI(email, p);
+                }
+                else
+                {
+                    MainPage = new LoginPage();
+                }
             }
-            else 
+            else
             {
                 MainPage = new LoginPage();
+                UserDialogs.Instance.Alert("Please ensure you have a working connection", "Error", "OK");
             }
         }
 
@@ -56,7 +65,7 @@ namespace CoreInvestmentApp
 			};
 
 			var content = new FormUrlEncodedContent(values);
-			var response = await client.PostAsync("http://www.coreinvest.me/login_api.php", content);
+			var response = await client.PostAsync(Util.CoreInvestUrlLogin, content);
 			var responseString = await response.Content.ReadAsStringAsync();
 
 			JObject jsonObject = JObject.Parse(responseString);

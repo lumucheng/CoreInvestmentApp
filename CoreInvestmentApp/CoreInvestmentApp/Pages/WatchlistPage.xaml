@@ -85,7 +85,7 @@
                                 </StackLayout>
                                 
                                 <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="1">
-                                    <Label Text="D" TextColor="#479eaa" FontAttributes="Bold"></Label>
+                                    <Label Text="D" TextColor="#34495e" FontAttributes="Bold"></Label>
                                     <OnPlatform x:TypeArguments="View">
                                         <OnPlatform.Android>
                                             <Label VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding DivdendEntryPriceString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" />

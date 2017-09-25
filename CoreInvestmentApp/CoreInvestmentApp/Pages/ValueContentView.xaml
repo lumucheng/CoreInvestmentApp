@@ -165,6 +165,8 @@
                     </StackLayout>
                 </Grid>
 
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="#4B77BE" Margin="5, 10, 5, 10" />
+                
                 <Label Text="DIVIDEND" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
 
                 <Label Text="Valuation based on expected dividend" FontSize="Medium" HorizontalOptions="CenterAndExpand" TextColor="Black" />
@@ -249,6 +251,8 @@
                     </StackLayout>
                 </Grid>
 
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="#4B77BE" Margin="5, 10, 5, 10" />
+                
                 <Label Text="ASSET" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
 
                 <Label Text="Valuation based on Book Value" FontSize="Medium" HorizontalOptions="CenterAndExpand" TextColor="Black" />

@@ -13,7 +13,10 @@ namespace CoreInvestmentApp.Model
 		[JsonProperty("name")]
 		public string Name { get; set; }
 
-		[JsonProperty("cik")]
+        [JsonProperty("lei")]
+        public string Lei { get; set; }
+
+        [JsonProperty("cik")]
 		public string Cik { get; set; }
 
 		[JsonProperty("latest_filing_date")]

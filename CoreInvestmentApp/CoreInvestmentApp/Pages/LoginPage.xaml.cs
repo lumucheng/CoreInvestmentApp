@@ -25,11 +25,18 @@ namespace CoreInvestmentApp.Pages
 
         void Handle_ClickedAsync(object sender, System.EventArgs e)
         {
-			UserDialogs.Instance.ShowLoading("Loading..", MaskType.Black);
-			CallAPI().ContinueWith((task) =>
-			{
-				UserDialogs.Instance.HideLoading();
-			});
+            if (Util.IsNetworkAvailable())
+            {
+                UserDialogs.Instance.ShowLoading("Loading..", MaskType.Black);
+                CallAPI().ContinueWith((task) =>
+                {
+                    UserDialogs.Instance.HideLoading();
+                });
+            }
+            else
+            {
+                UserDialogs.Instance.Alert("Please ensure you have a working connection", "Error", "OK");
+            }
         }
 
         private async Task CallAPI()

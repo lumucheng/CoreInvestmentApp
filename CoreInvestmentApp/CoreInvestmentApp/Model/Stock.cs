@@ -50,13 +50,13 @@ namespace CoreInvestmentApp.Model
         public bool Efficient { get; set; }
 
         // LIST
-        public bool LegalRisk { get; set; }
-        public bool InflationRisk { get; set; }
-        public bool StructureSystemRisk { get; set; }
-        public bool TechnologyRisk { get; set; }
+        public bool LegalRisk { get; set; } = true;
+        public bool InflationRisk { get; set; } = true;
+        public bool StructureSystemRisk { get; set; } = true;
+        public bool TechnologyRisk { get; set; } = true;
 
-		// User Entered Data
-		public bool UserEnteredGrowthPercent { get; set; }
+        // User Entered Data
+        public bool UserEnteredGrowthPercent { get; set; }
 		public decimal UserEnteredGrowthValue { get; set; }
 		public decimal UserEnteredDividend { get; set; }
 		public decimal UserBookValuePerShare { get; set; }

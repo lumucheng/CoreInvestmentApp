@@ -26,7 +26,7 @@ namespace CoreInvestmentApp.Pages
 
         public DetailedStockPage(Stock stock)
         {
-            Title = "Stock Info";
+            Title = "Info";
             this.stock = stock;
 
             ToolbarItems.Add(new ToolbarItem
@@ -39,7 +39,7 @@ namespace CoreInvestmentApp.Pages
                 }))
             });
 
-            if (DateTime.Now > stock.LastUpdated.AddHours(1))
+            if (DateTime.Now > stock.LastUpdated.AddHours(2))
             {
 				UserDialogs.Instance.ShowLoading("Loading..", MaskType.Black);
 				GetDetailedInfoAsync().ContinueWith((task) =>
@@ -61,158 +61,157 @@ namespace CoreInvestmentApp.Pages
 
         private async Task GetDetailedInfoAsync()
         {
-            string query = "";
-
-            if (stock.Description != null)
-            {
-                query = string.Format(Util.IntrinioAPIUrl + "/data_point?identifier={0}&item=,adj_close_price,volume,52_week_high,52_week_low,marketcap,basiceps,epsgrowth,debttoequity,cashdividendspershare,dividendyield,bookvaluepershare,pricetobook,currentratio", stock.StockIdentifier.Ticker);
-            }
-            else
-            {
-                query = string.Format(Util.IntrinioAPIUrl +
+            string query = query = string.Format(Util.IntrinioAPIUrl +
                     "/data_point?identifier={0}&item=long_description,adj_close_price,volume,52_week_high,52_week_low,sector,marketcap,basiceps,epsgrowth,debttoequity,cashdividendspershare,dividendyield,bookvaluepershare,pricetobook,pricetoearnings,currentratio", stock.StockIdentifier.Ticker);
-            }
 
             HttpClient client = Util.GetAuthHttpClient();
             var uri = new Uri(query);
 
-            var response = await client.GetAsync(uri);
-            if (response.IsSuccessStatusCode)
+            if (Util.IsNetworkAvailable())
             {
-                var json = await response.Content.ReadAsStringAsync();
-                JObject jsonObject = JObject.Parse(json);
-                JArray data = (JArray)jsonObject["data"];
 
-                foreach (JToken token in data)
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
                 {
-                    string item = token["item"].ToString();
-                    string value = token["value"].ToString();
+                    var json = await response.Content.ReadAsStringAsync();
+                    JObject jsonObject = JObject.Parse(json);
+                    JArray data = (JArray)jsonObject["data"];
 
-                    if (item == "long_description")
+                    foreach (JToken token in data)
                     {
-                        stock.Description = value;
-                    }
-                    else if (item == "adj_close_price")
-                    {
-                        decimal adjClosePrice;
-                        if (Decimal.TryParse(value, out adjClosePrice))
-                        {
-                            stock.AdjClosePrice = adjClosePrice;
-                        }
-                    }
-                    else if (item == "volume")
-                    {
-                        decimal volume;
-                        if (Decimal.TryParse(value, out volume))
-                        {
-                            stock.Volume = volume;
-                        }
-                    }
-                    else if (item == "52_week_high")
-                    {
-                        decimal fiftyTwoWeekHigh;
-                        if (Decimal.TryParse(value, out fiftyTwoWeekHigh))
-                        {
-                            stock.FiftyTwoWeekHigh = fiftyTwoWeekHigh;
-                        }
-                    }
-                    else if (item == "52_week_low")
-                    {
-                        decimal fiftyTwoWeekLow;
-                        if (Decimal.TryParse(value, out fiftyTwoWeekLow))
-                        {
-                            stock.FiftyTwoWeekLow = fiftyTwoWeekLow;
-                        }
-                    }
-                    else if (item == "sector")
-                    {
-                        stock.Sector = value;
-                    }
-                    else if (item == "marketcap")
-                    {
-                        decimal marketCap;
-                        if (Decimal.TryParse(value, out marketCap))
-                        {
-                            stock.MarketCap = marketCap;
-                        }
-                    }
-                    else if (item == "basiceps")
-                    {
+                        string item = token["item"].ToString();
+                        string value = token["value"].ToString();
 
-                        decimal basicEps;
-                        if (Decimal.TryParse(value, out basicEps))
+                        if (item == "long_description")
                         {
-                            stock.BasicEps = basicEps;
+                            stock.Description = value;
+                        }
+                        else if (item == "adj_close_price")
+                        {
+                            decimal adjClosePrice;
+                            if (Decimal.TryParse(value, out adjClosePrice))
+                            {
+                                stock.AdjClosePrice = adjClosePrice;
+                            }
+                        }
+                        else if (item == "volume")
+                        {
+                            decimal volume;
+                            if (Decimal.TryParse(value, out volume))
+                            {
+                                stock.Volume = volume;
+                            }
+                        }
+                        else if (item == "52_week_high")
+                        {
+                            decimal fiftyTwoWeekHigh;
+                            if (Decimal.TryParse(value, out fiftyTwoWeekHigh))
+                            {
+                                stock.FiftyTwoWeekHigh = fiftyTwoWeekHigh;
+                            }
+                        }
+                        else if (item == "52_week_low")
+                        {
+                            decimal fiftyTwoWeekLow;
+                            if (Decimal.TryParse(value, out fiftyTwoWeekLow))
+                            {
+                                stock.FiftyTwoWeekLow = fiftyTwoWeekLow;
+                            }
+                        }
+                        else if (item == "sector")
+                        {
+                            stock.Sector = value;
+                        }
+                        else if (item == "marketcap")
+                        {
+                            decimal marketCap;
+                            if (Decimal.TryParse(value, out marketCap))
+                            {
+                                stock.MarketCap = marketCap;
+                            }
+                        }
+                        else if (item == "basiceps")
+                        {
+
+                            decimal basicEps;
+                            if (Decimal.TryParse(value, out basicEps))
+                            {
+                                stock.BasicEps = basicEps;
+                            }
+                        }
+                        else if (item == "epsgrowth")
+                        {
+                            decimal epsGrowth;
+                            if (Decimal.TryParse(value, out epsGrowth))
+                            {
+                                stock.EpsGrowth = epsGrowth;
+                            }
+                        }
+                        else if (item == "debttoequity")
+                        {
+                            decimal debtToEquity;
+                            if (Decimal.TryParse(value, out debtToEquity))
+                            {
+                                stock.DebtToEquity = debtToEquity;
+                            }
+                        }
+                        else if (item == "cashdividendspershare")
+                        {
+                            decimal dividend;
+                            if (Decimal.TryParse(value, out dividend))
+                            {
+                                stock.Dividend = dividend;
+                            }
+                        }
+                        else if (item == "dividendyield")
+                        {
+                            decimal dividendYield;
+                            if (Decimal.TryParse(value, out dividendYield))
+                            {
+                                stock.DividendYield = dividendYield;
+                            }
+                        }
+                        else if (item == "pricetobook")
+                        {
+                            decimal priceToBook;
+                            if (Decimal.TryParse(value, out priceToBook))
+                            {
+                                stock.PriceToBook = priceToBook;
+                            }
+                        }
+                        else if (item == "bookvaluepershare")
+                        {
+                            decimal bookValuePerShare;
+                            if (Decimal.TryParse(value, out bookValuePerShare))
+                            {
+                                stock.BookValuePerShare = bookValuePerShare;
+                            }
+                        }
+                        else if (item == "pricetoearnings")
+                        {
+                            decimal priceToEarnings;
+                            if (Decimal.TryParse(value, out priceToEarnings))
+                            {
+                                stock.PriceToEarnings = priceToEarnings;
+                            }
+                        }
+                        else if (item == "currentratio")
+                        {
+                            decimal currentRatio;
+                            if (Decimal.TryParse(value, out currentRatio))
+                            {
+                                stock.CurrentRatio = currentRatio;
+                            }
                         }
                     }
-                    else if (item == "epsgrowth")
-                    {
-                        decimal epsGrowth;
-                        if (Decimal.TryParse(value, out epsGrowth))
-                        {
-                            stock.EpsGrowth = epsGrowth;
-                        }
-                    }
-                    else if (item == "debttoequity")
-                    {
-                        decimal debtToEquity;
-                        if (Decimal.TryParse(value, out debtToEquity))
-                        {
-                            stock.DebtToEquity = debtToEquity;
-                        }
-                    }
-                    else if (item == "cashdividendspershare")
-                    {
-                        decimal dividend;
-                        if (Decimal.TryParse(value, out dividend))
-                        {
-                            stock.Dividend = dividend;
-                        }
-                    }
-                    else if (item == "dividendyield")
-                    {
-                        decimal dividendYield;
-                        if (Decimal.TryParse(value, out dividendYield))
-                        {
-                            stock.DividendYield = dividendYield;
-                        }
-                    }
-                    else if (item == "pricetobook")
-                    {
-                        decimal priceToBook;
-                        if (Decimal.TryParse(value, out priceToBook))
-                        {
-                            stock.PriceToBook = priceToBook;
-                        }
-                    }
-                    else if (item == "bookvaluepershare")
-                    {
-                        decimal bookValuePerShare;
-                        if (Decimal.TryParse(value, out bookValuePerShare))
-                        {
-                            stock.BookValuePerShare = bookValuePerShare;
-                        }
-                    }
-                    else if (item == "pricetoearnings")
-                    {
-                        decimal priceToEarnings;
-                        if (Decimal.TryParse(value, out priceToEarnings))
-                        {
-                            stock.PriceToEarnings = priceToEarnings;
-                        }
-                    }
-					else if (item == "currentratio")
-					{
-						decimal currentRatio;
-						if (Decimal.TryParse(value, out currentRatio))
-						{
-                            stock.CurrentRatio = currentRatio;
-						}
-					}
+
+                    stock.LastUpdated = DateTime.Now;
+                    await GetHistoricalEPS();
                 }
-
-                stock.LastUpdated = DateTime.Now;
-                await GetHistoricalEPS();
+            }
+            else
+            {
+                UserDialogs.Instance.Alert("Please ensure you have a working connection", "Error", "OK");
             }
         }
 

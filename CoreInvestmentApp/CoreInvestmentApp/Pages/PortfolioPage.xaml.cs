@@ -31,7 +31,9 @@ namespace CoreInvestmentApp.Pages
             if (Device.RuntimePlatform == Device.Android)
             {
                 StackLay.VerticalOptions = LayoutOptions.FillAndExpand;
-			}
+                ListViewPortfolio.HasUnevenRows = false;
+                ListViewPortfolio.RowHeight = 155;
+            }
             else if (Device.RuntimePlatform == Device.iOS)
             {
                 StackLay.VerticalOptions = LayoutOptions.StartAndExpand;

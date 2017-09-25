@@ -236,15 +236,17 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\IconFAB.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\IconFAB.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\IconFAB.png" />
     <AndroidResource Include="Resources\drawable\splash_core.jpg" />
-    <AndroidResource Include="Resources\drawable\core_logo.jpg" />
+    <AndroidResource Include="Resources\drawable\core_logo.png" />
+    <AndroidResource Include="Resources\drawable\feedback.png" />
+    <AndroidResource Include="Resources\drawable\lock.png" />
+    <AndroidResource Include="Resources\drawable\logout.png" />
+    <AndroidResource Include="Resources\drawable\portfolio.png" />
+    <AndroidResource Include="Resources\drawable\username.png" />
+    <AndroidResource Include="Resources\drawable\watchlist.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -259,18 +261,6 @@
       <Project>{B4B49A74-6C42-4B59-9888-BDF3529B16BE}</Project>
       <Name>CoreInvestmentApp</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\accounts.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\contacts.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\leads.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\opportunities.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\settings.png" />

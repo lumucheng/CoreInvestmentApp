@@ -1,10 +1,7 @@
 ﻿using CoreInvestmentApp.Classes;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -68,27 +65,35 @@ namespace CoreInvestmentApp.Pages
             HttpClient client = Util.GetAuthHttpClient();
             // var uri = new Uri(string.Format(Util.IntrinioAPIUrl + "/companies?query={0}", query));
             var uri = new Uri(string.Format(Util.IntrinioAPIUrl + "/companies?identifier={0}", query));
-            var response = await client.GetAsync(uri);
-            if (response.IsSuccessStatusCode)
-            {
-                var json = await response.Content.ReadAsStringAsync();
-                JObject jObject = JObject.Parse(json);
-                StockIdentifier stockIdentifier = JsonConvert.DeserializeObject<StockIdentifier>(jObject.ToString());
 
-                if (stockIdentifier != null)
+            if (Util.IsNetworkAvailable())
+            {
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
                 {
-                    IdentifierList = new ObservableCollection<StockIdentifier>();
-                    IdentifierList.Add(stockIdentifier);
-                    StockIdentifierListView.ItemsSource = IdentifierList;
+                    var json = await response.Content.ReadAsStringAsync();
+                    JObject jObject = JObject.Parse(json);
+                    StockIdentifier stockIdentifier = JsonConvert.DeserializeObject<StockIdentifier>(jObject.ToString());
+
+                    if (stockIdentifier != null)
+                    {
+                        IdentifierList = new ObservableCollection<StockIdentifier>();
+                        IdentifierList.Add(stockIdentifier);
+                        StockIdentifierListView.ItemsSource = IdentifierList;
+                    }
+                    else
+                    {
+                        UserDialogs.Instance.Toast("No results found", TimeSpan.FromMilliseconds(1000));
+                    }
                 }
                 else
                 {
-                    UserDialogs.Instance.Toast("No results found", TimeSpan.FromMilliseconds(1000));
+                    UserDialogs.Instance.Alert("Something went wrong with the network", "Error", "OK");
                 }
             }
             else
             {
-                UserDialogs.Instance.Toast("No results found", TimeSpan.FromMilliseconds(1000));
+                UserDialogs.Instance.Alert("Please ensure you have a working connection", "Error", "OK");
             }
         }
 
