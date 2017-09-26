@@ -1,30 +1,13 @@
-﻿using CoreInvestmentApp.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using CoreInvestmentApp.Model;
+﻿using System.Collections.Generic;
 using Xamarin.Forms;
 using CoreInvestmentApp.Classes;
 using CoreInvestmentApp.Pages;
-using PCLCrypto;
-using Realms;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
-using System.Threading.Tasks;
 using Acr.UserDialogs;
 
 namespace CoreInvestmentApp
 {
-    public static class ViewModelLocator
-    {
-        static StockViewModel stockVM;
-        static OxyExData exData;
-
-        public static StockViewModel StockViewModel => stockVM ?? (stockVM = new StockViewModel());
-        public static OxyExData OxyExData = exData ?? (exData = new OxyExData());
-    }
-
     public partial class App : Application
     {
         public App()

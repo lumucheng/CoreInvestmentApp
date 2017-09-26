@@ -69,6 +69,9 @@ namespace CoreInvestmentApp.Model
         public decimal DivdendEntryPrice { get; set; }
         public int InvestorConfidence { get; set; }
 
+        // Indicate stock is entered manually
+        public bool UserManualEntry { get; set; }
+
         public string GrowthEntryPriceString
         {
             get { return Util.FormatNumberToCurrency(GrowthEntryPrice, CURRENCY_TYPE.USD); }

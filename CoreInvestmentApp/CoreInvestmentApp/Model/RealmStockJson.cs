@@ -13,5 +13,7 @@ namespace CoreInvestmentApp.Model
         public string StockTicker { get; set; }
 
         public string JsonObjStr { get; set; }
+
+        public bool UserEnteredStock { get; set; }
     }
 }

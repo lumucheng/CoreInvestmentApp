@@ -50,7 +50,9 @@
     <Compile Include="Model\RealmStockJson.cs" />
     <Compile Include="Model\ReturnOnAsset.cs" />
     <Compile Include="Model\ReturnOnEquity.cs" />
-    <Compile Include="Model\WatchlistStock.cs" />
+    <Compile Include="Pages\AddManualStock.xaml.cs">
+      <DependentUpon>AddManualStock.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AddPortfolioPage.xaml.cs">
       <DependentUpon>AddPortfolioPage.xaml</DependentUpon>
     </Compile>
@@ -73,7 +75,6 @@
     <Compile Include="Menu\MenuListData.cs" />
     <Compile Include="Menu\MenuListView.cs" />
     <Compile Include="Menu\MenuPage.cs" />
-    <Compile Include="Model\OxyExData.cs" />
     <Compile Include="Model\Stock.cs" />
     <Compile Include="Model\StockHelper.cs" />
     <Compile Include="Pages\PortfolioPage.xaml.cs">
@@ -100,7 +101,6 @@
     <Compile Include="TestChart.xaml.cs">
       <DependentUpon>TestChart.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\StockViewModel.cs" />
     <Compile Include="Pages\WatchlistPage.xaml.cs">
       <DependentUpon>WatchlistPage.xaml</DependentUpon>
     </Compile>
@@ -112,7 +112,6 @@
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\User.cs" />
     <Compile Include="Pages\EditPortfolioPage.xaml.cs">
       <DependentUpon>EditPortfolioPage.xaml</DependentUpon>
     </Compile>
@@ -278,6 +277,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\FeedbackPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\AddManualStock.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

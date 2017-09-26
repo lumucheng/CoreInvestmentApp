@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CoreInvestmentApp.Classes"
+             xmlns:messier16="clr-namespace:Messier16.Forms.Controls;assembly=Messier16.Forms.Controls"
+             xmlns:segcontrol="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+             x:Class="CoreInvestmentApp.Pages.AddManualStock">
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <StackLayout Orientation="Vertical" Padding="10,10,10,10">
+                <Label Text="Company Name" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
+                <local:ExtendedEntry x:Name="EntryCompanyName" Placeholder="Name" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" TextColor="Black" FontSize="Medium"/>
+                <Label Text="Stock Ticker" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Medium" TextColor="#4B77BE"></Label>
+                <local:ExtendedEntry x:Name="EntryTicker" Placeholder="Ticker" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" TextColor="Black" FontSize="Medium"/>
+                <Label Text="Description" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Medium" TextColor="#4B77BE"></Label>
+                <Editor x:Name="EditorDescription" HorizontalOptions="FillAndExpand" HeightRequest="125"></Editor>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="#4B77BE" Margin="5, 10, 5, 10" />
+
+                <Label Text="NICES" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
+
+                <StackLayout Orientation="Horizontal">
+                    <messier16:Checkbox x:Name="ChkBoxNetwork" WidthRequest="30" TickColor="#4B77BE" />
+                    <Label FontSize="Medium" Text="Network Effect" VerticalOptions="Center" TextColor="Black" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <messier16:Checkbox x:Name="ChkBoxIntangible" WidthRequest="30" TickColor="#4B77BE" />
+                    <Label FontSize="Medium" Text="Intangible Assets" VerticalOptions="Center" TextColor="Black" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <messier16:Checkbox x:Name="ChkBoxCost" WidthRequest="30" TickColor="#4B77BE" />
+                    <Label FontSize="Medium" Text="Cost Advantages" VerticalOptions="Center" TextColor="Black" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <messier16:Checkbox x:Name="ChkBoxEfficientScale" WidthRequest="30" TickColor="#4B77BE" />
+                    <Label FontSize="Medium" Text="Economies Of Scope" VerticalOptions="Center" TextColor="Black" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <messier16:Checkbox x:Name="ChkBoxSwitch" WidthRequest="30" TickColor="#4B77BE" />
+                    <Label FontSize="Medium" Text="Switching Cost" VerticalOptions="Center" TextColor="Black" />
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="#4B77BE" Margin="5, 10, 5, 10" />
+
+                <Label Text="CORE" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <messier16:Checkbox x:Name="ChkboxConstantEPS" WidthRequest="30" TickColor="#4B77BE" />
+                    <Label FontSize="Medium" Text="Constant EPS" VerticalOptions="Center" TextColor="Black" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <messier16:Checkbox x:Name="ChkboxCashFlow" WidthRequest="30" TickColor="#4B77BE" />
+                    <Label FontSize="Medium" Text="Operation Cash Flow" VerticalOptions="Center" TextColor="Black" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <messier16:Checkbox x:Name="ChkboxReliable"  WidthRequest="30" TickColor="#4B77BE" />
+                    <Label FontSize="Medium" Text="Reliable" VerticalOptions="Center" TextColor="Black"  />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <messier16:Checkbox x:Name="ChkboxEfficient" WidthRequest="30" TickColor="#4B77BE" />
+                    <Label FontSize="Medium" Text="Efficient" VerticalOptions="Center" TextColor="Black" />
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="#4B77BE" Margin="5, 10, 5, 10" />
+
+                <Label Text="LIST" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
+
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Medium" Text="Legal Risk" VerticalOptions="Center" HorizontalOptions="Fill" TextColor="Black" />
+                    <segcontrol:SegmentedControl x:Name="SegControlLegal" TintColor="#4B77BE" SelectedSegment="1" HorizontalOptions="Fill" WidthRequest="150"  >
+                        <segcontrol:SegmentedControl.Children>
+                            <segcontrol:SegmentedControlOption Text="LOW" />
+                            <segcontrol:SegmentedControlOption Text="HIGH" />
+                        </segcontrol:SegmentedControl.Children>
+                    </segcontrol:SegmentedControl>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Medium" Text="Inflation Risk" VerticalOptions="Center" HorizontalOptions="Fill" TextColor="Black"  />
+                    <segcontrol:SegmentedControl x:Name="SegControlInflation" TintColor="#4B77BE" SelectedSegment="1" HorizontalOptions="Fill" WidthRequest="150" >
+                        <segcontrol:SegmentedControl.Children>
+                            <segcontrol:SegmentedControlOption Text="LOW" />
+                            <segcontrol:SegmentedControlOption Text="HIGH" />
+                        </segcontrol:SegmentedControl.Children>
+                    </segcontrol:SegmentedControl>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Medium" Text="Structure &amp; System Risk" VerticalOptions="Center" HorizontalOptions="Fill" TextColor="Black" />
+                    <segcontrol:SegmentedControl x:Name="SegControlStruct" TintColor="#4B77BE" SelectedSegment="1" HorizontalOptions="Fill" WidthRequest="150" >
+                        <segcontrol:SegmentedControl.Children>
+                            <segcontrol:SegmentedControlOption Text="LOW" />
+                            <segcontrol:SegmentedControlOption Text="HIGH" />
+                        </segcontrol:SegmentedControl.Children>
+                    </segcontrol:SegmentedControl>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Medium" Text="Technology Risk" VerticalOptions="Center" HorizontalOptions="Fill" TextColor="Black" />
+                    <segcontrol:SegmentedControl x:Name="SegControlTechnology" TintColor="#4B77BE" SelectedSegment="1" HorizontalOptions="Fill" WidthRequest="150" >
+                        <segcontrol:SegmentedControl.Children>
+                            <segcontrol:SegmentedControlOption Text="LOW" />
+                            <segcontrol:SegmentedControlOption Text="HIGH" />
+                        </segcontrol:SegmentedControl.Children>
+                    </segcontrol:SegmentedControl>
+                </StackLayout>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="#4B77BE" Margin="5, 10, 5, 10" />
+
+                <Label Text="Market Price" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Medium" TextColor="#4B77BE"></Label>
+                <local:ExtendedEntry Text="0" x:Name="EntryPrice" Placeholder="Price" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" TextColor="Black" FontSize="Medium" Completed="EntryPrice_Completed"/>
+
+                <Label Text="Growth" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
+                
+                <Label Text="Earning Per Share" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Medium" TextColor="#4B77BE"></Label>
+                <local:ExtendedEntry Text="0" x:Name="EntryEPS" Placeholder="EPS" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" TextColor="Black" FontSize="Medium" Completed="EntryEPS_Completed"/>
+
+                <Label Text="Growth Rate (%)" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Medium" TextColor="#4B77BE"></Label>
+                <local:ExtendedEntry Text="0" x:Name="EntryGrowth" Placeholder="Growth %" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" TextColor="Black" FontSize="Medium" Completed="EntryGrowth_Completed"/>
+
+                <Label Text="Entry Price" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
+                <Label x:Name="LabelGrowthEntryPrice" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
+
+                <Label Text="Review Price" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
+                <Label x:Name="LabelGrowthReviewPrice" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
+
+                <Label Text="Dividend" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
+
+                <Label Text="Dividend" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Medium" TextColor="#4B77BE"></Label>
+                <local:ExtendedEntry Text="0" x:Name="EntryDividend" Placeholder="Dividend" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" TextColor="Black" FontSize="Medium" Completed="EntryDividend_Completed"/>
+
+                <Label Text="Dividend Yield(%)" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Medium" TextColor="#4B77BE"></Label>
+                <local:ExtendedEntry Text="0" x:Name="EntryDividendYield" Placeholder="Yield %" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" TextColor="Black" FontSize="Medium" Completed="EntryDividendYield_Completed"/>
+
+                <Label Text="Entry Price" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
+                <Label x:Name="LabelDividendEntryPrice" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
+
+                <Label Text="Review Price" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
+                <Label x:Name="LabelDividendReviewPrice" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
+
+                <Label Text="Asset Play" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
+
+                <Label Text="Book Value" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Medium" TextColor="#4B77BE"></Label>
+                <local:ExtendedEntry Text="0" x:Name="EntryBookValue" Placeholder="Value" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" TextColor="Black" FontSize="Medium" Completed="EntryBookValue_Completed"/>
+
+                <Label Text="P/B Ratio" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Medium" TextColor="#4B77BE"></Label>
+                <local:ExtendedEntry Text="0" x:Name="EntryRatio" Placeholder="Ratio" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" TextColor="Black" FontSize="Medium" Completed="EntryRatio_Completed"/>
+
+                <Label Text="Entry Price" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
+                <Label x:Name="LabelBookEntryPrice" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
+
+                <Label Text="Review Price" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
+                <Label x:Name="LabelBookReviewPrice" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
+
+                <Button Text="ADD" FontSize="Medium" FontAttributes="Bold" Clicked="Button_Clicked" BackgroundColor="#4B77BE" TextColor="White" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

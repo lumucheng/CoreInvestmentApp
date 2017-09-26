@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CoreInvestmentApp.Classes"
              x:Class="CoreInvestmentApp.Pages.AddPortfolioPage">
     <ContentPage.Content>
         <ScrollView Orientation="Vertical">
@@ -15,15 +16,15 @@
                 <Label x:Name="LabelClosePrice" HorizontalOptions="StartAndExpand" TextColor="Black" FontAttributes="Bold" FontSize="Large"></Label>
 
                 <Label Text="Enter Quantity" HorizontalOptions="StartAndExpand" TextColor="#4B77BE" FontAttributes="Bold" FontSize="Medium"></Label>
-                <Entry x:Name="EntryQuantity" Placeholder="Quantity" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" TextColor="Black" FontSize="Large"/>
+                <local:ExtendedEntry x:Name="EntryQuantity" Placeholder="Quantity" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" TextColor="Black" FontSize="Large"/>
 
                 <Label Text="Enter Purchase Price" HorizontalOptions="StartAndExpand" TextColor="#4B77BE" FontAttributes="Bold" FontSize="Medium"></Label>
-                <Entry x:Name="EntryPrice" Placeholder="Price" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" TextColor="Black" FontSize="Large" />
+                <local:ExtendedEntry x:Name="EntryPrice" Placeholder="Price" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" TextColor="Black" FontSize="Large" />
 
                 <Label Text="Select Purchase Date" HorizontalOptions="StartAndExpand" TextColor="#4B77BE" FontAttributes="Bold" FontSize="Medium"></Label>
                 <DatePicker x:Name="PickerPurchaseDate" Format="dd MMM yyyy" TextColor="Black" />
 
-                <Button Text="Add to Portfolio" FontSize="Medium" FontAttributes="Bold" Clicked="Button_Clicked" BackgroundColor="#4B77BE" TextColor="White" />
+                <Button Text="ADD" FontSize="Medium" FontAttributes="Bold" Clicked="Button_Clicked" BackgroundColor="#4B77BE" TextColor="White" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

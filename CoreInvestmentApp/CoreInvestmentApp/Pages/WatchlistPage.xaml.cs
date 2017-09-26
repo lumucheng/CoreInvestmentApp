@@ -1,7 +1,6 @@
 ﻿using Acr.UserDialogs;
 using CoreInvestmentApp.Classes;
 using CoreInvestmentApp.Model;
-using CoreInvestmentApp.ViewModel;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Realms;
@@ -34,11 +33,7 @@ namespace CoreInvestmentApp.Pages
 
 			addItem.Clicked += (object sender, System.EventArgs e) =>
 			{
-				Navigation.PushModalAsync(new NavigationPage(new SearchPage())
-                {
-                    BarBackgroundColor = Color.FromHex("#4B77BE"),
-                    BarTextColor = Color.White
-                });
+                HandleAddButton();
 			};
 
             ToolbarItems.Add(addItem);
@@ -48,6 +43,29 @@ namespace CoreInvestmentApp.Pages
             });
 
             LoadTickersFromDBAsync();
+        }
+
+        private async void HandleAddButton()
+        {
+            ContentPage page = null;
+            var action = await DisplayActionSheet("Selection", "Cancel", null, "Search Stock", "Manual Add");
+
+            if (action == "Search Stock")
+            {
+                await Navigation.PushModalAsync(new NavigationPage(new SearchPage())
+                {
+                    BarBackgroundColor = Color.FromHex("#4B77BE"),
+                    BarTextColor = Color.White
+                });
+            }
+            else if (action == "Manual Add")
+            {
+                await Navigation.PushModalAsync(new NavigationPage(new AddManualStock())
+                {
+                    BarBackgroundColor = Color.FromHex("#4B77BE"),
+                    BarTextColor = Color.White
+                });
+            }
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
