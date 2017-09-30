@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Newtonsoft.Json;
 
 namespace CoreInvestmentApp.Pages
 {
@@ -69,8 +70,12 @@ namespace CoreInvestmentApp.Pages
             {
 				foreach (PortfolioStock portfolio in portfolioList)
 				{
-					identifierQuery += portfolio.StockTicker + ",";
-					portfolioDictionary[portfolio.StockTicker] = portfolio;
+                    if (!portfolio.UserEnteredPortfolio)
+                    {
+						identifierQuery += portfolio.StockTicker + ",";
+						portfolioDictionary[portfolio.StockTicker] = portfolio;
+                        
+                    }
 				}
 
 				string query = string.Format(Util.IntrinioAPIUrl +
@@ -106,13 +111,9 @@ namespace CoreInvestmentApp.Pages
 							}
 						}
 					}
+				}
 
-					InitLayout();
-				}
-				else
-				{
-					UserDialogs.Instance.Alert("Something went wrong with the network", "Error", "OK");
-				}
+				GetUserEnteredStockData(vRealmDb);
             }
             else
             {
@@ -123,6 +124,30 @@ namespace CoreInvestmentApp.Pages
                 PortfolioModel = null;
                 PlotPortfolio.BindingContext = null;
             }
+        }
+
+        private void GetUserEnteredStockData(Realm vRealmDB)
+        {
+            var vAllStock = vRealmDB.All<RealmStockJson>();
+
+            foreach (PortfolioStock portfolio in portfolioList)
+            {
+                if (portfolio.UserEnteredPortfolio)
+                {
+                    RealmStockJson stockJson = vAllStock.FirstOrDefault(c => c.StockTicker == portfolio.StockTicker);
+                    if (stockJson != null)
+                    {
+						Stock stock = JsonConvert.DeserializeObject<Stock>(stockJson.JsonObjStr);
+						portfolio.CurrentValue = stock.AdjClosePrice;
+                    }
+                    else 
+                    {
+                        portfolio.CurrentValue = Convert.ToDecimal(portfolio.ManualCurrentPrice);
+                    }
+                }
+            }
+
+            InitLayout();
         }
 
         private void InitLayout()

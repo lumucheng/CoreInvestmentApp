@@ -100,6 +100,8 @@ namespace CoreInvestmentApp.Pages
                 portfolio.StockTicker = stock.Ticker;
                 portfolio.DateAdded = PickerPurchaseDate.Date;
                 portfolio.PortfolioID = id;
+                portfolio.UserEnteredPortfolio = stock.UserManualEntry;
+                portfolio.ManualCurrentPrice = (double)stock.AdjClosePrice;
 
                 vRealmDb.Write(() =>
                 {

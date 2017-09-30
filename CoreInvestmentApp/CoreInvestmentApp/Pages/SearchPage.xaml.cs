@@ -88,7 +88,7 @@ namespace CoreInvestmentApp.Pages
                 }
                 else
                 {
-                    UserDialogs.Instance.Alert("Something went wrong with the network", "Error", "OK");
+                    UserDialogs.Instance.Alert("No results found", null, "OK");
                 }
             }
             else

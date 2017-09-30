@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using CoreInvestmentApp.Classes;
+using Acr.UserDialogs;
+using System.Text.RegularExpressions;
 
 namespace CoreInvestmentApp.Pages
 {
@@ -20,9 +22,23 @@ namespace CoreInvestmentApp.Pages
 			InitializeComponent ();
 
             this.stock = stock;
-            LabelDescription.Text = stock.Description;
             LabelAdjClosePrice.Text = stock.AdjClosePriceString;
             LabelVolume.Text = stock.VolumeString;
+
+            if (stock.UserManualEntry)
+            {
+                LabelAdjClosePrice.IsVisible = false;
+                EntryAdjClosePrice.IsVisible = true;
+                EntryAdjClosePrice.Text = stock.AdjClosePriceString;
+            }
+            else 
+            {
+				LabelAdjClosePrice.IsVisible = true;
+                EntryAdjClosePrice.IsVisible = false;
+				LabelAdjClosePrice.Text = stock.AdjClosePriceString;
+            }
+
+            LabelDescription.Text = stock.Description;
             LabelFiftyTwoHigh.Text = stock.FiftyTwoWeekHighString;
             LabelFiftyTwoLow.Text = stock.FiftyTwoWeekLowString;
             LabelSector.Text = stock.Sector;
@@ -31,12 +47,9 @@ namespace CoreInvestmentApp.Pages
             LabelMarketCap.Text = stock.MarketCapString;
             EditorRemarks.Text = stock.Remarks;
             circleImage.Source = stock.ImageUrl;
-
-            // Bind data to chart.
-            // pieChart.BindingContext = ViewModelLocator.OxyExData;
         }
 
-        private void Handle_Completed(object sender, System.EventArgs e)
+        private void EditorRemarksHandle_Completed(object sender, System.EventArgs e)
         {
             string remarks = EditorRemarks.Text;
             if (remarks != null)
@@ -44,6 +57,24 @@ namespace CoreInvestmentApp.Pages
                 stock.Remarks = EditorRemarks.Text.Trim();
                 Util.SaveStockToDB(stock);
             }
+        }
+
+        private void EntryAdjClosePriceHandle_Completed(object sender, System.EventArgs e)
+        {
+			string text = EntryAdjClosePrice.Text;
+			text = Regex.Replace(text, "[^0-9.]", "");
+
+			decimal closePrice = 0.0M;
+			bool result = Decimal.TryParse(text, out closePrice);
+
+            if (result)
+            {
+				stock.AdjClosePrice = closePrice;
+                stock.CurrentValue = closePrice;
+				Util.SaveStockToDB(stock);
+                EntryAdjClosePrice.Text = stock.AdjClosePriceString;
+            }
+            EntryAdjClosePrice.Text = stock.AdjClosePriceString;
         }
     }
 }

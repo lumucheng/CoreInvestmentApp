@@ -26,6 +26,10 @@ namespace CoreInvestmentApp.Model
 
         public String StockSector { get; set; }
 
+        public bool UserEnteredPortfolio { get; set; }
+
+        public double ManualCurrentPrice { get; set; }
+
         [IgnoredAttribute]
         public String PurchasePriceString
         {

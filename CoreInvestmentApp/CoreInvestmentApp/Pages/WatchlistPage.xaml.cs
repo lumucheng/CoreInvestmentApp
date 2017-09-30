@@ -47,7 +47,6 @@ namespace CoreInvestmentApp.Pages
 
         private async void HandleAddButton()
         {
-            ContentPage page = null;
             var action = await DisplayActionSheet("Selection", "Cancel", null, "Search Stock", "Manual Add");
 
             if (action == "Search Stock")
@@ -98,8 +97,11 @@ namespace CoreInvestmentApp.Pages
                 {
                     Stock stock = JsonConvert.DeserializeObject<Stock>(stockJson.JsonObjStr);
                     StockIdentifier stockIdentifier = stock.StockIdentifier;
-                    identifierQuery += stockIdentifier.Ticker + ",";
 
+                    if (!stock.UserManualEntry)
+                    {
+                        identifierQuery += stockIdentifier.Ticker + ",";
+                    }
                     stockDictionary.Add(stockIdentifier.Ticker, stock);
                 }
 
@@ -118,49 +120,62 @@ namespace CoreInvestmentApp.Pages
             HttpClient client = Util.GetAuthHttpClient();
             var uri = new Uri(query);
 
-            if (Util.IsNetworkAvailable())
+            if (stockDictionary.Count() > 0)
             {
-                var response = await client.GetAsync(uri);
-                if (response.IsSuccessStatusCode)
+                if (Util.IsNetworkAvailable())
                 {
-                    var json = await response.Content.ReadAsStringAsync();
-                    JObject jsonObject = JObject.Parse(json);
-                    JArray data = (JArray)jsonObject["data"];
-
-                    foreach (JToken token in data)
+                    var response = await client.GetAsync(uri);
+                    if (response.IsSuccessStatusCode)
                     {
-                        string identifier = token["identifier"].ToString();
-                        string item = token["item"].ToString();
-                        string value = token["value"].ToString();
+                        var json = await response.Content.ReadAsStringAsync();
+                        JObject jsonObject = JObject.Parse(json);
+                        JArray data = (JArray)jsonObject["data"];
 
-                        Stock stock = stockDictionary[identifier];
-
-                        if (item == "close_price")
+                        foreach (JToken token in data)
                         {
-                            decimal currentValue;
-                            if (Decimal.TryParse(value, out currentValue))
+                            string identifier = token["identifier"].ToString();
+                            string item = token["item"].ToString();
+                            string value = token["value"].ToString();
+
+                            Stock stock = stockDictionary[identifier];
+
+                            if (item == "close_price")
                             {
-                                stock.CurrentValue = currentValue;
+                                decimal currentValue;
+                                if (Decimal.TryParse(value, out currentValue))
+                                {
+                                    stock.CurrentValue = currentValue;
+                                }
+                            }
+                            else if (item == "company_url")
+                            {
+                                stock.ImageUrl = string.Format("https://logo.clearbit.com/{0}", value);
                             }
                         }
-                        else if (item == "company_url")
-                        {
-                            stock.ImageUrl = string.Format("https://logo.clearbit.com/{0}", value);
-                        }
-                    }
 
-                    StockList = new ObservableCollection<Stock>(stockDictionary.Values.ToList());
-                    StockListView.ItemsSource = null;
-                    StockListView.ItemsSource = StockList;
+                        List<Stock> list = stockDictionary.Values.ToList();
+                        list = list.OrderByDescending(s => s.InvestorConfidence)
+                                             .ThenByDescending(s => s.CurrentValue)
+                                             .ToList();
+                        StockList = new ObservableCollection<Stock>(list);
+                        StockListView.ItemsSource = null;
+                        StockListView.ItemsSource = StockList;
+                    }
+                    else
+                    {
+						List<Stock> list = stockDictionary.Values.ToList();
+						list = list.OrderByDescending(s => s.InvestorConfidence)
+											 .ThenByDescending(s => s.CurrentValue)
+											 .ToList();
+						StockList = new ObservableCollection<Stock>(list);
+						StockListView.ItemsSource = null;
+						StockListView.ItemsSource = StockList;
+                    }
                 }
                 else
                 {
-                    UserDialogs.Instance.Alert("Something went wrong with the network", "Error", "OK");
+                    UserDialogs.Instance.Alert("Please ensure you have a working connection", "Error", "OK");
                 }
-            }
-            else
-            {
-                UserDialogs.Instance.Alert("Please ensure you have a working connection", "Error", "OK");
             }
         }
 

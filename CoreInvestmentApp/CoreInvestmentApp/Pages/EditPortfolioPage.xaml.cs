@@ -93,6 +93,7 @@ namespace CoreInvestmentApp.Pages
 					updatePortfolio.PurchasePriceBeforeDecimalPoint = priceBeforeDecimalPoint;
 					updatePortfolio.PurchasePriceAfterDecimalPoint = priceAfterDecimalPoint;
 					updatePortfolio.DateAdded = PickerPurchaseDate.Date;
+                    updatePortfolio.UserEnteredPortfolio = portfolio.UserEnteredPortfolio;
 
                     vRealmDb.Add(updatePortfolio, true);
 					transaction.Commit();

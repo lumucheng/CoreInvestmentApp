@@ -64,6 +64,7 @@ namespace CoreInvestmentApp.Pages
 
             double totalThree = 0.0f;
             double totalFive = 0.0f;
+            decimal ttm = 0.0M;
 
             if (SortedList.Count() >= 4)
             {
@@ -94,20 +95,40 @@ namespace CoreInvestmentApp.Pages
                 LabelAnnual.Text = "-";
             }
 
-            LabelTTM.Text = stock.BasicEpsString;
+            if (stock.BasicEps == 0)
+            {
+                LabelTTM.IsVisible = false;
+                EntryTTM.IsVisible = true;
+                ttm = stock.UserEnteredTTM;
+                EntryTTM.Text = ttm.ToString("F2");
+            }
+            else 
+            {
+                ttm = stock.BasicEps;
+                EntryTTM.IsVisible = false;
+                LabelTTM.IsVisible = true;
+                LabelTTM.Text = stock.BasicEpsString;
+            }
+
             LabelGrowth.Text = Util.FormatNumberToPercent(stock.EpsGrowth);
+            decimal epsGrowth = 0.0M;
 
             if (!stock.UserEnteredGrowthPercent)
             {
-                stock.EpsEstimatedGrowth = Convert.ToDecimal(Math.Round(estimatedGrowth, 2));
+                epsGrowth = Convert.ToDecimal(Math.Round(estimatedGrowth, 2));
+            }
+            else 
+            {
+                epsGrowth = stock.UserEnteredGrowthValue;
             }
 
-            EntryEstimate.Text = stock.EpsEstimatedGrowth.ToString("F2");
-            decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
+            EntryEstimate.Text = epsGrowth.ToString("F2");
+
+            decimal entryPrice = ttm * epsGrowth * 0.8M;
             LabelEpsEntryPrice.Text = "  " + Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD) + "  ";
             stock.GrowthEntryPrice = entryPrice;
 
-            decimal reviewPrice = 1.25M * entryPrice;
+            decimal reviewPrice = ttm * epsGrowth; 
             LabelEpsReviewPrice.Text = "  " + Util.FormatNumberToCurrency(reviewPrice, CURRENCY_TYPE.USD) + "  ";
         }
 
@@ -118,18 +139,28 @@ namespace CoreInvestmentApp.Pages
             if (stock.Dividend == 0)
             {
                 dividendValue = stock.UserEnteredDividend;
-                EntryCashDividend.IsEnabled = true;
-                EntryCashDividend.BackgroundColor = Color.White;
-                EntryCashDividend.TextColor = Color.Black;
+                LabelCashDividend.IsVisible = false;
+                EntryCashDividend.IsVisible = true;
+                EntryCashDividend.Text = Util.FormatNumberToCurrency(dividendValue, CURRENCY_TYPE.USD);
+            }
+            else 
+            {
+                LabelCashDividend.IsVisible = true;
+                LabelCashDividend.Text = Util.FormatNumberToCurrency(dividendValue, CURRENCY_TYPE.USD);
+                EntryCashDividend.IsVisible = false;
+            }
+
+            if (stock.UserEnteredDividendYield > 0)
+            {
+                EntryExpectedDividendYield.Text = stock.UserEnteredDividendYield.ToString();
             }
 
             decimal dividendEntry = (dividendValue / Decimal.Parse(EntryExpectedDividendYield.Text)) * 100;
 
-            stock.DivdendEntryPrice = dividendEntry;
-            LabelDividendEntryPrice.Text = Util.FormatNumberToCurrency(dividendEntry, CURRENCY_TYPE.USD);
-            EntryCashDividend.Text = Util.FormatNumberToCurrency(dividendValue, CURRENCY_TYPE.USD);
+            stock.DivdendEntryPrice = dividendEntry * 0.8M;
+            LabelDividendEntryPrice.Text = Util.FormatNumberToCurrency(stock.DivdendEntryPrice, CURRENCY_TYPE.USD);
 
-            decimal dividendReviewPrice = dividendEntry * 1.25M;
+            decimal dividendReviewPrice = dividendEntry;
             LabelDivdendReviewPrice.Text = Util.FormatNumberToCurrency(dividendReviewPrice, CURRENCY_TYPE.USD);
 
             stock.DivdendEntryPrice = dividendEntry;
@@ -147,24 +178,35 @@ namespace CoreInvestmentApp.Pages
             if (stock.BookValuePerShare == 0) 
             {
                 bookValuePerShare = stock.UserBookValuePerShare;
-                EntryBookValue.IsEnabled = true;
-				EntryBookValue.BackgroundColor = Color.White;
-				EntryBookValue.TextColor = Color.Black;
+                EntryBookValue.IsVisible = true;
+                EntryBookValue.Text = Util.FormatNumberToCurrency(bookValuePerShare, CURRENCY_TYPE.USD);
+                LabelBookValue.IsVisible = false;
             }
-            EntryBookValue.Text = Util.FormatNumberToCurrency(bookValuePerShare, CURRENCY_TYPE.USD);
+            else 
+            {
+                LabelBookValue.IsVisible = true;
+                LabelBookValue.Text = Util.FormatNumberToCurrency(bookValuePerShare, CURRENCY_TYPE.USD);
+                EntryBookValue.IsVisible = false;
+            }
 
             if (stock.CurrentRatio == 0)
             {
                 currentRatio = stock.UserEnteredCurrentRatio;
+                LabelCurrentRatio.IsVisible = false;
                 EntryCurrentRatio.IsEnabled = true;
-
+                EntryCurrentRatio.Text = currentRatio.ToString("F2");
             }
-            EntryCurrentRatio.Text = currentRatio.ToString("F2");
+            else 
+            {
+                EntryCurrentRatio.IsVisible = false;
+                LabelCurrentRatio.Text = currentRatio.ToString("F2");
+                LabelCurrentRatio.IsVisible = true;
+            }
 
-            decimal entryPriceBookValue = bookValuePerShare * 0.80M;
+            decimal entryPriceBookValue = bookValuePerShare;
             LabelEntryBookValuePrice.Text = Util.FormatNumberToCurrency(entryPriceBookValue, CURRENCY_TYPE.USD);
 
-            decimal bookExpectedReturn = bookValuePerShare * 1.25M;
+            decimal bookExpectedReturn = bookValuePerShare * 0.8M;
             LabelBookValuerReviewPrice.Text = Util.FormatNumberToCurrency(bookExpectedReturn, CURRENCY_TYPE.USD);
 
             stock.AssetEntryPrice = entryPriceBookValue;
@@ -332,13 +374,21 @@ namespace CoreInvestmentApp.Pages
             BookValueChart.IsEnabled = false;
         }
 
-        void Handle_EntryExpectedBookPrice_Completed(object sender, System.EventArgs e)
+        void EntryTTM_Completed(object sender, System.EventArgs e)
         {
-            //decimal tryParse = 0.0M;
-            //Decimal.TryParse(EntryExpectedBookPrice.Text, out tryParse);
+			string text = EntryTTM.Text;
+			text = Regex.Replace(text, "[^0-9.]", "");
 
-            //EntryExpectedBookPrice.Text = tryParse.ToString();
-            //UpdateBookLabels();
+			decimal ttm = 0.0M;
+			bool result = Decimal.TryParse(text, out ttm);
+
+			if (result)
+			{
+                stock.UserEnteredTTM = ttm;
+			}
+
+            Util.SaveStockToDB(stock);
+            UpdateEpsLabels();
         }
 
         void Handle_EntryExpectedDividendYield_Completed(object sender, System.EventArgs e)
@@ -348,8 +398,10 @@ namespace CoreInvestmentApp.Pages
             
             if (tryParse != 0.0M)
             {
+                stock.UserEnteredDividendYield = tryParse;
                 EntryExpectedDividendYield.Text = tryParse.ToString();
                 UpdateDividendLabels();
+                Util.SaveStockToDB(stock);
             }
             else
             {
@@ -365,21 +417,16 @@ namespace CoreInvestmentApp.Pages
 
             if (result)
             {
+                stock.UserEnteredGrowthPercent = true;
+                stock.UserEnteredGrowthValue = estimate;
                 stock.EpsEstimatedGrowth = estimate;
             }
 
             EntryEstimate.Text = estimate.ToString("F2");
 
-            decimal entryPrice = stock.BasicEps * stock.EpsEstimatedGrowth;
-            LabelEpsEntryPrice.Text = "  " + Util.FormatNumberToCurrency(entryPrice, CURRENCY_TYPE.USD) + "  ";
-            stock.GrowthEntryPrice = entryPrice;
-
-            decimal reviewPrice = 1.2M * entryPrice;
-            LabelEpsReviewPrice.Text = "  " + Util.FormatNumberToCurrency(reviewPrice, CURRENCY_TYPE.USD) + "  ";
-
-            stock.UserEnteredGrowthPercent = true;
-
             Util.SaveStockToDB(stock);
+
+            UpdateEpsLabels();
         }
 
         private void EntryCashDividend_Completed(object sender, EventArgs e)
@@ -412,22 +459,26 @@ namespace CoreInvestmentApp.Pages
 			}
 
             UpdateBookLabels();
+
+            Util.SaveStockToDB(stock);
         }
 
         private void EntryCurrentRatio_Completed(object sender, System.EventArgs e)
         {
 			string text = EntryCurrentRatio.Text;
-			text = Regex.Replace(text, @"[^\d]", "");
+			text = Regex.Replace(text, "[^0-9.]", "");
 
 			decimal currentRatio = 0.0M;
 			bool result = Decimal.TryParse(text, out currentRatio);
 
 			if (result)
 			{
-                stock.CurrentRatio = currentRatio;
+                stock.UserEnteredCurrentRatio = currentRatio;
 			}
 
             UpdateBookLabels();
+
+            Util.SaveStockToDB(stock);
         }
     }
 }

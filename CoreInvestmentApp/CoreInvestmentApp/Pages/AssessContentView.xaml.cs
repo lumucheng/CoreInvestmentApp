@@ -54,12 +54,6 @@ namespace CoreInvestmentApp.Pages
             UpdateInvestorConfidence();
         }
 
-        private void OnPinchUpdated(object sender, PinchGestureUpdatedEventArgs e)
-        {
-            
-        }
-
-
         private void InitCheckBoxes()
         {
             // NICES

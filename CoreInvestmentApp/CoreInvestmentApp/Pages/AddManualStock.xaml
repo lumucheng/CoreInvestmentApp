@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CoreInvestmentApp.Classes"
@@ -12,6 +12,8 @@
                 <local:ExtendedEntry x:Name="EntryCompanyName" Placeholder="Name" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" TextColor="Black" FontSize="Medium"/>
                 <Label Text="Stock Ticker" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Medium" TextColor="#4B77BE"></Label>
                 <local:ExtendedEntry x:Name="EntryTicker" Placeholder="Ticker" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" TextColor="Black" FontSize="Medium"/>
+                <Label Text="Sector" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Medium" TextColor="#4B77BE"></Label>
+                <local:ExtendedEntry x:Name="EntrySector" Placeholder="Sector" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" TextColor="Black" FontSize="Medium"/>
                 <Label Text="Description" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Medium" TextColor="#4B77BE"></Label>
                 <Editor x:Name="EditorDescription" HorizontalOptions="FillAndExpand" HeightRequest="125"></Editor>
 
@@ -126,10 +128,10 @@
                 <local:ExtendedEntry Text="0" x:Name="EntryGrowth" Placeholder="Growth %" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" TextColor="Black" FontSize="Medium" Completed="EntryGrowth_Completed"/>
 
                 <Label Text="Entry Price" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
-                <Label x:Name="LabelGrowthEntryPrice" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
+                <Label x:Name="LabelGrowthEntryPrice" Text="0" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
 
                 <Label Text="Review Price" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
-                <Label x:Name="LabelGrowthReviewPrice" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
+                <Label x:Name="LabelGrowthReviewPrice" Text="0" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
 
                 <Label Text="Dividend" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
 
@@ -140,10 +142,10 @@
                 <local:ExtendedEntry Text="0" x:Name="EntryDividendYield" Placeholder="Yield %" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" TextColor="Black" FontSize="Medium" Completed="EntryDividendYield_Completed"/>
 
                 <Label Text="Entry Price" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
-                <Label x:Name="LabelDividendEntryPrice" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
+                <Label x:Name="LabelDividendEntryPrice" Text="0" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
 
                 <Label Text="Review Price" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
-                <Label x:Name="LabelDividendReviewPrice" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
+                <Label x:Name="LabelDividendReviewPrice" Text="0" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
 
                 <Label Text="Asset Play" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
 
@@ -154,10 +156,10 @@
                 <local:ExtendedEntry Text="0" x:Name="EntryRatio" Placeholder="Ratio" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Keyboard="Numeric" TextColor="Black" FontSize="Medium" Completed="EntryRatio_Completed"/>
 
                 <Label Text="Entry Price" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
-                <Label x:Name="LabelBookEntryPrice" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
+                <Label x:Name="LabelBookEntryPrice" Text="0" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
 
                 <Label Text="Review Price" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
-                <Label x:Name="LabelBookReviewPrice" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
+                <Label x:Name="LabelBookReviewPrice" Text="0" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
 
                 <Button Text="ADD" FontSize="Medium" FontAttributes="Bold" Clicked="Button_Clicked" BackgroundColor="#4B77BE" TextColor="White" />
             </StackLayout>

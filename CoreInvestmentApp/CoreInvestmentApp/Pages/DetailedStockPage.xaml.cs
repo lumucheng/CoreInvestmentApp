@@ -31,7 +31,7 @@ namespace CoreInvestmentApp.Pages
 
             ToolbarItems.Add(new ToolbarItem
             {
-                Text = "Add",
+                Text = "Add to Portfolio",
                 Command = new Command(() => Navigation.PushModalAsync(new NavigationPage(new AddPortfolioPage(stock))
                 {
                     BarBackgroundColor = Color.FromHex("4B77BE"),
@@ -39,7 +39,7 @@ namespace CoreInvestmentApp.Pages
                 }))
             });
 
-            if (DateTime.Now > stock.LastUpdated.AddHours(2))
+            if (!stock.UserManualEntry && DateTime.Now > stock.LastUpdated.AddHours(2))
             {
 				UserDialogs.Instance.ShowLoading("Loading..", MaskType.Black);
 				GetDetailedInfoAsync().ContinueWith((task) =>

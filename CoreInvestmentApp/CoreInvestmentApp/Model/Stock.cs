@@ -58,7 +58,9 @@ namespace CoreInvestmentApp.Model
         // User Entered Data
         public bool UserEnteredGrowthPercent { get; set; }
 		public decimal UserEnteredGrowthValue { get; set; }
+        public decimal UserEnteredTTM { get; set; }
 		public decimal UserEnteredDividend { get; set; }
+        public decimal UserEnteredDividendYield { get; set; }
 		public decimal UserBookValuePerShare { get; set; }
 		public decimal UserEnteredCurrentRatio { get; set; }
         public string Remarks;
@@ -127,7 +129,14 @@ namespace CoreInvestmentApp.Model
 
         public string VolumeString
         {
-            get { return Volume.ToString("#,##"); }
+            get 
+            {
+                if (Volume == 0.0M)
+                {
+                    return "0";
+                }
+                return Volume.ToString("#,##"); 
+            }
         }
 
         public string AdjClosePriceString
