@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CoreInvestmentApp.Classes"
@@ -133,6 +133,8 @@
                 <Label Text="Review Price" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
                 <Label x:Name="LabelGrowthReviewPrice" Text="0" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
 
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="#4B77BE" Margin="5, 10, 5, 10" />
+                
                 <Label Text="Dividend" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
 
                 <Label Text="Dividend" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Medium" TextColor="#4B77BE"></Label>
@@ -147,6 +149,8 @@
                 <Label Text="Review Price" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
                 <Label x:Name="LabelDividendReviewPrice" Text="0" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
 
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="#4B77BE" Margin="5, 10, 5, 10" />
+                
                 <Label Text="Asset Play" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
 
                 <Label Text="Book Value" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Medium" TextColor="#4B77BE"></Label>
@@ -161,6 +165,8 @@
                 <Label Text="Review Price" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
                 <Label x:Name="LabelBookReviewPrice" Text="0" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
 
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="#4B77BE" Margin="5, 10, 5, 10" />
+                
                 <Button Text="ADD" FontSize="Medium" FontAttributes="Bold" Clicked="Button_Clicked" BackgroundColor="#4B77BE" TextColor="White" />
             </StackLayout>
         </ScrollView>

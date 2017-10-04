@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CoreInvestmentApp.Pages.LoginPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CoreInvestmentApp.Pages.LoginPage" xmlns:local="clr-namespace:CoreInvestmentApp.Classes" >
     <ContentPage.Content>
         <StackLayout BackgroundColor="#4B77BE" Orientation="Vertical" Padding="20,100,20,10" VerticalOptions="FillAndExpand">
             <Image x:Name="ImageLogo" Aspect="AspectFill" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
@@ -14,7 +14,11 @@
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <Label Text="Remember me" FontSize="Medium" TextColor="White" FontAttributes="Bold" VerticalOptions="Center" />
-                <Switch IsToggled="false" x:Name="SwitchRemember" VerticalOptions="Center" />
+                <Switch IsToggled="false" x:Name="SwitchRemember" VerticalOptions="Center">
+                    <Switch.Effects>
+                        <local:SwitchEffect />
+                    </Switch.Effects>
+                </Switch>
             </StackLayout>
             <Button Text="Login" FontSize="Large" TextColor="White" BackgroundColor="#1F4788" FontAttributes="Bold" Clicked="Handle_ClickedAsync" />
         </StackLayout>
