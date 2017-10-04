@@ -12,6 +12,10 @@
                 <Image x:Name="ImageLock" Aspect="AspectFit" WidthRequest="30" HeightRequest="30" />
                 <Entry x:Name="EntryPassword" Placeholder="Password" FontSize="Medium" TextColor="White" FontAttributes="Bold" BackgroundColor="Transparent" PlaceholderColor="White"  HorizontalOptions="FillAndExpand" VerticalOptions="Fill" IsPassword="true" />
             </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label Text="Remember me" FontSize="Medium" TextColor="White" FontAttributes="Bold" VerticalOptions="Center" />
+                <Switch IsToggled="false" x:Name="SwitchRemember" VerticalOptions="Center" />
+            </StackLayout>
             <Button Text="Login" FontSize="Large" TextColor="White" BackgroundColor="#1F4788" FontAttributes="Bold" Clicked="Handle_ClickedAsync" />
         </StackLayout>
     </ContentPage.Content>

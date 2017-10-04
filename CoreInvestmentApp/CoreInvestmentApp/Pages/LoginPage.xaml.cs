@@ -63,10 +63,14 @@ namespace CoreInvestmentApp.Pages
 
             JObject jsonObject = JObject.Parse(responseString);
 
-            if ((bool)jsonObject["status"])
+			// Login success
+			if ((bool)jsonObject["status"])
             {
-                // Login success
-                Util.SaveCredentials(email, hashHex);
+                if (SwitchRemember.IsToggled)
+                {
+                    Util.SaveCredentials(email, hashHex);
+                }
+
 				Application.Current.MainPage = new RootPage();
             }
             else

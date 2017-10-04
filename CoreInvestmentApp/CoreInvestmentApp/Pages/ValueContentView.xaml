@@ -44,7 +44,7 @@
                     <local:CurvedCornersLabel x:Name="LabelTTM" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100"
                         Grid.Row="0" Grid.Column="1">
                         </local:CurvedCornersLabel>
-                    <local:ExtendedEntry x:Name="EntryTTM" FontSize="Small" HorizontalTextAlignment="Center" WidthRequest="100" HeightRequest="35" Completed="EntryTTM_Completed" Keyboard="Numeric" Grid.Row="0" Grid.Column="1" />
+                    <local:ExtendedEntry x:Name="EntryTTM" FontSize="Small" HorizontalTextAlignment="Center" WidthRequest="100" HeightRequest="40" Completed="EntryTTM_Completed" Keyboard="Numeric" Grid.Row="0" Grid.Column="1" />
                     <Label Text="TTM" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" Grid.Row="1" Grid.Column="1" />
                     <local:CurvedCornersLabel x:Name="LabelGrowth" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100"
                         Grid.Row="0" Grid.Column="2">
