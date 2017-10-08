@@ -104,36 +104,7 @@
     <Compile Include="Renderers\ExtendedEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Icon-60%402x.png" />
-    <BundleResource Include="Resources\Icon-60%403x.png" />
-    <BundleResource Include="Resources\Icon-76.png" />
-    <BundleResource Include="Resources\Icon-76%402x.png" />
-    <BundleResource Include="Resources\Icon-Small-40.png" />
-    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
-    <BundleResource Include="Resources\Icon-Small-40%403x.png" />
-    <BundleResource Include="Resources\Icon-Small.png" />
-    <BundleResource Include="Resources\Icon-Small%402x.png" />
-    <BundleResource Include="Resources\Icon-Small%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <BundleResource Include="Resources\Icon-16.png" />
-    <BundleResource Include="Resources\Icon-24.png" />
-    <BundleResource Include="Resources\Icon-32.png" />
-    <BundleResource Include="Resources\Icon-40.png" />
-    <BundleResource Include="Resources\Icon-40%402x.png" />
-    <BundleResource Include="Resources\Icon-40%403x.png" />
-    <BundleResource Include="Resources\Icon-60.png" />
-    <BundleResource Include="Resources\Icon-64.png" />
-    <BundleResource Include="Resources\Icon-72.png" />
-    <BundleResource Include="Resources\Icon-72%402x.png" />
-    <BundleResource Include="Resources\Icon-120.png" />
-    <BundleResource Include="Resources\Icon-152.png" />
-    <BundleResource Include="Resources\Icon-167.png" />
-    <BundleResource Include="Resources\Icon-180.png" />
-    <BundleResource Include="Resources\Icon-Small-50.png" />
-    <BundleResource Include="Resources\Icon-Small-50%402x.png" />
-    <BundleResource Include="Resources\Icon%402x.png" />
-    <BundleResource Include="Resources\Icon%403x.png" />
-    <BundleResource Include="Resources\Icon.png" />
     <BundleResource Include="Resources\splash-core.jpg" />
     <BundleResource Include="Resources\feedback.png" />
     <BundleResource Include="Resources\lock.png" />
@@ -143,6 +114,30 @@
     <BundleResource Include="Resources\watchlist.png" />
     <BundleResource Include="Resources\settings%402x.png" />
     <BundleResource Include="Resources\settings%403x.png" />
+    <BundleResource Include="Resources\Icon-29%401x.png" />
+    <BundleResource Include="Resources\Icon-29%402x.png" />
+    <BundleResource Include="Resources\Icon-29%403x.png" />
+    <BundleResource Include="Resources\Icon-40%401x.png" />
+    <BundleResource Include="Resources\Icon-40%402x.png" />
+    <BundleResource Include="Resources\Icon-40%403x.png" />
+    <BundleResource Include="Resources\Icon-57%401x.png" />
+    <BundleResource Include="Resources\Icon-57%402x.png" />
+    <BundleResource Include="Resources\Icon-60%401x.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-60%403x.png" />
+    <BundleResource Include="Resources\Icon-72%401x.png" />
+    <BundleResource Include="Resources\Icon-72%402x.png" />
+    <BundleResource Include="Resources\Icon-76%401x.png" />
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+    <BundleResource Include="Resources\Icon-76%403x.png" />
+    <BundleResource Include="Resources\Icon-83.5%402x.png" />
+    <BundleResource Include="Resources\Icon-Small%401x.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\Icon%401x.png" />
+    <BundleResource Include="Resources\Icon%402x.png" />
+    <BundleResource Include="Resources\Icon%403x.png" />
+    <BundleResource Include="Resources\iTunesArtwork%401x.png" />
+    <BundleResource Include="Resources\iTunesArtwork%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.Support.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

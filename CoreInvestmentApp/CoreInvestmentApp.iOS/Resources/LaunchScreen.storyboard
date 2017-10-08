@@ -13,10 +13,10 @@
                         <viewControllerLayoutGuide type="bottom" id="127"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="core_logo.jpg" id="23" translatesAutoresizingMaskIntoConstraints="NO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="23" translatesAutoresizingMaskIntoConstraints="NO" image="core_logo.png">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
@@ -55,12 +55,11 @@
     </scenes>
     <resources>
         <image name="Icon-60.png" width="60" height="60"/>
-        <image name="Default-568h.png" width="320" height="568"/>
         <image name="Default-Portrait.png" width="768" height="1004"/>
         <image name="Default.png" width="320" height="480"/>
         <image name="Icon-76.png" width="76" height="76"/>
         <image name="Icon-Small-40.png" width="40" height="40"/>
-        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Icon-Small.png" width="50" height="50"/>
         <image name="Icon-16.png" width="16" height="16"/>
         <image name="Icon-24.png" width="24" height="24"/>
         <image name="Icon-32.png" width="32" height="32"/>
@@ -72,18 +71,29 @@
         <image name="Icon-167.png" width="167" height="167"/>
         <image name="Icon-180.png" width="180" height="180"/>
         <image name="Icon-Small-50.png" width="50" height="50"/>
-        <image name="Icon.png" width="57" height="57"/>
+        <image name="Icon.png" width="20" height="20"/>
         <image name="IconFAB.png" width="133" height="133"/>
         <image name="accounts.png" width="102" height="102"/>
         <image name="contacts.png" width="102" height="100"/>
         <image name="leads.png" width="102" height="102"/>
         <image name="opportunities.png" width="102" height="102"/>
-        <image name="settings.png" width="14" height="15"/>
+        <image name="settings.png" width="22" height="22"/>
         <image name="book.png" width="512" height="512"/>
         <image name="chart.png" width="512" height="512"/>
         <image name="document.png" width="512" height="512"/>
         <image name="splash-core.jpg" width="351" height="196"/>
         <image name="core_logo.jpg" width="2809" height="1569"/>
+        <image name="feedback.png" width="250" height="250"/>
+        <image name="lock.png" width="256" height="256"/>
+        <image name="logout.png" width="250" height="250"/>
+        <image name="portfolio.png" width="250" height="250"/>
+        <image name="username.png" width="512" height="512"/>
+        <image name="watchlist.png" width="250" height="250"/>
+        <image name="core_logo.png" width="936.3333" height="523"/>
+        <image name="Icon-29.png" width="29" height="29"/>
+        <image name="Icon-57.png" width="57" height="57"/>
+        <image name="Icon-83.5.png" width="83.5" height="83.5"/>
+        <image name="iTunesArtwork.png" width="512" height="512"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedScreenMetrics key="destination"/>

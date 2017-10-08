@@ -99,9 +99,6 @@
     <Compile Include="Tabs\PagerIndicatorTab.cs" />
     <Compile Include="Tabs\SwitcherPageViewModel.cs" />
     <Compile Include="Tabs\TabView.cs" />
-    <Compile Include="TestChart.xaml.cs">
-      <DependentUpon>TestChart.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\WatchlistPage.xaml.cs">
       <DependentUpon>WatchlistPage.xaml</DependentUpon>
     </Compile>
@@ -233,12 +230,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\InfoContentView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="TestChart.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
