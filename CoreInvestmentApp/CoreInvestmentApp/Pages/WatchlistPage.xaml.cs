@@ -47,23 +47,34 @@ namespace CoreInvestmentApp.Pages
 
         private async void HandleAddButton()
         {
-            var action = await DisplayActionSheet("Selection", "Cancel", null, "Search Stock", "Manual Add");
+            // check accessrights first
+            if (Util.AccessRights == "full" || 
+                Util.AccessRights == "guest" && StockList.Count < 3 ||
+                Util.AccessRights == "expired" && StockList.Count < 3)
+            {
+                var action = await DisplayActionSheet("Selection", "Cancel", null, "Search Stock", "Manual Add");
 
-            if (action == "Search Stock")
-            {
-                await Navigation.PushModalAsync(new NavigationPage(new SearchPage())
+                if (action == "Search Stock")
                 {
-                    BarBackgroundColor = Color.FromHex("#4B77BE"),
-                    BarTextColor = Color.White
-                });
+                    await Navigation.PushModalAsync(new NavigationPage(new SearchPage())
+                    {
+                        BarBackgroundColor = Color.FromHex("#4B77BE"),
+                        BarTextColor = Color.White
+                    });
+                }
+                else if (action == "Manual Add")
+                {
+                    await Navigation.PushModalAsync(new NavigationPage(new AddManualStock())
+                    {
+                        BarBackgroundColor = Color.FromHex("#4B77BE"),
+                        BarTextColor = Color.White
+                    });
+                }
             }
-            else if (action == "Manual Add")
+            else
             {
-                await Navigation.PushModalAsync(new NavigationPage(new AddManualStock())
-                {
-                    BarBackgroundColor = Color.FromHex("#4B77BE"),
-                    BarTextColor = Color.White
-                });
+                string message = "You have reached the max limit of stock valuation. Please subscribe to our app account to have unlimited access.";
+                UserDialogs.Instance.Alert(message, "Error", "OK");
             }
         }
 

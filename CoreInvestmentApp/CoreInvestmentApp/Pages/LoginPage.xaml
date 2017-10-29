@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CoreInvestmentApp.Pages.LoginPage" xmlns:local="clr-namespace:CoreInvestmentApp.Classes" >
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#4B77BE" Orientation="Vertical" Padding="20,100,20,10" VerticalOptions="FillAndExpand">
+        <StackLayout BackgroundColor="White" Orientation="Vertical" Padding="20,20,20,10" Spacing="20" VerticalOptions="FillAndExpand">
             <Image x:Name="ImageLogo" Aspect="AspectFill" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <Image x:Name="ImageUsername" Aspect="AspectFit" WidthRequest="30" HeightRequest="30" />
-                <Entry x:Name="EntryEmail"  Placeholder="Email" FontSize="Medium" TextColor="White" FontAttributes="Bold" BackgroundColor="Transparent" PlaceholderColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" />
+                <Entry x:Name="EntryEmail"  Placeholder="Email" FontSize="Medium" TextColor="Black" FontAttributes="Bold" BackgroundColor="Transparent" PlaceholderColor="Gray" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" />
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <Image x:Name="ImageLock" Aspect="AspectFit" WidthRequest="30" HeightRequest="30" />
-                <Entry x:Name="EntryPassword" Placeholder="Password" FontSize="Medium" TextColor="White" FontAttributes="Bold" BackgroundColor="Transparent" PlaceholderColor="White"  HorizontalOptions="FillAndExpand" VerticalOptions="Fill" IsPassword="true" />
+                <Entry x:Name="EntryPassword" Placeholder="Password" FontSize="Medium" TextColor="Black" FontAttributes="Bold" BackgroundColor="Transparent" PlaceholderColor="Gray"  HorizontalOptions="FillAndExpand" VerticalOptions="Fill" IsPassword="true" />
             </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <Label Text="Remember me" FontSize="Medium" TextColor="White" FontAttributes="Bold" VerticalOptions="Center" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="3,3,3,3">
+                <Label Text="Remember me" FontSize="Medium" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" />
                 <Switch IsToggled="false" x:Name="SwitchRemember" VerticalOptions="Center">
                     <Switch.Effects>
                         <local:SwitchEffect />

@@ -71,6 +71,7 @@ namespace CoreInvestmentApp.Pages
                     Util.SaveCredentials(email, hashHex);
                 }
 
+                Util.AccessRights = (string)jsonObject["message"];
 				Application.Current.MainPage = new RootPage();
             }
             else

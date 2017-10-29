@@ -97,7 +97,7 @@ namespace CoreInvestmentApp.Classes
         {
             return String.Format("{0:P2}", num);
         }
-        
+
         public static void SaveStockToDB(Stock stock)
         {
             var vRealmDb = Realm.GetInstance();
@@ -112,58 +112,60 @@ namespace CoreInvestmentApp.Classes
             });
         }
 
-		public static string ByteArrayToHex(byte[] barray)
-		{
-			char[] c = new char[barray.Length * 2];
-			byte b;
-			for (int i = 0; i < barray.Length; ++i)
-			{
-				b = ((byte)(barray[i] >> 4));
-				c[i * 2] = (char)(b > 9 ? b + 0x37 : b + 0x30);
-				b = ((byte)(barray[i] & 0xF));
-				c[i * 2 + 1] = (char)(b > 9 ? b + 0x37 : b + 0x30);
-			}
-			return new string(c);
-		}
+        public static string ByteArrayToHex(byte[] barray)
+        {
+            char[] c = new char[barray.Length * 2];
+            byte b;
+            for (int i = 0; i < barray.Length; ++i)
+            {
+                b = ((byte)(barray[i] >> 4));
+                c[i * 2] = (char)(b > 9 ? b + 0x37 : b + 0x30);
+                b = ((byte)(barray[i] & 0xF));
+                c[i * 2 + 1] = (char)(b > 9 ? b + 0x37 : b + 0x30);
+            }
+            return new string(c);
+        }
 
-		public static void SaveCredentials(string userName, string password)
-		{
-			if (!string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(password))
-			{
-				Account account = new Account
-				{
-					Username = userName
-				};
-				account.Properties.Add("Password", password);
+        public static void SaveCredentials(string userName, string password)
+        {
+            if (!string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(password))
+            {
+                Account account = new Account
+                {
+                    Username = userName
+                };
+                account.Properties.Add("Password", password);
                 AccountStore.Create().Save(account, AppName);
-			}
-		}
+            }
+        }
 
         public static void RemoveCredentials()
-		{
-			var account = AccountStore.Create().FindAccountsForService(AppName).FirstOrDefault();
-			if (account != null)
-			{
-				AccountStore.Create().Delete(account, AppName);
-			}
-		}
+        {
+            var account = AccountStore.Create().FindAccountsForService(AppName).FirstOrDefault();
+            if (account != null)
+            {
+                AccountStore.Create().Delete(account, AppName);
+            }
+        }
 
-		public static string UserName
-		{
-			get
-			{
-				var account = AccountStore.Create().FindAccountsForService(AppName).FirstOrDefault();
-				return (account != null) ? account.Username : null;
-			}
-		}
+        public static string UserName
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(AppName).FirstOrDefault();
+                return (account != null) ? account.Username : null;
+            }
+        }
 
-		public static string Password
-		{
-			get
-			{
-				var account = AccountStore.Create().FindAccountsForService(AppName).FirstOrDefault();
-				return (account != null) ? account.Properties["Password"] : null;
-			}
-		}
+        public static string Password
+        {
+            get
+            {
+                var account = AccountStore.Create().FindAccountsForService(AppName).FirstOrDefault();
+                return (account != null) ? account.Properties["Password"] : null;
+            }
+        }
+
+        public static string AccessRights { get; set; }
     }
 }

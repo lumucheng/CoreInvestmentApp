@@ -74,7 +74,7 @@
                         x:Name="LabelName"
                         Grid.Row="0"
                         Grid.Column="1"
-                        FontSize="Medium"
+                        FontSize="14"
                         TextColor="Black"
                         FontAttributes="Bold"/>
 
@@ -82,7 +82,7 @@
                         Grid.Row="1"
                         Grid.Column="1"
                         Text="Market Capitalization"
-                        FontSize="Medium"
+                        FontSize="14"
                         TextColor="Black"
                         FontAttributes="Bold"/>
 
@@ -90,7 +90,7 @@
                         x:Name="LabelMarketCap"
                         Grid.Row="2"
                         Grid.Column="1"
-                        FontSize="Medium"
+                        FontSize="14"
                         TextColor="Black"
                         FontAttributes="Bold"/>
                 </Grid>

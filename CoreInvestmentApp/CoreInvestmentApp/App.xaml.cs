@@ -55,6 +55,7 @@ namespace CoreInvestmentApp
 
 			if ((bool)jsonObject["status"])
 			{
+                Util.AccessRights = (string)jsonObject["message"];
                 MainPage = new RootPage();
 			}
             else 

@@ -4,9 +4,9 @@
         <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
             <StackLayout BackgroundColor="White" Padding="10, 10, 10, 10" Orientation="Vertical" VerticalOptions="FillAndExpand">
                 <Label Text="GROWTH" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
-                <Label Text="Valuation based on expected EPS Growth percentage" TextColor="Black" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
+                <Label Text="Valuation based on expected EPS Growth percentage" TextColor="Black" FontSize="14" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
                 <oxy:PlotView x:Name="EPSChart" Model="{Binding EPSModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand" />
-                <Label Text="Average growth" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="#4B77BE" />
+                <Label Text="Average growth" FontSize="14" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="#4B77BE" />
                 <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -16,17 +16,17 @@
                         <ColumnDefinition Width="1*" />
                     </Grid.ColumnDefinitions>
                     <StackLayout Orientation="Vertical" Grid.Column="0" HorizontalOptions="FillAndExpand">
-                        <local:CurvedCornersLabel x:Name="LabelThreeYears" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100">
+                        <local:CurvedCornersLabel x:Name="LabelThreeYears" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100">
                         </local:CurvedCornersLabel>
                         <Label Text="3 Years" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" />
                     </StackLayout>
                     <StackLayout Orientation="Vertical" Grid.Column="1" HorizontalOptions="FillAndExpand">
-                        <local:CurvedCornersLabel x:Name="LabelFiveYears" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100">
+                        <local:CurvedCornersLabel x:Name="LabelFiveYears" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100">
                         </local:CurvedCornersLabel>
                         <Label Text="5 Years" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" />
                     </StackLayout>
                 </Grid>
-                <Label Text="Latest Earning per Share (USD)" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="#4B77BE" />
+                <Label Text="Latest Earning per Share (USD)" FontSize="14" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="#4B77BE" />
                 <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
@@ -37,21 +37,21 @@
                         <ColumnDefinition Width="1*" />
                         <ColumnDefinition Width="1*" />
                     </Grid.ColumnDefinitions>
-                    <local:CurvedCornersLabel x:Name="LabelAnnual" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100"
+                    <local:CurvedCornersLabel x:Name="LabelAnnual" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100"
                         Grid.Row="0" Grid.Column="0">
                     </local:CurvedCornersLabel>
                     <Label Text="Annual" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" Grid.Row="1" Grid.Column="0" />
-                    <local:CurvedCornersLabel x:Name="LabelTTM" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100"
+                    <local:CurvedCornersLabel x:Name="LabelTTM" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100"
                         Grid.Row="0" Grid.Column="1">
                         </local:CurvedCornersLabel>
                     <local:ExtendedEntry x:Name="EntryTTM" FontSize="Small" HorizontalTextAlignment="Center" WidthRequest="100" HeightRequest="40" Completed="EntryTTM_Completed" Keyboard="Numeric" Grid.Row="0" Grid.Column="1" />
                     <Label Text="TTM" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" Grid.Row="1" Grid.Column="1" />
-                    <local:CurvedCornersLabel x:Name="LabelGrowth" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100"
+                    <local:CurvedCornersLabel x:Name="LabelGrowth" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100"
                         Grid.Row="0" Grid.Column="2">
                     </local:CurvedCornersLabel>
                     <Label Text="Growth (%)" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" TextColor="Black" Grid.Row="1" Grid.Column="2" />
                 </Grid>
-                <Label Text="Earning per share estimated growth (%)" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="#4B77BE" />
+                <Label Text="Earning per share estimated growth (%)" FontSize="14" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="#4B77BE" />
                 <local:ExtendedEntry x:Name="EntryEstimate" FontSize="Large" Text="12.5" Placeholder="Enter Estimate" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Completed="EntryEstimate_Completed" Keyboard="Numeric" />
                 <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
                     <Grid.RowDefinitions>
@@ -62,21 +62,21 @@
                         <ColumnDefinition Width="1*" />
                     </Grid.ColumnDefinitions>
                     <StackLayout Orientation="Vertical" Grid.Column="0" HorizontalOptions="FillAndExpand">
-                        <local:CurvedCornersLabel x:Name="LabelEpsEntryPrice" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" HeightRequest="30" CurvedBackgroundColor="#4CB050" TextColor="White" CurvedCornerRadius="15" HorizontalOptions="CenterAndExpand" WidthRequest="140">
+                        <local:CurvedCornersLabel x:Name="LabelEpsEntryPrice" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" HeightRequest="30" CurvedBackgroundColor="#4CB050" TextColor="White" CurvedCornerRadius="15" HorizontalOptions="CenterAndExpand" WidthRequest="140">
                         </local:CurvedCornersLabel>
                         <Label Text="Entry Price" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" />
                     </StackLayout>
                     <StackLayout Orientation="Vertical" Grid.Column="1" HorizontalOptions="FillAndExpand">
-                        <local:CurvedCornersLabel x:Name="LabelEpsReviewPrice" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" HeightRequest="30" CurvedBackgroundColor="#4169E2" TextColor="White" CurvedCornerRadius="15" HorizontalOptions="CenterAndExpand" WidthRequest="140">
+                        <local:CurvedCornersLabel x:Name="LabelEpsReviewPrice" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" HeightRequest="30" CurvedBackgroundColor="#4169E2" TextColor="White" CurvedCornerRadius="15" HorizontalOptions="CenterAndExpand" WidthRequest="140">
                         </local:CurvedCornersLabel>
                         <Label Text="Fair Value" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" />
                     </StackLayout>
                 </Grid>
                 <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="#4B77BE" Margin="5, 10, 5, 10" />
                 <Label Text="DIVIDEND" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
-                <Label Text="Valuation based on expected dividend" FontSize="Medium" HorizontalOptions="CenterAndExpand" TextColor="Black" />
+                <Label Text="Valuation based on expected dividend" FontSize="14" HorizontalOptions="CenterAndExpand" TextColor="Black" />
                 <oxy:PlotView x:Name="DividendChart" Model="{Binding DividendModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand" />
-                <Label Text="Current Dividend" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="#4B77BE" />
+                <Label Text="Current Dividend" FontSize="14" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="#4B77BE" />
                 <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
@@ -86,18 +86,18 @@
                         <ColumnDefinition Width="1*" />
                         <ColumnDefinition Width="1*" />
                     </Grid.ColumnDefinitions>
-                    <local:CurvedCornersLabel x:Name="LabelCashDividend" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" WidthRequest="120" HeightRequest="30" HorizontalOptions="Center"
+                    <local:CurvedCornersLabel x:Name="LabelCashDividend" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" WidthRequest="120" HeightRequest="30" HorizontalOptions="Center"
                         VerticalOptions="Center" Grid.Row="0" Grid.Column="0">
                     </local:CurvedCornersLabel>
-                    <local:ExtendedEntry x:Name="EntryCashDividend" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="Black" HorizontalOptions="CenterAndExpand" WidthRequest="120" Completed="EntryCashDividend_Completed" Keyboard="Numeric" Grid.Row="0" Grid.Column="0">
+                    <local:ExtendedEntry x:Name="EntryCashDividend" HorizontalTextAlignment="Center" FontSize="14" TextColor="Black" HorizontalOptions="CenterAndExpand" WidthRequest="120" Completed="EntryCashDividend_Completed" Keyboard="Numeric" Grid.Row="0" Grid.Column="0">
                     </local:ExtendedEntry>
                     <Label Text="Cash Dividend" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" Grid.Row="1" Grid.Column="0" />
-                    <local:CurvedCornersLabel x:Name="LabelCurrentYield" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" WidthRequest="120" HeightRequest="30" HorizontalOptions="Center"
+                    <local:CurvedCornersLabel x:Name="LabelCurrentYield" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" WidthRequest="120" HeightRequest="30" HorizontalOptions="Center"
                         VerticalOptions="Center" Grid.Row="0" Grid.Column="1">
                     </local:CurvedCornersLabel>
                     <Label Text="Current Yield" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" Grid.Row="1" Grid.Column="1" />
                 </Grid>
-                <Label Text="Expected dividend yield (%)" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="#4B77BE" />
+                <Label Text="Expected dividend yield (%)" FontSize="14" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="#4B77BE" />
                 <local:ExtendedEntry x:Name="EntryExpectedDividendYield" Text="7.0" FontSize="Large" Placeholder="Enter Expected" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Completed="Handle_EntryExpectedDividendYield_Completed" Keyboard="Numeric" />
                 <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
                     <Grid.RowDefinitions>
@@ -108,21 +108,21 @@
                         <ColumnDefinition Width="1*" />
                     </Grid.ColumnDefinitions>
                     <StackLayout Orientation="Vertical" Grid.Column="0" HorizontalOptions="FillAndExpand">
-                        <local:CurvedCornersLabel x:Name="LabelDividendEntryPrice" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" HeightRequest="30" CurvedBackgroundColor="#4CB050" TextColor="White" CurvedCornerRadius="15" HorizontalOptions="CenterAndExpand" WidthRequest="140">
+                        <local:CurvedCornersLabel x:Name="LabelDividendEntryPrice" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" HeightRequest="30" CurvedBackgroundColor="#4CB050" TextColor="White" CurvedCornerRadius="15" HorizontalOptions="CenterAndExpand" WidthRequest="140">
                         </local:CurvedCornersLabel>
                         <Label Text="Entry Price" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" />
                     </StackLayout>
                     <StackLayout Orientation="Vertical" Grid.Column="1" HorizontalOptions="FillAndExpand">
-                        <local:CurvedCornersLabel x:Name="LabelDivdendReviewPrice" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" HeightRequest="30" CurvedBackgroundColor="#4169E2" TextColor="White" CurvedCornerRadius="15" HorizontalOptions="CenterAndExpand" WidthRequest="140">
+                        <local:CurvedCornersLabel x:Name="LabelDivdendReviewPrice" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" HeightRequest="30" CurvedBackgroundColor="#4169E2" TextColor="White" CurvedCornerRadius="15" HorizontalOptions="CenterAndExpand" WidthRequest="140">
                         </local:CurvedCornersLabel>
                         <Label Text="Fair Value" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" />
                     </StackLayout>
                 </Grid>
                 <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" BackgroundColor="#4B77BE" Margin="5, 10, 5, 10" />
                 <Label Text="ASSET" FontSize="Large" FontAttributes="Bold" TextColor="#4B77BE" HorizontalOptions="CenterAndExpand" />
-                <Label Text="Valuation based on Book Value" FontSize="Medium" HorizontalOptions="CenterAndExpand" TextColor="Black" />
+                <Label Text="Valuation based on Book Value" FontSize="14" HorizontalOptions="CenterAndExpand" TextColor="Black" />
                 <oxy:PlotView x:Name="BookValueChart" Model="{Binding BookValueModel}" HeightRequest="400" WidthRequest="300" Margin="5,5,5,10" HorizontalOptions="FillAndExpand" />
-                <Label Text="Current Book Value" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="#4B77BE" />
+                <Label Text="Current Book Value" FontSize="14" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="#4B77BE" />
                 <Grid Padding="5" RowSpacing="10" ColumnSpacing="10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
@@ -132,20 +132,20 @@
                         <ColumnDefinition Width="1*" />
                         <ColumnDefinition Width="1*" />
                     </Grid.ColumnDefinitions>
-                    <local:CurvedCornersLabel x:Name="LabelBookValue" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100"
+                    <local:CurvedCornersLabel x:Name="LabelBookValue" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100"
                         Grid.Row="0" Grid.Column="0">
                     </local:CurvedCornersLabel>
-                    <local:ExtendedEntry x:Name="EntryBookValue" FontSize="Medium" Placeholder="Price to Book" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Completed="EntryBookValue_Completed" Keyboard="Numeric" Grid.Row="0" Grid.Column="0" />
+                    <local:ExtendedEntry x:Name="EntryBookValue" FontSize="14" Placeholder="Price to Book" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Completed="EntryBookValue_Completed" Keyboard="Numeric" Grid.Row="0" Grid.Column="0" />
                     <Label Text="Book Value" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" Grid.Row="1" Grid.Column="0" />
-                    <local:CurvedCornersLabel x:Name="LabelPriceToBook" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" WidthRequest="120" HeightRequest="30" HorizontalOptions="Center"
+                    <local:CurvedCornersLabel x:Name="LabelPriceToBook" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" WidthRequest="120" HeightRequest="30" HorizontalOptions="Center"
                         VerticalOptions="Center" Grid.Row="0" Grid.Column="1">
                     </local:CurvedCornersLabel>
                     <Label Text="Price to Book" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" Grid.Row="1" Grid.Column="1" />
                 </Grid>
-                <local:CurvedCornersLabel x:Name="LabelCurrentRatio" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100">
+                <local:CurvedCornersLabel x:Name="LabelCurrentRatio" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" HeightRequest="30" CurvedBackgroundColor="#5E9EA0" TextColor="White" CurvedCornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="100">
                 </local:CurvedCornersLabel>
-                <Label Text="Current Ratio" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" />
-                <local:ExtendedEntry x:Name="EntryCurrentRatio" FontSize="Medium" Placeholder="Enter Ratio" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" Completed="EntryCurrentRatio_Completed" Keyboard="Numeric" IsEnabled="false" />
+                <Label Text="Current Ratio" FontSize="14" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" />
+                <local:ExtendedEntry x:Name="EntryCurrentRatio" FontSize="14" Placeholder="Enter Ratio" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" Completed="EntryCurrentRatio_Completed" Keyboard="Numeric" IsEnabled="false" />
                 <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -155,12 +155,12 @@
                         <ColumnDefinition Width="1*" />
                     </Grid.ColumnDefinitions>
                     <StackLayout Orientation="Vertical" Grid.Column="0" HorizontalOptions="FillAndExpand">
-                        <local:CurvedCornersLabel x:Name="LabelEntryBookValuePrice" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" HeightRequest="30" CurvedBackgroundColor="#4CB050" TextColor="White" CurvedCornerRadius="15" HorizontalOptions="CenterAndExpand" WidthRequest="140">
+                        <local:CurvedCornersLabel x:Name="LabelEntryBookValuePrice" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" HeightRequest="30" CurvedBackgroundColor="#4CB050" TextColor="White" CurvedCornerRadius="15" HorizontalOptions="CenterAndExpand" WidthRequest="140">
                         </local:CurvedCornersLabel>
                         <Label Text="Entry Price" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" />
                     </StackLayout>
                     <StackLayout Orientation="Vertical" Grid.Column="1" HorizontalOptions="FillAndExpand">
-                        <local:CurvedCornersLabel x:Name="LabelBookValuerReviewPrice" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" HeightRequest="30" CurvedBackgroundColor="#4169E2" TextColor="White" CurvedCornerRadius="15" HorizontalOptions="CenterAndExpand" WidthRequest="140">
+                        <local:CurvedCornersLabel x:Name="LabelBookValuerReviewPrice" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="14" HeightRequest="30" CurvedBackgroundColor="#4169E2" TextColor="White" CurvedCornerRadius="15" HorizontalOptions="CenterAndExpand" WidthRequest="140">
                         </local:CurvedCornersLabel>
                         <Label Text="Fair Value" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" />
                     </StackLayout>
