@@ -203,10 +203,10 @@ namespace CoreInvestmentApp.Pages
                 LabelCurrentRatio.IsVisible = true;
             }
 
-            decimal entryPriceBookValue = bookValuePerShare;
+            decimal entryPriceBookValue = bookValuePerShare * 0.8M;
             LabelEntryBookValuePrice.Text = Util.FormatNumberToCurrency(entryPriceBookValue, CURRENCY_TYPE.USD);
 
-            decimal bookExpectedReturn = bookValuePerShare * 0.8M;
+            decimal bookExpectedReturn = bookValuePerShare;
             LabelBookValuerReviewPrice.Text = Util.FormatNumberToCurrency(bookExpectedReturn, CURRENCY_TYPE.USD);
 
             stock.AssetEntryPrice = entryPriceBookValue;
