@@ -538,8 +538,8 @@ namespace CoreInvestmentApp.Pages
 
             StackLayout stackLayout = new StackLayout
             {
-                BackgroundColor = Color.FromHex("#89C4F4"),
-                Orientation = StackOrientation.Vertical,
+				BackgroundColor = Color.FromHex("#89C4F4"),
+				Orientation = StackOrientation.Vertical,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 Padding = new Thickness(0, 0, 0, 0)
             };
@@ -553,9 +553,9 @@ namespace CoreInvestmentApp.Pages
             grid.ColumnDefinitions.Add(col1);
             grid.ColumnDefinitions.Add(col2);
 
-            Label LabelTicker = new Label { Text = stock.StockIdentifier.Ticker, TextColor = Color.White, FontSize = 16, FontAttributes = FontAttributes.Bold, Margin = new Thickness(15, 10, 0, 0) };
-            Label LabelIdentifier = new Label { Text = stock.StockIdentifier.Name, TextColor = Color.White, FontSize = 14, FontAttributes = FontAttributes.Bold, Margin = new Thickness(15, 10, 0, 0) };
-            Label LabelClose = new Label { Text = "Price: " + Util.FormatNumberToCurrency(stock.AdjClosePrice, CURRENCY_TYPE.USD), TextColor = Color.White, FontSize = 14, FontAttributes = FontAttributes.Bold, Margin = new Thickness(15, 10, 0, 0) };
+            Label LabelTicker = new Label { Text = stock.StockIdentifier.Ticker, TextColor = Color.White, FontSize = 14, FontAttributes = FontAttributes.Bold, Margin = new Thickness(15, 10, 0, 0) };
+            Label LabelIdentifier = new Label { Text = stock.StockIdentifier.Name, TextColor = Color.White, FontSize = 12, FontAttributes = FontAttributes.Bold, Margin = new Thickness(15, 10, 0, 0) };
+            Label LabelClose = new Label { Text = "Price: " + Util.FormatNumberToCurrency(stock.AdjClosePrice, CURRENCY_TYPE.USD), TextColor = Color.White, FontSize = 12, FontAttributes = FontAttributes.Bold, Margin = new Thickness(15, 10, 0, 0) };
 
             StackLayout leftLayout = new StackLayout
             {
@@ -563,7 +563,7 @@ namespace CoreInvestmentApp.Pages
                 Orientation = StackOrientation.Vertical,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 Padding = new Thickness(0, 0, 0, 0),
-                HeightRequest = 120
+                HeightRequest = 105
             };
 
             leftLayout.Children.Add(LabelTicker);
@@ -584,7 +584,7 @@ namespace CoreInvestmentApp.Pages
                 Orientation = StackOrientation.Vertical,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 Padding = new Thickness(0, 0, 0, 0) ,
-                HeightRequest = 120
+                HeightRequest = 105
             };
 
             rightLayout.Children.Add(LabelFiftyTwo);
@@ -608,14 +608,14 @@ namespace CoreInvestmentApp.Pages
             var tabsHeight = 50;
             relativeLayout.Children.Add(_tabs,
                 Constraint.RelativeToParent((parent) => { return parent.X; }),
-                Constraint.RelativeToParent((parent) => { return parent.Y - 125; }),
+                Constraint.RelativeToParent((parent) => { return parent.Y - 105; }),
                 Constraint.RelativeToParent(parent => parent.Width),
                 Constraint.Constant(tabsHeight)
             );
 
             relativeLayout.Children.Add(pagesCarousel,
                 Constraint.Constant(0),
-                Constraint.RelativeToParent((parent) => { return parent.Y + tabsHeight - 125; }),
+                Constraint.RelativeToParent((parent) => { return parent.Y + tabsHeight - 105; }),
                 Constraint.RelativeToParent((parent) => { return parent.Width; }),
                 Constraint.RelativeToView(_tabs, (parent, sibling) => { return parent.Height - (sibling.Height); })
             );

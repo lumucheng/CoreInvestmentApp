@@ -47,7 +47,11 @@
                                     <ColumnDefinition Width="50*" />
                                     <ColumnDefinition Width="30*" />
                                 </Grid.ColumnDefinitions>
-                                <controls:CircleImage Aspect="AspectFit" BorderColor="Black" BorderThickness="1" HeightRequest="70" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" WidthRequest="70" Grid.RowSpan="3" Source="{Binding ImageUrl}" />
+                                <controls:CircleImage HeightRequest="45"
+                                        HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="CenterAndExpand"
+                                        Aspect="AspectFit"
+                                        WidthRequest="45" BorderColor="Black" BorderThickness="1" Grid.RowSpan="3" Source="{Binding ImageUrl}" />
                                 <StackLayout Grid.Column="1" Orientation="Horizontal" Grid.RowSpan="2" Grid.Row="0" VerticalOptions="Start">
                                     <Label FontSize="12" Text="{Binding Name}" VerticalOptions="End" FontAttributes="Bold" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" />
                                     <Label FontSize="12" Text="{Binding Category}" VerticalOptions="End" TextColor="Black" BackgroundColor="#faebd6" />

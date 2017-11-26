@@ -21,6 +21,7 @@
                 </Switch>
             </StackLayout>
             <Button Text="Login" FontSize="Large" TextColor="White" BackgroundColor="#1F4788" FontAttributes="Bold" Clicked="Handle_ClickedAsync" />
+            <local:HyperlinkLabel TextColor="Black" Text="Not a member? Register at www.coreinvest.me/register.php" HorizontalTextAlignment="Center" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

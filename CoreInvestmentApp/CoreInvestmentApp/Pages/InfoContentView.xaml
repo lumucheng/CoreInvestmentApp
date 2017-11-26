@@ -53,11 +53,11 @@
                         x:Name="circleImage"
                         BorderColor="Black"
                         BorderThickness="1"
-                        HeightRequest="66"
+                        HeightRequest="45"
                         HorizontalOptions="CenterAndExpand"
                         VerticalOptions="CenterAndExpand"
                         Aspect="AspectFit"
-                        WidthRequest="66"
+                        WidthRequest="45"
                         Grid.RowSpan="2"
                         Source="{Binding ImageUrl}"/>
 
@@ -65,7 +65,7 @@
                         x:Name="LabelTicker"
                         Grid.Row="2"
                         Grid.Column="0"
-                        FontSize="Medium"
+                        FontSize="14"
                         FontAttributes="Bold"
                         HorizontalOptions="CenterAndExpand"
                         TextColor="Black"/>

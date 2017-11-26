@@ -113,6 +113,7 @@
     <Compile Include="Pages\EditPortfolioPage.xaml.cs">
       <DependentUpon>EditPortfolioPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Classes\HyperlinkLabel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">

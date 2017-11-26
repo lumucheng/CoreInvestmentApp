@@ -49,8 +49,8 @@ namespace CoreInvestmentApp.Pages
         {
             // check accessrights first
             if (Util.AccessRights == "full" || 
-                Util.AccessRights == "guest" && StockList.Count < 3 ||
-                Util.AccessRights == "expired" && StockList.Count < 3)
+                Util.AccessRights == "guest" && StockList.Count < 2 ||
+                Util.AccessRights == "expired" && StockList.Count < 2)
             {
                 var action = await DisplayActionSheet("Selection", "Cancel", null, "Search Stock", "Manual Add");
 
@@ -74,7 +74,12 @@ namespace CoreInvestmentApp.Pages
             else
             {
                 string message = "You have reached the max limit of stock valuation. Please subscribe to our app account to have unlimited access.";
-                UserDialogs.Instance.Alert(message, "Error", "OK");
+                bool result = await DisplayAlert("Error", message, "Subscribe", "Cancel");
+
+                if (result) {
+                    Uri url = new Uri("http://coreinvest.me/appsubscribe.php");
+                    Device.OpenUri(url);
+                }
             }
         }
 

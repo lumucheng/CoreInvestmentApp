@@ -102,6 +102,7 @@
     <ITunesArtwork Include="Resources\iTunesArtwork.png" />
     <ITunesArtwork Include="Resources\iTunesArtwork%402x.png" />
     <Compile Include="Renderers\ExtendedEntryRenderer.cs" />
+    <Compile Include="Renderers\HyperLinkLabelRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
