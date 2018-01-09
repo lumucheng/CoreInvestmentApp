@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using CoreInvestmentApp.Classes;
-using CoreInvestmentApp.Model;
 using Newtonsoft.Json.Linq;
 using PCLCrypto;
 using Xamarin.Forms;
+using Xamarin.Auth;
 
 namespace CoreInvestmentApp.Pages
 {

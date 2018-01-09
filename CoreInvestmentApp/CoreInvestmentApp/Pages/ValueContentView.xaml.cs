@@ -5,14 +5,9 @@ using OxyPlot.Series;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using OxyPlot.Annotations;
-using Acr.UserDialogs;
 using OxyPlot.Axes;
 using System.Text.RegularExpressions;
 
@@ -38,7 +33,6 @@ namespace CoreInvestmentApp.Pages
             EPSChart.BindingContext = this;
             DividendChart.BindingContext = this;
             BookValueChart.BindingContext = this;
-
 
             if (stock.Dividend > 0)
             {
@@ -217,12 +211,13 @@ namespace CoreInvestmentApp.Pages
             var plotModel1 = new PlotModel { Title = "Earnings Per Share (USD)" };
             var areaSeries1 = new AreaSeries
             {
+                LabelFormatString = "{1}",
                 MarkerType = MarkerType.Circle,
                 MarkerSize = 3,
                 MarkerStroke = OxyColors.Black,
                 StrokeThickness = 3,
                 Color = OxyColor.FromRgb(210, 198, 1),
-                Fill = OxyColor.FromRgb(209, 220, 114)
+                Fill = OxyColor.FromRgb(209, 220, 114),
             };
 
             var xAxis = new LinearAxis();
@@ -243,18 +238,51 @@ namespace CoreInvestmentApp.Pages
             areaSeries1.XAxisKey = "x";
             areaSeries1.YAxisKey = "y";
 
-            foreach (EarningPerShare eps in stock.EpsList)
+            if (stock.EpsList.Count > 0)
             {
-				var pointAnnotation1 = new PointAnnotation();
-				pointAnnotation1.X = Convert.ToDouble(eps.Date.Year);
-				pointAnnotation1.Y = Convert.ToDouble(eps.Value);
-				pointAnnotation1.Text = String.Format("{0}", eps.Value);
-				plotModel1.Annotations.Add(pointAnnotation1);
-                areaSeries1.Points.Add(new DataPoint(eps.Date.Year, eps.Value));
+                List<EarningPerShare> epsList = new List<EarningPerShare>();
+                var uniqueYears = stock.EpsList.Select(s => s.Date.Year).Distinct().OrderBy(s => s);
+
+                foreach (int year in uniqueYears)
+                {
+                    var eps = stock.EpsList.Where(s => s.Date.Year == year).OrderByDescending(t => t.Date).FirstOrDefault();
+                    epsList.Add(eps);
+                }
+
+                double min = epsList.Min(entry => entry.Value);
+                double max = epsList.Max(entry => entry.Value);
+
+                var areaSeries2 = new AreaSeries
+                {
+                    MarkerType = MarkerType.None,
+                    MarkerSize = 0,
+                    MarkerStroke = OxyColors.Undefined,
+                    StrokeThickness = 0,
+                    Color = OxyColor.FromArgb(0, 0, 0, 0),
+                    Fill = OxyColor.FromArgb(0, 0, 0, 0)
+                };
+
+                areaSeries2.Points.Add(new DataPoint(uniqueYears.FirstOrDefault() - 0.5, (min - Math.Abs(min / 4))));
+                areaSeries2.Points.Add(new DataPoint(uniqueYears.FirstOrDefault() - 0.5, (max + Math.Abs(max / 4))));
+                areaSeries2.Points.Add(new DataPoint(uniqueYears.LastOrDefault() + 0.5, (min - Math.Abs(min / 4))));
+                areaSeries2.Points.Add(new DataPoint(uniqueYears.LastOrDefault() + 0.5, (max + Math.Abs(max / 4))));
+                plotModel1.Series.Add(areaSeries2);
+
+                foreach (EarningPerShare eps in epsList)
+                {
+                    var pointAnnotation1 = new PointAnnotation();
+                    pointAnnotation1.X = Convert.ToDouble(eps.Date.Year);
+                    pointAnnotation1.Y = Convert.ToDouble(eps.Value);
+                    pointAnnotation1.Text = String.Format("{0}", eps.Value);
+                    pointAnnotation1.FontSize = 10.0f;
+                    plotModel1.Annotations.Add(pointAnnotation1);
+
+                    areaSeries1.Points.Add(new DataPoint(eps.Date.Year, eps.Value));
+                }
+
+                plotModel1.Series.Add(areaSeries1);
             }
-
-            plotModel1.Series.Add(areaSeries1);
-
+            
             EPSModel = plotModel1;
             EPSChart.IsEnabled = false;
         }
@@ -290,38 +318,82 @@ namespace CoreInvestmentApp.Pages
             areaSeries1.XAxisKey = "x";
             areaSeries1.YAxisKey = "y";
 
-            Dictionary<int, decimal> dividendByYear = new Dictionary<int, decimal>();
-
-            foreach (Dividend divdend in stock.DividendList)
+            if (stock.DividendList.Count > 0)
             {
-                int year = divdend.Date.Year;
-                decimal value;
+                Dictionary<int, decimal> dividendByYear = new Dictionary<int, decimal>();
+                Dividend div = stock.DividendList.FirstOrDefault();
 
-                if (dividendByYear.ContainsKey(year))
+                decimal min = div.Value;
+                decimal max = div.Value;
+
+                int minYear = div.Date.Year;
+                int maxYear = div.Date.Year;
+
+                foreach (Dividend dividend in stock.DividendList)
                 {
-                    value = dividendByYear[year];
-                    value += divdend.Value;
-                    dividendByYear[year] = value;
+                    int year = dividend.Date.Year;
+                    decimal value;
+
+                    if (dividendByYear.ContainsKey(year))
+                    {
+                        value = dividendByYear[year];
+                        value += dividend.Value;
+                        dividendByYear[year] = value;
+                    }
+                    else
+                    {
+                        dividendByYear.Add(year, dividend.Value);
+                    }
+
+                    if (dividend.Date.Year < minYear)
+                    {
+                        minYear = dividend.Date.Year;
+                    }
+                    if (dividend.Date.Year > maxYear)
+                    {
+                        maxYear = dividend.Date.Year;
+                    }
+                    if (dividend.Value < min)
+                    {
+                        min = dividend.Value;
+                    }
+                    if (dividend.Value > max)
+                    {
+                        max = dividend.Value;
+                    }
                 }
-                else
+
+                var areaSeries2 = new AreaSeries
                 {
-                    dividendByYear.Add(year, divdend.Value);
+                    MarkerType = MarkerType.None,
+                    MarkerSize = 0,
+                    MarkerStroke = OxyColors.Undefined,
+                    StrokeThickness = 0,
+                    Color = OxyColor.FromArgb(0, 0, 0, 0),
+                    Fill = OxyColor.FromArgb(0, 0, 0, 0)
+                };
+
+                areaSeries2.Points.Add(new DataPoint(minYear - 0.5, (double)(min - Math.Abs(min / 4))));
+                areaSeries2.Points.Add(new DataPoint(minYear - 0.5, (double)(max + Math.Abs(max / 4))));
+                areaSeries2.Points.Add(new DataPoint(maxYear + 0.5, (double)(min - Math.Abs(min / 4))));
+                areaSeries2.Points.Add(new DataPoint(maxYear + 0.5, (double)(max + Math.Abs(max / 4))));
+                plotModel1.Series.Add(areaSeries2);
+
+                foreach (int key in dividendByYear.Keys)
+                {
+                    var val = Convert.ToDouble(dividendByYear[key]);
+
+                    var pointAnnotation1 = new PointAnnotation();
+                    pointAnnotation1.X = Convert.ToDouble(key);
+                    pointAnnotation1.Y = val;
+                    pointAnnotation1.Text = String.Format("{0}", val);
+                    pointAnnotation1.FontSize = 10.0f;
+                    plotModel1.Annotations.Add(pointAnnotation1);
+                    areaSeries1.Points.Add(new DataPoint(key, val));
                 }
-            }
 
-            foreach (int key in dividendByYear.Keys)
-            {
-                var val = Convert.ToDouble(dividendByYear[key]);
-                                             
-				var pointAnnotation1 = new PointAnnotation();
-				pointAnnotation1.X = Convert.ToDouble(key);
-                pointAnnotation1.Y = val;
-				pointAnnotation1.Text = String.Format("{0}", val);
-				plotModel1.Annotations.Add(pointAnnotation1);
-                areaSeries1.Points.Add(new DataPoint(key, val));
+                plotModel1.Series.Add(areaSeries1);
             }
-
-            plotModel1.Series.Add(areaSeries1);
 
             DividendModel = plotModel1;
             DividendChart.IsEnabled = false;
@@ -358,18 +430,50 @@ namespace CoreInvestmentApp.Pages
             areaSeries1.XAxisKey = "x";
             areaSeries1.YAxisKey = "y";
 
-            foreach (BookValue bookValue in stock.BookValueList)
+            if (stock.BookValueList.Count > 0)
             {
-				var pointAnnotation1 = new PointAnnotation();
-				pointAnnotation1.X = Convert.ToDouble(bookValue.Date.Year);
-				pointAnnotation1.Y = Convert.ToDouble(bookValue.Value);
-				pointAnnotation1.Text = String.Format("{0}", bookValue.Value);
-				plotModel1.Annotations.Add(pointAnnotation1);
-                areaSeries1.Points.Add(new DataPoint(bookValue.Date.Year, bookValue.Value));
+                List<BookValue> bookList = new List<BookValue>();
+                var uniqueYears = stock.BookValueList.Select(s => s.Date.Year).Distinct().OrderBy(s => s);
+
+                foreach (int year in uniqueYears)
+                {
+                    var book = stock.BookValueList.Where(s => s.Date.Year == year).OrderByDescending(t => t.Date).FirstOrDefault();
+                    bookList.Add(book);
+                }
+
+                double min = bookList.Min(entry => entry.Value);
+                double max = bookList.Max(entry => entry.Value);
+
+                var areaSeries2 = new AreaSeries
+                {
+                    MarkerType = MarkerType.None,
+                    MarkerSize = 0,
+                    MarkerStroke = OxyColors.Undefined,
+                    StrokeThickness = 0,
+                    Color = OxyColor.FromArgb(0, 0, 0, 0),
+                    Fill = OxyColor.FromArgb(0, 0, 0, 0)
+                };
+
+                areaSeries2.Points.Add(new DataPoint(uniqueYears.FirstOrDefault() - 0.5, (min - Math.Abs(min / 4))));
+                areaSeries2.Points.Add(new DataPoint(uniqueYears.FirstOrDefault() - 0.5, (max + Math.Abs(max / 4))));
+                areaSeries2.Points.Add(new DataPoint(uniqueYears.LastOrDefault() + 0.5, (min - Math.Abs(min / 4))));
+                areaSeries2.Points.Add(new DataPoint(uniqueYears.LastOrDefault() + 0.5, (max + Math.Abs(max / 4))));
+                plotModel1.Series.Add(areaSeries2);
+
+                foreach (BookValue bookValue in bookList)
+                {
+                    var pointAnnotation1 = new PointAnnotation();
+                    pointAnnotation1.X = Convert.ToDouble(bookValue.Date.Year);
+                    pointAnnotation1.Y = Convert.ToDouble(bookValue.Value);
+                    pointAnnotation1.Text = String.Format("{0}", bookValue.Value);
+                    pointAnnotation1.FontSize = 10.0f;
+                    plotModel1.Annotations.Add(pointAnnotation1);
+                    areaSeries1.Points.Add(new DataPoint(bookValue.Date.Year, bookValue.Value));
+                }
+
+                plotModel1.Series.Add(areaSeries1);
             }
-
-            plotModel1.Series.Add(areaSeries1);
-
+            
             BookValueModel = plotModel1;
             BookValueChart.IsEnabled = false;
         }

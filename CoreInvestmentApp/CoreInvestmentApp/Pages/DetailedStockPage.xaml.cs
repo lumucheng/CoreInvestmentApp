@@ -39,7 +39,7 @@ namespace CoreInvestmentApp.Pages
                 }))
             });
 
-            if (!stock.UserManualEntry && DateTime.Now > stock.LastUpdated.AddHours(2))
+            if (!stock.UserManualEntry) // && DateTime.Now > stock.LastUpdated.AddHours(2))
             {
 				UserDialogs.Instance.ShowLoading("Loading..", MaskType.Black);
 				GetDetailedInfoAsync().ContinueWith((task) =>
@@ -218,15 +218,15 @@ namespace CoreInvestmentApp.Pages
         private async Task GetHistoricalEPS()
         {
             DateTime currentDate = DateTime.Now;
-            DateTime previousDate = currentDate.AddYears(-10);
+            DateTime previousDate = currentDate.AddYears(-6);
             List<EarningPerShare> SortedList = stock.EpsList.OrderByDescending(o => o.Date).ToList();
             EarningPerShare latestEps = SortedList.FirstOrDefault();
 
             if (SortedList.Count == 0 || latestEps.Date.AddYears(1) < currentDate.Date)
             {
                 string query = string.Format(Util.IntrinioAPIUrl + 
-                    "/historical_data?identifier={0}&item=basiceps&type=FY&start_date={1}-01-01&end_date={2}-01-01", 
-                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
+                    "/historical_data?identifier={0}&item=dilutedeps&start_date={1}-01-01&end_date={2}-{3}-{4}", 
+                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year, currentDate.Month, currentDate.Day);
                 HttpClient client = Util.GetAuthHttpClient();
                 var uri = new Uri(query);
 
@@ -264,14 +264,14 @@ namespace CoreInvestmentApp.Pages
         private async Task GetFreeCashFlow()
         {
             DateTime currentDate = DateTime.Now;
-            DateTime previousDate = currentDate.AddYears(-10);
+            DateTime previousDate = currentDate.AddYears(-6);
             List<FreeCashFlow> SortedList = stock.CashFlowList.OrderByDescending(o => o.Date).ToList();
             FreeCashFlow latestCashFlow = SortedList.FirstOrDefault();
 
             if (SortedList.Count == 0 || latestCashFlow.Date.AddYears(1) < currentDate.Date)
             {
                 string query = string.Format(Util.IntrinioAPIUrl +
-                   "/historical_data?identifier={0}&item=netcashfromoperatingactivities&type=FY&start_date={1}-01-01&end_date={2}-01-01",
+                   "/historical_data?identifier={0}&item=netcashfromoperatingactivities&start_date={1}-01-01&end_date={2}-01-01",
                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
                 HttpClient client = Util.GetAuthHttpClient();
                 var uri = new Uri(query);
@@ -309,14 +309,14 @@ namespace CoreInvestmentApp.Pages
         private async Task GetDebtToEquity()
         {
             DateTime currentDate = DateTime.Now;
-            DateTime previousDate = currentDate.AddYears(-10);
+            DateTime previousDate = currentDate.AddYears(-6);
             List<DebtToEquity> SortedList = stock.DebtToEquityList.OrderByDescending(o => o.Date).ToList();
             DebtToEquity latestDebtToEquity = SortedList.FirstOrDefault();
 
             if (SortedList.Count == 0 || latestDebtToEquity.Date.AddYears(1) < currentDate.Date)
             {
                 string query = string.Format(Util.IntrinioAPIUrl +
-                   "/historical_data?identifier={0}&item=debttoequity&type=FY&start_date={1}-01-01&end_date={2}-01-01",
+                   "/historical_data?identifier={0}&item=debttoequity&start_date={1}-01-01&end_date={2}-01-01",
                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
                 HttpClient client = Util.GetAuthHttpClient();
                 var uri = new Uri(query);
@@ -354,14 +354,14 @@ namespace CoreInvestmentApp.Pages
         private async Task GetReturnOnEquity()
         {
             DateTime currentDate = DateTime.Now;
-            DateTime previousDate = currentDate.AddYears(-10);
+            DateTime previousDate = currentDate.AddYears(-6);
             List<ReturnOnEquity> SortedList = stock.ReturnToEquityList.OrderByDescending(o => o.Date).ToList();
             ReturnOnEquity latestReturnOnEquity = SortedList.FirstOrDefault();
 
             if (SortedList.Count == 0 || latestReturnOnEquity.Date.AddYears(1) < currentDate.Date)
             {
                 string query = string.Format(Util.IntrinioAPIUrl +
-                   "/historical_data?identifier={0}&item=roe&type=FY&start_date={1}-01-01&end_date={2}-01-01",
+                   "/historical_data?identifier={0}&item=roe&start_date={1}-01-01&end_date={2}-01-01",
                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
                 HttpClient client = Util.GetAuthHttpClient();
                 var uri = new Uri(query);
@@ -399,14 +399,14 @@ namespace CoreInvestmentApp.Pages
         private async Task GetReturnOnAsset()
         {
             DateTime currentDate = DateTime.Now;
-            DateTime previousDate = currentDate.AddYears(-10);
+            DateTime previousDate = currentDate.AddYears(-6);
             List<ReturnOnAsset> SortedList = stock.ReturnToAssetList.OrderByDescending(o => o.Date).ToList();
             ReturnOnAsset latestReturnOnAsset = SortedList.FirstOrDefault();
 
             if (SortedList.Count == 0 || latestReturnOnAsset.Date.AddYears(1) < currentDate.Date)
             {
                 string query = string.Format(Util.IntrinioAPIUrl +
-                   "/historical_data?identifier={0}&item=roa&type=FY&start_date={1}-01-01&end_date={2}-01-01",
+                   "/historical_data?identifier={0}&item=roa&start_date={1}-01-01&end_date={2}-01-01",
                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
                 HttpClient client = Util.GetAuthHttpClient();
                 var uri = new Uri(query);
@@ -444,14 +444,14 @@ namespace CoreInvestmentApp.Pages
         private async Task GetDividend()
         {
             DateTime currentDate = DateTime.Now;
-            DateTime previousDate = currentDate.AddYears(-10);
+            DateTime previousDate = currentDate.AddYears(-6);
             List<Dividend> SortedList = stock.DividendList.OrderByDescending(o => o.Date).ToList();
             Dividend latestDividend = SortedList.FirstOrDefault();
 
             if (SortedList.Count == 0 || latestDividend.Date.AddYears(1) < currentDate.Date)
             {
                 string query = string.Format(Util.IntrinioAPIUrl +
-                   "/historical_data?identifier={0}&item=dividend&type=FY&start_date={1}-01-01&end_date={2}-01-01",
+                   "/historical_data?identifier={0}&item=dividend&start_date={1}-01-01&end_date={2}-01-01",
                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
                 HttpClient client = Util.GetAuthHttpClient();
                 var uri = new Uri(query);
@@ -489,14 +489,14 @@ namespace CoreInvestmentApp.Pages
         private async Task GetBookValue()
         {
             DateTime currentDate = DateTime.Now;
-            DateTime previousDate = currentDate.AddYears(-10);
+            DateTime previousDate = currentDate.AddYears(-6);
             List<BookValue> SortedList = stock.BookValueList.OrderByDescending(o => o.Date).ToList();
             BookValue latestBookValue = SortedList.FirstOrDefault();
 
             if (SortedList.Count == 0 || latestBookValue.Date.AddYears(1) < currentDate.Date)
             {
                 string query = string.Format(Util.IntrinioAPIUrl +
-                   "/historical_data?identifier={0}&item=bookvaluepershare&type=FY&start_date={1}-01-01&end_date={2}-01-01",
+                   "/historical_data?identifier={0}&item=bookvaluepershare&start_date={1}-01-01&end_date={2}-01-01",
                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year);
                 HttpClient client = Util.GetAuthHttpClient();
                 var uri = new Uri(query);
