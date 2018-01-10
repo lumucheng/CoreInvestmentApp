@@ -268,12 +268,20 @@ namespace CoreInvestmentApp.Pages
                 areaSeries2.Points.Add(new DataPoint(uniqueYears.LastOrDefault() + 0.5, (max + Math.Abs(max / 4))));
                 plotModel1.Series.Add(areaSeries2);
 
-                foreach (EarningPerShare eps in epsList)
+                for (int i = 0; i < epsList.Count; i++)
                 {
+                    EarningPerShare eps = epsList[i];
+                    string text = String.Format("{0}", eps.Value);
+
+                    if (i == epsList.Count - 1)
+                    {
+                        text += "(TTM)";
+                    }
+
                     var pointAnnotation1 = new PointAnnotation();
                     pointAnnotation1.X = Convert.ToDouble(eps.Date.Year);
                     pointAnnotation1.Y = Convert.ToDouble(eps.Value);
-                    pointAnnotation1.Text = String.Format("{0}", eps.Value);
+                    pointAnnotation1.Text = text;
                     pointAnnotation1.FontSize = 10.0f;
                     plotModel1.Annotations.Add(pointAnnotation1);
 
@@ -282,7 +290,7 @@ namespace CoreInvestmentApp.Pages
 
                 plotModel1.Series.Add(areaSeries1);
             }
-            
+
             EPSModel = plotModel1;
             EPSChart.IsEnabled = false;
         }

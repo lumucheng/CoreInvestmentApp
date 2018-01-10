@@ -224,8 +224,8 @@ namespace CoreInvestmentApp.Pages
 
             if (SortedList.Count == 0 || latestEps.Date.AddYears(1) < currentDate.Date)
             {
-                string query = string.Format(Util.IntrinioAPIUrl + 
-                    "/historical_data?identifier={0}&item=dilutedeps&start_date={1}-01-01&end_date={2}-{3}-{4}", 
+                string query = string.Format(Util.IntrinioAPIUrl +
+                    "/historical_data?identifier={0}&item=dilutedeps&frequency=yearly&start_date={1}-01-01&end_date={2}-{3}-{4}",
                     stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year, currentDate.Month, currentDate.Day);
                 HttpClient client = Util.GetAuthHttpClient();
                 var uri = new Uri(query);
@@ -237,6 +237,8 @@ namespace CoreInvestmentApp.Pages
                     JObject jsonObject = JObject.Parse(json);
                     JArray data = (JArray)jsonObject["data"];
                     List<EarningPerShare> epsList = new List<EarningPerShare>();
+                    int index = 0;
+                    DateTime latestDate = DateTime.Now;
 
                     foreach (JToken token in data)
                     {
@@ -251,14 +253,56 @@ namespace CoreInvestmentApp.Pages
 
                             epsList.Add(eps);
                         }
+
+                        if (index == 0)
+                        {
+                            latestDate = Convert.ToDateTime(date);
+                            index++;
+                        }
+                    }
+
+                    var query1 = string.Format(Util.IntrinioAPIUrl +
+                        "/historical_data?identifier={0}&item=dilutedeps",
+                    stock.StockIdentifier.Ticker, previousDate.Year, currentDate.Year, currentDate.Month, currentDate.Day);
+                    var uri1 = new Uri(query1);
+
+                    var response1 = await client.GetAsync(uri1);
+                    if (response1.IsSuccessStatusCode)
+                    {
+                        json = await response1.Content.ReadAsStringAsync();
+                        jsonObject = JObject.Parse(json);
+                        data = (JArray)jsonObject["data"];
+
+                        foreach (JToken token in data)
+                        {
+                            string date = token["date"].ToString();
+                            string value = token["value"].ToString();
+
+                            if (value.Length > 0 && value != "null")
+                            {
+                                DateTime dt = Convert.ToDateTime(date);
+
+                                if (dt.Year > latestDate.Year)
+                                {
+                                    EarningPerShare eps = new EarningPerShare();
+                                    eps.DateStr = date;
+                                    eps.ValueStr = value;
+
+                                    epsList.Add(eps);
+                                }
+                                else
+                                {
+                                    break;
+                                }
+                            }
+                        }
                     }
 
                     stock.EpsList = epsList;
-
                 }
-            }
 
-            await GetFreeCashFlow();
+                await GetFreeCashFlow();
+            }
         }
 
         private async Task GetFreeCashFlow()

@@ -244,7 +244,7 @@ namespace CoreInvestmentApp.Pages
 
         private void CreateEPSChart()
         {
-            var plotModel1 = new PlotModel { Title = "Earnings Per Share (USD)" };	
+            var plotModel1 = new PlotModel { Title = "Earnings Per Share (USD)" };
             var areaSeries1 = new AreaSeries
             {
                 LabelFormatString = "{1}",
@@ -304,12 +304,20 @@ namespace CoreInvestmentApp.Pages
                 areaSeries2.Points.Add(new DataPoint(uniqueYears.LastOrDefault() + 0.5, (max + Math.Abs(max / 4))));
                 plotModel1.Series.Add(areaSeries2);
 
-                foreach (EarningPerShare eps in epsList)
+                for (int i = 0; i < epsList.Count; i++)
                 {
+                    EarningPerShare eps = epsList[i];
+                    string text = String.Format("{0}", eps.Value);
+
+                    if (i == epsList.Count - 1)
+                    {
+                        text += "(TTM)";
+                    }
+
                     var pointAnnotation1 = new PointAnnotation();
                     pointAnnotation1.X = Convert.ToDouble(eps.Date.Year);
                     pointAnnotation1.Y = Convert.ToDouble(eps.Value);
-                    pointAnnotation1.Text = String.Format("{0}", eps.Value);
+                    pointAnnotation1.Text = text;
                     pointAnnotation1.FontSize = 10.0f;
                     plotModel1.Annotations.Add(pointAnnotation1);
 
