@@ -300,9 +300,9 @@ namespace CoreInvestmentApp.Pages
 
                     stock.EpsList = epsList;
                 }
-
-                await GetFreeCashFlow();
             }
+
+            await GetFreeCashFlow();
         }
 
         private async Task GetFreeCashFlow()
@@ -312,7 +312,7 @@ namespace CoreInvestmentApp.Pages
             List<FreeCashFlow> SortedList = stock.CashFlowList.OrderByDescending(o => o.Date).ToList();
             FreeCashFlow latestCashFlow = SortedList.FirstOrDefault();
 
-            if (SortedList.Count == 0 || latestCashFlow.Date.AddYears(1) < currentDate.Date)
+            if (SortedList.Count == 0 || latestCashFlow.Date.AddMonths(1) < currentDate.Date)
             {
                 string query = string.Format(Util.IntrinioAPIUrl +
                    "/historical_data?identifier={0}&item=netcashfromoperatingactivities&start_date={1}-01-01&end_date={2}-01-01",
