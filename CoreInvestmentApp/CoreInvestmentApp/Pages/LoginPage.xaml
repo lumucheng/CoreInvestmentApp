@@ -20,9 +20,12 @@
                     </Switch.Effects>
                 </Switch>
             </StackLayout>
-            <Button Text="Login" FontSize="Large" TextColor="White" BackgroundColor="#1F4788" FontAttributes="Bold" Clicked="Handle_ClickedAsync" />
-            <Button Text="Register" FontSize="Large" TextColor="White" BackgroundColor="#4C924C" FontAttributes="Bold" Clicked="Handle_Clicked" />
-<!--            <local:HyperlinkLabel TextColor="Black" Text="Not a member? Register at www.coreinvest.me/register.php" HorizontalTextAlignment="Center" />-->
+            <StackLayout BackgroundColor="White" Orientation="Vertical" Spacing="5" VerticalOptions="FillAndExpand">
+                <Button Text="Facebook Login" FontSize="Large" TextColor="White" BackgroundColor="#1F4788" FontAttributes="Bold" Clicked="Handle_FacebookClicked" />
+                <Button Text="Login" FontSize="Large" TextColor="White" BackgroundColor="#1F4788" FontAttributes="Bold" Clicked="Handle_LoginClickedAsync" />
+                <Button Text="Register" FontSize="Large" TextColor="White" BackgroundColor="#4C924C" FontAttributes="Bold" Clicked="Handle_RegisterClicked" />
+                <!--            <local:HyperlinkLabel TextColor="Black" Text="Not a member? Register at www.coreinvest.me/register.php" HorizontalTextAlignment="Center" />-->
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

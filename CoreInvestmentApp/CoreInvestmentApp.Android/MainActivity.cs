@@ -11,6 +11,8 @@ using ImageCircle.Forms.Plugin.Droid;
 using Messier16.Forms.Android.Controls;
 using Acr.UserDialogs;
 using FormsCommunityToolkit.Effects.Droid;
+using Plugin.FacebookClient;
+using Android.Content;
 
 namespace CoreInvestmentApp.Droid
 {
@@ -19,6 +21,8 @@ namespace CoreInvestmentApp.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+            FacebookClientManager.Initialize(this);
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -34,6 +38,12 @@ namespace CoreInvestmentApp.Droid
             Effects.Init();
 
             LoadApplication(new App());
+        }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            FacebookClientManager.OnActivityResult(requestCode, resultCode, data);
         }
     }
 }

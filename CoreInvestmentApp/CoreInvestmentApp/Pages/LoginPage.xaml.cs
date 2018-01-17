@@ -11,6 +11,8 @@ using Xamarin.Forms;
 using Xamarin.Auth;
 using Plugin.Share;
 using Plugin.Share.Abstractions;
+using Plugin.FacebookClient;
+using Plugin.FacebookClient.Abstractions;
 
 namespace CoreInvestmentApp.Pages
 {
@@ -25,7 +27,7 @@ namespace CoreInvestmentApp.Pages
             ImageLock.Source = ImageSource.FromFile("lock.png");
         }
 
-        void Handle_ClickedAsync(object sender, System.EventArgs e)
+        void Handle_LoginClickedAsync(object sender, System.EventArgs e)
         {
             if (Util.IsNetworkAvailable())
             {
@@ -38,6 +40,47 @@ namespace CoreInvestmentApp.Pages
             else
             {
                 UserDialogs.Instance.Alert("Please ensure you have a working connection", "Error", "OK");
+            }
+        }
+
+        void Handle_RegisterClicked(object sender, System.EventArgs e)
+        {
+            var options = new BrowserOptions
+            {
+                ChromeShowTitle = true,
+                UseSafariReaderMode = false,
+                UseSafariWebViewController = true
+            };
+
+            CrossShare.Current.OpenBrowser("http://www.coreinvest.me/register.php", options);
+        }
+
+        void Handle_FacebookClicked(object sender, System.EventArgs e)
+        {
+            if (Util.IsNetworkAvailable())
+            {
+                UserDialogs.Instance.ShowLoading("Loading..", MaskType.Black);
+                CallFacebookLogin().ContinueWith((task) =>
+                {
+                    UserDialogs.Instance.HideLoading();
+                });
+            }
+            else
+            {
+                UserDialogs.Instance.Alert("Please ensure you have a working connection", "Error", "OK");
+            }
+        }
+
+        private async Task CallFacebookLogin()
+        { 
+            FacebookResponse<bool> result = await CrossFacebookClient.Current.LoginAsync(new string[] { "email" });
+            if (result.Data)
+            {
+                Application.Current.MainPage = new RootPage();
+            }
+            else
+            {
+                UserDialogs.Instance.Alert("Unable to login to Facebook.", "Error", "OK");
             }
         }
 
@@ -83,16 +126,6 @@ namespace CoreInvestmentApp.Pages
             }
         }
 
-        void Handle_Clicked(object sender, System.EventArgs e)
-        {
-            var options = new BrowserOptions
-            {
-                ChromeShowTitle = true,
-                UseSafariReaderMode = false,
-                UseSafariWebViewController = true
-            };
 
-            CrossShare.Current.OpenBrowser("http://www.coreinvest.me/register.php", options);
-        }
     }
 }
