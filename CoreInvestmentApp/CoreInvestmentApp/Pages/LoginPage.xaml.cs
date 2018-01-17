@@ -9,6 +9,8 @@ using Newtonsoft.Json.Linq;
 using PCLCrypto;
 using Xamarin.Forms;
 using Xamarin.Auth;
+using Plugin.Share;
+using Plugin.Share.Abstractions;
 
 namespace CoreInvestmentApp.Pages
 {
@@ -79,6 +81,18 @@ namespace CoreInvestmentApp.Pages
                 string message = "Wrong username or password.";
                 UserDialogs.Instance.Alert(message, "Error", "OK");
             }
+        }
+
+        void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            var options = new BrowserOptions
+            {
+                ChromeShowTitle = true,
+                UseSafariReaderMode = false,
+                UseSafariWebViewController = true
+            };
+
+            CrossShare.Current.OpenBrowser("http://www.coreinvest.me/register.php", options);
         }
     }
 }
