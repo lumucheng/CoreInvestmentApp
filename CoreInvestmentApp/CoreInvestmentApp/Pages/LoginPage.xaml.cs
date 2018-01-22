@@ -32,7 +32,7 @@ namespace CoreInvestmentApp.Pages
             if (Util.IsNetworkAvailable())
             {
                 UserDialogs.Instance.ShowLoading("Loading..", MaskType.Black);
-                CallAPI().ContinueWith((task) =>
+                CallLoginAPI().ContinueWith((task) =>
                 {
                     UserDialogs.Instance.HideLoading();
                 });
@@ -73,10 +73,17 @@ namespace CoreInvestmentApp.Pages
 
         private async Task CallFacebookLogin()
         { 
-            FacebookResponse<bool> result = await CrossFacebookClient.Current.LoginAsync(new string[] { "email" });
-            if (result.Data)
+            FacebookResponse<Dictionary<string, object>> result = await CrossFacebookClient.Current.RequestUserDataAsync(new string[] { "email", "first_name", "last_name" }, new string[] { "email" });
+
+            if (result.Data != null)
             {
-                Application.Current.MainPage = new RootPage();
+                // Save to server
+                string email = result.Data["email"].ToString();
+                string first_name = result.Data["last_name"].ToString();
+                string last_name = result.Data["first_name"].ToString();
+                string user_id = result.Data["user_id"].ToString();
+
+                await CallFacebookLoginAPI(email, first_name + last_name, user_id);
             }
             else
             {
@@ -84,7 +91,37 @@ namespace CoreInvestmentApp.Pages
             }
         }
 
-        private async Task CallAPI()
+        private async Task CallFacebookLoginAPI(string email, string name, string user_id)
+        {
+            HttpClient client = Util.HttpC;
+
+            var values = new Dictionary<string, string>
+            {
+                { "email", email },
+                { "name", name } ,
+                { "user_id", user_id }
+            };
+
+            var content = new FormUrlEncodedContent(values);
+            var response = await client.PostAsync("http://www.coreinvest.me/facebook_login.php", content);
+            var responseString = await response.Content.ReadAsStringAsync();
+
+            JObject jsonObject = JObject.Parse(responseString);
+
+            // Login success
+            if ((bool)jsonObject["status"])
+            {
+                Util.AccessRights = (string)jsonObject["message"];
+                Application.Current.MainPage = new RootPage();
+            }
+            else
+            {
+                string message = "An error occured on the server.";
+                UserDialogs.Instance.Alert(message, "Error", "OK");
+            }
+        }
+
+        private async Task CallLoginAPI()
         {
 			string email = EntryEmail.Text.Trim();
 			string p = EntryPassword.Text;
@@ -125,7 +162,5 @@ namespace CoreInvestmentApp.Pages
                 UserDialogs.Instance.Alert(message, "Error", "OK");
             }
         }
-
-
     }
 }

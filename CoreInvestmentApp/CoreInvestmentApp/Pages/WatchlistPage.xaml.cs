@@ -49,8 +49,8 @@ namespace CoreInvestmentApp.Pages
         {
             // check accessrights first
             if (Util.AccessRights == "full" || 
-                Util.AccessRights == "guest" && StockList.Count < 2 ||
-                Util.AccessRights == "expired" && StockList.Count < 2)
+                Util.AccessRights == "guest" && StockList.Count < 3 ||
+                Util.AccessRights == "expired" && StockList.Count < 3)
             {
                 var action = await DisplayActionSheet("Selection", "Cancel", null, "Search Stock", "Manual Add");
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CoreInvestmentApp.Pages.LoginPage" xmlns:local="clr-namespace:CoreInvestmentApp.Classes" >
     <ContentPage.Content>
-        <StackLayout BackgroundColor="White" Orientation="Vertical" Padding="20,20,20,10" Spacing="20" VerticalOptions="FillAndExpand">
+        <StackLayout BackgroundColor="White" Orientation="Vertical" Padding="20,20,20,10" Spacing="10" VerticalOptions="FillAndExpand">
             <Image x:Name="ImageLogo" Aspect="AspectFill" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <Image x:Name="ImageUsername" Aspect="AspectFit" WidthRequest="30" HeightRequest="30" />
@@ -21,9 +21,9 @@
                 </Switch>
             </StackLayout>
             <StackLayout BackgroundColor="White" Orientation="Vertical" Spacing="5" VerticalOptions="FillAndExpand">
-                <Button Text="Facebook Login" FontSize="Large" TextColor="White" BackgroundColor="#1F4788" FontAttributes="Bold" Clicked="Handle_FacebookClicked" />
                 <Button Text="Login" FontSize="Large" TextColor="White" BackgroundColor="#1F4788" FontAttributes="Bold" Clicked="Handle_LoginClickedAsync" />
                 <Button Text="Register" FontSize="Large" TextColor="White" BackgroundColor="#4C924C" FontAttributes="Bold" Clicked="Handle_RegisterClicked" />
+                <Button Text="Facebook Login" FontSize="Large" TextColor="White" BackgroundColor="#1F4788" FontAttributes="Bold" Clicked="Handle_FacebookClicked" />
                 <!--            <local:HyperlinkLabel TextColor="Black" Text="Not a member? Register at www.coreinvest.me/register.php" HorizontalTextAlignment="Center" />-->
             </StackLayout>
         </StackLayout>

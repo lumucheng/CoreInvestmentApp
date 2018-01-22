@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Auth;
 using Xamarin.Forms;
+using Plugin.FacebookClient;
 
 namespace CoreInvestmentApp.Classes
 {
@@ -146,6 +147,8 @@ namespace CoreInvestmentApp.Classes
             {
                 AccountStore.Create().Delete(account, AppName);
             }
+
+            CrossFacebookClient.Current.Logout();
         }
 
         public static string UserName
