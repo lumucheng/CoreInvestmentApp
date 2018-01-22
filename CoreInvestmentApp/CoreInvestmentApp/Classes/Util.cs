@@ -28,6 +28,7 @@ namespace CoreInvestmentApp.Classes
         private static string IntrinioPassword = "173402da49b5f4a1ed0edbf38c330052";
         public static string IntrinioAPIUrl = "https://api.intrinio.com";
         public static string CoreInvestUrlLogin = "http://www.coreinvest.me/login_api.php";
+        public static string CoreInvestUrlFacebookLogin = "http://www.coreinvest.me/facebook_login.php";
         public static string ContactEmail = "contact@coreinvest.me";
         public static readonly HttpClient HttpC = new HttpClient();
         private static readonly string AppName = "CoreInvest";

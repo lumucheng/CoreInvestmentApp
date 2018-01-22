@@ -24,20 +24,20 @@ namespace CoreInvestmentApp
 
             if (Util.IsNetworkAvailable())
             {
+                // Placeholder Page
+                MainPage = new Page();
+
                 // Check for Facebook Login first..
                 if (facebookClient.IsLoggedIn) {
-                    // CallFacebookLogin();
-                    CallFacebookLoginAPI("lumucheng@gmail.com", "LuMucheng", "1111111");
+                    CallFacebookLogin();
                 }
-                else // Check for Core Invest Account
-                {
+                else 
+                {   // Check for Core Invest Account
                     string email = Util.UserName;
                     string p = Util.Password;
 
                     if (email != null && p != null)
                     {
-                        // Placeholder Page
-                        MainPage = new Page();
                         CheckAPI(email, p);
                     }
                     else
@@ -55,34 +55,29 @@ namespace CoreInvestmentApp
 
         private async void CallFacebookLogin()
         {
-            try {
-                var result = await facebookClient.RequestUserDataAsync(new string[] { "email", "first_name", "last_name" }, new string[] { "email" }, FacebookPermissionType.Read);
-                // FacebookResponse<Dictionary<string, object>> result 
+            var result = await facebookClient.RequestUserDataAsync(new string[] { "email", "first_name", "last_name" }, new string[] { "email" }, FacebookPermissionType.Read);
+            // FacebookResponse<Dictionary<string, object>> result 
 
-                if (result.Data != null)
-                {
-                    // Save to server
-                    string email = result.Data["email"].ToString();
-                    string first_name = result.Data["last_name"].ToString();
-                    string last_name = result.Data["first_name"].ToString();
-                    string user_id = result.Data["user_id"].ToString();
+            if (result.Data != null)
+            {
+                // Save to server
+                string email = result.Data["email"].ToString();
+                string first_name = result.Data["last_name"].ToString();
+                string last_name = result.Data["first_name"].ToString();
+                string user_id = result.Data["user_id"].ToString();
 
-                    // await CallFacebookLoginAPI(email, first_name + last_name, user_id);
-                }
-                else
-                {
-                    UserDialogs.Instance.Alert("Unable to login to Facebook.", "Error", "OK");
-                    MainPage = new LoginPage();
-                }
+                await CallFacebookLoginAPI(email, first_name + last_name, user_id);
             }
-            catch (Exception e) {
+            else
+            {
+                UserDialogs.Instance.Alert("Unable to login to Facebook.", "Error", "OK");
                 MainPage = new LoginPage();
             }
         }
 
-        private async void CallFacebookLoginAPI(string email, string name, string user_id)
+        private async Task CallFacebookLoginAPI(string email, string name, string user_id)
         {
-            HttpClient client = new HttpClient();
+            HttpClient client = Util.HttpC;
 
             var values = new Dictionary<string, string>
             {
@@ -92,7 +87,7 @@ namespace CoreInvestmentApp
             };
 
             var content = new FormUrlEncodedContent(values);
-            var response = await client.PostAsync("http://www.coreinvest.me/facebook_login.php", content);
+            var response = await client.PostAsync(Util.CoreInvestUrlFacebookLogin, content);
             var responseString = await response.Content.ReadAsStringAsync();
 
             JObject jsonObject = JObject.Parse(responseString);
@@ -113,7 +108,7 @@ namespace CoreInvestmentApp
 
         private async void CheckAPI(string email, string p)
         {
-            HttpClient client = new HttpClient();
+            HttpClient client = Util.HttpC;
 
 			var values = new Dictionary<string, string>
 			{
