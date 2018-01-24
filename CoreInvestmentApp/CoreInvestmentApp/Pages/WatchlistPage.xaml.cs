@@ -28,7 +28,7 @@ namespace CoreInvestmentApp.Pages
 
 			var addItem = new ToolbarItem
 			{
-				Text = "Add"
+				Text = "Search"
 			};
 
 			addItem.Clicked += (object sender, System.EventArgs e) =>
