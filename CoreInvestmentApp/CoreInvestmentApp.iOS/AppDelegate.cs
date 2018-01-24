@@ -8,6 +8,7 @@ using OxyPlot.Xamarin.Forms.Platform.iOS;
 using ImageCircle.Forms.Plugin.iOS;
 using Messier16.Forms.iOS.Controls;
 using FormsCommunityToolkit.Effects.iOS;
+using Plugin.FacebookClient;
 
 namespace CoreInvestmentApp.iOS
 {
@@ -33,12 +34,28 @@ namespace CoreInvestmentApp.iOS
             ImageCircleRenderer.Init();
             Messier16Controls.InitAll();
             Effects.Init();
+            FacebookClientManager.Initialize(app, options);
 
 			UIApplication.SharedApplication.SetStatusBarStyle(UIStatusBarStyle.LightContent, false);
 			UIApplication.SharedApplication.SetStatusBarHidden(false, false);
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
+        }
+
+        public override void OnActivated(UIApplication app)
+        {
+            FacebookClientManager.OnActivated();
+        }
+
+        public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
+        {
+            return FacebookClientManager.OpenUrl(app, url, options);
+        }
+
+        public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
+        {
+            return FacebookClientManager.OpenUrl(application, url, sourceApplication, annotation);
         }
     }
 }

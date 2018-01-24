@@ -72,7 +72,9 @@ namespace CoreInvestmentApp.Pages
         }
 
         private async Task CallFacebookLogin()
-        { 
+        {
+            UserDialogs.Instance.HideLoading();
+
             FacebookResponse<Dictionary<string, object>> result = await CrossFacebookClient.Current.RequestUserDataAsync(new string[] { "email", "first_name", "last_name" }, new string[] { "email" });
 
             if (result.Data != null)

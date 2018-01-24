@@ -1,39 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="CoreInvestmentApp.Pages.WatchlistPage" 
-    xmlns:design="clr-namespace:CoreInvestmentApp;assembly=CoreInvestmentApp" 
-    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" 
-    xmlns:segcontrol="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions" 
-    xmlns:effects="clr-namespace:FormsCommunityToolkit.Effects;assembly=FormsCommunityToolkit.Effects"
-    xmlns:local="clr-namespace:CoreInvestmentApp.Classes"
-    Title="Watchlist">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CoreInvestmentApp.Pages.WatchlistPage" xmlns:design="clr-namespace:CoreInvestmentApp;assembly=CoreInvestmentApp" xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" xmlns:segcontrol="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions" xmlns:effects="clr-namespace:FormsCommunityToolkit.Effects;assembly=FormsCommunityToolkit.Effects" xmlns:local="clr-namespace:CoreInvestmentApp.Classes" Title="Watchlist">
     <ContentPage.Content>
-        <AbsoluteLayout Grid.Row="1">
-            <ListView 
-                AbsoluteLayout.LayoutFlags="All"
-                AbsoluteLayout.LayoutBounds="0,1,1,1"
-                x:Name="StockListView" 
-                ItemsSource="{Binding StockList}"
-                HasUnevenRows="true" 
-                ItemSelected="ListView_ItemSelected" 
-                SeparatorVisibility="None"
-                IsPullToRefreshEnabled="True"
-                Refreshing="StockListView_Refreshing">
-                
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ListView x:Name="StockListView" ItemsSource="{Binding StockList}" HasUnevenRows="true" ItemSelected="ListView_ItemSelected" SeparatorVisibility="None" IsPullToRefreshEnabled="false" Refreshing="StockListView_Refreshing">
                 <ListView.Header>
-                    <StackLayout Padding="10, 10, 10, 10" BackgroundColor="#89C4F4">
-                        <Label HorizontalOptions="Center" Text="Company Information" TextColor="White" FontSize="14" FontFamily="Bold" />
+                    <StackLayout Padding="0, 0, 0, 10" BackgroundColor="#89C4F4">
+                        <SearchBar x:Name="SearchBarTicker" BackgroundColor="#89C4F4" VerticalOptions="Fill" HorizontalOptions="FillAndExpand" Placeholder="Filter Ticker.." TextChanged="SearchBar_OnTextChanged"></SearchBar>    
+                        <Label HorizontalOptions="Center" Text="Company Information" TextColor="White" FontSize="Medium" FontFamily="Bold" />
                     </StackLayout>
                 </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.ContextActions>
-                                <MenuItem Clicked="OnDelete" 
-                                    CommandParameter="{Binding .}" 
-                                    Text="Delete" 
-                                    IsDestructive="true" />
+                                <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Delete" IsDestructive="true" />
                             </ViewCell.ContextActions>
                             <Grid Padding="5" RowSpacing="0" ColumnSpacing="10" BackgroundColor="{Binding .,Converter={StaticResource StripedBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}">
                                 <Grid.RowDefinitions>
@@ -47,17 +27,14 @@
                                     <ColumnDefinition Width="50*" />
                                     <ColumnDefinition Width="30*" />
                                 </Grid.ColumnDefinitions>
-                                <controls:CircleImage HeightRequest="45"
-                                        HorizontalOptions="CenterAndExpand"
-                                        VerticalOptions="CenterAndExpand"
-                                        Aspect="AspectFit"
-                                        WidthRequest="45" BorderColor="Black" BorderThickness="1" Grid.RowSpan="3" Source="{Binding ImageUrl}" />
+                                <controls:CircleImage HeightRequest="45" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFit" WidthRequest="45" BorderColor="Black" BorderThickness="1" Grid.RowSpan="3" Source="{Binding ImageUrl}" />
                                 <StackLayout Grid.Column="1" Orientation="Horizontal" Grid.RowSpan="2" Grid.Row="0" VerticalOptions="Start">
                                     <Label FontSize="12" Text="{Binding Name}" VerticalOptions="End" FontAttributes="Bold" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" />
                                     <Label FontSize="12" Text="{Binding Category}" VerticalOptions="End" TextColor="Black" BackgroundColor="#faebd6" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
-                                    <Label Text="MKT" TextColor="#2ecc71" FontAttributes="Bold" FontSize="12"></Label>
+                                    <Label Text="MKT" TextColor="#2ecc71" FontAttributes="Bold" FontSize="12">
+                                    </Label>
                                     <OnPlatform x:TypeArguments="View">
                                         <OnPlatform.Android>
                                             <Label FontSize="12" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding CurrentValueString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" />
@@ -71,9 +48,9 @@
                                         </OnPlatform.iOS>
                                     </OnPlatform>
                                 </StackLayout>
-                                    
                                 <StackLayout Orientation="Horizontal" Grid.Column="2">
-                                    <Label Text="G" FontSize="12" TextColor="#ebc361" FontAttributes="Bold"></Label>
+                                    <Label Text="G" FontSize="12" TextColor="#ebc361" FontAttributes="Bold">
+                                    </Label>
                                     <OnPlatform x:TypeArguments="View">
                                         <OnPlatform.Android>
                                             <Label FontSize="12" Text="{Binding GrowthEntryPriceString}" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" />
@@ -87,9 +64,9 @@
                                         </OnPlatform.iOS>
                                     </OnPlatform>
                                 </StackLayout>
-                                
                                 <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="1">
-                                    <Label Text="D" FontSize="12" TextColor="#34495e" FontAttributes="Bold"></Label>
+                                    <Label Text="D" FontSize="12" TextColor="#34495e" FontAttributes="Bold">
+                                    </Label>
                                     <OnPlatform x:TypeArguments="View">
                                         <OnPlatform.Android>
                                             <Label FontSize="12" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding DivdendEntryPriceString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" />
@@ -103,9 +80,9 @@
                                         </OnPlatform.iOS>
                                     </OnPlatform>
                                 </StackLayout>
-                                
                                 <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="2">
-                                    <Label Text="A" FontSize="12" TextColor="#efa06a" FontAttributes="Bold"></Label>
+                                    <Label Text="A" FontSize="12" TextColor="#efa06a" FontAttributes="Bold">
+                                    </Label>
                                     <OnPlatform x:TypeArguments="View">
                                         <OnPlatform.Android>
                                             <Label FontSize="12" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding AssetEntryPriceString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" />
@@ -119,15 +96,15 @@
                                         </OnPlatform.iOS>
                                     </OnPlatform>
                                 </StackLayout>
-                                
                                 <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="3">
-                                    <Label Text="IC" FontSize="12" TextColor="#ff4081" FontAttributes="Bold"></Label>
+                                    <Label Text="IC" FontSize="12" TextColor="#ff4081" FontAttributes="Bold">
+                                    </Label>
                                     <OnPlatform x:TypeArguments="View">
                                         <OnPlatform.Android>
                                             <Label FontSize="12" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding InvestorConfidenceString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" />
                                         </OnPlatform.Android>
                                         <OnPlatform.iOS>
-                                            <Label FontSize="12" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding InvestorConfidenceString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}" >
+                                            <Label FontSize="12" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" Text="{Binding InvestorConfidenceString}" TextColor="{Binding .,Converter={StaticResource StripeLabelBackgroundIndexConverter}, ConverterParameter={x:Reference StockListView}}">
                                                 <Label.Effects>
                                                     <effects:SizeFontToFitEffect />
                                                 </Label.Effects>
@@ -143,6 +120,6 @@
                     <Label />
                 </ListView.Footer>
             </ListView>
-        </AbsoluteLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

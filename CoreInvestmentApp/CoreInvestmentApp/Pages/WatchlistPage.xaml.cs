@@ -38,6 +38,17 @@ namespace CoreInvestmentApp.Pages
 
             ToolbarItems.Add(addItem);
 
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                SearchBarTicker.TextColor = Color.White;
+                SearchBarTicker.PlaceholderColor = Color.White;
+            }
+            else if (Device.RuntimePlatform == Device.iOS)
+            {
+                SearchBarTicker.TextColor = Color.Gray;
+                SearchBarTicker.PlaceholderColor = Color.Gray;
+            }
+
             MessagingCenter.Subscribe<string>("refresh", "refresh", (sender) => {
                 LoadTickersFromDBAsync();
             });
@@ -223,6 +234,22 @@ namespace CoreInvestmentApp.Pages
             LoadTickersFromDBAsync();
             StockListView.IsRefreshing = false;
             StockListView.EndRefresh();
+        }
+
+        private void SearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            // StockListView.BeginRefresh();
+
+            if (string.IsNullOrWhiteSpace(e.NewTextValue))
+            {
+                StockListView.ItemsSource = StockList;
+            }
+            else 
+            {
+                StockListView.ItemsSource = StockList.Where(s => s.Ticker.Contains(e.NewTextValue.ToUpper()));
+            }
+
+            // StockListView.EndRefresh();
         }
     }
 }

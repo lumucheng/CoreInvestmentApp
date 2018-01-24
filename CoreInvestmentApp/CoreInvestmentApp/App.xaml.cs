@@ -8,7 +8,6 @@ using Acr.UserDialogs;
 using Plugin.FacebookClient;
 using System.Threading.Tasks;
 using Plugin.FacebookClient.Abstractions;
-using System;
 
 namespace CoreInvestmentApp
 {
