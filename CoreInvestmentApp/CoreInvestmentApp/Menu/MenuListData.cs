@@ -22,6 +22,13 @@ namespace CoreInvestmentApp.Menu
 
             this.Add(new MenuItem()
             {
+                Title = "Account",
+                IconSource = "watchlist.png",
+                TargetType = typeof(AccountPage)
+            });
+
+            this.Add(new MenuItem()
+            {
                 Title = "Portfolio",
                 IconSource = "portfolio.png",
                 TargetType = typeof(PortfolioPage)

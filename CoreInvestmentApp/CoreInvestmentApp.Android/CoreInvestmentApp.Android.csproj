@@ -117,6 +117,15 @@
     <Reference Include="Plugin.FacebookClient.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Plugin.FacebookClient.1.0.0-beta\lib\MonoAndroid10\Plugin.FacebookClient.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.InAppBilling, Version=1.2.4.137, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plugin.InAppBilling.1.2.4.137-beta\lib\MonoAndroid10\Plugin.InAppBilling.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.InAppBilling.Abstractions, Version=1.2.4.137, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plugin.InAppBilling.1.2.4.137-beta\lib\MonoAndroid10\Plugin.InAppBilling.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.InAppBilling.VendingLibrary, Version=1.2.4.137, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plugin.InAppBilling.1.2.4.137-beta\lib\MonoAndroid10\Plugin.InAppBilling.VendingLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Realm, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Realm.Database.1.6.0\lib\netstandard1.4\Realm.dll</HintPath>
     </Reference>

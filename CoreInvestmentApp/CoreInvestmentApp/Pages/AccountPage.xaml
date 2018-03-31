@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoreInvestmentApp.Pages.AccountPage">
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <StackLayout Orientation="Vertical" Padding="10,10,10,10">
+                <Label Text="Account" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
+                <Label x:Name="LabelAccountName" FontAttributes="Bold" FontSize="Large" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
+                <Label Text="Account Type" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Medium" TextColor="#4B77BE"></Label>
+                <Label x:Name="LabelAccountType" HorizontalOptions="StartAndExpand" FontAttributes="Bold" TextColor="Black" FontSize="Large"></Label>
+                <Label Text="Account Expiry" HorizontalOptions="StartAndExpand" FontSize="Medium" FontAttributes="Bold" TextColor="#4B77BE"></Label>
+                <Label x:Name="LabelAccountExpiry" HorizontalOptions="StartAndExpand" TextColor="Black" FontAttributes="Bold" FontSize="Large"></Label>
+                
+                <Button Text="Subscribe" FontSize="Medium" FontAttributes="Bold" Clicked="Button_Clicked" BackgroundColor="#4B77BE" TextColor="White" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -13,6 +13,7 @@ using Acr.UserDialogs;
 using FormsCommunityToolkit.Effects.Droid;
 using Plugin.FacebookClient;
 using Android.Content;
+using Plugin.InAppBilling;
 
 namespace CoreInvestmentApp.Droid
 {
@@ -44,6 +45,7 @@ namespace CoreInvestmentApp.Droid
         {
             base.OnActivityResult(requestCode, resultCode, data);
             FacebookClientManager.OnActivityResult(requestCode, resultCode, data);
+            InAppBillingImplementation.HandleActivityResult(requestCode, resultCode, data);
         }
     }
 }
