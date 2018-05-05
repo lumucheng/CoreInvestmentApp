@@ -26,15 +26,15 @@ namespace CoreInvestmentApp.Pages
             InitializeComponent();
             StockList = new ObservableCollection<Stock>();
 
-			var addItem = new ToolbarItem
-			{
-				Text = "Search"
-			};
+            var addItem = new ToolbarItem
+            {
+                Text = "Search"
+            };
 
-			addItem.Clicked += (object sender, System.EventArgs e) =>
-			{
+            addItem.Clicked += (object sender, System.EventArgs e) =>
+            {
                 HandleAddButton();
-			};
+            };
 
             ToolbarItems.Add(addItem);
 
@@ -49,7 +49,8 @@ namespace CoreInvestmentApp.Pages
                 SearchBarTicker.PlaceholderColor = Color.Gray;
             }
 
-            MessagingCenter.Subscribe<string>("refresh", "refresh", (sender) => {
+            MessagingCenter.Subscribe<string>("refresh", "refresh", (sender) =>
+            {
                 LoadTickersFromDBAsync();
             });
 
@@ -58,8 +59,8 @@ namespace CoreInvestmentApp.Pages
 
         private async void HandleAddButton()
         {
-            // check accessrights first
-            if (Util.AccessRights == "full" || 
+            // Check accessrights first
+            if (Util.AccessRights == "full" ||
                 Util.AccessRights == "guest" && StockList.Count < 3 ||
                 Util.AccessRights == "expired" && StockList.Count < 3)
             {
@@ -87,7 +88,8 @@ namespace CoreInvestmentApp.Pages
                 string message = "You have reached the max limit of stock valuation. Please subscribe to our app account to have unlimited access.";
                 bool result = await DisplayAlert("Error", message, "Subscribe", "Cancel");
 
-                if (result) {
+                if (result)
+                {
                     Uri url = new Uri("http://coreinvest.me/appsubscribe.php");
                     Device.OpenUri(url);
                 }
@@ -101,7 +103,7 @@ namespace CoreInvestmentApp.Pages
                 Stock stock = (Stock)e.SelectedItem;
                 Navigation.PushAsync(new DetailedStockPage(stock));
                 ((ListView)sender).SelectedItem = null;
-            }    
+            }
         }
 
         private void LoadTickersFromDBAsync()
@@ -115,8 +117,8 @@ namespace CoreInvestmentApp.Pages
             if (vAllStock.Count() == 0)
             {
                 StockListView.ItemsSource = null;
-				StockListView.IsRefreshing = false;
-				StockListView.EndRefresh();
+                StockListView.IsRefreshing = false;
+                StockListView.EndRefresh();
             }
             else
             {
@@ -190,13 +192,13 @@ namespace CoreInvestmentApp.Pages
                     }
                     else
                     {
-						List<Stock> list = stockDictionary.Values.ToList();
-						list = list.OrderByDescending(s => s.InvestorConfidence)
-											 .ThenByDescending(s => s.CurrentValue)
-											 .ToList();
-						StockList = new ObservableCollection<Stock>(list);
-						StockListView.ItemsSource = null;
-						StockListView.ItemsSource = StockList;
+                        List<Stock> list = stockDictionary.Values.ToList();
+                        list = list.OrderByDescending(s => s.InvestorConfidence)
+                                             .ThenByDescending(s => s.CurrentValue)
+                                             .ToList();
+                        StockList = new ObservableCollection<Stock>(list);
+                        StockListView.ItemsSource = null;
+                        StockListView.ItemsSource = StockList;
                     }
                 }
                 else
@@ -216,15 +218,15 @@ namespace CoreInvestmentApp.Pages
         {
             var menuItem = (MenuItem)sender;
             Stock stock = (Stock)menuItem.CommandParameter;
-			var vRealmDb = Realm.GetInstance();
+            var vRealmDb = Realm.GetInstance();
 
-			var realmJsonObj = vRealmDb.All<RealmStockJson>()
-										   .Where(s => s.StockTicker == stock.StockIdentifier.Ticker)
-										   .FirstOrDefault();
-			vRealmDb.Write(() =>
-		    {
-                vRealmDb.Remove(realmJsonObj);   
-		    });
+            var realmJsonObj = vRealmDb.All<RealmStockJson>()
+                                           .Where(s => s.StockTicker == stock.StockIdentifier.Ticker)
+                                           .FirstOrDefault();
+            vRealmDb.Write(() =>
+            {
+                vRealmDb.Remove(realmJsonObj);
+            });
 
             LoadTickersFromDBAsync();
         }
@@ -244,7 +246,7 @@ namespace CoreInvestmentApp.Pages
             {
                 StockListView.ItemsSource = StockList;
             }
-            else 
+            else
             {
                 StockListView.ItemsSource = StockList.Where(s => s.Ticker.Contains(e.NewTextValue.ToUpper()));
             }

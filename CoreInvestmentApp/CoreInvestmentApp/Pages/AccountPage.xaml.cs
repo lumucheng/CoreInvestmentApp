@@ -19,6 +19,10 @@ namespace CoreInvestmentApp.Pages
             Title = "Account";
         }
 
+        private void InitLayout() {
+            
+        }
+
         private void Button_Clicked(object sender, EventArgs e)
         {
 

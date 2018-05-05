@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using CoreInvestmentApp.Classes;
 using CoreInvestmentApp.Pages;
@@ -14,7 +15,7 @@ namespace CoreInvestmentApp
     public partial class App : Application
     {
         IFacebookClient facebookClient;
-        
+
         public App()
         {
             InitializeComponent();
@@ -27,10 +28,11 @@ namespace CoreInvestmentApp
                 MainPage = new Page();
 
                 // Check for Facebook Login first..
-                if (facebookClient.IsLoggedIn) {
+                if (facebookClient.IsLoggedIn)
+                {
                     CallFacebookLogin();
                 }
-                else 
+                else
                 {   // Check for Core Invest Account
                     string email = Util.UserName;
                     string p = Util.Password;
@@ -55,7 +57,6 @@ namespace CoreInvestmentApp
         private async void CallFacebookLogin()
         {
             var result = await facebookClient.RequestUserDataAsync(new string[] { "email", "first_name", "last_name" }, new string[] { "email" }, FacebookPermissionType.Read);
-            // FacebookResponse<Dictionary<string, object>> result 
 
             if (result.Data != null)
             {
@@ -76,59 +77,77 @@ namespace CoreInvestmentApp
 
         private async Task CallFacebookLoginAPI(string email, string name, string user_id)
         {
-            HttpClient client = Util.HttpC;
+            try
+            {
+                HttpClient client = Util.HttpC;
 
-            var values = new Dictionary<string, string>
+                var values = new Dictionary<string, string>
             {
                 { "email", email },
                 { "name", name } ,
                 { "user_id", user_id }
             };
 
-            var content = new FormUrlEncodedContent(values);
-            var response = await client.PostAsync(Util.CoreInvestUrlFacebookLogin, content);
-            var responseString = await response.Content.ReadAsStringAsync();
+                var content = new FormUrlEncodedContent(values);
+                var response = await client.PostAsync(Util.CoreInvestUrlFacebookLogin, content);
+                var responseString = await response.Content.ReadAsStringAsync();
 
-            JObject jsonObject = JObject.Parse(responseString);
+                JObject jsonObject = JObject.Parse(responseString);
 
-            // Login success
-            if ((bool)jsonObject["status"])
-            {
-                Util.AccessRights = (string)jsonObject["message"];
-                MainPage = new RootPage();
+                // Login success
+                if ((bool)jsonObject["status"])
+                {
+                    Util.AccessRights = (string)jsonObject["message"];
+                    MainPage = new RootPage();
+                }
+                else
+                {
+                    string message = "An error occured on the server.";
+                    UserDialogs.Instance.Alert(message, "Error", "OK");
+                    MainPage = new LoginPage();
+                }
             }
-            else
+            catch (Exception e)
             {
-                string message = "An error occured on the server.";
-                UserDialogs.Instance.Alert(message, "Error", "OK");
-                MainPage = new LoginPage();
+                UserDialogs.Instance.Alert("Unable to login to Facebook.", "Error", "OK");
+                Util.RemoveCredentials();
+                Application.Current.MainPage = new LoginPage();
             }
+
         }
 
         private async void CheckAPI(string email, string p)
         {
-            HttpClient client = Util.HttpC;
-
-			var values = new Dictionary<string, string>
-			{
-					{ "email", email },
-					{ "p", p }
-			};
-
-			var content = new FormUrlEncodedContent(values);
-			var response = await client.PostAsync(Util.CoreInvestUrlLogin, content);
-			var responseString = await response.Content.ReadAsStringAsync();
-
-			JObject jsonObject = JObject.Parse(responseString);
-
-			if ((bool)jsonObject["status"])
-			{
-                Util.AccessRights = (string)jsonObject["message"];
-                MainPage = new RootPage();
-			}
-            else 
+            try
             {
-                MainPage = new LoginPage();
+                HttpClient client = Util.HttpC;
+
+                var values = new Dictionary<string, string>
+            {
+                    { "email", email },
+                    { "p", p }
+            };
+
+                var content = new FormUrlEncodedContent(values);
+                var response = await client.PostAsync(Util.CoreInvestUrlLogin, content);
+                var responseString = await response.Content.ReadAsStringAsync();
+
+                JObject jsonObject = JObject.Parse(responseString);
+
+                if ((bool)jsonObject["status"])
+                {
+                    Util.AccessRights = (string)jsonObject["message"];
+                    MainPage = new RootPage();
+                }
+                else
+                {
+                    MainPage = new LoginPage();
+                }
+            }
+            catch (Exception e)
+            {
+                UserDialogs.Instance.Alert("Unable to login.", "Error", "OK");
+                Util.RemoveCredentials();
             }
         }
 

@@ -32,7 +32,16 @@ namespace CoreInvestmentApp.Model
 
         public decimal Value
         {
-            get { return Decimal.Parse(valueStr); }
+            get 
+            {
+                decimal val;
+
+                if (!decimal.TryParse(valueStr, out val)) 
+                {
+                    val = 0.0M;
+                }
+                return val;
+            }
         }
     }
 }

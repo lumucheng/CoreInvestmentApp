@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.coreinvest" android:installLocation="auto" android:versionCode="6" android:versionName="1.5">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.coreinvest" android:installLocation="auto" android:versionCode="7" android:versionName="1.6">
 	<uses-sdk android:minSdkVersion="15" />
 	<uses-permission android:name="android.permission.INTERNET" />
-  <uses-permission android:name="com.android.vending.BILLING" />
+	<uses-permission android:name="com.android.vending.BILLING" />
 	<application android:label="Core Invest">
 		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id" />
 		<activity android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:label="@string/facebook_app_name" />

@@ -171,5 +171,6 @@ namespace CoreInvestmentApp.Classes
         }
 
         public static string AccessRights { get; set; }
+        public static string MemberExpiry { get; set; }
     }
 }

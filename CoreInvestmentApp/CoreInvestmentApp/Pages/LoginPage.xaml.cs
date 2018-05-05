@@ -73,95 +73,128 @@ namespace CoreInvestmentApp.Pages
 
         private async Task CallFacebookLogin()
         {
-            UserDialogs.Instance.HideLoading();
-
-            FacebookResponse<Dictionary<string, object>> result = await CrossFacebookClient.Current.RequestUserDataAsync(new string[] { "email", "first_name", "last_name" }, new string[] { "email" });
-
-            if (result.Data != null)
+            try
             {
-                // Save to server
-                string email = result.Data["email"].ToString();
-                string first_name = result.Data["last_name"].ToString();
-                string last_name = result.Data["first_name"].ToString();
-                string user_id = result.Data["user_id"].ToString();
+                UserDialogs.Instance.HideLoading();
 
-                await CallFacebookLoginAPI(email, first_name + last_name, user_id);
+                FacebookResponse<Dictionary<string, object>> result = await CrossFacebookClient.Current.RequestUserDataAsync(new string[] { "email", "first_name", "last_name" }, new string[] { "email" });
+
+                if (result.Data != null)
+                {
+                    // Save to server
+                    string email = result.Data["email"].ToString();
+                    string first_name = result.Data["last_name"].ToString();
+                    string last_name = result.Data["first_name"].ToString();
+                    string user_id = result.Data["user_id"].ToString();
+
+                    await CallFacebookLoginAPI(email, first_name + last_name, user_id);
+                }
+                else
+                {
+                    UserDialogs.Instance.Alert("Unable to login to Facebook.", "Error", "OK");
+                }
             }
-            else
+            catch (Exception e)
             {
                 UserDialogs.Instance.Alert("Unable to login to Facebook.", "Error", "OK");
+                Util.RemoveCredentials();
+                Application.Current.MainPage = new LoginPage();
             }
+
         }
 
         private async Task CallFacebookLoginAPI(string email, string name, string user_id)
         {
-            HttpClient client = Util.HttpC;
+            try
+            {
+                HttpClient client = Util.HttpC;
 
-            var values = new Dictionary<string, string>
+                var values = new Dictionary<string, string>
             {
                 { "email", email },
                 { "name", name } ,
                 { "user_id", user_id }
             };
 
-            var content = new FormUrlEncodedContent(values);
-            var response = await client.PostAsync("http://www.coreinvest.me/facebook_login.php", content);
-            var responseString = await response.Content.ReadAsStringAsync();
+                var content = new FormUrlEncodedContent(values);
+                var response = await client.PostAsync("http://www.coreinvest.me/facebook_login.php", content);
+                var responseString = await response.Content.ReadAsStringAsync();
 
-            JObject jsonObject = JObject.Parse(responseString);
+                JObject jsonObject = JObject.Parse(responseString);
 
-            // Login success
-            if ((bool)jsonObject["status"])
-            {
-                Util.AccessRights = (string)jsonObject["message"];
-                Application.Current.MainPage = new RootPage();
+                // Login success
+                if ((bool)jsonObject["status"])
+                {
+                    Util.AccessRights = (string)jsonObject["message"];
+                    Application.Current.MainPage = new RootPage();
+                }
+                else
+                {
+                    string message = "An error occured on the server.";
+                    UserDialogs.Instance.Alert(message, "Error", "OK");
+                }
             }
-            else
+            catch (Exception e)
             {
                 string message = "An error occured on the server.";
                 UserDialogs.Instance.Alert(message, "Error", "OK");
+                Application.Current.MainPage = new LoginPage();
             }
         }
 
         private async Task CallLoginAPI()
         {
-			string email = EntryEmail.Text.Trim();
-			string p = EntryPassword.Text;
-
-			var data = Encoding.UTF8.GetBytes(p);
-			var hasher = WinRTCrypto.HashAlgorithmProvider.OpenAlgorithm(HashAlgorithm.Sha512);
-			byte[] hash = hasher.HashData(data);
-			string hashHex = Util.ByteArrayToHex(hash).ToLower();
-
-			HttpClient client = Util.HttpC;
-
-			var values = new Dictionary<string, string>
-			{
-				{ "email", email },
-				{ "p", hashHex }
-			};
-
-			var content = new FormUrlEncodedContent(values);
-			var response = await client.PostAsync("http://www.coreinvest.me/login_api.php", content);
-			var responseString = await response.Content.ReadAsStringAsync();
-
-            JObject jsonObject = JObject.Parse(responseString);
-
-			// Login success
-			if ((bool)jsonObject["status"])
+            try
             {
-                if (SwitchRemember.IsToggled)
+                string email = EntryEmail.Text.Trim();
+                string p = EntryPassword.Text;
+
+                var data = Encoding.UTF8.GetBytes(p);
+                var hasher = WinRTCrypto.HashAlgorithmProvider.OpenAlgorithm(HashAlgorithm.Sha512);
+                byte[] hash = hasher.HashData(data);
+                string hashHex = Util.ByteArrayToHex(hash).ToLower();
+
+                HttpClient client = Util.HttpC;
+
+                var values = new Dictionary<string, string>
+            {
+                { "email", email },
+                { "p", hashHex }
+            };
+
+                var content = new FormUrlEncodedContent(values);
+                var response = await client.PostAsync("http://www.coreinvest.me/login_api.php", content);
+                var responseString = await response.Content.ReadAsStringAsync();
+
+                JObject jsonObject = JObject.Parse(responseString);
+
+                // Login success
+                if ((bool)jsonObject["status"])
                 {
-                    Util.SaveCredentials(email, hashHex);
-                }
+                    if (SwitchRemember.IsToggled)
+                    {
+                        Util.SaveCredentials(email, hashHex);
+                    }
 
-                Util.AccessRights = (string)jsonObject["message"];
-				Application.Current.MainPage = new RootPage();
+                    Util.AccessRights = (string)jsonObject["message"];
+
+                    if (jsonObject["expiry"] != null)
+                    {
+                        Util.MemberExpiry = (string)jsonObject["expiry"];
+                    }
+
+                    Application.Current.MainPage = new RootPage();
+                }
+                else
+                {
+                    string message = "Wrong username or password.";
+                    UserDialogs.Instance.Alert(message, "Error", "OK");
+                }
             }
-            else
+            catch (Exception e)
             {
-                string message = "Wrong username or password.";
-                UserDialogs.Instance.Alert(message, "Error", "OK");
+                UserDialogs.Instance.Alert("Unable to login.", "Error", "OK");
+                Util.RemoveCredentials();
             }
         }
     }
